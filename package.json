@@ -1,0 +1,36 @@
+{
+  "name": "sumi-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://bitbucket.org/forinvestment/sumi-server.git",
+  "author": "builden <billdeng@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "egg-bin dev",
+    "start": "cross-env EGG_SERVER_ENV=prod egg-bin dev --port 7002",
+    "test": "cross-env DEBUG=common-bin egg-bin test"
+  },
+  "dependencies": {
+    "awaiting": "^2.2.0",
+    "egg": "^1.2.1",
+    "egg-mysql": "^3.0.0",
+    "egg-socket.io": "^1.2.2",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "cross-env": "^4.0.0",
+    "egg-bin": "^3.3.2",
+    "egg-mock": "^3.6.1",
+    "eslint": "^3.19.0",
+    "eslint-config-egg": "^4.1.0",
+    "supertest": "^3.0.0"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-egg",
+    "rules": {
+      "strict": "off",
+      "newline-per-chained-call": "off"
+    }
+  }
+}
