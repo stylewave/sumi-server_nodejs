@@ -20,3 +20,12 @@ yarn-error.log*
 # office temp files
 ~$*.docx
 ~$*.xlsx
+
+logs/
+npm-debug.log
+node_modules/
+coverage/
+.idea/
+run/
+.DS_Store
+*.swp
