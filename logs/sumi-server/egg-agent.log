@@ -1,6 +1,53 @@
-2017-05-15 14:24:07,762 INFO 8468 [egg:logger] init all loggers with options: {"dir":"D:\\cq-server\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"unittest","level":"INFO","consoleLevel":"WARN","outputJSON":false,"buffer":false,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{},"type":"agent"}
-2017-05-15 14:24:07,826 INFO 8468 [egg-watcher:agent] watcher start success
-2017-05-15 14:24:16,588 INFO 2264 [egg:logger] init all loggers with options: {"dir":"D:\\cq-server\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","outputJSON":false,"buffer":true,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{},"type":"agent"}
-2017-05-15 14:24:16,707 INFO 2264 [egg-watcher:agent] watcher start success
-2017-05-15 14:31:40,550 WARN 2264 [agent:development] reload worker because D:\cq-server\sumi-server\config\config.unittest.js change
-2017-05-15 14:31:41,548 WARN 2264 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-16 20:15:18,827 INFO 5256 [egg:logger] init all loggers with options: {"dir":"D:\\cq-server\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"unittest","level":"INFO","consoleLevel":"WARN","outputJSON":false,"buffer":false,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{},"type":"agent"}
+2017-05-16 20:15:18,897 INFO 5256 [egg-watcher:agent] watcher start success
+2017-05-16 20:23:45,413 INFO 6272 [egg:logger] init all loggers with options: {"dir":"D:\\cq-server\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","outputJSON":false,"buffer":true,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{},"type":"agent"}
+2017-05-16 20:23:45,492 INFO 6272 [egg-watcher:agent] watcher start success
+2017-05-16 20:25:38,244 WARN 6272 [agent:development] reload worker because D:\cq-server\sumi-server\app\service\veCode.js change
+2017-05-16 20:25:39,318 WARN 6272 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-16 20:25:44,183 WARN 6272 [agent:development] reload worker because D:\cq-server\sumi-server\app\service\veCode.js change
+2017-05-16 20:25:45,153 WARN 6272 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-16 20:26:29,533 WARN 6272 [agent:development] reload worker because D:\cq-server\sumi-server\app\service\veCode.js change
+2017-05-16 20:26:30,595 WARN 6272 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-16 20:30:13,668 WARN 6272 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\utils\checkMobileNum.js change
+2017-05-16 20:30:14,642 WARN 6272 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-16 20:33:18,145 WARN 6272 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\login.js change
+2017-05-16 20:58:53,780 WARN 6272 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\utils\checkReg.js change
+2017-05-16 20:59:43,152 WARN 6272 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\utils\regExpUtil.js change
+2017-05-16 20:59:50,842 WARN 6272 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\utils\regExpUtil.js change
+2017-05-16 21:00:14,259 WARN 6272 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\utils\regExpUtil.js change
+2017-05-16 21:00:15,947 WARN 6272 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\utils\regExpUtil.js change
+2017-05-16 21:00:16,934 WARN 6272 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-16 21:00:22,764 WARN 6272 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\utils\regExpUtil.js change
+2017-05-16 21:00:23,727 WARN 6272 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-16 21:00:32,300 WARN 6272 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\utils\regExpUtil.js change
+2017-05-16 21:00:33,249 WARN 6272 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-16 21:00:40,063 WARN 6272 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\utils\regExpUtil.js change
+2017-05-16 21:00:40,997 WARN 6272 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-16 21:00:43,738 WARN 6272 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\utils\regExpUtil.js change
+2017-05-16 21:00:44,676 WARN 6272 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-16 21:00:56,615 WARN 6272 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\utils\regExpUtil.js change
+2017-05-16 21:00:57,645 WARN 6272 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-16 21:01:14,201 WARN 6272 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\login.js change
+2017-05-16 21:01:15,162 WARN 6272 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-16 21:02:03,141 WARN 6272 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\login.js change
+2017-05-16 21:02:04,092 WARN 6272 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-16 21:02:19,019 WARN 6272 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\login.js change
+2017-05-16 21:02:19,918 WARN 6272 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-16 21:02:28,713 WARN 6272 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\login.js change
+2017-05-16 21:02:37,347 WARN 6272 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\login.js change
+2017-05-16 21:02:37,615 WARN 6272 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\login.js change
+2017-05-16 21:02:38,013 WARN 6272 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\login.js change
+2017-05-16 21:02:38,310 WARN 6272 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-16 21:02:39,216 WARN 6272 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-16 21:03:29,923 WARN 6272 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\veCode.js change
+2017-05-16 21:03:30,950 WARN 6272 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-16 21:03:36,116 WARN 6272 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\veCode.js change
+2017-05-16 21:03:37,145 WARN 6272 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-16 21:03:47,650 WARN 6272 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\veCode.js change
+2017-05-16 21:03:48,591 WARN 6272 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-16 21:05:03,671 WARN 6272 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\utils\regExpUtil.js change
+2017-05-16 21:05:04,862 WARN 6272 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-16 21:05:16,255 WARN 6272 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\utils\regExpUtil.js change
+2017-05-16 21:05:17,313 WARN 6272 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-16 21:06:39,255 WARN 6272 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\veCode.js change
+2017-05-16 21:06:40,397 WARN 6272 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
