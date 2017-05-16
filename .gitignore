@@ -20,3 +20,8 @@ yarn-error.log*
 # office temp files
 ~$*.docx
 ~$*.xlsx
+
+logs/
+.idea/
+run/
+*.swp
