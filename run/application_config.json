@@ -17,23 +17,22 @@
     "i18n": {
       "defaultLocale": "en_US",
       "dirs": [
-        "D:\\builden-proj\\sumi-server\\node_modules\\egg-onerror\\config\\locales",
-        "D:\\builden-proj\\sumi-server\\node_modules\\egg-session\\config\\locales",
-        "D:\\builden-proj\\sumi-server\\node_modules\\egg-i18n\\config\\locales",
-        "D:\\builden-proj\\sumi-server\\node_modules\\egg-watcher\\config\\locales",
-        "D:\\builden-proj\\sumi-server\\node_modules\\egg-multipart\\config\\locales",
-        "D:\\builden-proj\\sumi-server\\node_modules\\egg-security\\config\\locales",
-        "D:\\builden-proj\\sumi-server\\node_modules\\egg-schedule\\config\\locales",
-        "D:\\builden-proj\\sumi-server\\node_modules\\egg-logrotator\\config\\locales",
-        "D:\\builden-proj\\sumi-server\\node_modules\\egg-static\\config\\locales",
-        "D:\\builden-proj\\sumi-server\\node_modules\\egg-jsonp\\config\\locales",
-        "D:\\builden-proj\\sumi-server\\node_modules\\egg-view\\config\\locales",
-        "D:\\builden-proj\\sumi-server\\node_modules\\egg-mysql\\config\\locales",
-        "D:\\builden-proj\\sumi-server\\node_modules\\egg-socket.io\\config\\locales",
-        "D:\\builden-proj\\sumi-server\\node_modules\\egg-mock\\config\\locales",
-        "D:\\builden-proj\\sumi-server\\node_modules\\egg\\config\\locales",
-        "D:\\builden-proj\\sumi-server\\node_modules\\egg-mock\\lib\\tmp\\config\\locales",
-        "D:\\builden-proj\\sumi-server\\config\\locales"
+        "D:\\cq-server\\sumi-server\\node_modules\\egg-onerror\\config\\locales",
+        "D:\\cq-server\\sumi-server\\node_modules\\egg-session\\config\\locales",
+        "D:\\cq-server\\sumi-server\\node_modules\\egg-i18n\\config\\locales",
+        "D:\\cq-server\\sumi-server\\node_modules\\egg-watcher\\config\\locales",
+        "D:\\cq-server\\sumi-server\\node_modules\\egg-multipart\\config\\locales",
+        "D:\\cq-server\\sumi-server\\node_modules\\egg-security\\config\\locales",
+        "D:\\cq-server\\sumi-server\\node_modules\\egg-development\\config\\locales",
+        "D:\\cq-server\\sumi-server\\node_modules\\egg-schedule\\config\\locales",
+        "D:\\cq-server\\sumi-server\\node_modules\\egg-logrotator\\config\\locales",
+        "D:\\cq-server\\sumi-server\\node_modules\\egg-static\\config\\locales",
+        "D:\\cq-server\\sumi-server\\node_modules\\egg-jsonp\\config\\locales",
+        "D:\\cq-server\\sumi-server\\node_modules\\egg-view\\config\\locales",
+        "D:\\cq-server\\sumi-server\\node_modules\\egg-mysql\\config\\locales",
+        "D:\\cq-server\\sumi-server\\node_modules\\egg-socket.io\\config\\locales",
+        "D:\\cq-server\\sumi-server\\node_modules\\egg\\config\\locales",
+        "D:\\cq-server\\sumi-server\\config\\locales"
       ],
       "queryField": "locale",
       "cookieField": "locale",
@@ -43,8 +42,8 @@
     "watcher": {
       "type": "development",
       "eventSources": {
-        "default": "D:\\builden-proj\\sumi-server\\node_modules\\egg-watcher\\lib\\event-sources\\default",
-        "development": "D:\\builden-proj\\sumi-server\\node_modules\\egg-watcher\\lib\\event-sources\\development"
+        "default": "D:\\cq-server\\sumi-server\\node_modules\\egg-watcher\\lib\\event-sources\\default",
+        "development": "D:\\cq-server\\sumi-server\\node_modules\\egg-watcher\\lib\\event-sources\\development"
       }
     },
     "multipart": {
@@ -107,6 +106,12 @@
     "helper": {
       "shtml": {}
     },
+    "development": {
+      "watchDirs": [],
+      "ignoreDirs": [],
+      "fastReady": true,
+      "reloadOnDebug": true
+    },
     "logrotator": {
       "filesRotateByHour": null,
       "filesRotateBySize": null,
@@ -117,7 +122,7 @@
     },
     "static": {
       "prefix": "/public/",
-      "dir": "D:\\builden-proj\\sumi-server\\app\\public",
+      "dir": "D:\\cq-server\\sumi-server\\app\\public",
       "dynamic": true,
       "preload": false,
       "buffer": false
@@ -128,8 +133,8 @@
       "csrf": false
     },
     "view": {
-      "root": "D:\\builden-proj\\sumi-server\\app\\view",
-      "cache": true,
+      "root": "D:\\cq-server\\sumi-server\\app\\view",
+      "cache": false,
       "defaultExtension": ".html",
       "defaultViewEngine": "",
       "mapping": {}
@@ -140,7 +145,14 @@
         "connectionLimit": 5
       },
       "app": true,
-      "agent": false
+      "agent": false,
+      "client": {
+        "host": "192.168.16.254",
+        "port": "3306",
+        "user": "root",
+        "password": "<String len: 6>",
+        "database": "cq"
+      }
     },
     "io": {
       "init": {},
@@ -151,7 +163,7 @@
         }
       }
     },
-    "env": "unittest",
+    "env": "local",
     "name": "sumi-server",
     "keys": "<String len: 20>",
     "proxy": false,
@@ -194,9 +206,9 @@
         }
       }
     },
-    "baseDir": "D:\\builden-proj\\sumi-server",
-    "HOME": "C:\\Users\\billdeng",
-    "rundir": "D:\\builden-proj\\sumi-server\\run",
+    "baseDir": "D:\\cq-server\\sumi-server",
+    "HOME": "C:\\Users\\Administrator",
+    "rundir": "D:\\cq-server\\sumi-server\\run",
     "dump": {
       "ignore": "<Set>"
     },
@@ -227,13 +239,13 @@
       "returnRawBody": true
     },
     "logger": {
-      "dir": "D:\\builden-proj\\sumi-server\\logs\\sumi-server",
+      "dir": "D:\\cq-server\\sumi-server\\logs\\sumi-server",
       "encoding": "utf8",
-      "env": "unittest",
+      "env": "local",
       "level": "INFO",
-      "consoleLevel": "WARN",
+      "consoleLevel": "INFO",
       "outputJSON": false,
-      "buffer": false,
+      "buffer": true,
       "appLogName": "sumi-server-web.log",
       "coreLogName": "egg-web.log",
       "agentLogName": "egg-agent.log",
@@ -257,11 +269,10 @@
       "bodyParser",
       "session",
       "i18n",
-      "clusterAppMock",
       "securities"
     ],
     "workerStartTimeout": 600000,
-    "custom": "test hello",
+    "custom": "local hello",
     "coreMiddlewares": [
       "meta",
       "siteFile",
@@ -270,7 +281,6 @@
       "bodyParser",
       "session",
       "i18n",
-      "clusterAppMock",
       "securities"
     ],
     "appMiddlewares": [],
@@ -296,8 +306,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "D:\\builden-proj\\sumi-server\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\builden-proj\\sumi-server\\node_modules\\egg-onerror",
+      "from": "D:\\cq-server\\sumi-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\cq-server\\sumi-server\\node_modules\\egg-onerror",
       "version": "1.3.0"
     },
     "session": {
@@ -307,8 +317,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "D:\\builden-proj\\sumi-server\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\builden-proj\\sumi-server\\node_modules\\egg-session",
+      "from": "D:\\cq-server\\sumi-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\cq-server\\sumi-server\\node_modules\\egg-session",
       "version": "2.1.0"
     },
     "i18n": {
@@ -318,8 +328,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "D:\\builden-proj\\sumi-server\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\builden-proj\\sumi-server\\node_modules\\egg-i18n",
+      "from": "D:\\cq-server\\sumi-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\cq-server\\sumi-server\\node_modules\\egg-i18n",
       "version": "1.1.1"
     },
     "watcher": {
@@ -329,8 +339,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "D:\\builden-proj\\sumi-server\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\builden-proj\\sumi-server\\node_modules\\egg-watcher",
+      "from": "D:\\cq-server\\sumi-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\cq-server\\sumi-server\\node_modules\\egg-watcher",
       "version": "2.1.2"
     },
     "multipart": {
@@ -340,8 +350,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "D:\\builden-proj\\sumi-server\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\builden-proj\\sumi-server\\node_modules\\egg-multipart",
+      "from": "D:\\cq-server\\sumi-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\cq-server\\sumi-server\\node_modules\\egg-multipart",
       "version": "1.3.0"
     },
     "security": {
@@ -353,9 +363,24 @@
       ],
       "optionalDependencies": [],
       "env": [],
-      "from": "D:\\builden-proj\\sumi-server\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\builden-proj\\sumi-server\\node_modules\\egg-security",
+      "from": "D:\\cq-server\\sumi-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\cq-server\\sumi-server\\node_modules\\egg-security",
       "version": "1.10.0"
+    },
+    "development": {
+      "enable": true,
+      "package": "egg-development",
+      "name": "development",
+      "dependencies": [
+        "watcher"
+      ],
+      "optionalDependencies": [],
+      "env": [
+        "local"
+      ],
+      "from": "D:\\cq-server\\sumi-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\cq-server\\sumi-server\\node_modules\\egg-development",
+      "version": "1.3.0"
     },
     "schedule": {
       "enable": true,
@@ -364,8 +389,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "D:\\builden-proj\\sumi-server\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\builden-proj\\sumi-server\\node_modules\\egg-schedule",
+      "from": "D:\\cq-server\\sumi-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\cq-server\\sumi-server\\node_modules\\egg-schedule",
       "version": "2.3.0"
     },
     "logrotator": {
@@ -377,8 +402,8 @@
       ],
       "optionalDependencies": [],
       "env": [],
-      "from": "D:\\builden-proj\\sumi-server\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\builden-proj\\sumi-server\\node_modules\\egg-logrotator",
+      "from": "D:\\cq-server\\sumi-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\cq-server\\sumi-server\\node_modules\\egg-logrotator",
       "version": "2.2.2"
     },
     "static": {
@@ -388,8 +413,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "D:\\builden-proj\\sumi-server\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\builden-proj\\sumi-server\\node_modules\\egg-static",
+      "from": "D:\\cq-server\\sumi-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\cq-server\\sumi-server\\node_modules\\egg-static",
       "version": "1.3.0"
     },
     "jsonp": {
@@ -401,8 +426,8 @@
         "security"
       ],
       "env": [],
-      "from": "D:\\builden-proj\\sumi-server\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\builden-proj\\sumi-server\\node_modules\\egg-jsonp",
+      "from": "D:\\cq-server\\sumi-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\cq-server\\sumi-server\\node_modules\\egg-jsonp",
       "version": "1.0.0"
     },
     "view": {
@@ -412,8 +437,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "D:\\builden-proj\\sumi-server\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\builden-proj\\sumi-server\\node_modules\\egg-view",
+      "from": "D:\\cq-server\\sumi-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\cq-server\\sumi-server\\node_modules\\egg-view",
       "version": "1.1.0"
     },
     "mysql": {
@@ -423,8 +448,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "D:\\builden-proj\\sumi-server\\config\\plugin.js",
-      "path": "D:\\builden-proj\\sumi-server\\node_modules\\egg-mysql",
+      "from": "D:\\cq-server\\sumi-server\\config\\plugin.js",
+      "path": "D:\\cq-server\\sumi-server\\node_modules\\egg-mysql",
       "version": "3.0.0"
     },
     "io": {
@@ -434,18 +459,9 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "D:\\builden-proj\\sumi-server\\config\\plugin.js",
-      "path": "D:\\builden-proj\\sumi-server\\node_modules\\egg-socket.io",
+      "from": "D:\\cq-server\\sumi-server\\config\\plugin.js",
+      "path": "D:\\cq-server\\sumi-server\\node_modules\\egg-socket.io",
       "version": "1.2.2"
-    },
-    "egg-mock": {
-      "enable": true,
-      "path": "D:\\builden-proj\\sumi-server\\node_modules\\egg-mock",
-      "name": "egg-mock",
-      "dependencies": [],
-      "optionalDependencies": [],
-      "env": [],
-      "version": "3.6.1"
     }
   }
 }

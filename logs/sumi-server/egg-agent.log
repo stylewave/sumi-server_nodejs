@@ -1,0 +1,6 @@
+2017-05-15 14:24:07,762 INFO 8468 [egg:logger] init all loggers with options: {"dir":"D:\\cq-server\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"unittest","level":"INFO","consoleLevel":"WARN","outputJSON":false,"buffer":false,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{},"type":"agent"}
+2017-05-15 14:24:07,826 INFO 8468 [egg-watcher:agent] watcher start success
+2017-05-15 14:24:16,588 INFO 2264 [egg:logger] init all loggers with options: {"dir":"D:\\cq-server\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","outputJSON":false,"buffer":true,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{},"type":"agent"}
+2017-05-15 14:24:16,707 INFO 2264 [egg-watcher:agent] watcher start success
+2017-05-15 14:31:40,550 WARN 2264 [agent:development] reload worker because D:\cq-server\sumi-server\config\config.unittest.js change
+2017-05-15 14:31:41,548 WARN 2264 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
