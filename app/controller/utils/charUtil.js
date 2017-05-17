@@ -19,4 +19,10 @@ module.exports = {
     const char = this.getRandomNum(len);
     return this.md5(char);
   },
+
+  // 用户密码加密方式
+  md5PWD(pwd, salt) {
+    return this.md5(this.md5(pwd) + salt);
+  },
+
 };

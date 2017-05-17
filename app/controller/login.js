@@ -23,7 +23,9 @@ module.exports = app => {
       }
       // await Promise.all(this.ctx.service.veCode.update(mobile, code, 2), this.ctx.service.user.insert(mobile, nickName, pwd));
       this.ctx.service.veCode.update(mobile, code, 2);
-      const md5Pwd = charUtil.md5(pwd);
+      const salt = charUtil.getRandomNum(4);
+      // const md5Pwd = charUtil.md5(pwd);
+      const md5Pwd = charUtil.md5PWD(pwd, salt);
       const result = await this.ctx.service.login.insert(mobile, nickName, md5Pwd);
       if (result) {
         this.ctx.body = { status: 1 };
