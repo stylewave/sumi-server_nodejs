@@ -10,7 +10,6 @@ module.exports = app => {
     async update(mobile, code, state) {
       const sql = 'UPDATE data_sms SET sms_type = ' + state + ' WHERE sms_mobile = ' + mobile + ' AND sms_content=' + code;
       const result = await this.app.mysql.query(sql);
-      console.log('VeCode update result=', result);
       return result;
     }
 
@@ -24,9 +23,7 @@ module.exports = app => {
     // 查询验证码是否有效
     async findByMobile(mobile) {
       const sql = 'SELECT COUNT(*) as total FROM data_sms WHERE sms_mobile=' + mobile + ' AND TIMEDIFF(NOW(),sms_create_time) <= 60 AND sms_type = 0';
-      console.log('sql>>>>', sql);
       const result = await app.mysql.query(sql);
-      console.log('sql result>>>>', result);
       return result[0].total > 0;
     }
 

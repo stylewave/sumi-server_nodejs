@@ -1,19 +1,13 @@
 const regExp = require('./utils/regExpUtil.js');
+const charUtil = require('./utils/charUtil.js');
+
 
 module.exports = app => {
   class VeCodeService extends app.Service {
-    // 获取验证码
-    getCode() {
-      let code = '';
-      for (let i = 0; i < 6; i++) {
-        code += Math.floor(Math.random() * 10);
-      }
-      return code;
-    }
 
     // 发送验证码
     async sendCode() {
-      const { mobile } = this.ctx.params;
+      const mobile = this.ctx.request.body.mobile;
       if (regExp.checkMobile(mobile) === false) {
         this.ctx.body = {
           status: 0,
@@ -29,7 +23,7 @@ module.exports = app => {
         };
         return;
       }
-      const code = this.getCode();
+      const code = charUtil.getRandomNum(6);
       // 发送到短信服务器
       await this.ctx.service.veCode.insert(mobile, code);
       this.ctx.body = {
