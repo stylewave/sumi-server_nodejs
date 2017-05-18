@@ -1,10 +1,9 @@
 module.exports = app => {
   /** http get请求**/
-  app.get('/', 'home.index');
-  app.get('/news/:page', 'home.news');
+  // app.get('/', 'home.index');
+  app.get('/debug/:mobile', 'debug.get');
 
   /** http post请求**/
-  app.post('/api/posts', 'post.create');
   app.post('/api/sendCode', 'veCode.sendCode');
   app.post('/api/login/register', 'login.register');
   app.post('/api/login/forgetPwd', 'login.forgetPwd');

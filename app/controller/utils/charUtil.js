@@ -7,10 +7,23 @@ module.exports = {
     return md5Val;
   },
   // 获取随机字符串
-  getRandomNum(len = 0) {
+  getRandomNum(len = 1) {
     let code = '';
     for (let i = 0; i < len; i++) {
       code += Math.floor(Math.random() * 10);
+    }
+    return code;
+  },
+  // 获取随机字符串
+  getRandomChar(len = 1) {
+    const list = [
+      '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a',
+      'b', 'c', 'd', 'e', 'f', 'g', 'h',
+    ];
+    let code = '';
+    for (let i = 0; i < len; i++) {
+      const index = Math.floor(Math.random() * list.length);
+      code += list[index];
     }
     return code;
   },

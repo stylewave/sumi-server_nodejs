@@ -1,0 +1,62 @@
+2017-05-17 16:13:12,519 ERROR 5232 nodejs.ClusterClientNoResponseError: client no response in 199141ms exceeding maxIdleTime 30000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (D:\cq-server\sumi-server\node_modules\cluster-client\lib\leader.js:72:23)
+    at ontimeout (timers.js:380:14)
+    at tryOnTimeout (timers.js:244:5)
+    at Timer.listOnTimeout (timers.js:214:5)
+name: 'ClusterClientNoResponseError'
+pid: 5232
+hostname: PW5EMWJM7ZBMK3A
+
+2017-05-18 13:28:34,453 ERROR 5616 nodejs.TcpConnectionTimeoutError: [TCPBase] socket connect timeout (3000ms) (address: 127.0.0.1:53140) (127.0.0.1)
+    at Socket.socket.setTimeout (D:\cq-server\sumi-server\node_modules\tcp-base\lib\base.js:399:19)
+    at Object.onceWrapper (events.js:293:19)
+    at emitNone (events.js:86:13)
+    at Socket.emit (events.js:188:7)
+    at Socket._onTimeout (net.js:345:8)
+    at ontimeout (timers.js:380:14)
+    at tryOnTimeout (timers.js:244:5)
+    at Timer.listOnTimeout (timers.js:214:5)
+name: 'TcpConnectionTimeoutError'
+host: '127.0.0.1'
+port: 53140
+pid: 5616
+hostname: PW5EMWJM7ZBMK3A
+
+2017-05-18 13:28:34,455 ERROR 5616 nodejs.TcpConnectionTimeoutError: [TCPBase] socket connect timeout (3000ms) (address: 127.0.0.1:53140) (127.0.0.1) (127.0.0.1) (127.0.0.1)
+    at Socket.socket.setTimeout (D:\cq-server\sumi-server\node_modules\tcp-base\lib\base.js:399:19)
+    at Object.onceWrapper (events.js:293:19)
+    at emitNone (events.js:86:13)
+    at Socket.emit (events.js:188:7)
+    at Socket._onTimeout (net.js:345:8)
+    at ontimeout (timers.js:380:14)
+    at tryOnTimeout (timers.js:244:5)
+    at Timer.listOnTimeout (timers.js:214:5)
+name: 'TcpConnectionTimeoutError'
+host: '127.0.0.1'
+port: 53140
+pid: 5616
+hostname: PW5EMWJM7ZBMK3A
+
+2017-05-18 13:28:34,649 ERROR 10012 nodejs.ClusterClientNoResponseError: client no response in 248145ms exceeding maxIdleTime 30000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (D:\cq-server\sumi-server\node_modules\cluster-client\lib\leader.js:72:23)
+    at ontimeout (timers.js:380:14)
+    at tryOnTimeout (timers.js:244:5)
+    at Timer.listOnTimeout (timers.js:214:5)
+name: 'ClusterClientNoResponseError'
+pid: 10012
+hostname: PW5EMWJM7ZBMK3A
+
+2017-05-18 15:00:35,277 ERROR 7692 [-/127.0.0.1/-/10ms GET /debug/18680318240] nodejs.TypeError: Cannot read property 'user_salt' of undefined
+    at UserService.findByUid (D:\cq-server\sumi-server\app\service\user.js:8:23)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 7692
+hostname: PW5EMWJM7ZBMK3A
+
+2017-05-18 15:00:58,973 ERROR 7240 [-/127.0.0.1/-/20ms GET /debug/18680318240] nodejs.TypeError: Cannot read property 'user_salt' of undefined
+    at UserService.findByUid (D:\cq-server\sumi-server\app\service\user.js:9:23)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 7240
+hostname: PW5EMWJM7ZBMK3A
+

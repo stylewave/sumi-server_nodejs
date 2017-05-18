@@ -23,10 +23,9 @@ module.exports = app => {
       }
       // await Promise.all(this.ctx.service.veCode.update(mobile, code, 2), this.ctx.service.user.insert(mobile, nickName, pwd));
       this.ctx.service.veCode.update(mobile, code, 2);
-      const salt = charUtil.getRandomNum(4);
-      // const md5Pwd = charUtil.md5(pwd);
+      const salt = charUtil.getRandomChar(4);
       const md5Pwd = charUtil.md5PWD(pwd, salt);
-      const result = await this.ctx.service.login.insert(mobile, nickName, md5Pwd);
+      const result = await this.ctx.service.userLogin.insert(mobile, nickName, md5Pwd, salt);
       if (result) {
         this.ctx.body = { status: 1 };
       } else {
@@ -56,8 +55,9 @@ module.exports = app => {
         return;
       }
       this.ctx.service.veCode.update(mobile, code, 2);
-      const md5Pwd = charUtil.md5(pwd);
-      this.ctx.service.login.updatePwd(mobile, md5Pwd);
+      const salt = charUtil.getRandomChar(4);
+      const md5Pwd = charUtil.md5PWD(pwd, salt);
+      this.ctx.service.userLogin.updatePwd(mobile, md5Pwd, salt);
       this.ctx.body = {
         status: 1,
       };
@@ -65,9 +65,17 @@ module.exports = app => {
 
     // 登录
     async login() {
-      const { uid, pwd } = this.ctx.request.body;
-      const md5Pwd = charUtil.md5(pwd);
-      const userInfo = await this.ctx.service.login.login(uid, md5Pwd);
+      const { mobile, pwd } = this.ctx.request.body;
+      const salt = await this.ctx.service.user.findByUid(mobile);
+      if (salt === null) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户名密码错误',
+        };
+        return;
+      }
+      const md5Pwd = charUtil.md5PWD(pwd, salt);
+      const userInfo = await this.ctx.service.userLogin.login(mobile, md5Pwd);
       if (userInfo === null) {
         this.ctx.body = {
           status: 0,
@@ -76,7 +84,7 @@ module.exports = app => {
         return;
       }
       const token = charUtil.getMd5Char(6);
-      this.ctx.service.login.updateToken(uid, token);
+      this.ctx.service.userLogin.updateToken(userInfo.user_id, token);
       this.ctx.body = {
         status: 1,
         uid: userInfo.user_id,
@@ -87,7 +95,7 @@ module.exports = app => {
     // 重新登录
     async relogin() {
       const { uid, token } = this.ctx.request.body;
-      const userInfo = await this.ctx.service.login.checkUser(uid, token);
+      const userInfo = await this.ctx.service.user.checkUser(uid, token);
       if (userInfo === null) {
         this.ctx.body = {
           status: 0,
@@ -96,7 +104,7 @@ module.exports = app => {
         return;
       }
       const newToken = charUtil.getMd5Char(6);
-      this.ctx.service.login.updateToken(uid, newToken);
+      this.ctx.service.userLogin.updateToken(uid, newToken);
       this.ctx.body = {
         status: 1,
         uid: userInfo.user_id,
