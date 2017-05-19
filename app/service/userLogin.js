@@ -3,8 +3,8 @@ module.exports = app => {
   class UserLoginService extends app.Service {
 
     // 注册
-    async insert(mobile, nickName, pwd, salt) {
-      const result = await this.app.mysql.insert('data_user', { user_name: mobile, user_nickname: nickName, user_pwd: pwd, user_salt: salt, user_reg_time: this.app.mysql.literals.now });
+    async insert(mobile, pwd, salt) {
+      const result = await this.app.mysql.insert('data_user', { user_name: mobile, user_pwd: pwd, user_salt: salt, user_reg_time: this.app.mysql.literals.now });
       return result.affectedRows === 1;
     }
 

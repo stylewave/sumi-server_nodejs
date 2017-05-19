@@ -2,7 +2,7 @@ const mock = require('egg-mock');
 const request = require('supertest');
 const { expect } = require('chai');
 
-describe('test/controller/login.test.js', () => {
+describe('test/controller/news.test.js', () => {
   let app;
   before(() => {
     // 创建当前应用的 app 实例
@@ -11,33 +11,32 @@ describe('test/controller/login.test.js', () => {
     return app.ready();
   });
 
-  it('get api/login/login', done => {
+  it.only('get /api/news/list', done => {
     request(app.callback())
-      .post('/api/login/login')
+      .post('/api/news/list')
       .send({
-        mobile: '18680318246',
-        pwd: '123456',
+        page: 1,
+        size: 10,
       })
       .end((err, res) => {
         const info = JSON.parse(res.text);
-        console.log('/api/login/register>>>>', res.text);
-        expect(info.status).to.equal(0);
+        console.log(res.text);
+        expect(info.status).to.equal(1);
         done();
       });
   });
 
-  it('get api/login/register', done => {
+
+  it.only('get /api/news/detail', done => {
     request(app.callback())
-      .post('/api/login/register')
+      .post('/api/news/detail')
       .send({
-        mobile: '18680318246',
-        pwd: '123456',
-        code: '123456',
+        newsId: 52,
       })
       .end((err, res) => {
         const info = JSON.parse(res.text);
-        console.log('/api/login/register>>>>', res.text);
-        expect(info.status).to.equal(0);
+        console.log(res.text);
+        expect(info.status).to.equal(1);
         done();
       });
   });

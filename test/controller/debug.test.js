@@ -2,7 +2,7 @@ const mock = require('egg-mock');
 const request = require('supertest');
 const { expect } = require('chai');
 
-describe('test/controller/home.test.js', () => {
+describe('test/controller/debug.test.js', () => {
   let app;
   before(() => {
     // 创建当前应用的 app 实例
@@ -11,9 +11,12 @@ describe('test/controller/home.test.js', () => {
     return app.ready();
   });
 
-  it('get /', () => {
-    request(app.callback()).get('/?foo=bar&quee=quxx').end((err, res) => {
-      expect(res.text).to.equal('test hello');
+  it('get /debug', done => {
+    request(app.callback()).get('/debug/18680318246').end((err, res) => {
+      const info = JSON.parse(res.text);
+      console.log('/debug>>>>', res.text);
+      expect(info.status).to.equal(1);
+      done();
     });
   });
 });

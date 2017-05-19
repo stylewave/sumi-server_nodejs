@@ -1,7 +1,6 @@
 const regExp = require('./utils/regExpUtil.js');
 const charUtil = require('./utils/charUtil.js');
 
-
 module.exports = app => {
   class VeCodeService extends app.Service {
 

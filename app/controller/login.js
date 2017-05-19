@@ -1,3 +1,4 @@
+const _ = require('lodash');
 const regExp = require('./utils/regExpUtil.js');
 const charUtil = require('./utils/charUtil.js');
 
@@ -5,7 +6,7 @@ module.exports = app => {
   class LoginController extends app.Controller {
     // 注册逻辑
     async register() {
-      const { mobile, nickName, pwd, code } = this.ctx.request.body;
+      const { mobile, pwd, code } = this.ctx.request.body;
       if (regExp.checkMobile(mobile) === false) {
         this.ctx.body = {
           status: 0,
@@ -25,8 +26,8 @@ module.exports = app => {
       this.ctx.service.veCode.update(mobile, code, 2);
       const salt = charUtil.getRandomChar(4);
       const md5Pwd = charUtil.md5PWD(pwd, salt);
-      const result = await this.ctx.service.userLogin.insert(mobile, nickName, md5Pwd, salt);
-      if (result) {
+      const result = await this.ctx.service.userLogin.insert(mobile, md5Pwd, salt);
+      if (_.isEmpty(result)) {
         this.ctx.body = { status: 1 };
       } else {
         this.ctx.body = {
@@ -67,7 +68,7 @@ module.exports = app => {
     async login() {
       const { mobile, pwd } = this.ctx.request.body;
       const salt = await this.ctx.service.user.findByUid(mobile);
-      if (salt === null) {
+      if (_.isEmpty(salt)) {
         this.ctx.body = {
           status: 0,
           tips: '用户名密码错误',
@@ -76,7 +77,7 @@ module.exports = app => {
       }
       const md5Pwd = charUtil.md5PWD(pwd, salt);
       const userInfo = await this.ctx.service.userLogin.login(mobile, md5Pwd);
-      if (userInfo === null) {
+      if (_.isEmpty(userInfo)) {
         this.ctx.body = {
           status: 0,
           tips: '用户名密码错误',
@@ -96,7 +97,7 @@ module.exports = app => {
     async relogin() {
       const { uid, token } = this.ctx.request.body;
       const userInfo = await this.ctx.service.user.checkUser(uid, token);
-      if (userInfo === null) {
+      if (_.isEmpty(userInfo)) {
         this.ctx.body = {
           status: 0,
           tips: '用户信息已过期',

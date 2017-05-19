@@ -11,7 +11,7 @@ describe('test/controller/veCode.test.js', () => {
     return app.ready();
   });
 
-  it.only('get api/sendCode', () => {
+  it('get api/sendCode', () => {
     request(app.callback()).post('/api/sendCode').send({
       mobile: '18680318246',
     }).end((err, res) => {
