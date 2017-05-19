@@ -10,6 +10,7 @@ module.exports = app => {
   app.post('/api/login/login', 'login.login');
   app.post('/api/login/relogin', 'login.relogin');
 
+  app.post('/api/ad/list', 'ad.list');
   app.post('/api/news/list', 'news.list');
   app.post('/api/news/detail', 'news.newsDetail');
 

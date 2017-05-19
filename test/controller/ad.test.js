@@ -2,7 +2,7 @@ const mock = require('egg-mock');
 const request = require('supertest');
 const { expect } = require('chai');
 
-describe('test/controller/news.test.js', () => {
+describe('test/controller/ad.test.js', () => {
   let app;
   before(() => {
     // 创建当前应用的 app 实例
@@ -11,27 +11,11 @@ describe('test/controller/news.test.js', () => {
     return app.ready();
   });
 
-  it('get /api/news/list', done => {
+  it.only('get /api/ad/list', done => {
     request(app.callback())
-      .post('/api/news/list')
+      .post('/api/ad/list')
       .send({
-        page: 1,
-        size: 10,
-      })
-      .end((err, res) => {
-        const info = JSON.parse(res.text);
-        console.log(res.text);
-        expect(info.status).to.equal(1);
-        done();
-      });
-  });
-
-
-  it('get /api/news/detail', done => {
-    request(app.callback())
-      .post('/api/news/detail')
-      .send({
-        newsId: 52,
+        page: 'activity',
       })
       .end((err, res) => {
         const info = JSON.parse(res.text);
