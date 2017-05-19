@@ -1,2 +1,12 @@
 2017-05-19 14:24:59,404 INFO 7708 [egg:logger] init all loggers with options: {"dir":"D:\\cq-server\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"unittest","level":"INFO","consoleLevel":"WARN","outputJSON":false,"buffer":false,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{},"type":"agent"}
 2017-05-19 14:24:59,482 INFO 7708 [egg-watcher:agent] watcher start success
+2017-05-19 14:35:11,758 INFO 6328 [egg:logger] init all loggers with options: {"dir":"D:\\cq-server\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","outputJSON":false,"buffer":true,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{},"type":"agent"}
+2017-05-19 14:35:11,838 INFO 6328 [egg-watcher:agent] watcher start success
+2017-05-19 15:04:13,473 WARN 6328 [agent:development] reload worker because D:\cq-server\sumi-server\app\router.js change
+2017-05-19 15:04:14,471 WARN 6328 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-19 15:04:57,262 WARN 6328 [agent:development] reload worker because D:\cq-server\sumi-server\app\io\controller\chat.js change
+2017-05-19 15:04:58,246 WARN 6328 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-19 15:55:29,937 WARN 6328 [agent:development] reload worker because D:\cq-server\sumi-server\app\router.js change
+2017-05-19 15:55:30,919 WARN 6328 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-19 16:27:39,990 INFO 8888 [egg:logger] init all loggers with options: {"dir":"D:\\cq-server\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","outputJSON":false,"buffer":true,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{},"type":"agent"}
+2017-05-19 16:27:40,071 INFO 8888 [egg-watcher:agent] watcher start success
