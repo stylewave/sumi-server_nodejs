@@ -14,6 +14,10 @@ module.exports = app => {
   app.post('/api/news/list', 'news.list');
   app.post('/api/news/detail', 'news.newsDetail');
 
+  app.post('/api/forum/list', 'forum.listForum');
+  app.post('/api/forum/detail', 'forum.detailForum');
+  app.post('/api/forum/follow', 'forum.followForum');
+
   /** socket请求**/
   app.io.route('join', app.io.controllers.chat);
 
@@ -21,7 +25,5 @@ module.exports = app => {
 
   // app.get('/home','home.index');
 
-  app.post('/api/forum/listForum', 'forum.listForum');
-  app.post('/api/forum/detailForum', 'forum.detailForum');
-   app.post('/api/forum/followForum', 'forum.followForum');
+
 };

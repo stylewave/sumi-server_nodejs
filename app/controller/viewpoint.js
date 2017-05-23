@@ -1,21 +1,21 @@
 const _ = require('lodash');
 
 module.exports = app => {
-  //观点模块
+  // 观点模块
   class ViewpointController extends app.Controller {
 
-    //观点列表
-    async get_expert_comment_list(){
-       this.ctx.body='观点列表';
+    // 观点列表
+    async get_expert_comment_list() {
+      this.ctx.body = '观点列表';
     }
-    //大数据
+    // 大数据
     async bigdata() {
-     this.ctx.body='大数据';
+      this.ctx.body = '大数据';
     }
 
     // 多空舆情
     async get_market_list() {
-     
+
       this.ctx.body = {
         status: 1,
         list: '多空舆情',
@@ -41,10 +41,10 @@ module.exports = app => {
       };
     }
 
-  //股吧评论
-  async forumComment(){
+    // 股吧评论
+    async forumComment() {
 
-  }
+    }
 
 
 

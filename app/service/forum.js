@@ -4,7 +4,6 @@ module.exports = app => {
     // 获取总的记录数
     async getTotal() {
       const sql = 'SELECT COUNT(*) as total FROM data_forum_board WHERE board_status = \'1\'';
-      console.log(sql);
       const result = await app.mysql.query(sql);
       return result[0].total;
     }
@@ -24,42 +23,42 @@ module.exports = app => {
       const result = await app.mysql.query(sql);
       return result.length > 0 ? result[0] : null;
     }
-　　
-   async followForum(state,boardId){
-     
-       const user = await app.mysql.get('data_user', { user_id: this.ctx.session.userInfo.user_id});
-       const board = await app.mysql.get('data_forum_board', { board_id: boardId});
-  
+
+    async followForum(state, boardId) {
+
+      const user = await app.mysql.get('data_user', { user_id: this.ctx.session.userInfo.user_id });
+      const board = await app.mysql.get('data_forum_board', { board_id: boardId });
+
       console.log(board.board_follow);
       console.log(user.user_id);
-        const row1 = {
-                  user_id: user.user_id,
-                 // user_follow_board: user.user_follow_board+boardId,
-                };
-         console.log(row1);    
-         var count = parseInt(board.board_follow)-parseInt(1);   
-         console.log(count);
-  
-             const row2 = {
-                  board_id: board.board_id,
-                  board_follow: board.board_follow,
-                  };
-      
+      const row1 = {
+        user_id: user.user_id,
+        // user_follow_board: user.user_follow_board+boardId,
+      };
+      console.log(row1);
+      const count = parseInt(board.board_follow) - parseInt(1);
+      console.log(count);
 
-    //   return board;
+      const row2 = {
+        board_id: board.board_id,
+        board_follow: board.board_follow,
+      };
+
+
+      //   return board;
       const conn = await app.mysql.beginTransaction(); // 初始化事务
-        try {
-           
-              await conn.update('data_user', row1); 
-              await conn.update('data_forum_board', row2); 
-              await conn.commit(); // 提交事务
-        } catch (err) {
-          // error, rollback
-              await conn.rollback(); // 一定记得捕获异常后回滚事务！！
-              throw err;
-        }
- 
-   } 
+      try {
+
+        await conn.update('data_user', row1);
+        await conn.update('data_forum_board', row2);
+        await conn.commit(); // 提交事务
+      } catch (err) {
+        // error, rollback
+        await conn.rollback(); // 一定记得捕获异常后回滚事务！！
+        throw err;
+      }
+
+    }
 
 
   }

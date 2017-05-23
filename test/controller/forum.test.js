@@ -11,9 +11,9 @@ describe('test/controller/forum.test.js', () => {
     return app.ready();
   });
 
-  it('get /api/forum/listForum', done => {
+  it('get /api/forum/list', done => {
     request(app.callback())
-      .post('/api/forum/listForum')
+      .post('/api/forum/list')
       .send({
         page: 1,
         size: 4,
@@ -27,9 +27,9 @@ describe('test/controller/forum.test.js', () => {
   });
 
 
-  it.only('get /api/forum/detailForum', done => {
+  it('get /api/forum/detail', done => {
     request(app.callback())
-      .post('/api/forum/detailForum')
+      .post('/api/forum/detail')
       .send({
         boardId: 4,
       })
