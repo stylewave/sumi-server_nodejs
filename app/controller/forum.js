@@ -12,7 +12,7 @@ module.exports = app => {
     }
 
     // 股吧列表
-    async listForum() {
+    async list() {
       let { page, size } = this.ctx.request.body;
       page = parseInt(page, 10);
       size = parseInt(size, 10);
@@ -33,7 +33,7 @@ module.exports = app => {
     }
 
     // 股吧详情
-    async detailForum() {
+    async detail() {
       const { boardId } = this.ctx.request.body;
       const result = await this.ctx.service.forum.forumDetail(boardId);
       if (_.isEmpty(result)) {
@@ -50,7 +50,7 @@ module.exports = app => {
     }
 
     // 关注股吧
-    async followForum() {
+    async follow() {
       const { state, boardId } = this.ctx.request.body;
       if (state === '1') {
         this.ctx.body = {
@@ -77,9 +77,8 @@ module.exports = app => {
     }
 
     // 股吧评论
-    // async forumComment() {
-
-    // }
+    async forumComment() {
+    }
 
 
 

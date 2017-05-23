@@ -14,9 +14,9 @@ module.exports = app => {
   app.post('/api/news/list', 'news.list');
   app.post('/api/news/detail', 'news.newsDetail');
 
-  app.post('/api/forum/list', 'forum.listForum');
-  app.post('/api/forum/detail', 'forum.detailForum');
-  app.post('/api/forum/follow', 'forum.followForum');
+  app.post('/api/forum/list', 'forum.list');
+  app.post('/api/forum/detail', 'forum.detail');
+  app.post('/api/forum/follow', 'forum.follow');
 
   /** socket请求**/
   app.io.route('join', app.io.controllers.chat);

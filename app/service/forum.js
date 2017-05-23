@@ -33,7 +33,7 @@ module.exports = app => {
       console.log(user.user_id);
       const row1 = {
         user_id: user.user_id,
-        // user_follow_board: user.user_follow_board+boardId,
+        user_follow_board: user.user_follow_board + boardId,
       };
       console.log(row1);
       const count = parseInt(board.board_follow) - parseInt(1);
@@ -45,19 +45,24 @@ module.exports = app => {
       };
 
 
-      //   return board;
-      const conn = await app.mysql.beginTransaction(); // 初始化事务
-      try {
+      // const conn = await app.mysql.beginTransaction(); // 初始化事务
+      // try {
 
-        await conn.update('data_user', row1);
-        await conn.update('data_forum_board', row2);
-        await conn.commit(); // 提交事务
-      } catch (err) {
-        // error, rollback
-        await conn.rollback(); // 一定记得捕获异常后回滚事务！！
-        throw err;
-      }
+      //   await conn.update('data_user', row1);
+      //   await conn.update('data_forum_board', row2);
+      //   await conn.commit(); // 提交事务
+      // } catch (err) {
+      //   // error, rollback
+      //   await conn.rollback(); // 一定记得捕获异常后回滚事务！！
+      //   throw err;
+      // }
 
+      const result = await app.mysql.beginTransactionScope(function* (conn) {
+        // don't commit or rollback by yourself
+        await app.mysql.update('data_user', row1);
+        await app.mysql.update('data_forum_board', row2);
+        return { success: true };
+      }, this.ctx);
     }
 
 

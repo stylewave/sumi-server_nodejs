@@ -26,11 +26,25 @@ describe('test/controller/forum.test.js', () => {
       });
   });
 
-
   it('get /api/forum/detail', done => {
     request(app.callback())
       .post('/api/forum/detail')
       .send({
+        boardId: 4,
+      })
+      .end((err, res) => {
+        const info = JSON.parse(res.text);
+        console.log(res.text);
+        expect(info.status).to.equal(1);
+        done();
+      });
+  });
+
+  it.only('get /api/forum/follow', done => {
+    request(app.callback())
+      .post('/api/forum/follow')
+      .send({
+        state: 0,
         boardId: 4,
       })
       .end((err, res) => {

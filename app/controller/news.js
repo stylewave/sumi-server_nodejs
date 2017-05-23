@@ -8,7 +8,7 @@ module.exports = app => {
       const MAX_PAGE = 5;
       const result = await this.ctx.service.news.getTotal();
       console.log(result);
-       return result > MAX_PAGE ? MAX_PAGE : result;
+      return result > MAX_PAGE ? MAX_PAGE : result;
     }
 
     // 拉取新闻列表
@@ -17,7 +17,7 @@ module.exports = app => {
       page = parseInt(page, 10);
       size = parseInt(size, 10);
       const maxPage = await this.getMaxPage();
-     
+
       if (page > maxPage) {
         this.ctx.body = {
           status: 0,
@@ -30,7 +30,7 @@ module.exports = app => {
       this.ctx.body = {
         status: 1,
         list: result,
-        maxPage:maxPage,
+        maxPage,
       };
     }
 

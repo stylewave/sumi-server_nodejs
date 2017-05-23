@@ -1,13 +1,1 @@
-2017-05-23 17:06:45,445 INFO 12416 [egg:logger] init all loggers with options: {"dir":"D:\\cq-server\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"unittest","level":"INFO","consoleLevel":"WARN","outputJSON":false,"buffer":false,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{},"type":"application"}
-2017-05-23 17:06:45,464 INFO 12416 [egg-schedule]: register schedule egg-schedule:D:\cq-server\sumi-server\node_modules\egg-logrotator\app\schedule\clean_log.js
-2017-05-23 17:06:45,464 INFO 12416 [egg-schedule]: register schedule egg-schedule:D:\cq-server\sumi-server\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
-2017-05-23 17:06:45,477 INFO 12416 [egg-mysql] connecting root@192.168.16.254:3306/cq
-2017-05-23 17:06:45,695 INFO 12416 [egg-static] starting static serve /public/ -> D:\cq-server\sumi-server\app\public
-2017-05-23 17:06:45,698 INFO 12416 [egg-security] use methodnoallow middleware
-2017-05-23 17:06:45,698 INFO 12416 [egg-security] use noopen middleware
-2017-05-23 17:06:45,699 INFO 12416 [egg-security] use nosniff middleware
-2017-05-23 17:06:45,699 INFO 12416 [egg-security] use xssProtection middleware
-2017-05-23 17:06:45,700 INFO 12416 [egg-security] use xframe middleware
-2017-05-23 17:06:45,700 INFO 12416 [egg-security] compose 5 middlewares into one security middleware
-2017-05-23 17:06:45,759 INFO 12416 [egg-watcher:app] watcher start success
-2017-05-23 17:06:45,769 INFO 12416 [egg-mysql] instance[0] status OK, rds currentTime: Tue May 23 2017 17:08:00 GMT+0800 (中国标准时间)
+2017-05-23 17:44:06,230 INFO 9732 [egg:logger] init all loggers with options: {"dir":"D:\\cq-server\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"unittest","level":"INFO","consoleLevel":"WARN","outputJSON":false,"buffer":false,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{},"type":"application"}
