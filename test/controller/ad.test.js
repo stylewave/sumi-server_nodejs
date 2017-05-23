@@ -11,7 +11,7 @@ describe('test/controller/ad.test.js', () => {
     return app.ready();
   });
 
-  it.only('get /api/ad/list', done => {
+  it('get /api/ad/list', done => {
     request(app.callback())
       .post('/api/ad/list')
       .send({

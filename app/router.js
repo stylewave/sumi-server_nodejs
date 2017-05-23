@@ -16,4 +16,12 @@ module.exports = app => {
 
   /** socket请求**/
   app.io.route('join', app.io.controllers.chat);
+
+
+
+  // app.get('/home','home.index');
+
+  app.post('/api/forum/listForum', 'forum.listForum');
+  app.post('/api/forum/detailForum', 'forum.detailForum');
+   app.post('/api/forum/followForum', 'forum.followForum');
 };

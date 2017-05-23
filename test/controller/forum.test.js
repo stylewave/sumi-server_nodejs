@@ -2,7 +2,7 @@ const mock = require('egg-mock');
 const request = require('supertest');
 const { expect } = require('chai');
 
-describe('test/controller/news.test.js', () => {
+describe('test/controller/forum.test.js', () => {
   let app;
   before(() => {
     // 创建当前应用的 app 实例
@@ -11,12 +11,12 @@ describe('test/controller/news.test.js', () => {
     return app.ready();
   });
 
-  it('get /api/news/list', done => {
+  it('get /api/forum/listForum', done => {
     request(app.callback())
-      .post('/api/news/list')
+      .post('/api/forum/listForum')
       .send({
-        page: 2,
-        size: 10,
+        page: 1,
+        size: 4,
       })
       .end((err, res) => {
         const info = JSON.parse(res.text);
@@ -27,11 +27,11 @@ describe('test/controller/news.test.js', () => {
   });
 
 
-  it('get /api/news/detail', done => {
+  it.only('get /api/forum/detailForum', done => {
     request(app.callback())
-      .post('/api/news/detail')
+      .post('/api/forum/detailForum')
       .send({
-        newsId: 52,
+        boardId: 4,
       })
       .end((err, res) => {
         const info = JSON.parse(res.text);
