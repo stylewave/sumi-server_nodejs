@@ -26,46 +26,24 @@ module.exports = app => {
 
     async followForum(state, boardId) {
 
-      const user = await app.mysql.get('data_user', { user_id: this.ctx.session.userInfo.user_id });
+      const user = await app.mysql.get('data_user', { user_id: 51 });
       const board = await app.mysql.get('data_forum_board', { board_id: boardId });
 
-      console.log(board.board_follow);
-      console.log(user.user_id);
-      const row1 = {
-        user_id: user.user_id,
-        user_follow_board: user.user_follow_board + boardId,
-      };
-      console.log(row1);
-      const count = parseInt(board.board_follow) - parseInt(1);
-      console.log(count);
+      const userSql = 'UPDATE data_user SET user_follow_board = ' + boardId + ' WHERE user_id = ' + user.user_id;
+      console.log(userSql);
 
-      const row2 = {
-        board_id: board.board_id,
-        board_follow: board.board_follow,
-      };
-
-
-      // const conn = await app.mysql.beginTransaction(); // 初始化事务
-      // try {
-
-      //   await conn.update('data_user', row1);
-      //   await conn.update('data_forum_board', row2);
-      //   await conn.commit(); // 提交事务
-      // } catch (err) {
-      //   // error, rollback
-      //   await conn.rollback(); // 一定记得捕获异常后回滚事务！！
-      //   throw err;
-      // }
-
-      const result = await app.mysql.beginTransactionScope(function* (conn) {
-        // don't commit or rollback by yourself
-        await app.mysql.update('data_user', row1);
-        await app.mysql.update('data_forum_board', row2);
-        return { success: true };
-      }, this.ctx);
+      const forumSql = 'UPDATE data_forum_board SET board_follow = ' + board.board_follow + ' WHERE board_id = ' + boardId;
+      console.log(forumSql);
+      const conn = await app.mysql.beginTransaction(); // 初始化事务
+      try {
+        await conn.query(userSql);
+        await conn.query(forumSql);
+        await conn.commit(); // 提交事务
+      } catch (err) {
+        await conn.rollback(); // 一定记得捕获异常后回滚事务！！
+        throw err;
+      }
     }
-
-
   }
   return ForumService;
 };
