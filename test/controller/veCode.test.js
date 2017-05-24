@@ -11,10 +11,11 @@ describe('test/controller/veCode.test.js', () => {
     return app.ready();
   });
 
-  it('get api/sendCode', () => {
+  it.only('get api/sendCode', () => {
     request(app.callback()).post('/api/sendCode').send({
-      mobile: '18680318246',
+      mobile: '13928491884',
     }).end((err, res) => {
+     // console.log(res.text);
       const info = JSON.parse(res.text);
       expect(info.status).to.equal(1);
     });

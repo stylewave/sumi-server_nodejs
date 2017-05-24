@@ -112,6 +112,20 @@ module.exports = app => {
         token: newToken,
       };
     }
+
+    async crypt() {
+      const value_1 = charUtil.encrypt('中亠"{13245}acb_)+', app.config.crypKeys);
+      const value_2 = charUtil.decrypt(value_1, app.config.crypKeys);
+      this.ctx.body = {
+        value1: value_1,
+        value2: value_2,
+      };
+     // const result = await this.ctx.service.forum.getTotal();
+      console.log(value_1);
+      console.log(value_2);
+     // return value;
+    }
+
   }
   return LoginController;
 };
