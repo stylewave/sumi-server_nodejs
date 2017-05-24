@@ -15,7 +15,7 @@ describe('test/controller/news.test.js', () => {
     request(app.callback())
       .post('/api/news/list')
       .send({
-        page: 1,
+        page: 2,
         size: 10,
       })
       .end((err, res) => {

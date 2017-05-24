@@ -1,0 +1,54 @@
+2017-05-23 19:03:27,484 ERROR 12752 [-/127.0.0.1/-/80ms POST /api/forum/follow] nodejs.ER_BAD_FIELD_ERRORError: ER_BAD_FIELD_ERROR: Unknown column 'board_follow1' in 'field list'
+    at Query.Sequence._packetToError (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (D:\cq-server\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:176:18)
+    at Socket.Readable.push (_stream_readable.js:134:10)
+    at TCP.onread (net.js:554:20)
+    --------------------
+    at Protocol._enqueue (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:141:48)
+    at PoolConnection.query (D:\cq-server\sumi-server\node_modules\mysql\lib\Connection.js:208:25)
+    at D:\cq-server\sumi-server\node_modules\pify\index.js:29:7
+    at PoolConnection.<anonymous> (D:\cq-server\sumi-server\node_modules\pify\index.js:12:10)
+    at PoolConnection.ret [as query] (D:\cq-server\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSConnection.proto._query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\connection.js:38:20)
+    at RDSTransaction.proto._query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\transaction.js:45:26)
+    at proto._query.next (<anonymous>)
+    at onFulfilled (D:\cq-server\sumi-server\node_modules\co\index.js:65:19)
+    at D:\cq-server\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (D:\cq-server\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as _query] (D:\cq-server\sumi-server\node_modules\co\index.js:30:15)
+    at RDSTransaction.proto.query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (D:\cq-server\sumi-server\node_modules\co\index.js:65:19)
+    at D:\cq-server\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (D:\cq-server\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as query] (D:\cq-server\sumi-server\node_modules\co\index.js:30:15)
+    at ForumService.followForum (D:\cq-server\sumi-server\app\service\forum.js:40:20)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+    sql: UPDATE data_forum_board SET board_follow1 = 10 WHERE board_id = 4
+code: 'ER_BAD_FIELD_ERROR'
+errno: 1054
+sqlState: '42S22'
+index: 0
+name: 'ER_BAD_FIELD_ERRORError'
+pid: 12752
+hostname: PW5EMWJM7ZBMK3A
+
+2017-05-23 19:03:27,509 ERROR 12752 nodejs.SyntaxError: Unexpected token < in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at Test.request.post.send.end (D:\cq-server\sumi-server/test\controller\forum.test.js:51:27)
+    at Test.assert (node_modules\supertest\lib\test.js:179:6)
+    at Server.assert (node_modules\supertest\lib\test.js:131:12)
+    at emitCloseNT (net.js:1546:8)
+    at _combinedTickCallback (internal/process/next_tick.js:77:11)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+uncaught: true
+pid: 12752
+hostname: PW5EMWJM7ZBMK3A
+

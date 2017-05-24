@@ -41,6 +41,7 @@ module.exports = {
     return this.md5(this.md5(pwd) + salt);
   },
 
+
   algorithm: { ecb: 'des-ecb', cbc: 'des-cbc' },
   // DES 加密
   encrypt(value, key, iv = 0) {
@@ -62,6 +63,5 @@ module.exports = {
     txt += decipher.final('utf8');
     return txt;
   },
-
 
 };
