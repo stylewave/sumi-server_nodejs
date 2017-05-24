@@ -1,14 +1,9 @@
 const _ = require('lodash');
-<<<<<<< HEAD
 
 module.exports = app => {
-  // 新闻资讯模块
-=======
 // const charUtil = require('./utils/charUtil.js');
 
-module.exports = app => {
   // 股吧模块
->>>>>>> 47a617870074d6cb260ef5bc99ab466ce893d41e
   class ForumController extends app.Controller {
     // 获取最大页码
     async getMaxPage() {
@@ -17,21 +12,12 @@ module.exports = app => {
       return result > MAX_PAGE ? MAX_PAGE : result;
     }
 
-<<<<<<< HEAD
-    /*
-    // 拉取新闻列表
-=======
     // 股吧列表
->>>>>>> 47a617870074d6cb260ef5bc99ab466ce893d41e
     async list() {
       let { page, size } = this.ctx.request.body;
       page = parseInt(page, 10);
       size = parseInt(size, 10);
-<<<<<<< HEAD
-      const maxPage = this.getMaxPage();
-=======
       const maxPage = await this.getMaxPage();
->>>>>>> 47a617870074d6cb260ef5bc99ab466ce893d41e
       if (page > maxPage) {
         this.ctx.body = {
           status: 0,
@@ -40,17 +26,12 @@ module.exports = app => {
         return;
       }
       const start = (page - 1) * size;
-<<<<<<< HEAD
-      const result = await this.ctx.service.news.list(start, size);
-=======
       const result = await this.ctx.service.forum.list(start, size);
->>>>>>> 47a617870074d6cb260ef5bc99ab466ce893d41e
       this.ctx.body = {
         status: 1,
         list: result,
       };
-<<<<<<< HEAD
-    }*/
+    }
 
     // 详情
     async boardDetail() {
@@ -63,7 +44,10 @@ module.exports = app => {
         };
         return;
       }
-=======
+      this.ctx.body = {
+        status: 1,
+        detail: result,
+      };
     }
 
     // 股吧详情
@@ -94,33 +78,12 @@ module.exports = app => {
         return;
       }
       const result = await this.ctx.service.forum.followForum(state, boardId);
->>>>>>> 47a617870074d6cb260ef5bc99ab466ce893d41e
       this.ctx.body = {
         status: 1,
         detail: result,
       };
-<<<<<<< HEAD
-    }
-=======
 
     }
-
-    // 发新贴
-    async addForum() {
-
-      this.ctx.body = {
-        status: 1,
-        list: '发新贴',
-      };
-    }
-
-    // 股吧评论
-    async forumComment() {
-    }
-
-
-
->>>>>>> 47a617870074d6cb260ef5bc99ab466ce893d41e
   }
   return ForumController;
 };
