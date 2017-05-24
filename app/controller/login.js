@@ -77,7 +77,7 @@ module.exports = app => {
       }
       const md5Pwd = charUtil.md5PWD(pwd, salt);
       const userInfo = await this.ctx.service.userLogin.login(mobile, md5Pwd);
-        this.ctx.session.userInfo = userInfo;
+      this.ctx.session.userInfo = userInfo;
       if (_.isEmpty(userInfo)) {
         this.ctx.body = {
           status: 0,
@@ -86,9 +86,9 @@ module.exports = app => {
         return;
       }
       const token = charUtil.getMd5Char(6);
-    
+
       this.ctx.service.userLogin.updateToken(userInfo.user_id, token);
-      
+
       this.ctx.body = {
         status: 1,
         uid: userInfo.user_id,
