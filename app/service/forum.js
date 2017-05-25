@@ -37,9 +37,13 @@ module.exports = app => {
       const conn = await app.mysql.beginTransaction(); // 初始化事务
       try {
         await conn.query(userSql);
+        console.log('userSql end');
         await conn.query(forumSql);
+        console.log('forumSql end');
         await conn.commit(); // 提交事务
+        console.log('commit end');
       } catch (err) {
+        console.log('rollback end');
         await conn.rollback(); // 一定记得捕获异常后回滚事务！！
         throw err;
       }
