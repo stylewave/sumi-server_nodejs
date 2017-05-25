@@ -1,2 +1,2 @@
-2017-05-24 17:55:23,160 INFO 8856 [egg:logger] init all loggers with options: {"dir":"E:\\wamp\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"unittest","level":"INFO","consoleLevel":"WARN","outputJSON":false,"buffer":false,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{},"type":"agent"}
-2017-05-24 17:55:23,211 INFO 8856 [egg-watcher:agent] watcher start success
+2017-05-25 11:04:04,427 INFO 15624 [egg:logger] init all loggers with options: {"dir":"E:\\nodejs\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"unittest","level":"INFO","consoleLevel":"WARN","outputJSON":false,"buffer":false,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{},"type":"agent"}
+2017-05-25 11:04:04,495 INFO 15624 [egg-watcher:agent] watcher start success

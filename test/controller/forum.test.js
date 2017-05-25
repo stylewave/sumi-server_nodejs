@@ -11,7 +11,7 @@ describe('test/controller/forum.test.js', () => {
     return app.ready();
   });
 
-  it.only('get /api/forum/boardDetail', done => {
+  it('get /api/forum/boardDetail', done => {
     request(app.callback())
       .post('/api/forum/boardDetail')
       .send({
@@ -26,7 +26,6 @@ describe('test/controller/forum.test.js', () => {
       });
   });
 
-  /*
   it('get /api/forum/detail', done => {
     request(app.callback())
       .post('/api/forum/detail')
@@ -40,13 +39,27 @@ describe('test/controller/forum.test.js', () => {
         done();
       });
   });
-
-  it.only('get /api/forum/follow', done => {
+  it('get /api/forum/list', done => {
     request(app.callback())
-      .post('/api/forum/follow')
+      .post('/api/forum/list')
       .send({
-        state: 0,
-        boardId: 4,
+        page: 3,
+        size: 2,
+      })
+      .end((err, res) => {
+        const info = JSON.parse(res.text);
+        console.log(res.text);
+        expect(info.status).to.equal(1);
+        done();
+      });
+  });
+
+
+  it.only('get /api/forum/commentdata', done => {
+    request(app.callback())
+      .post('/api/forum/commentdata')
+      .send({
+        subId: 3,
 
       })
       .end((err, res) => {
@@ -55,5 +68,5 @@ describe('test/controller/forum.test.js', () => {
         expect(info.status).to.equal(1);
         done();
       });
-  });*/
+  });
 });
