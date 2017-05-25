@@ -11,21 +11,22 @@ describe('test/controller/forum.test.js', () => {
     return app.ready();
   });
 
-  it('get /api/forum/list', done => {
+  it.only('get /api/forum/boardDetail', done => {
     request(app.callback())
-      .post('/api/forum/list')
+      .post('/api/forum/boardDetail')
       .send({
-        page: 1,
-        size: 4,
+        id: 1,
       })
       .end((err, res) => {
         const info = JSON.parse(res.text);
-        console.log(res.text);
+        console.log('xxxxx');
+        console.log(info);
         expect(info.status).to.equal(1);
         done();
       });
   });
 
+  /*
   it('get /api/forum/detail', done => {
     request(app.callback())
       .post('/api/forum/detail')
@@ -46,6 +47,7 @@ describe('test/controller/forum.test.js', () => {
       .send({
         state: 0,
         boardId: 4,
+
       })
       .end((err, res) => {
         const info = JSON.parse(res.text);
@@ -53,5 +55,5 @@ describe('test/controller/forum.test.js', () => {
         expect(info.status).to.equal(1);
         done();
       });
-  });
+  });*/
 });

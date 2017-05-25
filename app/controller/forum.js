@@ -1,7 +1,8 @@
 const _ = require('lodash');
-// const charUtil = require('./utils/charUtil.js');
 
 module.exports = app => {
+// const charUtil = require('./utils/charUtil.js');
+
   // 股吧模块
   class ForumController extends app.Controller {
     // 获取最大页码
@@ -29,6 +30,23 @@ module.exports = app => {
       this.ctx.body = {
         status: 1,
         list: result,
+      };
+    }
+
+    // 详情
+    async boardDetail() {
+      const { id } = this.ctx.request.body;
+      const result = await this.ctx.service.forum.boardDetail(id);
+      if (_.isEmpty(result)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '内容不存在或已被删除',
+        };
+        return;
+      }
+      this.ctx.body = {
+        status: 1,
+        detail: result,
       };
     }
 
@@ -66,22 +84,6 @@ module.exports = app => {
       };
 
     }
-
-    // 发新贴
-    async addForum() {
-
-      this.ctx.body = {
-        status: 1,
-        list: '发新贴',
-      };
-    }
-
-    // 股吧评论
-    async forumComment() {
-    }
-
-
-
   }
   return ForumController;
 };

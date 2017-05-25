@@ -1,5 +1,6 @@
 module.exports = {
   custom: 'test hello',
+  crypKeys: '12345678',
   mysql: {
     client: {
       // host

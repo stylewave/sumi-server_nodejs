@@ -41,56 +41,27 @@ module.exports = {
     return this.md5(this.md5(pwd) + salt);
   },
 
-  renew_point() {
-    $.ajax({
-        cache: true,
-        url: "http://hq.sinajs.cn/list=s_sh000001,s_sz399006,s_sz399001,int_dji",
-        type: "GET",
-        dataType: "script",
-        success: function() {
-            var point1 = hq_str_s_sh000001.split(","); //上证指数
-           var point2 = hq_str_s_sz399006.split(","); //创业指数
-           var point3 = hq_str_s_sz399001.split(","); //深证指数
-           var point4 = hq_str_int_dji.split(","); //道琼斯
-            console.log(point1);
-             console.log(point2);
-              console.log(point3);
 
-
-            // $("#point1-1").text(parseFloat(point1[1]).toFixed(2));
-            // $("#point1-2").text(parseFloat(point1[2]).toFixed(2));
-            // $("#point1-3").text(parseFloat(point1[3]).toFixed(2)+"%");
-
-            // $("#point2-1").text(parseFloat(point2[1]).toFixed(2));
-            // $("#point2-2").text(parseFloat(point2[2]).toFixed(2));
-            // $("#point2-3").text(parseFloat(point2[3]).toFixed(2)+"%");
-
-            // $("#point3-1").text(parseFloat(point3[1]).toFixed(2));
-            // $("#point3-2").text(parseFloat(point3[2]).toFixed(2));
-            // $("#point3-3").text(parseFloat(point3[3]).toFixed(2)+"%");
-
-           
-
-            // if($("#point1-2").text()<0){
-            //     $(".mark-a").css('background-color','#5fc970');
-            // }else{
-            //      $(".mark-a").css('background-color','#ff5959');
-            // }
-
-            // if($("#point2-2").text()<0){
-            //     $(".mark-b").css('background-color','#5fc970');
-            // }else{
-            //      $(".mark-b").css('background-color','#ff5959');
-            // }
-
-            // if($("#point3-2").text()<0){
-            //    $(".mark-c").css('background-color','#5fc970');
-            // }else{
-            //      $(".mark-c").css('background-color','#ff5959');
-            // }
-        }
-    });
-    setTimeout(function() { renew_point() }, 10000); //30秒刷新
-   },
+  algorithm: { ecb: 'des-ecb', cbc: 'des-cbc' },
+  // DES 加密
+  encrypt(value, key, iv = 0) {
+    const key2 = new Buffer(key);
+    const iv2 = new Buffer(iv ? iv : 0);
+    const cipher = crypto.createCipheriv(this.algorithm.ecb, key2, iv2);
+    cipher.setAutoPadding(true);
+    let ciph = cipher.update(value, 'utf8', 'base64');
+    ciph += cipher.final('base64');
+    return ciph;
+  },
+  // DES 解密
+  decrypt(value, key, iv = 0) {
+    const key2 = new Buffer(key);
+    const iv2 = new Buffer(iv ? iv : 0);
+    const decipher = crypto.createDecipheriv(this.algorithm.ecb, key2, iv2);
+    decipher.setAutoPadding(true);
+    let txt = decipher.update(value, 'base64', 'utf8');
+    txt += decipher.final('utf8');
+    return txt;
+  },
 
 };

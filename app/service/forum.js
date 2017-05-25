@@ -1,6 +1,14 @@
 module.exports = app => {
   class ForumService extends app.Service {
 
+    // 股吧板块详情
+    async boardDetail(id) {
+      const field = '*';
+      const sql = 'SELECT ' + field + " FROM data_forum_board WHERE board_id = '" + id + "' ";
+      const result = await app.mysql.query(sql);
+      return result.length > 0 ? result[0] : null;
+    }
+
     // 获取总的记录数
     async getTotal() {
       const sql = 'SELECT COUNT(*) as total FROM data_forum_board WHERE board_status = \'1\'';
@@ -48,6 +56,7 @@ module.exports = app => {
         throw err;
       }
     }
+
   }
   return ForumService;
 };
