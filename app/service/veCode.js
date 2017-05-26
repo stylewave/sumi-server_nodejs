@@ -8,21 +8,21 @@ module.exports = app => {
 
     // 更新验证码状态
     async update(mobile, code, state) {
-      const sql = 'UPDATE data_sms SET sms_type = ' + state + ' WHERE sms_mobile = ' + mobile + ' AND sms_content=' + code;
+      const sql = 'UPDATE data_sms SET sms_status = ' + state + ' WHERE sms_mobile = ' + mobile + ' AND sms_content=' + code;
       const result = await this.app.mysql.query(sql);
       return result;
     }
 
     // 查询验证码是否有效
     async find(mobile, code) {
-      const sql = 'SELECT COUNT(*) as total FROM data_sms WHERE sms_mobile=' + mobile + ' AND sms_content=' + code + ' AND TIMEDIFF(NOW(),sms_create_time) <= 60 AND sms_type = 0';
+      const sql = 'SELECT COUNT(*) as total FROM data_sms WHERE sms_mobile=' + mobile + ' AND sms_content=' + code + ' AND TIMEDIFF(NOW(),sms_create_time) <= 60 AND sms_status = 0';
       const result = await app.mysql.query(sql);
       return result[0].total > 0;
     }
 
-    // 查询验证码是否有效
+    // 查询验证码是否有效, 时间间断临时改为600s
     async findByMobile(mobile) {
-      const sql = 'SELECT COUNT(*) as total FROM data_sms WHERE sms_mobile=' + mobile + ' AND TIMEDIFF(NOW(),sms_create_time) <= 60 AND sms_type = 0';
+      const sql = 'SELECT COUNT(*) as total FROM data_sms WHERE sms_mobile=' + mobile + ' AND TIMEDIFF(NOW(),sms_create_time) <= 600 AND sms_status = 0';
       const result = await app.mysql.query(sql);
       return result[0].total > 0;
     }

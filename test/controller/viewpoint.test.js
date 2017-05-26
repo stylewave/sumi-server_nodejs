@@ -10,9 +10,6 @@ describe('test/controller/viewpoint.test.js', () => {
     // 等待 app 启动成功，才能执行测试用例
     return app.ready();
   });
-
-
-
   it('get /api/viewpoint/commentDetail', done => {
     request(app.callback())
       .post('/api/viewpoint/commentDetail')

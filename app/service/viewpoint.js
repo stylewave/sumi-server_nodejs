@@ -93,9 +93,6 @@ module.exports = app => {
 
     }
 
-
-
-
     // 获取多空舆情总的记录数
     async getMarketMaxPage() {
       const sql = 'SELECT COUNT(*) as total FROM data_market ';

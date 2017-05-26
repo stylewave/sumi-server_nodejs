@@ -156,8 +156,6 @@ module.exports = app => {
       };
     }
 
-
-
     // 观点详情
     async forumDetail() {
       const { newsId } = this.ctx.request.body;
@@ -179,9 +177,6 @@ module.exports = app => {
     // async forumComment() {
 
     // }
-
-
-
   }
   return ViewpointController;
 };

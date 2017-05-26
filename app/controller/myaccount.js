@@ -1,4 +1,4 @@
-const _ = require('lodash');
+// const _ = require('lodash');
 
 module.exports = app => {
   // 我的账户模块
@@ -29,8 +29,6 @@ module.exports = app => {
       };
 
     }
-
-
 
   }
   return MyaccountController;
