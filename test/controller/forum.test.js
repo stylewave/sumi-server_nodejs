@@ -19,12 +19,12 @@ describe('test/controller/forum.test.js', () => {
       })
       .end((err, res) => {
         const info = JSON.parse(res.text);
-        console.log('xxxxx');
-        console.log(info);
+        // console.log(info);
         expect(info.status).to.equal(1);
         done();
       });
   });
+
 
   /*
   it('get /api/forum/detail', done => {

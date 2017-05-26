@@ -45,9 +45,9 @@ module.exports = {
   algorithm: { ecb: 'des-ecb', cbc: 'des-cbc' },
   // DES 加密
   encrypt(value, key, iv = 0) {
-    const key2 = new Buffer(key);
-    const iv2 = new Buffer(iv ? iv : 0);
-    const cipher = crypto.createCipheriv(this.algorithm.ecb, key2, iv2);
+    key = new Buffer(key);
+    iv = new Buffer(iv ? iv : 0);
+    const cipher = crypto.createCipheriv(this.algorithm.ecb, key, iv);
     cipher.setAutoPadding(true);
     let ciph = cipher.update(value, 'utf8', 'base64');
     ciph += cipher.final('base64');
@@ -55,9 +55,9 @@ module.exports = {
   },
   // DES 解密
   decrypt(value, key, iv = 0) {
-    const key2 = new Buffer(key);
-    const iv2 = new Buffer(iv ? iv : 0);
-    const decipher = crypto.createDecipheriv(this.algorithm.ecb, key2, iv2);
+    key = new Buffer(key);
+    iv = new Buffer(iv ? iv : 0);
+    const decipher = crypto.createDecipheriv(this.algorithm.ecb, key, iv);
     decipher.setAutoPadding(true);
     let txt = decipher.update(value, 'base64', 'utf8');
     txt += decipher.final('utf8');
