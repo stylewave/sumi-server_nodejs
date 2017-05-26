@@ -2,7 +2,7 @@ const mock = require('egg-mock');
 const request = require('supertest');
 const { expect } = require('chai');
 
-describe('test/controller/forum.test.js', () => {
+describe('test/controller/viewpoint.test.js', () => {
   let app;
   before(() => {
     // 创建当前应用的 app 实例
@@ -11,26 +11,14 @@ describe('test/controller/forum.test.js', () => {
     return app.ready();
   });
 
-  it('get /api/forum/boardDetail', done => {
-    request(app.callback())
-      .post('/api/forum/boardDetail')
-      .send({
-        id: 1,
-      })
-      .end((err, res) => {
-        const info = JSON.parse(res.text);
-        console.log('xxxxx');
-        console.log(info);
-        expect(info.status).to.equal(1);
-        done();
-      });
-  });
 
-  it('get /api/forum/detail', done => {
+
+  it('get /api/viewpoint/commentDetail', done => {
     request(app.callback())
-      .post('/api/forum/detail')
+      .post('/api/viewpoint/commentDetail')
       .send({
-        boardId: 4,
+        commentId: 2,
+        userId: 62,
       })
       .end((err, res) => {
         const info = JSON.parse(res.text);
@@ -39,11 +27,11 @@ describe('test/controller/forum.test.js', () => {
         done();
       });
   });
-  it('get /api/forum/list', done => {
+  it('get /api/viewpoint/expertCommentList', done => {
     request(app.callback())
-      .post('/api/forum/list')
+      .post('/api/viewpoint/expertCommentList')
       .send({
-        page: 3,
+        page: 1,
         size: 2,
       })
       .end((err, res) => {
@@ -54,17 +42,11 @@ describe('test/controller/forum.test.js', () => {
       });
   });
 
-
-  it('get /api/forum/follow', done => {
+  it.only('get /api/viewpoint/buyExpertComment', done => {
     request(app.callback())
-      .post('/api/forum/follow')
+      .post('/api/viewpoint/buyExpertComment')
       .send({
-        // page: 1,
-        // size: 1,
-        // boardId: 1,
-        // style: 'hot',
-        boardId: 4,
-        state: 0,
+        commentId: 2,
         userId: 62,
       })
       .end((err, res) => {
@@ -74,4 +56,6 @@ describe('test/controller/forum.test.js', () => {
         done();
       });
   });
+
+
 });

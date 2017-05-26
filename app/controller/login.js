@@ -123,10 +123,10 @@ module.exports = app => {
         value1: value_1,
         value2: value_2,
       };
-     // const result = await this.ctx.service.forum.getTotal();
+      // const result = await this.ctx.service.forum.getTotal();
       console.log(value_1);
       console.log(value_2);
-     // return value;
+      // return value;
     }
 
   }

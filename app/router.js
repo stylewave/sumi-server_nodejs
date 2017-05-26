@@ -19,6 +19,17 @@ module.exports = app => {
   app.post('/api/forum/detail', 'forum.detail');
   app.post('/api/forum/follow', 'forum.follow');
   app.post('/api/forum/commentdata', 'forum.commentdata');
+  app.post('/api/forum/sublist', 'forum.sublist');
+  app.post('/api/forum/forumSubjectDetail', 'forum.forumSubjectDetail');
+  app.post('/api/forum/commentadd', 'forum.commentadd');
+  app.post('/api/forum/addForumSubject', 'forum.addForumSubject');
+
+  app.post('/api/viewpoint/expertCommentList', 'viewpoint.expertCommentList');
+  app.post('/api/viewpoint/commentDetail', 'viewpoint.commentDetail');
+  app.post('/api/viewpoint/marketList', 'viewpoint.marketList');
+  app.post('/api/viewpoint/buyExpertComment', 'viewpoint.buyExpertComment');
+
+  app.post('/api/myaccount/userMoneylog', 'myaccount.userMoneylog');
 
   /** socket请求**/
   app.io.route('join', app.io.controllers.chat);

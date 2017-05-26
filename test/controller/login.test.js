@@ -15,8 +15,8 @@ describe('test/controller/login.test.js', () => {
     request(app.callback())
       .post('/api/login/login')
       .send({
-        mobile: '18680318246',
-        pwd: '123456',
+        mobile: '18814188612',
+        pwd: '111111',
       })
       .end((err, res) => {
         const info = JSON.parse(res.text);

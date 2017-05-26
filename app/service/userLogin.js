@@ -23,7 +23,7 @@ module.exports = app => {
 
     // 更新token
     async updateToken(uid, token) {
-      const sql = 'UPDATE data_user SET user_token = ' + token + ',user_last_login=NOW() WHERE user_id = ' + uid;
+      const sql = 'UPDATE data_user SET user_token ="' + token + '",user_last_login=NOW() WHERE user_id = ' + uid;
       const result = await this.app.mysql.query(sql);
       return result;
     }

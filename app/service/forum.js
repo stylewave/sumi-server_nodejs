@@ -1,3 +1,4 @@
+const Paginate = require('../controller/utils/page.js');
 module.exports = app => {
   class ForumService extends app.Service {
 
@@ -31,12 +32,18 @@ module.exports = app => {
       const result = await app.mysql.query(sql);
       return result.length > 0 ? result[0] : null;
     }
-  // 关注股吧板块
-    async followForum(state, boardId) {
+    // 关注股吧板块
+    async followForum(state, boardId, userId) {
 
-      const user = await app.mysql.get('data_user', { user_id: 62 });
+      const user = await app.mysql.get('data_user', { user_id: userId });
+      console.log(user.user_follow_board);
+
+      if (user.user_follow_board.indexOf(boardId) !== -1) {
+        console.log('已关注');
+        return 0;
+      }
       const board = await app.mysql.get('data_forum_board', { board_id: boardId });
-      const userfollow = user.user_follow_board + boardId;
+      const userfollow = user.user_follow_board + boardId + ',';
       const boardfollowcount = parseInt(board.board_follow) + parseInt(1);
 
       const userSql = 'UPDATE data_user SET user_follow_board = "' + userfollow + '"  WHERE user_id = ' + user.user_id;
@@ -54,20 +61,115 @@ module.exports = app => {
         throw err;
       }
     }
+
+    // 取消关注股吧板块
+    async cancleFollowForum(state, boardId, userId) {
+
+      const user = await app.mysql.get('data_user', { user_id: userId });
+      if (user.user_follow_board.indexOf(boardId) === -1) {
+        console.log('您之前没关注此板块内容');
+        return 0;
+      }
+      const board = await app.mysql.get('data_forum_board', { board_id: boardId });
+
+      const userfollow = user.user_follow_board.replace(boardId + ',', '');
+      const boardfollowcount = parseInt(board.board_follow) - parseInt(1);
+
+      const userSql = 'UPDATE data_user SET user_follow_board = "' + userfollow + '"  WHERE user_id = ' + user.user_id;
+      console.log(userSql);
+      // console.log(boardfollowcount);
+      // console.log(userfollow);
+      const forumSql = 'UPDATE data_forum_board SET board_follow = ' + boardfollowcount + ' WHERE board_id = ' + boardId;
+      console.log(forumSql);
+      const conn = await app.mysql.beginTransaction(); // 初始化事务
+      try {
+        await conn.query(userSql);
+        await conn.query(forumSql);
+        await conn.commit(); // 提交事务
+      } catch (err) {
+        await conn.rollback(); // 一定记得捕获异常后回滚事务！！
+        throw err;
+      }
+    }
+
     // 股吧主题评论
     async commentdata(subId) {
       const field = 'reply_id,reply_board_id,reply_user,reply_user_icon,reply_nickname,reply_content,reply_create_time,reply_status';
       const sql = 'SELECT ' + field + ' FROM data_forum_reply WHERE reply_status = \'1\' AND  reply_suject_id= ' + subId + ' ORDER BY reply_id DESC ';
-      console.log(sql);
       const result = await app.mysql.query(sql);
       return result;
     }
-   // 获取股吧主题总的记录数
+    // 获取股吧主题总的记录数
     async getSubTotal(boardId) {
-      const sql = 'SELECT COUNT(*) as total FROM data_forum_subject WHERE sub_status = \'1\'　AND sub_board_id=' + boardId;
+      const sql = 'SELECT COUNT(*) as total FROM data_forum_subject WHERE sub_status = \'1\' AND sub_board_id=' + boardId;
       const result = await app.mysql.query(sql);
       return result[0].total;
     }
+    async sublist(page, size, boardId, style) {
+
+      const hot = style === 'hot' ? 'and sub_set_hot_info=1' : '';
+      console.log(hot);
+      const sqlcount = 'SELECT COUNT(*) as total FROM data_forum_subject WHERE sub_status = \'1\' ' + hot + ' AND sub_board_id=' + boardId;
+      console.log(sqlcount);
+      const re = await app.mysql.query(sqlcount);
+      const paginate = new Paginate(page, size, re[0].total);
+      const first = paginate.first() > -1 ? paginate.first() : 0;
+      console.log(re[0].total);
+      console.log('first');
+      // const last = paginate.last();
+      // const total = paginate.total;
+      const prev = paginate.prev();
+      const next = paginate.next();
+      const sql = 'SELECT sub_title FROM data_forum_subject WHERE sub_status = \'1\' AND sub_board_id=' + boardId + ' ORDER BY `sub_id` DESC LIMIT ' + first + ',' + size;
+      console.log(sql);
+      const result = await app.mysql.query(sql);
+      return {
+        page,
+        result,
+        prev,
+        next,
+      };
+    }
+    // 股吧主题详情
+    async forumSubjectDetail(subId) {
+      const field = 'sub_id,sub_board_id,sub_title,sub_content,sub_uid,sub_user,sub_nickname,sub_user_icon,sub_hits,sub_hot_type,sub_reply_count,DATE_FORMAT(sub_create_time,"%m-%d %H:%i") AS sub_create_time ';
+      const sql = 'SELECT ' + field + 'FROM data_forum_subject where sub_status="1" and sub_id=' + subId;
+      const result = await app.mysql.query(sql);
+      const randhit = parseInt(Math.random() * 5 + 1, 10);
+      console.log(randhit);
+      const subSql = 'UPDATE data_forum_subject SET sub_hits = sub_hits+' + randhit + '  WHERE sub_id = ' + subId;
+      app.mysql.query(subSql);
+      return result.length > 0 ? result[0] : null;
+    }
+    // 股吧主题评论增加
+    async commentadd(subId, content, userId) {
+      const board = await app.mysql.get('data_forum_subject', { sub_id: subId });
+      const user = await app.mysql.get('data_user', { user_id: userId });
+      const reply_board_id1 = board.sub_board_id;
+      const subSql = 'UPDATE data_forum_subject SET sub_reply_count =sub_reply_count+1 WHERE sub_id = ' + subId;
+      const conn = await app.mysql.beginTransaction(); // 初始化事务
+      try {
+        // await conn.query(userSql);
+        await conn.query(subSql);
+        await conn.insert('data_forum_reply', { reply_board_id: reply_board_id1, reply_suject_id: subId, reply_uid: user.user_id, reply_user: user.user_name, reply_nickname: user.user_nickname, reply_user_icon: user.user_photo, reply_content: content, reply_create_time: this.app.mysql.literals.now });
+        await conn.commit(); // 提交事务
+      } catch (err) {
+        await conn.rollback(); // 一定记得捕获异常后回滚事务！！
+        throw err;
+      }
+    }
+    // 股吧主题增加
+    async addForumSubject(title, content, boardId, userId) {
+      const user = await app.mysql.get('data_user', { user_id: userId });
+      const result = await this.app.mysql.insert('data_forum_subject', { sub_board_id: boardId, sub_title: title, sub_content: content, sub_uid: user.user_id, sub_user: user.user_name, sub_nickname: user.user_nickname, sub_user_icon: user.user_photo, sub_create_time: this.app.mysql.literals.now });
+      return result.affectedRows === 1;
+    }
+    // 判断该股吧板块是否可以增加主题
+    async boardAllowSub(boardId) {
+      const boardallow = await app.mysql.get('data_forum_board', { board_id: boardId });
+      return boardallow.board_allow_subject > 0 ? boardallow.board_allow_subject : 0;
+    }
+
   }
   return ForumService;
 };
