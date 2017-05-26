@@ -22,13 +22,17 @@ module.exports = app => {
         };
         return;
       }
-      // await Promise.all(this.ctx.service.veCode.update(mobile, code, 2), this.ctx.service.user.insert(mobile, nickName, pwd));
-      this.ctx.service.veCode.update(mobile, code, 2);
+
+      this.ctx.service.veCode.update(mobile, code, 1);
       const salt = charUtil.getRandomChar(4);
       const md5Pwd = charUtil.md5PWD(pwd, salt);
-      const result = await this.ctx.service.userLogin.insert(mobile, md5Pwd, salt);
-      if (_.isEmpty(result)) {
-        this.ctx.body = { status: 1 };
+      const userInfo = await this.ctx.service.userLogin.reg(mobile, md5Pwd, salt);
+      if (userInfo) {
+        this.ctx.session.userInfo = userInfo;
+        this.ctx.body = {
+          status: 1,
+          row: userInfo,
+        };
       } else {
         this.ctx.body = {
           status: 0,
@@ -67,17 +71,8 @@ module.exports = app => {
     // 登录
     async login() {
       const { mobile, pwd } = this.ctx.request.body;
-      const salt = await this.ctx.service.user.findByUid(mobile);
-      if (_.isEmpty(salt)) {
-        this.ctx.body = {
-          status: 0,
-          tips: '用户名密码错误',
-        };
-        return;
-      }
-      const md5Pwd = charUtil.md5PWD(pwd, salt);
-      const userInfo = await this.ctx.service.userLogin.login(mobile, md5Pwd);
-      this.ctx.session.userInfo = userInfo;
+      const userInfo = await this.ctx.service.userLogin.login(mobile, pwd);
+
       if (_.isEmpty(userInfo)) {
         this.ctx.body = {
           status: 0,
@@ -85,14 +80,11 @@ module.exports = app => {
         };
         return;
       }
-      const token = charUtil.getMd5Char(6);
-
-      this.ctx.service.userLogin.updateToken(userInfo.user_id, token);
+      this.ctx.session.userInfo = userInfo;
 
       this.ctx.body = {
         status: 1,
-        uid: userInfo.user_id,
-        token,
+        row: userInfo,
       };
     }
 
@@ -123,12 +115,11 @@ module.exports = app => {
         value1: value_1,
         value2: value_2,
       };
-     // const result = await this.ctx.service.forum.getTotal();
+      // const result = await this.ctx.service.forum.getTotal();
       console.log(value_1);
       console.log(value_2);
-     // return value;
+      // return value;
     }
-
   }
   return LoginController;
 };

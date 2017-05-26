@@ -3,7 +3,6 @@ const charUtil = require('./utils/charUtil.js');
 
 module.exports = app => {
   class VeCodeService extends app.Service {
-
     // 发送验证码
     async sendCode() {
       const mobile = this.ctx.request.body.mobile;
@@ -24,11 +23,19 @@ module.exports = app => {
       }
       const code = charUtil.getRandomNum(6);
       // 发送到短信服务器
-      await this.ctx.service.veCode.insert(mobile, code);
-      this.ctx.body = {
-        status: 1,
-        tips: '验证码发送成功',
-      };
+      const rs = await this.ctx.service.veCode.insert(mobile, code);
+      // console.log("sms:", rs);
+      if (rs) {
+        this.ctx.body = {
+          status: 1,
+          tips: '验证码发送成功',
+        };
+      } else {
+        this.ctx.body = {
+          status: 0,
+          tips: '验证码发送失败,请稍后再试',
+        };
+      }
     }
   }
   return VeCodeService;

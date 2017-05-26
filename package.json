@@ -30,7 +30,8 @@
     "extends": "eslint-config-egg",
     "rules": {
       "strict": "off",
-      "newline-per-chained-call": "off"
+      "newline-per-chained-call": "off",
+      "quotes": "off"
     }
   }
 }
