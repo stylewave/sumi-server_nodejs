@@ -91,7 +91,10 @@ module.exports = app => {
     // 重新登录
     async relogin() {
       const { uid, token } = this.ctx.request.body;
-      const userInfo = await this.ctx.service.user.checkUser(uid, token);
+
+      //const userInfo = await this.ctx.service.user.checkUser(uid, token);
+      const userInfo = await this.ctx.service.userLogin.relogin(uid, token);
+
       if (_.isEmpty(userInfo)) {
         this.ctx.body = {
           status: 0,
@@ -99,12 +102,11 @@ module.exports = app => {
         };
         return;
       }
-      const newToken = charUtil.getMd5Char(6);
-      this.ctx.service.userLogin.updateToken(uid, newToken);
+      this.ctx.session.userInfo = userInfo;
+
       this.ctx.body = {
         status: 1,
-        uid: userInfo.user_id,
-        token: newToken,
+        row: userInfo,
       };
     }
 

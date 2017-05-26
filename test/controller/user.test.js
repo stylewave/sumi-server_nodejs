@@ -15,13 +15,13 @@ describe('test/controller/login.test.js', () => {
     request(app.callback())
       .post('/api/login/login')
       .send({
-        mobile: '18814188612',
-        pwd: '111111',
+        mobile: '13928491884',
+        pwd: '123456',
       })
       .end((err, res) => {
         const info = JSON.parse(res.text);
         console.log('/api/login/register>>>>', res.text);
-        expect(info.status).to.equal(0);
+        expect(info.status).to.equal(1);
         done();
       });
   });
@@ -37,7 +37,22 @@ describe('test/controller/login.test.js', () => {
       .end((err, res) => {
         const info = JSON.parse(res.text);
         console.log('/api/login/register>>>>', res.text);
-        expect(info.status).to.equal(0);
+        expect(info.status).to.equal(1);
+        done();
+      });
+  });
+
+  it.only('get api/login/relogin', done => {
+    request(app.callback())
+      .post('/api/login/relogin')
+      .send({
+        uid: '67',
+        token: 'MlaQXTwIELPx6BuJJ7eyamirgNDe0ts1RD6+3uXVwlI=',
+      })
+      .end((err, res) => {
+        const info = JSON.parse(res.text);
+        console.log('/api/login/relogin>>>>', res.text);
+        expect(info.status).to.equal(1);
         done();
       });
   });

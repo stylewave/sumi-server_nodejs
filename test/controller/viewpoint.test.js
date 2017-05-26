@@ -39,7 +39,7 @@ describe('test/controller/viewpoint.test.js', () => {
       });
   });
 
-  it.only('get /api/viewpoint/buyExpertComment', done => {
+  it('get /api/viewpoint/buyExpertComment', done => {
     request(app.callback())
       .post('/api/viewpoint/buyExpertComment')
       .send({
@@ -53,6 +53,4 @@ describe('test/controller/viewpoint.test.js', () => {
         done();
       });
   });
-
-
 });
