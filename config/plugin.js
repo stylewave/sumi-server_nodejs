@@ -11,4 +11,8 @@ module.exports = {
     enable: true,
     package: 'egg-view-xtpl',
   },
+  cors: {
+    enable: true,
+    package: 'egg-cors',
+  },
 };
