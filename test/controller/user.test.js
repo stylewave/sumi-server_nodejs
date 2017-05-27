@@ -2,7 +2,7 @@ const mock = require('egg-mock');
 const request = require('supertest');
 const { expect } = require('chai');
 
-describe('test/controller/viewpoint.test.js', () => {
+describe('test/controller/login.test.js', () => {
   let app;
   before(() => {
     // 创建当前应用的 app 实例
@@ -10,47 +10,48 @@ describe('test/controller/viewpoint.test.js', () => {
     // 等待 app 启动成功，才能执行测试用例
     return app.ready();
   });
-  it('get /api/viewpoint/commentDetail', done => {
+
+  it('get api/login/login', done => {
     request(app.callback())
-      .post('/api/viewpoint/commentDetail')
+      .post('/api/login/login')
       .send({
-        commentId: 2,
-        userId: 62,
+        mobile: '13928491884',
+        pwd: '123456',
       })
       .end((err, res) => {
         const info = JSON.parse(res.text);
-        console.log(res.text);
-        expect(info.status).to.equal(1);
-        done();
-      });
-  });
-  it('get /api/viewpoint/expertCommentList', done => {
-    request(app.callback())
-      .post('/api/viewpoint/expertCommentList')
-      .send({
-        page: 1,
-        size: 2,
-        userId: 62,
-        token: '12ASfxQk68dkY7MmZ4dpEeuoxZxBO6tkxEoJVyTscDs=',
-      })
-      .end((err, res) => {
-        const info = JSON.parse(res.text);
-        console.log(res.text);
+        console.log('/api/login/register>>>>', res.text);
         expect(info.status).to.equal(1);
         done();
       });
   });
 
-  it('get /api/viewpoint/buyExpertComment', done => {
+  it('get api/login/register', done => {
     request(app.callback())
-      .post('/api/viewpoint/buyExpertComment')
+      .post('/api/login/register')
       .send({
-        commentId: 2,
-        userId: 62,
+        mobile: '18680318246',
+        pwd: '123456',
+        code: '123456',
       })
       .end((err, res) => {
         const info = JSON.parse(res.text);
-        console.log(res.text);
+        console.log('/api/login/register>>>>', res.text);
+        expect(info.status).to.equal(1);
+        done();
+      });
+  });
+
+  it.only('get api/login/relogin', done => {
+    request(app.callback())
+      .post('/api/login/relogin')
+      .send({
+        uid: '67',
+        token: 'MlaQXTwIELPx6BuJJ7eyamirgNDe0ts1RD6+3uXVwlI=',
+      })
+      .end((err, res) => {
+        const info = JSON.parse(res.text);
+        console.log('/api/login/relogin>>>>', res.text);
         expect(info.status).to.equal(1);
         done();
       });

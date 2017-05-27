@@ -5,3 +5,9 @@ module.exports = {
     csrf: { enable: false },
   },
 };
+
+exports.security = {
+  domainWhiteList: [
+    'http://192.168.16.19:3001',
+  ],
+};
