@@ -1,2 +1,90 @@
 2017-05-27 10:01:53,935 INFO 11544 [egg:logger] init all loggers with options: {"dir":"E:\\nodejs\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"unittest","level":"INFO","consoleLevel":"WARN","outputJSON":false,"buffer":false,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{},"type":"agent"}
 2017-05-27 10:01:53,999 INFO 11544 [egg-watcher:agent] watcher start success
+2017-05-27 10:15:23,276 INFO 14596 [egg:logger] init all loggers with options: {"dir":"E:\\nodejs\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","outputJSON":false,"buffer":true,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"type":"agent"}
+2017-05-27 10:15:23,380 INFO 14596 [egg-watcher:agent] watcher start success
+2017-05-27 10:16:42,551 INFO 15236 [egg:logger] init all loggers with options: {"dir":"E:\\nodejs\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","outputJSON":false,"buffer":true,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"type":"agent"}
+2017-05-27 10:16:42,625 INFO 15236 [egg-watcher:agent] watcher start success
+2017-05-27 10:21:34,215 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\controller\forum.js change
+2017-05-27 10:21:35,754 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 10:29:46,778 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\router.js change
+2017-05-27 10:29:47,990 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 10:30:56,045 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\router.js change
+2017-05-27 10:30:57,036 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 10:41:35,354 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\controller\forum.js change
+2017-05-27 10:41:37,645 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 10:41:43,087 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\controller\forum.js change
+2017-05-27 10:41:44,983 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 10:43:12,725 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\forum.js change
+2017-05-27 10:43:13,839 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 10:43:27,560 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\controller\forum.js change
+2017-05-27 10:43:28,522 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 10:43:45,565 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\router.js change
+2017-05-27 10:43:46,983 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 10:44:01,116 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\router.js change
+2017-05-27 10:44:02,109 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 10:45:49,987 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\controller\forum.js change
+2017-05-27 10:45:51,150 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 10:45:56,813 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\controller\forum.js change
+2017-05-27 10:45:57,932 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 10:47:10,780 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\controller\forum.js change
+2017-05-27 10:47:11,871 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 10:47:16,673 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\controller\forum.js change
+2017-05-27 10:47:17,647 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 10:47:21,542 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\controller\forum.js change
+2017-05-27 10:47:22,556 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 10:47:45,120 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\forum.js change
+2017-05-27 10:47:45,529 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\forum.js change
+2017-05-27 10:47:46,119 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 10:47:47,048 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 11:01:07,202 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\forum.js change
+2017-05-27 11:01:08,731 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 11:01:37,761 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\forum.js change
+2017-05-27 11:01:39,022 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 11:01:46,414 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\forum.js change
+2017-05-27 11:01:47,490 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 11:07:10,726 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\forum.js change
+2017-05-27 11:07:12,210 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 11:07:18,096 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\forum.js change
+2017-05-27 11:07:19,185 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 11:07:26,245 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\forum.js change
+2017-05-27 11:07:27,225 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 11:07:28,964 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\forum.js change
+2017-05-27 11:07:29,920 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 11:07:37,611 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\forum.js change
+2017-05-27 11:07:38,567 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 11:07:57,940 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\forum.js change
+2017-05-27 11:07:58,940 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 11:08:06,819 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\forum.js change
+2017-05-27 11:08:07,921 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 11:08:31,947 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\forum.js change
+2017-05-27 11:08:33,019 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 11:08:34,881 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\forum.js change
+2017-05-27 11:08:35,862 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 11:08:55,110 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\forum.js change
+2017-05-27 11:08:56,080 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 11:11:18,111 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\forum.js change
+2017-05-27 11:11:19,480 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 11:11:22,727 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\forum.js change
+2017-05-27 11:11:23,950 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 11:11:29,754 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\forum.js change
+2017-05-27 11:11:30,767 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 11:11:48,146 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\forum.js change
+2017-05-27 11:11:49,155 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 11:13:04,932 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\forum.js change
+2017-05-27 11:13:06,080 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 11:13:25,110 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\forum.js change
+2017-05-27 11:13:26,800 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 11:18:19,685 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\forum.js change
+2017-05-27 11:18:21,142 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 11:18:40,328 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\forum.js change
+2017-05-27 11:18:41,386 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 11:20:27,476 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\forum.js change
+2017-05-27 11:20:29,111 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 11:23:16,617 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\forum.js change
+2017-05-27 11:23:18,134 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 11:23:39,649 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\forum.js change
+2017-05-27 11:23:40,692 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 11:24:10,721 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\forum.js change
+2017-05-27 11:24:11,791 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 11:25:29,910 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\router.js change
+2017-05-27 11:25:31,532 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer

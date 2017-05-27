@@ -6,18 +6,18 @@ module.exports = app => {
   // 股吧模块
   class ForumController extends app.Controller {
     // 获取板块最大页码
-    async getMaxPage(ishot) {
+    async getMaxPage() {
       const MAX_PAGE = 5;
-      const result = await this.ctx.service.forum.getTotal(ishot);
+      const result = await this.ctx.service.forum.getTotal();
       return result > MAX_PAGE ? MAX_PAGE : result;
     }
 
     // 股吧板块列表
     async get_stock_board_list() {
-      let { cpage, size, ishot } = this.ctx.request.body;
+      let { cpage, size } = this.ctx.request.body;
       cpage = parseInt(cpage, 10);
       size = parseInt(size, 10);
-      const maxPage = await this.getMaxPage(ishot);
+      const maxPage = await this.getMaxPage();
       if (cpage > maxPage) {
         this.ctx.body = {
           status: 0,
@@ -26,7 +26,18 @@ module.exports = app => {
         return;
       }
       const start = (cpage - 1) * size;
-      const result = await this.ctx.service.forum.list(start, size, ishot);
+      const result = await this.ctx.service.forum.list(start, size);
+      this.ctx.body = {
+        status: 1,
+        list: result,
+      };
+    }
+
+    // 股吧热门四条
+    async get_stock_board_hot() {
+      let { size } = this.ctx.request.body;
+      size = parseInt(size, 10);
+      const result = await this.ctx.service.forum.hot(size);
       this.ctx.body = {
         status: 1,
         list: result,

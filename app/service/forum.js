@@ -10,17 +10,36 @@ module.exports = app => {
     }
 
     // 获取股吧板块总的记录数
-    async getTotal(ishot) {
-      const sql = 'SELECT COUNT(*) as total FROM data_forum_board WHERE board_ishot=' + ishot + ' AND board_status = \'1\'';
+    async getTotal() {
+      const sql = 'SELECT COUNT(*) as total FROM data_forum_board WHERE board_status = \'1\'';
       const result = await app.mysql.query(sql);
       return result[0].total;
     }
 
     // 股吧板块列表
-    async list(start, size, ishot) {
+    async list(start, size) {
       const field = 'board_id,board_title,board_description,board_stock_code,board_follow,board_hits,board_ishot';
-      const sql = 'SELECT ' + field + ' FROM data_forum_board WHERE board_status = \'1\'  AND board_ishot=' + ishot + ' ORDER BY board_id DESC LIMIT ' + start + ',' + size;
+      const sql = 'SELECT ' + field + ' FROM data_forum_board WHERE board_status = \'1\'   ORDER BY board_id DESC LIMIT ' + start + ',' + size;
       const result = await app.mysql.query(sql);
+      return result;
+    }
+    // 热门股吧
+    async hot(size) {
+      const field = 'board_id,board_title,board_description,board_stock_code,board_follow,board_hits,board_ishot';
+      const sql = 'SELECT ' + field + ' FROM data_forum_board WHERE board_status = \'1\'  AND board_ishot=1 ORDER BY board_id DESC LIMIT ' + size;
+      const result = await app.mysql.query(sql);
+      // console.log(result);
+      // var myStringArray = ["Hello","World"];
+
+      console.log('board_hits');
+      for (const i in result) {
+        console.log(result[i].board_title);
+      }
+
+      // if (key === 'sh') {
+      //   break;
+      // }
+      // }
       return result;
     }
 
