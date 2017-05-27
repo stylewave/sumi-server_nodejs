@@ -130,18 +130,31 @@ module.exports = app => {
       return result[0].total;
     }
     // 主题列表
-    async sublist(start, size, boardId, type) {
+    async sublist(start, size, boardId) {
+      // const sql = 'SELECT sub_title FROM data_forum_subject WHERE sub_status = \'1\'  AND sub_board_id=' + boardId + ' ORDER BY `sub_id` DESC LIMIT ' + start + ',' + size;
+      const field = '*';
+      const sql = `SELECT ${field} FROM data_forum_subject WHERE sub_status = 1  AND sub_board_id='${boardId}' ORDER BY sub_id DESC LIMIT ${start},${size}`;
+      console.log(sql);
+
+      const result = await app.mysql.query(sql);
+      return result;
+    }
+    // 获取热门主题总的记录数
+    async getSubHotTotal(boardId, type) {
+      // console.log(type);
+      const sql = `SELECT COUNT(*) as total FROM data_forum_subject WHERE sub_status = 1 AND sub_hot_type= ${type} AND sub_board_id='${boardId}'`;
+      const result = await app.mysql.query(sql);
+      return result[0].total;
+    }
+    // 主题热门列表
+    async subHotlist(start, size, boardId, type) {
       let hot;
       if (type === 1) {
         hot = "and sub_hot_type='1'";
       } else {
         hot = '';
       }
-      // const hot = style === 'hot' ? 'and sub_set_hot_info=1' : '';
-      console.log(hot);
-
-      // const sql = 'SELECT sub_title FROM data_forum_subject WHERE sub_status = \'1\'  AND sub_board_id=' + boardId + ' ORDER BY `sub_id` DESC LIMIT ' + start + ',' + size;
-      const field = 'sub_title';
+      const field = '*';
       const sql = `SELECT ${field} FROM data_forum_subject WHERE sub_status = 1 ${hot} AND sub_board_id='${boardId}' ORDER BY sub_id DESC LIMIT ${start},${size}`;
       console.log(sql);
 

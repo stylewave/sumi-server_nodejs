@@ -132,13 +132,13 @@ module.exports = app => {
     }
     // 股吧主题列表
     async sublist() {
-      let { page, size, boardId, type } = this.ctx.request.body;
+      let { page, size, boardId } = this.ctx.request.body;
 
       page = parseInt(page, 10);
       size = parseInt(size, 10);
-      const maxPage = await this.getMaxPage(type, boardId);
+      const maxPage = await this.getMaxPage(boardId);
 
-      if (page > maxPage) {
+      if (page > maxPage / size) {
         this.ctx.body = {
           status: 0,
           tips: '没有更多数据了',
@@ -156,12 +156,49 @@ module.exports = app => {
         return;
       }
       const start = (page - 1) * size;
-      const result = await this.ctx.service.forum.sublist(start, size, boardId, type);
+      const result = await this.ctx.service.forum.sublist(start, size, boardId);
       this.ctx.body = {
         status: 1,
         list: result,
       };
     }
+
+    // 获取热门主题最大页码
+    async getSubHotTotal(type) {
+      const result = await this.ctx.service.forum.getSubHotTotal(type);
+      return result;
+    }
+    // 主题热门列表
+    async subHotlist() {
+      let { page, size, boardId, type } = this.ctx.request.body;
+
+      page = parseInt(page, 10);
+      size = parseInt(size, 10);
+      const maxPage = await this.getSubHotTotal(boardId, type);
+
+      if (page > maxPage / size) {
+        this.ctx.body = {
+          status: 0,
+          tips: '没有更多数据了',
+        };
+        return;
+      }
+      const boardstate = await this.ctx.service.forum.forumDetail(boardId);
+      if (_.isEmpty(boardstate)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '该股吧模块不存在',
+        };
+        return;
+      }
+      const start = (page - 1) * size;
+      const result = await this.ctx.service.forum.subHotlist(start, size, boardId, type);
+      this.ctx.body = {
+        status: 1,
+        list: result,
+      };
+    }
+
     // 股吧主题详情
     async forumSubjectDetail() {
       const { subId } = this.ctx.request.body;

@@ -86,3 +86,34 @@ name: 'unhandledExceptionError'
 pid: 15236
 hostname: xiaomo
 
+2017-05-27 14:37:15,101 ERROR 32836 [-/192.168.16.22/-/30ms POST /api/forum/subHotlist] nodejs.ER_BAD_FIELD_ERRORError: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT COUNT(*) as total FROM data_forum_subject WHERE sub_status = 1 AND sub_hot_type=undefined AND sub_board_id='1'
+code: 'ER_BAD_FIELD_ERROR'
+errno: 1054
+sqlState: '42S22'
+index: 0
+name: 'ER_BAD_FIELD_ERRORError'
+pid: 32836
+hostname: xiaomo
+

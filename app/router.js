@@ -24,6 +24,7 @@ module.exports = app => {
   app.post('/api/forum/forumSubjectDetail', 'forum.forumSubjectDetail');
   app.post('/api/forum/commentadd', 'forum.commentadd');
   app.post('/api/forum/addForumSubject', 'forum.addForumSubject');
+  app.post('/api/forum/subHotlist', 'forum.subHotlist');
 
   app.post('/api/viewpoint/expertCommentList', 'viewpoint.expertCommentList');
   app.post('/api/viewpoint/commentDetail', 'viewpoint.commentDetail');
