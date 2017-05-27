@@ -28,18 +28,13 @@ module.exports = app => {
       const field = 'board_id,board_title,board_description,board_stock_code,board_follow,board_hits,board_ishot';
       const sql = 'SELECT ' + field + ' FROM data_forum_board WHERE board_status = \'1\'  AND board_ishot=1 ORDER BY board_id DESC LIMIT ' + size;
       const result = await app.mysql.query(sql);
-      // console.log(result);
-      // var myStringArray = ["Hello","World"];
-
       console.log('board_hits');
       for (const i in result) {
+        result[i].board_title1 = '1231344444';
         console.log(result[i].board_title);
       }
+      console.log(result);
 
-      // if (key === 'sh') {
-      //   break;
-      // }
-      // }
       return result;
     }
 
