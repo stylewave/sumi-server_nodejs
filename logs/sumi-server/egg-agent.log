@@ -288,3 +288,7 @@
 2017-05-27 18:05:39,734 WARN 46472 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
 2017-05-27 18:07:08,491 WARN 46472 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\myaccount.js change
 2017-05-27 18:07:09,704 WARN 46472 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 18:09:19,938 WARN 46472 [agent:development] reload worker because E:\nodejs\sumi-server\app\controller\forum.js change
+2017-05-27 18:09:21,093 WARN 46472 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 18:09:27,502 WARN 46472 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\myaccount.js change
+2017-05-27 18:09:28,624 WARN 46472 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
