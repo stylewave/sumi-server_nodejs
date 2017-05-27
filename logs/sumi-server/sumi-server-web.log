@@ -193,3 +193,48 @@ message: 'Method Not Allowed'
 pid: 9388
 hostname: PW5EMWJM7ZBMK3A
 
+2017-05-27 15:05:28,776 WARN 9188 [-/192.168.16.19/-/17ms OPTIONS /api/forum/list] nodejs.MethodNotAllowedError: Method Not Allowed
+    at Object.throw (E:\wamp\sumi-server\node_modules\koa\lib\context.js:89:23)
+    at Object.notAllow (E:\wamp\sumi-server\node_modules\egg-security\lib\middlewares\methodnoallow.js:18:17)
+    at notAllow.next (<anonymous>)
+    at Object.<anonymous> (E:\wamp\sumi-server\node_modules\koa-compose\index.js:28:19)
+    at Generator.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at E:\wamp\sumi-server\node_modules\co\index.js:54:5
+    at Object.co (E:\wamp\sumi-server\node_modules\co\index.js:50:10)
+    at Object.toPromise (E:\wamp\sumi-server\node_modules\co\index.js:118:63)
+    at next (E:\wamp\sumi-server\node_modules\co\index.js:99:29)
+message: 'Method Not Allowed'
+pid: 9188
+hostname: O1SCA91JEKG1MM4
+
+2017-05-27 15:06:40,281 WARN 8580 [-/192.168.16.19/-/16ms OPTIONS /api/forum/list] nodejs.MethodNotAllowedError: Method Not Allowed
+    at Object.throw (E:\wamp\sumi-server\node_modules\koa\lib\context.js:89:23)
+    at Object.notAllow (E:\wamp\sumi-server\node_modules\egg-security\lib\middlewares\methodnoallow.js:18:17)
+    at notAllow.next (<anonymous>)
+    at Object.<anonymous> (E:\wamp\sumi-server\node_modules\koa-compose\index.js:28:19)
+    at Generator.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at E:\wamp\sumi-server\node_modules\co\index.js:54:5
+    at Object.co (E:\wamp\sumi-server\node_modules\co\index.js:50:10)
+    at Object.toPromise (E:\wamp\sumi-server\node_modules\co\index.js:118:63)
+    at next (E:\wamp\sumi-server\node_modules\co\index.js:99:29)
+message: 'Method Not Allowed'
+pid: 8580
+hostname: O1SCA91JEKG1MM4
+
+2017-05-27 16:54:36,425 WARN 8788 [-/192.168.16.19/-/10ms OPTIONS /api/forum/list] nodejs.MethodNotAllowedError: Method Not Allowed
+    at Object.throw (E:\wamp\sumi-server\node_modules\koa\lib\context.js:89:23)
+    at Object.notAllow (E:\wamp\sumi-server\node_modules\egg-security\lib\middlewares\methodnoallow.js:18:17)
+    at notAllow.next (<anonymous>)
+    at Object.<anonymous> (E:\wamp\sumi-server\node_modules\koa-compose\index.js:28:19)
+    at Generator.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at E:\wamp\sumi-server\node_modules\co\index.js:54:5
+    at Object.co (E:\wamp\sumi-server\node_modules\co\index.js:50:10)
+    at Object.toPromise (E:\wamp\sumi-server\node_modules\co\index.js:118:63)
+    at next (E:\wamp\sumi-server\node_modules\co\index.js:99:29)
+message: 'Method Not Allowed'
+pid: 8788
+hostname: O1SCA91JEKG1MM4
+
