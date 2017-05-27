@@ -210,3 +210,67 @@ name: 'ER_BAD_FIELD_ERRORError'
 pid: 37200
 hostname: xiaomo
 
+2017-05-27 17:59:10,902 ERROR 10524 [-/192.168.16.19/-/9ms POST /api/forum/subHotlist] nodejs.ER_BAD_FIELD_ERRORError: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (D:\cq-server\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:176:18)
+    at Socket.Readable.push (_stream_readable.js:134:10)
+    --------------------
+    at Pool.query (D:\cq-server\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\cq-server\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (D:\cq-server\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (D:\cq-server\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (D:\cq-server\sumi-server\node_modules\co\index.js:65:19)
+    at D:\cq-server\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (D:\cq-server\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT COUNT(*) as total FROM data_forum_subject WHERE sub_status = 1 AND sub_hot_type= undefined AND sub_board_id='undefined'
+code: 'ER_BAD_FIELD_ERROR'
+errno: 1054
+sqlState: '42S22'
+index: 0
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+name: 'ER_BAD_FIELD_ERRORError'
+pid: 10524
+hostname: PW5EMWJM7ZBMK3A
+
+2017-05-27 18:02:36,617 ERROR 9844 [-/192.168.16.19/-/19ms POST /api/forum/subHotlist] nodejs.ER_BAD_FIELD_ERRORError: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (D:\cq-server\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:176:18)
+    at Socket.Readable.push (_stream_readable.js:134:10)
+    --------------------
+    at Pool.query (D:\cq-server\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\cq-server\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (D:\cq-server\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (D:\cq-server\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (D:\cq-server\sumi-server\node_modules\co\index.js:65:19)
+    at D:\cq-server\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (D:\cq-server\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT COUNT(*) as total FROM data_forum_subject WHERE sub_status = 1 AND sub_hot_type= undefined AND sub_board_id='undefined'
+code: 'ER_BAD_FIELD_ERROR'
+errno: 1054
+sqlState: '42S22'
+index: 0
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+name: 'ER_BAD_FIELD_ERRORError'
+pid: 9844
+hostname: PW5EMWJM7ZBMK3A
+

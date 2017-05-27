@@ -244,3 +244,19 @@
 2017-05-27 14:52:42,282 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
 2017-05-27 14:55:12,045 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\config\plugin.js change
 2017-05-27 14:55:12,599 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 17:58:28,756 INFO 12084 [egg:logger] init all loggers with options: {"dir":"D:\\cq-server\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","outputJSON":false,"buffer":true,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"type":"agent"}
+2017-05-27 17:58:28,906 INFO 12084 [egg-watcher:agent] watcher start success
+2017-05-27 17:58:42,127 WARN 12084 [agent:development] reload worker because D:\cq-server\sumi-server\config\config.default.js change
+2017-05-27 17:58:43,715 WARN 12084 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 17:59:39,723 WARN 12084 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\forum.js change
+2017-05-27 17:59:41,267 WARN 12084 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 18:00:15,964 WARN 12084 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\forum.js change
+2017-05-27 18:00:17,071 WARN 12084 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 18:00:22,618 WARN 12084 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\forum.js change
+2017-05-27 18:00:23,717 WARN 12084 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 18:01:52,082 WARN 12084 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\forum.js change
+2017-05-27 18:01:53,196 WARN 12084 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 18:02:16,630 WARN 12084 [agent:development] reload worker because D:\cq-server\sumi-server\app\router.js change
+2017-05-27 18:02:18,150 WARN 12084 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 18:02:19,820 WARN 12084 [agent:development] reload worker because D:\cq-server\sumi-server\app\router.js change
+2017-05-27 18:02:20,864 WARN 12084 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
