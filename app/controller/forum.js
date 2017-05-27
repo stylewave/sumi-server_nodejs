@@ -114,7 +114,7 @@ module.exports = app => {
     async detail() {
       const { boardId } = this.ctx.request.body;
 
-      if (this.ctx.service.utils.common.chechtype(userId) === false) {
+      if (this.ctx.service.utils.common.chechtype(boardId) === false) {
         this.ctx.body = {
           status: 0,
           tips: 'ID格式不正确',

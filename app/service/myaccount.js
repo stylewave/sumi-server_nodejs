@@ -48,10 +48,6 @@ module.exports = app => {
       };
 
     }
-
-
-
-
   }
   return ViewpointService;
 };
