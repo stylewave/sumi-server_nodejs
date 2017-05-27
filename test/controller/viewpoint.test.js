@@ -24,7 +24,7 @@ describe('test/controller/viewpoint.test.js', () => {
         done();
       });
   });
-  it('get /api/viewpoint/expertCommentList', done => {
+  it.only('get /api/viewpoint/expertCommentList', done => {
     request(app.callback())
       .post('/api/viewpoint/expertCommentList')
       .send({

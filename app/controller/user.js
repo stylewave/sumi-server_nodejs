@@ -1,4 +1,4 @@
 module.exports = app => {
-  class UserController extends app.Controller {}
+  class UserController extends app.Controller { }
   return UserController;
 };
