@@ -2,6 +2,7 @@ module.exports = app => {
   /** http get请求**/
   // app.get('/', 'home.index');
   app.get('/debug/:mobile', 'debug.get');
+  app.get('/api/alipay', 'alipay.pay');
 
   /** http post请求**/
   app.post('/api/sendCode', 'veCode.sendCode');
@@ -35,6 +36,4 @@ module.exports = app => {
   app.io.route('join', app.io.controllers.chat);
 
   // app.get('/home','home.index');
-
-
 };

@@ -1,0 +1,140 @@
+2017-05-27 12:14:11,857 ERROR 4200 nodejs.unhandledRejectionError: Can't set headers after they are sent.
+    at ServerResponse.setHeader (_http_outgoing.js:371:11)
+    at Object.set (E:\wamp\sumi-server\node_modules\koa\lib\response.js:436:16)
+    at Object.set length [as length] (E:\wamp\sumi-server\node_modules\egg\app\extend\response.js:11:10)
+    at Object.set body [as body] (E:\wamp\sumi-server\node_modules\koa\lib\response.js:152:19)
+    at Object.body (E:\wamp\sumi-server\node_modules\delegates\index.js:92:31)
+    at renderView.then.body (E:\wamp\sumi-server\node_modules\egg-view\app\extend\context.js:15:17)
+name: 'unhandledRejectionError'
+pid: 4200
+hostname: O1SCA91JEKG1MM4
+
+2017-05-27 12:14:59,779 ERROR 9556 nodejs.unhandledRejectionError: Can't set headers after they are sent.
+    at ServerResponse.setHeader (_http_outgoing.js:371:11)
+    at Object.set (E:\wamp\sumi-server\node_modules\koa\lib\response.js:436:16)
+    at Object.set length [as length] (E:\wamp\sumi-server\node_modules\egg\app\extend\response.js:11:10)
+    at Object.set body [as body] (E:\wamp\sumi-server\node_modules\koa\lib\response.js:152:19)
+    at Object.body (E:\wamp\sumi-server\node_modules\delegates\index.js:92:31)
+    at renderView.then.body (E:\wamp\sumi-server\node_modules\egg-view\app\extend\context.js:15:17)
+name: 'unhandledRejectionError'
+pid: 9556
+hostname: O1SCA91JEKG1MM4
+
+2017-05-27 12:20:48,949 ERROR 9932 nodejs.unhandledRejectionError: Can't set headers after they are sent.
+    at ServerResponse.setHeader (_http_outgoing.js:371:11)
+    at Object.set (E:\wamp\sumi-server\node_modules\koa\lib\response.js:436:16)
+    at Object.set length [as length] (E:\wamp\sumi-server\node_modules\egg\app\extend\response.js:11:10)
+    at Object.set body [as body] (E:\wamp\sumi-server\node_modules\koa\lib\response.js:152:19)
+    at Object.body (E:\wamp\sumi-server\node_modules\delegates\index.js:92:31)
+    at renderView.then.body (E:\wamp\sumi-server\node_modules\egg-view\app\extend\context.js:15:17)
+name: 'unhandledRejectionError'
+pid: 9932
+hostname: O1SCA91JEKG1MM4
+
+2017-05-27 12:20:49,928 ERROR 9932 nodejs.unhandledRejectionError: Can't set headers after they are sent.
+    at ServerResponse.setHeader (_http_outgoing.js:371:11)
+    at Object.set (E:\wamp\sumi-server\node_modules\koa\lib\response.js:436:16)
+    at Object.set length [as length] (E:\wamp\sumi-server\node_modules\egg\app\extend\response.js:11:10)
+    at Object.set body [as body] (E:\wamp\sumi-server\node_modules\koa\lib\response.js:152:19)
+    at Object.body (E:\wamp\sumi-server\node_modules\delegates\index.js:92:31)
+    at renderView.then.body (E:\wamp\sumi-server\node_modules\egg-view\app\extend\context.js:15:17)
+name: 'unhandledRejectionError'
+pid: 9932
+hostname: O1SCA91JEKG1MM4
+
+2017-05-27 12:28:00,710 ERROR 8288 [-/127.0.0.1/-/9ms GET /api/alipay] nodejs.TypeError: Cannot set property 'ejs' of undefined
+    at AlipayController.pay (E:\wamp\sumi-server\app\controller\alipay.js:4:23)
+    at Object.classControllerMiddleware (E:\wamp\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\wamp\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at E:\wamp\sumi-server\node_modules\co\index.js:54:5
+    at Object.co (E:\wamp\sumi-server\node_modules\co\index.js:50:10)
+    at Object.toPromise (E:\wamp\sumi-server\node_modules\co\index.js:118:63)
+    at next (E:\wamp\sumi-server\node_modules\co\index.js:99:29)
+
+pid: 8288
+hostname: O1SCA91JEKG1MM4
+
+2017-05-27 12:29:34,470 ERROR 10124 [-/127.0.0.1/-/7ms GET /api/alipay] nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at AlipayController.pay (E:\wamp\sumi-server\app\controller\alipay.js:4:14)
+    at Object.classControllerMiddleware (E:\wamp\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\wamp\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at E:\wamp\sumi-server\node_modules\co\index.js:54:5
+    at Object.co (E:\wamp\sumi-server\node_modules\co\index.js:50:10)
+    at Object.toPromise (E:\wamp\sumi-server\node_modules\co\index.js:118:63)
+    at next (E:\wamp\sumi-server\node_modules\co\index.js:99:29)
+
+pid: 10124
+hostname: O1SCA91JEKG1MM4
+
+2017-05-27 12:29:52,702 ERROR 8288 nodejs.AssertionError: Can't find viewEngine for E:\wamp\sumi-server\app\view\hello.ejs
+    at ContextView.[contextView#render] (E:\wamp\sumi-server\node_modules\egg-view\lib\context_view.js:71:5)
+    at options.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+name: 'AssertionError'
+actual: ''
+expected: true
+operator: '=='
+message: 'Can\'t find viewEngine for E:\\wamp\\sumi-server\\app\\view\\hello.ejs'
+generatedMessage: false
+pid: 8288
+hostname: O1SCA91JEKG1MM4
+
+2017-05-27 12:35:46,033 ERROR 10232 [-/127.0.0.1/-/7ms GET /api/alipay] nodejs.TypeError: Cannot read property 'render' of undefined
+    at AlipayController.pay (E:\wamp\sumi-server\app\controller\alipay.js:4:19)
+    at Object.classControllerMiddleware (E:\wamp\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\wamp\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at E:\wamp\sumi-server\node_modules\co\index.js:54:5
+    at Object.co (E:\wamp\sumi-server\node_modules\co\index.js:50:10)
+    at Object.toPromise (E:\wamp\sumi-server\node_modules\co\index.js:118:63)
+    at next (E:\wamp\sumi-server\node_modules\co\index.js:99:29)
+
+pid: 10232
+hostname: O1SCA91JEKG1MM4
+
+2017-05-27 12:37:12,634 ERROR 10088 nodejs.AssertionError: Can't find viewEngine for E:\wamp\sumi-server\app\view\hello.ejs
+    at ContextView.[contextView#render] (E:\wamp\sumi-server\node_modules\egg-view\lib\context_view.js:71:5)
+    at options.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+name: 'AssertionError'
+actual: ''
+expected: true
+operator: '=='
+message: 'Can\'t find viewEngine for E:\\wamp\\sumi-server\\app\\view\\hello.ejs'
+generatedMessage: false
+pid: 10088
+hostname: O1SCA91JEKG1MM4
+
+2017-05-27 12:38:22,670 ERROR 9752 nodejs.unhandledRejectionError: Can't set headers after they are sent.
+    at ServerResponse.setHeader (_http_outgoing.js:371:11)
+    at Object.set (E:\wamp\sumi-server\node_modules\koa\lib\response.js:436:16)
+    at Object.set length [as length] (E:\wamp\sumi-server\node_modules\egg\app\extend\response.js:11:10)
+    at Object.set body [as body] (E:\wamp\sumi-server\node_modules\koa\lib\response.js:152:19)
+    at Object.body (E:\wamp\sumi-server\node_modules\delegates\index.js:92:31)
+    at renderView.then.body (E:\wamp\sumi-server\node_modules\egg-view\app\extend\context.js:15:17)
+name: 'unhandledRejectionError'
+pid: 9752
+hostname: O1SCA91JEKG1MM4
+
+2017-05-27 12:48:02,370 ERROR 9960 [-/127.0.0.1/-/14ms GET /api/alipay] nodejs.AssertionError: Can't find ViewEngine "html"
+    at ContextView.[contextView#getViewEngine] (E:\wamp\sumi-server\node_modules\egg-view\lib\context_view.js:93:5)
+    at ContextView.[contextView#render] (E:\wamp\sumi-server\node_modules\egg-view\lib\context_view.js:74:39)
+    at options.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+name: 'AssertionError'
+actual: undefined
+expected: true
+operator: '=='
+message: 'Can\'t find ViewEngine "html"'
+generatedMessage: false
+pid: 9960
+hostname: O1SCA91JEKG1MM4
+

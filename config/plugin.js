@@ -7,4 +7,8 @@ module.exports = {
     enable: true,
     package: 'egg-socket.io',
   },
+  xtpl: {
+    enable: true,
+    package: 'egg-view-xtpl',
+  },
 };

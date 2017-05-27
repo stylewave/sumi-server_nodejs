@@ -4,4 +4,9 @@ module.exports = {
   security: {
     csrf: { enable: false },
   },
+  view: {
+    mapping: {
+      '.html': 'xtpl',
+    },
+  },
 };

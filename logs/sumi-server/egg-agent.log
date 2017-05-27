@@ -1,2 +1,80 @@
 2017-05-26 18:44:45,619 INFO 9296 [egg:logger] init all loggers with options: {"dir":"E:\\wamp\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"unittest","level":"INFO","consoleLevel":"WARN","outputJSON":false,"buffer":false,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{},"type":"agent"}
 2017-05-26 18:44:45,667 INFO 9296 [egg-watcher:agent] watcher start success
+2017-05-27 12:05:39,096 INFO 8940 [egg:logger] init all loggers with options: {"dir":"E:\\wamp\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","outputJSON":false,"buffer":true,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"type":"agent"}
+2017-05-27 12:05:39,175 INFO 8940 [egg-watcher:agent] watcher start success
+2017-05-27 12:06:38,771 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\alipay.js change
+2017-05-27 12:06:39,714 WARN 8940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:11:34,033 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\alipay.js change
+2017-05-27 12:11:34,819 WARN 8940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:12:04,925 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\alipay.js change
+2017-05-27 12:12:05,686 WARN 8940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:12:20,136 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\alipay.js change
+2017-05-27 12:12:55,775 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\alipay.js change
+2017-05-27 12:13:08,751 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\alipay.js change
+2017-05-27 12:13:20,595 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\alipay.js change
+2017-05-27 12:13:27,747 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\alipay.js change
+2017-05-27 12:13:28,534 WARN 8940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:14:57,864 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\alipay.js change
+2017-05-27 12:14:58,793 WARN 8940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:15:40,000 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\alipay.js change
+2017-05-27 12:15:40,889 WARN 8940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:15:47,518 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\alipay.js change
+2017-05-27 12:15:48,295 WARN 8940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:16:39,124 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\alipay.js change
+2017-05-27 12:16:39,903 WARN 8940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:17:00,281 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\alipay.js change
+2017-05-27 12:17:01,478 WARN 8940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:17:09,531 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\alipay.js change
+2017-05-27 12:17:10,361 WARN 8940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:17:20,160 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\alipay.js change
+2017-05-27 12:17:20,962 WARN 8940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:18:14,901 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\alipay.js change
+2017-05-27 12:18:15,720 WARN 8940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:20:46,414 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\alipay.js change
+2017-05-27 12:20:47,383 WARN 8940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:24:27,235 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\alipay.js change
+2017-05-27 12:24:28,060 WARN 8940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:24:58,671 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\alipay.js change
+2017-05-27 12:24:59,485 WARN 8940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:26:00,760 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\config\plugin.js change
+2017-05-27 12:26:01,518 WARN 8940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:26:21,276 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\config\config.default.js change
+2017-05-27 12:26:22,068 WARN 8940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:27:06,084 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\alipay.js change
+2017-05-27 12:27:06,925 WARN 8940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:27:08,168 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\alipay.js change
+2017-05-27 12:27:08,991 WARN 8940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:27:57,861 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\alipay.js change
+2017-05-27 12:27:58,785 WARN 8940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:28:12,651 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\alipay.js change
+2017-05-27 12:28:13,550 WARN 8940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:28:56,486 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\config\plugin.js change
+2017-05-27 12:28:57,446 WARN 8940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:29:31,984 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\alipay.js change
+2017-05-27 12:29:32,904 WARN 8940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:29:50,652 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\alipay.js change
+2017-05-27 12:29:51,557 WARN 8940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:30:25,616 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\alipay.js change
+2017-05-27 12:30:26,497 WARN 8940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:35:41,454 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\alipay.js change
+2017-05-27 12:35:42,284 WARN 8940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:37:09,725 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\alipay.js change
+2017-05-27 12:37:10,647 WARN 8940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:38:15,105 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\config\config.default.js change
+2017-05-27 12:38:15,993 WARN 8940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:39:30,480 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\alipay.js change
+2017-05-27 12:39:31,390 WARN 8940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:47:29,115 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\alipay.js change
+2017-05-27 12:47:29,945 WARN 8940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:47:53,156 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\config\config.default.js change
+2017-05-27 12:47:53,966 WARN 8940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:48:17,167 WARN 8940 [agent:development] reload worker because E:\wamp\sumi-server\config\config.default.js change
+2017-05-27 12:48:18,077 WARN 8940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 14:27:25,667 INFO 9644 [egg:logger] init all loggers with options: {"dir":"E:\\wamp\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","outputJSON":false,"buffer":true,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"type":"agent"}
+2017-05-27 14:27:25,726 INFO 9644 [egg-watcher:agent] watcher start success
+2017-05-27 14:50:18,143 WARN 9644 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\user.js change
+2017-05-27 14:50:18,981 WARN 9644 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 14:50:22,554 WARN 9644 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\user.js change
+2017-05-27 14:50:23,349 WARN 9644 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 14:50:26,617 WARN 9644 [agent:development] reload worker because E:\wamp\sumi-server\app\controller\user.js change
+2017-05-27 14:50:27,362 WARN 9644 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
