@@ -14,9 +14,10 @@ module.exports = app => {
 
     // 股吧板块列表
     async list() {
-      let { page, size } = this.ctx.request.body;
-      page = parseInt(page, 10);
-      size = parseInt(size, 10);
+      // let { page, size } = this.ctx.request.body;
+      console.log('ctx.request.body>>>', this.ctx.request.body);
+      const page = 1;// parseInt(page, 10);
+      const size = 4;// parseInt(size, 10);
       const maxPage = await this.getMaxPage();
       if (page > maxPage) {
         this.ctx.body = {
@@ -26,6 +27,7 @@ module.exports = app => {
         return;
       }
       const start = (page - 1) * size;
+      console.log('forum list>> start=', start, '  size=', size);
       const result = await this.ctx.service.forum.list(start, size);
       this.ctx.body = {
         status: 1,
