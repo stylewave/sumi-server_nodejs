@@ -141,7 +141,6 @@ module.exports = app => {
     }
     // 获取热门主题总的记录数
     async getSubHotTotal(boardId, type) {
-      // console.log(type);
       const sql = `SELECT COUNT(*) as total FROM data_forum_subject WHERE sub_status = 1 AND sub_hot_type= ${type} AND sub_board_id='${boardId}'`;
       const result = await app.mysql.query(sql);
       return result[0].total;
