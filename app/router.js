@@ -33,7 +33,7 @@ module.exports = app => {
   app.post('/api/viewpoint/buyExpertComment', 'viewpoint.buyExpertComment');
 
   app.post('/api/myaccount/userMoneylog', 'myaccount.userMoneylog');
-
+  app.post('/api/myaccount/userBeanLog', 'myaccount.userBeanLog');
   /** socket请求**/
   app.io.route('join', app.io.controllers.chat);
 

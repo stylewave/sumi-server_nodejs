@@ -12,6 +12,14 @@ module.exports = app => {
     async userMoneylog() {
       const { userId } = this.ctx.request.body;
 
+      if (this.ctx.service.utils.common.chechtype(userId) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户ID格式不正确',
+        };
+        return;
+      }
+
       const result = await this.ctx.service.myaccount.userMoneylog(userId);
       this.ctx.body = {
         status: 1,
@@ -20,9 +28,31 @@ module.exports = app => {
     }
     // 豆币记录
     async userBeanLog() {
-      const { userId } = this.ctx.request.body;
-
-      const result = await this.ctx.service.myaccount.userBeanLog(userId);
+      const { userId, page, size } = this.ctx.request.body;
+      // const rs = this.ctx.service.utils.common.chechtype(page);
+      if (this.ctx.service.utils.common.chechtype(page) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '页码格式不正确',
+        };
+        return;
+      }
+      if (this.ctx.service.utils.common.chechtype(userId) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户ID格式不正确',
+        };
+        return;
+      }
+      if (this.ctx.service.utils.common.chechtype(size) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '页码数量格式不正确',
+        };
+        return;
+      }
+      console.log(this.ctx.service.utils.common.chechtype(userId));
+      const result = await this.ctx.service.myaccount.userBeanLog(userId, page, size);
       this.ctx.body = {
         status: 1,
         list: result,
