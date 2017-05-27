@@ -192,3 +192,178 @@ name: 'unhandledExceptionError'
 pid: 46472
 hostname: xiaomo
 
+2017-05-27 17:49:25,293 ERROR 46472 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 46472
+hostname: xiaomo
+
+2017-05-27 17:51:30,277 ERROR 55940 [-/192.168.16.22/-/5ms POST /api/myaccount/userBeanLog] nodejs.TypeError: this.ctx.service.utils.db.paginate is not a function
+    at ViewpointService.userBeanLog (E:\nodejs\sumi-server\app\service\myaccount.js:32:33)
+    at MyaccountController.userBeanLog (E:\nodejs\sumi-server\app\controller\myaccount.js:55:55)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
+
+pid: 55940
+hostname: xiaomo
+
+2017-05-27 17:51:50,225 ERROR 58304 [-/192.168.16.22/-/25ms POST /api/myaccount/userBeanLog] nodejs.TypeError: this.ctx.service.utils.db.paginate is not a function
+    at ViewpointService.userBeanLog (E:\nodejs\sumi-server\app\service\myaccount.js:32:33)
+    at MyaccountController.userBeanLog (E:\nodejs\sumi-server\app\controller\myaccount.js:55:55)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
+
+pid: 58304
+hostname: xiaomo
+
+2017-05-27 17:52:17,798 ERROR 57304 [-/192.168.16.22/-/26ms POST /api/myaccount/userBeanLog] nodejs.TypeError: this.ctx.service.utils.db.paginate is not a function
+    at ViewpointService.userBeanLog (E:\nodejs\sumi-server\app\service\myaccount.js:32:33)
+    at MyaccountController.userBeanLog (E:\nodejs\sumi-server\app\controller\myaccount.js:55:55)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
+
+pid: 57304
+hostname: xiaomo
+
+2017-05-27 17:53:04,227 ERROR 56004 [-/192.168.16.22/-/23ms POST /api/myaccount/userBeanLog] nodejs.TypeError: this.ctx.service.utils.db.paginate is not a function
+    at ViewpointService.userBeanLog (E:\nodejs\sumi-server\app\service\myaccount.js:32:33)
+    at MyaccountController.userBeanLog (E:\nodejs\sumi-server\app\controller\myaccount.js:55:55)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
+
+pid: 56004
+hostname: xiaomo
+
+2017-05-27 17:53:39,550 ERROR 56572 [-/192.168.16.22/-/22ms POST /api/myaccount/userBeanLog] nodejs.TypeError: this.ctx.service.utils.db.paginate is not a function
+    at ViewpointService.userBeanLog (E:\nodejs\sumi-server\app\service\myaccount.js:32:33)
+    at MyaccountController.userBeanLog (E:\nodejs\sumi-server\app\controller\myaccount.js:55:55)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
+
+pid: 56572
+hostname: xiaomo
+
+2017-05-27 17:57:27,454 ERROR 45060 [-/192.168.16.22/-/22ms POST /api/myaccount/userBeanLog] nodejs.TypeError: this.ctx.service.utils.db.paginate is not a function
+    at ViewpointService.userBeanLog (E:\nodejs\sumi-server\app\service\myaccount.js:32:33)
+    at MyaccountController.userBeanLog (E:\nodejs\sumi-server\app\controller\myaccount.js:55:55)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
+
+pid: 45060
+hostname: xiaomo
+
+2017-05-27 17:57:28,997 ERROR 45060 [-/192.168.16.22/-/3ms POST /api/myaccount/userBeanLog] nodejs.TypeError: this.ctx.service.utils.db.paginate is not a function
+    at ViewpointService.userBeanLog (E:\nodejs\sumi-server\app\service\myaccount.js:32:33)
+    at MyaccountController.userBeanLog (E:\nodejs\sumi-server\app\controller\myaccount.js:55:55)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
+
+pid: 45060
+hostname: xiaomo
+
+2017-05-27 17:58:14,042 ERROR 56816 [-/192.168.16.22/-/21ms POST /api/myaccount/userBeanLog] nodejs.TypeError: this.ctx.service.utils.db.paginate is not a function
+    at ViewpointService.userBeanLog (E:\nodejs\sumi-server\app\service\myaccount.js:32:33)
+    at MyaccountController.userBeanLog (E:\nodejs\sumi-server\app\controller\myaccount.js:55:55)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
+
+pid: 56816
+hostname: xiaomo
+
+2017-05-27 17:58:55,003 ERROR 58176 [-/192.168.16.22/-/22ms POST /api/myaccount/userBeanLog] nodejs.TypeError: this.ctx.service.utils.db.paginate is not a function
+    at ViewpointService.userBeanLog (E:\nodejs\sumi-server\app\service\myaccount.js:32:33)
+    at MyaccountController.userBeanLog (E:\nodejs\sumi-server\app\controller\myaccount.js:55:55)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
+
+pid: 58176
+hostname: xiaomo
+
+2017-05-27 17:59:37,719 ERROR 56212 [-/192.168.16.22/-/29ms POST /api/myaccount/userBeanLog] nodejs.TypeError: this.ctx.service.utils.db.paginate is not a function
+    at ViewpointService.userBeanLog (E:\nodejs\sumi-server\app\service\myaccount.js:32:33)
+    at MyaccountController.userBeanLog (E:\nodejs\sumi-server\app\controller\myaccount.js:55:55)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
+
+pid: 56212
+hostname: xiaomo
+
+2017-05-27 18:00:45,944 ERROR 57268 [-/192.168.16.22/-/27ms POST /api/myaccount/userBeanLog] nodejs.TypeError: this.ctx.service.utils.db.prev is not a function
+    at ViewpointService.userBeanLog (E:\nodejs\sumi-server\app\service\myaccount.js:33:50)
+    at MyaccountController.userBeanLog (E:\nodejs\sumi-server\app\controller\myaccount.js:55:55)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
+
+pid: 57268
+hostname: xiaomo
+
