@@ -1,0 +1,404 @@
+2017-05-27 10:41:51,764 ERROR 10620 [-/127.0.0.1/-/18ms POST /api/forum/list] nodejs.ER_SP_UNDECLARED_VARError: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+    at Query.Sequence._packetToError (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (D:\cq-server\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:176:18)
+    at Socket.Readable.push (_stream_readable.js:134:10)
+    --------------------
+    at Pool.query (D:\cq-server\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\cq-server\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (D:\cq-server\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (D:\cq-server\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (D:\cq-server\sumi-server\node_modules\co\index.js:65:19)
+    at D:\cq-server\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (D:\cq-server\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT board_id,board_title,board_description,board_stock_code,board_follow,board_hits,board_ishot FROM data_forum_board WHERE board_status = '1' ORDER BY board_id DESC LIMIT NaN,NaN
+code: 'ER_SP_UNDECLARED_VAR'
+errno: 1327
+sqlState: '42000'
+index: 0
+name: 'ER_SP_UNDECLARED_VARError'
+pid: 10620
+hostname: PW5EMWJM7ZBMK3A
+
+2017-05-27 10:42:01,207 ERROR 10620 [-/127.0.0.1/-/10ms POST /api/forum/list] nodejs.ER_SP_UNDECLARED_VARError: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+    at Query.Sequence._packetToError (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (D:\cq-server\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:176:18)
+    at Socket.Readable.push (_stream_readable.js:134:10)
+    --------------------
+    at Pool.query (D:\cq-server\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\cq-server\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (D:\cq-server\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (D:\cq-server\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (D:\cq-server\sumi-server\node_modules\co\index.js:65:19)
+    at D:\cq-server\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (D:\cq-server\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT board_id,board_title,board_description,board_stock_code,board_follow,board_hits,board_ishot FROM data_forum_board WHERE board_status = '1' ORDER BY board_id DESC LIMIT NaN,NaN
+code: 'ER_SP_UNDECLARED_VAR'
+errno: 1327
+sqlState: '42000'
+index: 0
+name: 'ER_SP_UNDECLARED_VARError'
+pid: 10620
+hostname: PW5EMWJM7ZBMK3A
+
+2017-05-27 10:49:45,785 ERROR 11920 [-/127.0.0.1/-/12ms POST /api/forum/list] nodejs.ER_SP_UNDECLARED_VARError: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+    at Query.Sequence._packetToError (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (D:\cq-server\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:176:18)
+    at Socket.Readable.push (_stream_readable.js:134:10)
+    --------------------
+    at Pool.query (D:\cq-server\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\cq-server\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (D:\cq-server\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (D:\cq-server\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (D:\cq-server\sumi-server\node_modules\co\index.js:65:19)
+    at D:\cq-server\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (D:\cq-server\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT board_id,board_title,board_description,board_stock_code,board_follow,board_hits,board_ishot FROM data_forum_board WHERE board_status = '1' ORDER BY board_id DESC LIMIT NaN,NaN
+code: 'ER_SP_UNDECLARED_VAR'
+errno: 1327
+sqlState: '42000'
+index: 0
+name: 'ER_SP_UNDECLARED_VARError'
+pid: 11920
+hostname: PW5EMWJM7ZBMK3A
+
+2017-05-27 10:49:57,081 ERROR 11920 [-/127.0.0.1/-/17ms POST /api/forum/list] nodejs.ER_SP_UNDECLARED_VARError: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+    at Query.Sequence._packetToError (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (D:\cq-server\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:176:18)
+    at Socket.Readable.push (_stream_readable.js:134:10)
+    --------------------
+    at Pool.query (D:\cq-server\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\cq-server\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (D:\cq-server\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (D:\cq-server\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (D:\cq-server\sumi-server\node_modules\co\index.js:65:19)
+    at D:\cq-server\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (D:\cq-server\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT board_id,board_title,board_description,board_stock_code,board_follow,board_hits,board_ishot FROM data_forum_board WHERE board_status = '1' ORDER BY board_id DESC LIMIT NaN,NaN
+code: 'ER_SP_UNDECLARED_VAR'
+errno: 1327
+sqlState: '42000'
+index: 0
+name: 'ER_SP_UNDECLARED_VARError'
+pid: 11920
+hostname: PW5EMWJM7ZBMK3A
+
+2017-05-27 10:51:07,711 ERROR 10832 [-/127.0.0.1/-/14ms POST /api/forum/list] nodejs.ER_SP_UNDECLARED_VARError: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+    at Query.Sequence._packetToError (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (D:\cq-server\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:176:18)
+    at Socket.Readable.push (_stream_readable.js:134:10)
+    --------------------
+    at Pool.query (D:\cq-server\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\cq-server\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (D:\cq-server\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (D:\cq-server\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (D:\cq-server\sumi-server\node_modules\co\index.js:65:19)
+    at D:\cq-server\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (D:\cq-server\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT board_id,board_title,board_description,board_stock_code,board_follow,board_hits,board_ishot FROM data_forum_board WHERE board_status = '1' ORDER BY board_id DESC LIMIT NaN,NaN
+code: 'ER_SP_UNDECLARED_VAR'
+errno: 1327
+sqlState: '42000'
+index: 0
+name: 'ER_SP_UNDECLARED_VARError'
+pid: 10832
+hostname: PW5EMWJM7ZBMK3A
+
+2017-05-27 10:52:55,414 ERROR 10588 [-/127.0.0.1/-/22ms POST /api/forum/list] nodejs.ER_SP_UNDECLARED_VARError: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+    at Query.Sequence._packetToError (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (D:\cq-server\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:176:18)
+    at Socket.Readable.push (_stream_readable.js:134:10)
+    --------------------
+    at Pool.query (D:\cq-server\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\cq-server\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (D:\cq-server\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (D:\cq-server\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (D:\cq-server\sumi-server\node_modules\co\index.js:65:19)
+    at D:\cq-server\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (D:\cq-server\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT board_id,board_title,board_description,board_stock_code,board_follow,board_hits,board_ishot FROM data_forum_board WHERE board_status = '1' ORDER BY board_id DESC LIMIT NaN,NaN
+code: 'ER_SP_UNDECLARED_VAR'
+errno: 1327
+sqlState: '42000'
+index: 0
+name: 'ER_SP_UNDECLARED_VARError'
+pid: 10588
+hostname: PW5EMWJM7ZBMK3A
+
+2017-05-27 10:55:12,954 ERROR 11476 [-/127.0.0.1/-/20ms POST /api/forum/list] nodejs.ER_SP_UNDECLARED_VARError: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+    at Query.Sequence._packetToError (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (D:\cq-server\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:176:18)
+    at Socket.Readable.push (_stream_readable.js:134:10)
+    --------------------
+    at Pool.query (D:\cq-server\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\cq-server\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (D:\cq-server\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (D:\cq-server\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (D:\cq-server\sumi-server\node_modules\co\index.js:65:19)
+    at D:\cq-server\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (D:\cq-server\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT board_id,board_title,board_description,board_stock_code,board_follow,board_hits,board_ishot FROM data_forum_board WHERE board_status = '1' ORDER BY board_id DESC LIMIT NaN,NaN
+code: 'ER_SP_UNDECLARED_VAR'
+errno: 1327
+sqlState: '42000'
+index: 0
+name: 'ER_SP_UNDECLARED_VARError'
+pid: 11476
+hostname: PW5EMWJM7ZBMK3A
+
+2017-05-27 10:57:14,737 ERROR 9328 [-/127.0.0.1/-/12ms POST /api/forum/list] nodejs.ER_SP_UNDECLARED_VARError: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+    at Query.Sequence._packetToError (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (D:\cq-server\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:176:18)
+    at Socket.Readable.push (_stream_readable.js:134:10)
+    --------------------
+    at Pool.query (D:\cq-server\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\cq-server\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (D:\cq-server\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (D:\cq-server\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (D:\cq-server\sumi-server\node_modules\co\index.js:65:19)
+    at D:\cq-server\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (D:\cq-server\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT board_id,board_title,board_description,board_stock_code,board_follow,board_hits,board_ishot FROM data_forum_board WHERE board_status = '1' ORDER BY board_id DESC LIMIT NaN,NaN
+code: 'ER_SP_UNDECLARED_VAR'
+errno: 1327
+sqlState: '42000'
+index: 0
+name: 'ER_SP_UNDECLARED_VARError'
+pid: 9328
+hostname: PW5EMWJM7ZBMK3A
+
+2017-05-27 10:58:53,451 ERROR 11500 [-/127.0.0.1/-/8601ms POST /api/forum/list] nodejs.ER_SP_UNDECLARED_VARError: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+    at Query.Sequence._packetToError (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (D:\cq-server\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:176:18)
+    at Socket.Readable.push (_stream_readable.js:134:10)
+    --------------------
+    at Pool.query (D:\cq-server\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\cq-server\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (D:\cq-server\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (D:\cq-server\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (D:\cq-server\sumi-server\node_modules\co\index.js:65:19)
+    at D:\cq-server\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (D:\cq-server\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT board_id,board_title,board_description,board_stock_code,board_follow,board_hits,board_ishot FROM data_forum_board WHERE board_status = '1' ORDER BY board_id DESC LIMIT NaN,NaN
+code: 'ER_SP_UNDECLARED_VAR'
+errno: 1327
+sqlState: '42000'
+index: 0
+name: 'ER_SP_UNDECLARED_VARError'
+pid: 11500
+hostname: PW5EMWJM7ZBMK3A
+
+2017-05-27 11:00:42,982 ERROR 11500 [-/127.0.0.1/-/16ms POST /api/forum/list] nodejs.ER_SP_UNDECLARED_VARError: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+    at Query.Sequence._packetToError (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (D:\cq-server\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:176:18)
+    at Socket.Readable.push (_stream_readable.js:134:10)
+    --------------------
+    at Pool.query (D:\cq-server\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\cq-server\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (D:\cq-server\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (D:\cq-server\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (D:\cq-server\sumi-server\node_modules\co\index.js:65:19)
+    at D:\cq-server\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (D:\cq-server\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT board_id,board_title,board_description,board_stock_code,board_follow,board_hits,board_ishot FROM data_forum_board WHERE board_status = '1' ORDER BY board_id DESC LIMIT NaN,NaN
+code: 'ER_SP_UNDECLARED_VAR'
+errno: 1327
+sqlState: '42000'
+index: 0
+name: 'ER_SP_UNDECLARED_VARError'
+pid: 11500
+hostname: PW5EMWJM7ZBMK3A
+
+2017-05-27 11:03:50,681 ERROR 11500 [-/127.0.0.1/-/9ms POST /api/forum/list] nodejs.ER_SP_UNDECLARED_VARError: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+    at Query.Sequence._packetToError (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (D:\cq-server\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:176:18)
+    at Socket.Readable.push (_stream_readable.js:134:10)
+    --------------------
+    at Pool.query (D:\cq-server\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\cq-server\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (D:\cq-server\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (D:\cq-server\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (D:\cq-server\sumi-server\node_modules\co\index.js:65:19)
+    at D:\cq-server\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (D:\cq-server\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT board_id,board_title,board_description,board_stock_code,board_follow,board_hits,board_ishot FROM data_forum_board WHERE board_status = '1' ORDER BY board_id DESC LIMIT NaN,NaN
+code: 'ER_SP_UNDECLARED_VAR'
+errno: 1327
+sqlState: '42000'
+index: 0
+name: 'ER_SP_UNDECLARED_VARError'
+pid: 11500
+hostname: PW5EMWJM7ZBMK3A
+
+2017-05-27 11:13:11,337 ERROR 11500 [-/127.0.0.1/-/14ms POST /api/forum/list] nodejs.ER_SP_UNDECLARED_VARError: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+    at Query.Sequence._packetToError (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (D:\cq-server\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:176:18)
+    at Socket.Readable.push (_stream_readable.js:134:10)
+    --------------------
+    at Pool.query (D:\cq-server\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\cq-server\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (D:\cq-server\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (D:\cq-server\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (D:\cq-server\sumi-server\node_modules\co\index.js:65:19)
+    at D:\cq-server\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (D:\cq-server\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT board_id,board_title,board_description,board_stock_code,board_follow,board_hits,board_ishot FROM data_forum_board WHERE board_status = '1' ORDER BY board_id DESC LIMIT NaN,NaN
+code: 'ER_SP_UNDECLARED_VAR'
+errno: 1327
+sqlState: '42000'
+index: 0
+name: 'ER_SP_UNDECLARED_VARError'
+pid: 11500
+hostname: PW5EMWJM7ZBMK3A
+
+2017-05-27 11:13:18,542 ERROR 11500 [-/127.0.0.1/-/8ms POST /api/forum/list] nodejs.ER_SP_UNDECLARED_VARError: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+    at Query.Sequence._packetToError (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (D:\cq-server\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (D:\cq-server\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:176:18)
+    at Socket.Readable.push (_stream_readable.js:134:10)
+    at TCP.onread (net.js:554:20)
+    --------------------
+    at Pool.query (D:\cq-server\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\cq-server\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (D:\cq-server\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (D:\cq-server\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (D:\cq-server\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (D:\cq-server\sumi-server\node_modules\co\index.js:65:19)
+    at D:\cq-server\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (D:\cq-server\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT board_id,board_title,board_description,board_stock_code,board_follow,board_hits,board_ishot FROM data_forum_board WHERE board_status = '1' ORDER BY board_id DESC LIMIT NaN,NaN
+code: 'ER_SP_UNDECLARED_VAR'
+errno: 1327
+sqlState: '42000'
+index: 0
+name: 'ER_SP_UNDECLARED_VARError'
+pid: 11500
+hostname: PW5EMWJM7ZBMK3A
+
