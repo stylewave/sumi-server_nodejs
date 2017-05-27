@@ -17,6 +17,10 @@ module.exports = app => {
       let { cpage, size } = this.ctx.request.body;
       cpage = parseInt(cpage, 10);
       size = parseInt(size, 10);
+      // let { page, size } = this.ctx.request.body;
+      console.log('ctx.request.body>>>', this.ctx.request.body);
+      // const page = 1;// parseInt(page, 10);
+      // const size = 4;// parseInt(size, 10);
       const maxPage = await this.getMaxPage();
       if (cpage > maxPage) {
         this.ctx.body = {
