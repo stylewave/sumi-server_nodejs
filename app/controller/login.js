@@ -92,7 +92,7 @@ module.exports = app => {
     async relogin() {
       const { uid, token } = this.ctx.request.body;
 
-      //const userInfo = await this.ctx.service.user.checkUser(uid, token);
+      // const userInfo = await this.ctx.service.user.checkUser(uid, token);
       const userInfo = await this.ctx.service.userLogin.relogin(uid, token);
 
       if (_.isEmpty(userInfo)) {
