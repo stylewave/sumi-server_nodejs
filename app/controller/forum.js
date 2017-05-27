@@ -14,10 +14,10 @@ module.exports = app => {
 
     // 股吧板块列表
     async list() {
-      let { page, size } = this.ctx.request.body;
+      // let { page, size } = this.ctx.request.body;
       console.log('ctx.request.body>>>', this.ctx.request.body);
-      page = parseInt(page, 10);
-      size = parseInt(size, 10);
+      const page = 1;// parseInt(page, 10);
+      const size = 4;// parseInt(size, 10);
       const maxPage = await this.getMaxPage();
       if (page > maxPage) {
         this.ctx.body = {

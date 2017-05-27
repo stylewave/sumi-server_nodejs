@@ -65,3 +65,61 @@
 2017-05-27 10:58:37,302 WARN 11968 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
 2017-05-27 10:58:39,624 WARN 11968 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\forum.js change
 2017-05-27 10:58:53,442 WARN 11968 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 11:43:42,576 INFO 5592 [egg:logger] init all loggers with options: {"dir":"D:\\cq-server\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","outputJSON":false,"buffer":true,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"type":"agent"}
+2017-05-27 11:43:42,685 INFO 5592 [egg-watcher:agent] watcher start success
+2017-05-27 11:46:17,741 INFO 12180 [egg:logger] init all loggers with options: {"dir":"D:\\cq-server\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","outputJSON":false,"buffer":true,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"type":"agent"}
+2017-05-27 11:46:17,832 INFO 12180 [egg-watcher:agent] watcher start success
+2017-05-27 11:46:59,515 INFO 10516 [egg:logger] init all loggers with options: {"dir":"D:\\cq-server\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","outputJSON":false,"buffer":true,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"type":"agent"}
+2017-05-27 11:46:59,598 INFO 10516 [egg-watcher:agent] watcher start success
+2017-05-27 11:52:32,282 INFO 9984 [egg:logger] init all loggers with options: {"dir":"D:\\cq-server\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","outputJSON":false,"buffer":true,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"type":"agent"}
+2017-05-27 11:52:32,362 INFO 9984 [egg-watcher:agent] watcher start success
+2017-05-27 11:55:44,170 WARN 9984 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\forum.js change
+2017-05-27 11:55:45,288 WARN 9984 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 11:56:36,508 WARN 9984 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\forum.js change
+2017-05-27 11:56:37,621 WARN 9984 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 11:56:45,679 WARN 9984 [agent:development] reload worker because D:\cq-server\sumi-server\app\controller\forum.js change
+2017-05-27 11:56:46,696 WARN 9984 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 11:59:46,011 INFO 11260 [egg:logger] init all loggers with options: {"dir":"D:\\cq-server\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","outputJSON":false,"buffer":true,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"type":"agent"}
+2017-05-27 11:59:46,090 INFO 11260 [egg-watcher:agent] watcher start success
+2017-05-27 12:00:12,707 INFO 9512 [egg:logger] init all loggers with options: {"dir":"D:\\cq-server\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","outputJSON":false,"buffer":true,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"type":"agent"}
+2017-05-27 12:00:12,785 INFO 9512 [egg-watcher:agent] watcher start success
+2017-05-27 12:02:49,486 WARN 9512 [agent:development] reload worker because D:\cq-server\sumi-server\config\config.default.js change
+2017-05-27 12:02:50,519 WARN 9512 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:03:12,734 WARN 9512 [agent:development] reload worker because D:\cq-server\sumi-server\config\config.default.js change
+2017-05-27 12:03:14,587 WARN 9512 [agent:development] reload worker because D:\cq-server\sumi-server\config\config.default.js change
+2017-05-27 12:03:13,790 WARN 9512 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:03:15,018 WARN 9512 [agent:development] reload worker because D:\cq-server\sumi-server\config\config.default.js change
+2017-05-27 12:03:15,253 WARN 9512 [agent:development] reload worker because D:\cq-server\sumi-server\config\config.default.js change
+2017-05-27 12:03:15,680 WARN 9512 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:03:16,736 WARN 9512 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:03:17,456 WARN 9512 [agent:development] reload worker because D:\cq-server\sumi-server\config\config.default.js change
+2017-05-27 12:03:18,445 WARN 9512 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:03:19,098 WARN 9512 [agent:development] reload worker because D:\cq-server\sumi-server\config\config.default.js change
+2017-05-27 12:03:19,321 WARN 9512 [agent:development] reload worker because D:\cq-server\sumi-server\config\config.default.js change
+2017-05-27 12:03:20,126 WARN 9512 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:03:21,127 WARN 9512 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:03:23,907 WARN 9512 [agent:development] reload worker because D:\cq-server\sumi-server\config\config.default.js change
+2017-05-27 12:03:24,924 WARN 9512 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:03:31,704 WARN 9512 [agent:development] reload worker because D:\cq-server\sumi-server\config\config.default.js change
+2017-05-27 12:03:32,708 WARN 9512 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:03:33,418 WARN 9512 [agent:development] reload worker because D:\cq-server\sumi-server\config\config.default.js change
+2017-05-27 12:03:34,033 WARN 9512 [agent:development] reload worker because D:\cq-server\sumi-server\config\config.default.js change
+2017-05-27 12:03:34,468 WARN 9512 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:03:35,493 WARN 9512 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:03:45,512 INFO 11588 [egg:logger] init all loggers with options: {"dir":"D:\\cq-server\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","outputJSON":false,"buffer":true,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"type":"agent"}
+2017-05-27 12:03:45,592 INFO 11588 [egg-watcher:agent] watcher start success
+2017-05-27 12:04:18,074 WARN 11588 [agent:development] reload worker because D:\cq-server\sumi-server\config\config.default.js change
+2017-05-27 12:04:18,889 WARN 11588 [agent:development] reload worker because D:\cq-server\sumi-server\config\config.default.js change
+2017-05-27 12:04:19,191 WARN 11588 [agent:development] reload worker because D:\cq-server\sumi-server\config\config.default.js change
+2017-05-27 12:04:19,437 WARN 11588 [agent:development] reload worker because D:\cq-server\sumi-server\config\config.default.js change
+2017-05-27 12:04:19,198 WARN 11588 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:04:19,642 WARN 11588 [agent:development] reload worker because D:\cq-server\sumi-server\config\config.default.js change
+2017-05-27 12:04:19,905 WARN 11588 [agent:development] reload worker because D:\cq-server\sumi-server\config\config.default.js change
+2017-05-27 12:04:20,132 WARN 11588 [agent:development] reload worker because D:\cq-server\sumi-server\config\config.default.js change
+2017-05-27 12:04:20,341 WARN 11588 [agent:development] reload worker because D:\cq-server\sumi-server\config\config.default.js change
+2017-05-27 12:04:20,133 WARN 11588 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:04:20,589 WARN 11588 [agent:development] reload worker because D:\cq-server\sumi-server\config\config.default.js change
+2017-05-27 12:04:21,194 WARN 11588 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:04:22,160 WARN 11588 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 12:04:40,742 WARN 11588 [agent:development] reload worker because D:\cq-server\sumi-server\config\config.default.js change
+2017-05-27 12:04:41,755 WARN 11588 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
