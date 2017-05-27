@@ -242,3 +242,5 @@
 2017-05-27 14:51:23,868 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
 2017-05-27 14:52:41,234 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\app\controller\login.js change
 2017-05-27 14:52:42,282 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-05-27 14:55:12,045 WARN 15236 [agent:development] reload worker because E:\nodejs\sumi-server\config\plugin.js change
+2017-05-27 14:55:12,599 WARN 15236 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
