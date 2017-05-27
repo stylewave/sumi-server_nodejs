@@ -43,3 +43,46 @@ hostname: xiaomo
 pid: 18552
 hostname: xiaomo
 
+2017-05-27 12:03:36,856 ERROR 15236 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 15236
+hostname: xiaomo
+
+2017-05-27 12:40:54,308 ERROR 15236 nodejs.ClusterClientNoResponseError: client no response in 230645ms exceeding maxIdleTime 30000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:72:23)
+    at ontimeout (timers.js:386:14)
+    at tryOnTimeout (timers.js:250:5)
+    at Timer.listOnTimeout (timers.js:214:5)
+name: 'ClusterClientNoResponseError'
+pid: 15236
+hostname: xiaomo
+
+2017-05-27 12:44:22,028 ERROR 31332 [-/192.168.16.22/-/57ms POST /api/forum/get_stock_board_hot] nodejs.TypeError: Cannot read property 'indexOf' of undefined
+    at ForumService.hot (E:\nodejs\sumi-server\app\service\forum.js:39:40)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 31332
+hostname: xiaomo
+
+2017-05-27 12:45:33,610 ERROR 28372 [-/192.168.16.22/-/43ms POST /api/forum/get_stock_board_hot] nodejs.TypeError: Cannot read property 'indexOf' of undefined
+    at ForumService.hot (E:\nodejs\sumi-server\app\service\forum.js:41:17)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 28372
+hostname: xiaomo
+
+2017-05-27 12:51:14,969 ERROR 15236 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 15236
+hostname: xiaomo
+

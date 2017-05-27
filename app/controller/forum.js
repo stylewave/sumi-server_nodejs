@@ -35,9 +35,9 @@ module.exports = app => {
 
     // 股吧热门四条
     async get_stock_board_hot() {
-      let { size } = this.ctx.request.body;
+      let { size, userId } = this.ctx.request.body;
       size = parseInt(size, 10);
-      const result = await this.ctx.service.forum.hot(size);
+      const result = await this.ctx.service.forum.hot(size, userId);
       this.ctx.body = {
         status: 1,
         list: result,

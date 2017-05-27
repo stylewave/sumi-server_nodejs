@@ -24,19 +24,29 @@ module.exports = app => {
       return result;
     }
     // 热门股吧
-    async hot(size) {
+    async hot(size, userId) {
       const field = 'board_id,board_title,board_description,board_stock_code,board_follow,board_hits,board_ishot';
       const sql = 'SELECT ' + field + ' FROM data_forum_board WHERE board_status = \'1\'  AND board_ishot=1 ORDER BY board_id DESC LIMIT ' + size;
       const result = await app.mysql.query(sql);
-      console.log('board_hits');
-      for (const i in result) {
-        result[i].board_title1 = '1231344444';
-        console.log(result[i].board_title);
-      }
-      console.log(result);
 
+      const user = await this.userBoard(userId);
+      for (const i in result) {
+        const followb = ',' + result[i].board_id + ',';
+        if (user.user_follow_board.indexOf(followb) !== -1) {
+          console.log('已关注');
+          result[i].isfollow = 1;
+        } else {
+          console.log('没关注');
+          result[i].isfollow = 0;
+        }
+      }
       return result;
     }
+    async userBoard(userId) {
+      const user = await app.mysql.get('data_user', { user_id: userId });
+      return user;
+    }
+
 
     // 股吧板块详情
     async forumDetail(boardId) {
@@ -49,9 +59,8 @@ module.exports = app => {
     async followForum(state, boardId, userId) {
 
       const user = await app.mysql.get('data_user', { user_id: userId });
-      console.log(user.user_follow_board);
-
-      if (user.user_follow_board.indexOf(boardId) !== -1) {
+      const boardid = ',' + boardId + ',';
+      if (user.user_follow_board.indexOf(boardid) !== -1) {
         console.log('已关注');
         return 0;
       }
@@ -79,7 +88,8 @@ module.exports = app => {
     async cancleFollowForum(state, boardId, userId) {
 
       const user = await app.mysql.get('data_user', { user_id: userId });
-      if (user.user_follow_board.indexOf(boardId) === -1) {
+      const boardid = ',' + boardId + ',';
+      if (user.user_follow_board.indexOf(boardid) === -1) {
         console.log('您之前没关注此板块内容');
         return 0;
       }
