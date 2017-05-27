@@ -6,27 +6,27 @@ module.exports = app => {
   // 股吧模块
   class ForumController extends app.Controller {
     // 获取板块最大页码
-    async getMaxPage() {
+    async getMaxPage(ishot) {
       const MAX_PAGE = 5;
-      const result = await this.ctx.service.forum.getTotal();
+      const result = await this.ctx.service.forum.getTotal(ishot);
       return result > MAX_PAGE ? MAX_PAGE : result;
     }
 
     // 股吧板块列表
-    async list() {
-      let { page, size } = this.ctx.request.body;
-      page = parseInt(page, 10);
+    async get_stock_board_list() {
+      let { cpage, size, ishot } = this.ctx.request.body;
+      cpage = parseInt(cpage, 10);
       size = parseInt(size, 10);
-      const maxPage = await this.getMaxPage();
-      if (page > maxPage) {
+      const maxPage = await this.getMaxPage(ishot);
+      if (cpage > maxPage) {
         this.ctx.body = {
           status: 0,
           tips: '没有更多数据了',
         };
         return;
       }
-      const start = (page - 1) * size;
-      const result = await this.ctx.service.forum.list(start, size);
+      const start = (cpage - 1) * size;
+      const result = await this.ctx.service.forum.list(start, size, ishot);
       this.ctx.body = {
         status: 1,
         list: result,
@@ -114,9 +114,28 @@ module.exports = app => {
       }
 
     }
+    // 获取主题最大页码
+    async getSubTotal() {
+      const result = await this.ctx.service.forum.getSubTotal();
+      return result;
+    }
     // 股吧主题列表
     async sublist() {
-      let { page, size, boardId, style } = this.ctx.request.body;
+      let { page, size, boardId, type } = this.ctx.request.body;
+
+      page = parseInt(page, 10);
+      size = parseInt(size, 10);
+      const maxPage = await this.getMaxPage(type, boardId);
+
+      if (page > maxPage) {
+        this.ctx.body = {
+          status: 0,
+          tips: '没有更多数据了',
+        };
+        return;
+      }
+
+      // const result = await this.ctx.service.forum.list(start, size);
       const boardstate = await this.ctx.service.forum.forumDetail(boardId);
       if (_.isEmpty(boardstate)) {
         this.ctx.body = {
@@ -125,9 +144,8 @@ module.exports = app => {
         };
         return;
       }
-      page = parseInt(page, 10);
-      size = parseInt(size, 10);
-      const result = await this.ctx.service.forum.sublist(page, size, boardId, style);
+      const start = (page - 1) * size;
+      const result = await this.ctx.service.forum.sublist(start, size, boardId, type);
       this.ctx.body = {
         status: 1,
         list: result,

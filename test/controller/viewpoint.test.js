@@ -30,6 +30,8 @@ describe('test/controller/viewpoint.test.js', () => {
       .send({
         page: 1,
         size: 2,
+        userId: 62,
+        token: '12ASfxQk68dkY7MmZ4dpEeuoxZxBO6tkxEoJVyTscDs=',
       })
       .end((err, res) => {
         const info = JSON.parse(res.text);
@@ -39,7 +41,7 @@ describe('test/controller/viewpoint.test.js', () => {
       });
   });
 
-  it.only('get /api/viewpoint/buyExpertComment', done => {
+  it('get /api/viewpoint/buyExpertComment', done => {
     request(app.callback())
       .post('/api/viewpoint/buyExpertComment')
       .send({

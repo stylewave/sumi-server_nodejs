@@ -59,10 +59,6 @@ describe('test/controller/forum.test.js', () => {
     request(app.callback())
       .post('/api/forum/follow')
       .send({
-        // page: 1,
-        // size: 1,
-        // boardId: 1,
-        // style: 'hot',
         boardId: 4,
         state: 0,
         userId: 62,
@@ -74,4 +70,22 @@ describe('test/controller/forum.test.js', () => {
         done();
       });
   });
+
+  it.only('get /api/forum/sublist', done => {
+    request(app.callback())
+      .post('/api/forum/sublist')
+      .send({
+        page: 1,
+        size: 2,
+        boardId: 1,
+        type: 1,
+      })
+      .end((err, res) => {
+        const info = JSON.parse(res.text);
+        console.log(res.text);
+        expect(info.status).to.equal(1);
+        done();
+      });
+  });
+
 });

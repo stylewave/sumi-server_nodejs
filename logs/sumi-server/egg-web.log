@@ -1,13 +1,13 @@
-2017-05-26 15:21:23,361 INFO 25868 [egg:logger] init all loggers with options: {"dir":"E:\\nodejs\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"unittest","level":"INFO","consoleLevel":"WARN","outputJSON":false,"buffer":false,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{},"type":"application"}
-2017-05-26 15:21:23,380 INFO 25868 [egg-schedule]: register schedule egg-schedule:E:\nodejs\sumi-server\node_modules\egg-logrotator\app\schedule\clean_log.js
-2017-05-26 15:21:23,380 INFO 25868 [egg-schedule]: register schedule egg-schedule:E:\nodejs\sumi-server\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
-2017-05-26 15:21:23,382 INFO 25868 [egg-mysql] connecting root@192.168.16.254:3306/cq
-2017-05-26 15:21:23,583 INFO 25868 [egg-static] starting static serve /public/ -> E:\nodejs\sumi-server\app\public
-2017-05-26 15:21:23,585 INFO 25868 [egg-security] use methodnoallow middleware
-2017-05-26 15:21:23,586 INFO 25868 [egg-security] use noopen middleware
-2017-05-26 15:21:23,586 INFO 25868 [egg-security] use nosniff middleware
-2017-05-26 15:21:23,587 INFO 25868 [egg-security] use xssProtection middleware
-2017-05-26 15:21:23,587 INFO 25868 [egg-security] use xframe middleware
-2017-05-26 15:21:23,587 INFO 25868 [egg-security] compose 5 middlewares into one security middleware
-2017-05-26 15:21:23,639 INFO 25868 [egg-watcher:app] watcher start success
-2017-05-26 15:21:23,648 INFO 25868 [egg-mysql] instance[0] status OK, rds currentTime: Fri May 26 2017 15:22:17 GMT+0800 (中国标准时间)
+2017-05-27 10:01:54,153 INFO 11544 [egg:logger] init all loggers with options: {"dir":"E:\\nodejs\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"unittest","level":"INFO","consoleLevel":"WARN","outputJSON":false,"buffer":false,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{},"type":"application"}
+2017-05-27 10:01:54,172 INFO 11544 [egg-schedule]: register schedule egg-schedule:E:\nodejs\sumi-server\node_modules\egg-logrotator\app\schedule\clean_log.js
+2017-05-27 10:01:54,172 INFO 11544 [egg-schedule]: register schedule egg-schedule:E:\nodejs\sumi-server\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2017-05-27 10:01:54,177 INFO 11544 [egg-mysql] connecting root@192.168.16.254:3306/cq
+2017-05-27 10:01:54,374 INFO 11544 [egg-static] starting static serve /public/ -> E:\nodejs\sumi-server\app\public
+2017-05-27 10:01:54,377 INFO 11544 [egg-security] use methodnoallow middleware
+2017-05-27 10:01:54,377 INFO 11544 [egg-security] use noopen middleware
+2017-05-27 10:01:54,378 INFO 11544 [egg-security] use nosniff middleware
+2017-05-27 10:01:54,378 INFO 11544 [egg-security] use xssProtection middleware
+2017-05-27 10:01:54,379 INFO 11544 [egg-security] use xframe middleware
+2017-05-27 10:01:54,379 INFO 11544 [egg-security] compose 5 middlewares into one security middleware
+2017-05-27 10:01:54,430 INFO 11544 [egg-watcher:app] watcher start success
+2017-05-27 10:01:54,439 INFO 11544 [egg-mysql] instance[0] status OK, rds currentTime: Sat May 27 2017 10:02:49 GMT+0800 (中国标准时间)
