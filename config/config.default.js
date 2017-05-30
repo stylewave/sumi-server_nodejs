@@ -10,4 +10,5 @@ module.exports = {
       '.html': 'xtpl',
     },
   },
+  proxyworker: { port: 10086 },
 };
