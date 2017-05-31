@@ -935,6 +935,10 @@ egg-cors@^1.1.0:
   dependencies:
     kcors "^1.3.2"
 
+egg-development-proxyworker@^1.0.1:
+  version "1.0.1"
+  resolved "http://registry.npm.taobao.org/egg-development-proxyworker/download/egg-development-proxyworker-1.0.1.tgz#34ceefbd4e379e29b70875e066ca4de69f551560"
+
 egg-development@^1.3.0:
   version "1.3.0"
   resolved "http://registry.npm.taobao.org/egg-development/download/egg-development-1.3.0.tgz#9b479c9a05158a31333cc074e4c8d4207efa5f66"

@@ -21,7 +21,7 @@ yarn-error.log*
 ~$*.docx
 ~$*.xlsx
 
-logs/
-.idea/
-run/
+/logs
+/.idea
+/run
 *.swp

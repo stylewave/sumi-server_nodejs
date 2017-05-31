@@ -19,3 +19,10 @@ $ yarn dev
 # 运行单元测试
 $ yarn test
 ```
+
+## 调试
+```bash
+# 1. 本地执行yarn debug
+# 2. 在Controller的类中设置断点，在router.js中设置无效
+# 3. 切换到VSCode的调试面板，选择Attach Worker调试方式，F5开始调试
+```

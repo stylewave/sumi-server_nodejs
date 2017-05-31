@@ -7,6 +7,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
     "start": "cross-env PORT=7002 EGG_SERVER_ENV=local node index.js",
     "test": "cross-env DEBUG=common-bin egg-bin test"
   },
@@ -23,6 +24,7 @@
     "chai": "^3.5.0",
     "cross-env": "^5.0.0",
     "egg-bin": "^3.3.2",
+    "egg-development-proxyworker": "^1.0.1",
     "egg-mock": "^3.6.1",
     "eslint": "^3.19.0",
     "eslint-config-egg": "^4.1.0",
@@ -33,7 +35,8 @@
     "rules": {
       "strict": "off",
       "newline-per-chained-call": "off",
-      "quotes": "off"
+      "quotes": "off",
+      "array-bracket-spacing": "off"
     }
   }
 }
