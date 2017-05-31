@@ -15,4 +15,8 @@ module.exports = {
     enable: true,
     package: 'egg-cors',
   },
+  proxyworker: {
+    enable: true,
+    package: 'egg-development-proxyworker',
+  },
 };

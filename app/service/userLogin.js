@@ -39,7 +39,7 @@ module.exports = app => {
       const sql = `SELECT ${field}  FROM data_user WHERE user_pwd = MD5(CONCAT(MD5(${pwd}),user_salt)) AND user_name = '${mobile}' LIMIT 1`;
       const result = await app.mysql.query(sql);
       if (result) {
-        // console.log('userinfo111>>>>>>>>', result);
+        console.log('userinfo111>>>>>>>>', result);
         const token = this.ctx.service.utils.common.createToken(result[0].user_id, result[0].user_name);
         // const checkToken = await this.ctx.service.utils.common.checkToken(result[0].user_id, token);
         // console.log('checktoken>>>>>>>>', checkToken);

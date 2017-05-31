@@ -13,22 +13,35 @@ module.exports = app => {
     }
 
     // 股吧板块列表
-    async list() {
+    async get_stock_board_list() {
+      let { cpage, size } = this.ctx.request.body;
+      cpage = parseInt(cpage, 10);
+      size = parseInt(size, 10);
       // let { page, size } = this.ctx.request.body;
       console.log('ctx.request.body>>>', this.ctx.request.body);
-      const page = 1;// parseInt(page, 10);
-      const size = 4;// parseInt(size, 10);
+      // const page = 1;// parseInt(page, 10);
+      // const size = 4;// parseInt(size, 10);
       const maxPage = await this.getMaxPage();
-      if (page > maxPage) {
+      if (cpage > maxPage) {
         this.ctx.body = {
           status: 0,
           tips: '没有更多数据了',
         };
         return;
       }
-      const start = (page - 1) * size;
-      console.log('forum list>> start=', start, '  size=', size);
+      const start = (cpage - 1) * size;
       const result = await this.ctx.service.forum.list(start, size);
+      this.ctx.body = {
+        status: 1,
+        list: result,
+      };
+    }
+
+    // 股吧热门四条
+    async get_stock_board_hot() {
+      let { size, userId } = this.ctx.request.body;
+      size = parseInt(size, 10);
+      const result = await this.ctx.service.forum.hot(size, userId);
       this.ctx.body = {
         status: 1,
         list: result,
@@ -116,9 +129,28 @@ module.exports = app => {
       }
 
     }
+    // 获取主题最大页码
+    async getSubTotal() {
+      const result = await this.ctx.service.forum.getSubTotal();
+      return result;
+    }
     // 股吧主题列表
     async sublist() {
-      let { page, size, boardId, style } = this.ctx.request.body;
+      let { page, size, boardId } = this.ctx.request.body;
+
+      page = parseInt(page, 10);
+      size = parseInt(size, 10);
+      const maxPage = await this.getMaxPage(boardId);
+
+      if (page > maxPage) {
+        this.ctx.body = {
+          status: 0,
+          tips: '没有更多数据了',
+        };
+        return;
+      }
+
+      // const result = await this.ctx.service.forum.list(start, size);
       const boardstate = await this.ctx.service.forum.forumDetail(boardId);
       if (_.isEmpty(boardstate)) {
         this.ctx.body = {
@@ -127,14 +159,49 @@ module.exports = app => {
         };
         return;
       }
-      page = parseInt(page, 10);
-      size = parseInt(size, 10);
-      const result = await this.ctx.service.forum.sublist(page, size, boardId, style);
+      const start = (page - 1) * size;
+      const result = await this.ctx.service.forum.sublist(start, size, boardId);
       this.ctx.body = {
         status: 1,
         list: result,
       };
     }
+
+    // 获取热门主题最大页码
+    async getSubHotTotal(boardId, type) {
+      const result = await this.ctx.service.forum.getSubHotTotal(boardId, type);
+      return result;
+    }
+    // 主题热门列表
+    async subHotlist() {
+      let { page, size, boardId, type } = this.ctx.request.body;
+      page = parseInt(page, 10);
+      size = parseInt(size, 10);
+      const maxPage = await this.getSubHotTotal(boardId, type);
+
+      if (page > maxPage) {
+        this.ctx.body = {
+          status: 0,
+          tips: '没有更多数据了',
+        };
+        return;
+      }
+      const boardstate = await this.ctx.service.forum.forumDetail(boardId);
+      if (_.isEmpty(boardstate)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '该股吧模块不存在',
+        };
+        return;
+      }
+      const start = (page - 1) * size;
+      const result = await this.ctx.service.forum.subHotlist(start, size, boardId, type);
+      this.ctx.body = {
+        status: 1,
+        list: result,
+      };
+    }
+
     // 股吧主题详情
     async forumSubjectDetail() {
       const { subId } = this.ctx.request.body;

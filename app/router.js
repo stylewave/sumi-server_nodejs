@@ -16,7 +16,8 @@ module.exports = app => {
   app.get('/api/login/crypt', 'login.crypt');
 
   app.post('/api/forum/boardDetail', 'forum.boardDetail');
-  app.post('/api/forum/list', 'forum.list');
+  app.post('/api/forum/get_stock_board_list', 'forum.get_stock_board_list');
+  app.post('/api/forum/get_stock_board_hot', 'forum.get_stock_board_hot');
   app.post('/api/forum/detail', 'forum.detail');
   app.post('/api/forum/follow', 'forum.follow');
   app.post('/api/forum/commentdata', 'forum.commentdata');
@@ -24,6 +25,7 @@ module.exports = app => {
   app.post('/api/forum/forumSubjectDetail', 'forum.forumSubjectDetail');
   app.post('/api/forum/commentadd', 'forum.commentadd');
   app.post('/api/forum/addForumSubject', 'forum.addForumSubject');
+  app.post('/api/forum/subHotlist', 'forum.subHotlist');
 
   app.post('/api/viewpoint/expertCommentList', 'viewpoint.expertCommentList');
   app.post('/api/viewpoint/commentDetail', 'viewpoint.commentDetail');

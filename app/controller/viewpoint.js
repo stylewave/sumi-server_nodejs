@@ -11,7 +11,16 @@ module.exports = app => {
     // 观点列表
     async expertCommentList() {
 
-      let { page, size } = this.ctx.request.body;
+      let { page, size, userId, token } = this.ctx.request.body;
+      const rs = this.ctx.service.utils.common.checkToken(userId, token);
+      console.log(rs);
+      if (rs === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户信息已过期',
+        };
+        return;
+      }
       page = parseInt(page, 10);
       size = parseInt(size, 10);
       const maxPage = await this.getMaxPage();

@@ -1,4 +1,3 @@
-const Paginate = require('../controller/utils/page.js');
 module.exports = app => {
   class ForumService extends app.Service {
     // 股吧板块详情
@@ -19,16 +18,35 @@ module.exports = app => {
     // 股吧板块列表
     async list(start, size) {
       const field = 'board_id,board_title,board_description,board_stock_code,board_follow,board_hits,board_ishot';
-      const sql =
-        'SELECT ' +
-        field +
-        " FROM data_forum_board WHERE board_status = '1' ORDER BY board_id DESC LIMIT " +
-        start +
-        ',' +
-        size;
+      const sql = 'SELECT ' + field + ' FROM data_forum_board WHERE board_status = \'1\'   ORDER BY board_id DESC LIMIT ' + start + ',' + size;
+
       const result = await app.mysql.query(sql);
       return result;
     }
+    // 热门股吧
+    async hot(size, userId) {
+      const field = 'board_id,board_title,board_description,board_stock_code,board_follow,board_hits,board_ishot';
+      const sql = 'SELECT ' + field + ' FROM data_forum_board WHERE board_status = \'1\'  AND board_ishot=1 ORDER BY board_id DESC LIMIT ' + size;
+      const result = await app.mysql.query(sql);
+
+      const user = await this.userBoard(userId);
+      for (const i in result) {
+        const followb = ',' + result[i].board_id + ',';
+        if (user.user_follow_board.indexOf(followb) !== -1) {
+          console.log('已关注');
+          result[i].isfollow = 1;
+        } else {
+          console.log('没关注');
+          result[i].isfollow = 0;
+        }
+      }
+      return result;
+    }
+    async userBoard(userId) {
+      const user = await app.mysql.get('data_user', { user_id: userId });
+      return user;
+    }
+
 
     // 股吧板块详情
     async forumDetail(boardId) {
@@ -40,9 +58,8 @@ module.exports = app => {
     // 关注股吧板块
     async followForum(state, boardId, userId) {
       const user = await app.mysql.get('data_user', { user_id: userId });
-      console.log(user.user_follow_board);
-
-      if (user.user_follow_board.indexOf(boardId) !== -1) {
+      const boardid = ',' + boardId + ',';
+      if (user.user_follow_board.indexOf(boardid) !== -1) {
         console.log('已关注');
         return 0;
       }
@@ -70,7 +87,8 @@ module.exports = app => {
     // 取消关注股吧板块
     async cancleFollowForum(state, boardId, userId) {
       const user = await app.mysql.get('data_user', { user_id: userId });
-      if (user.user_follow_board.indexOf(boardId) === -1) {
+      const boardid = ',' + boardId + ',';
+      if (user.user_follow_board.indexOf(boardid) === -1) {
         console.log('您之前没关注此板块内容');
         return 0;
       }
@@ -110,46 +128,45 @@ module.exports = app => {
       const result = await app.mysql.query(sql);
       return result;
     }
+
     // 获取股吧主题总的记录数
     async getSubTotal(boardId) {
       const sql = "SELECT COUNT(*) as total FROM data_forum_subject WHERE sub_status = '1' AND sub_board_id=" + boardId;
       const result = await app.mysql.query(sql);
       return result[0].total;
     }
-    async sublist(page, size, boardId, style) {
-      const hot = style === 'hot' ? 'and sub_set_hot_info=1' : '';
-      console.log(hot);
-      const sqlcount =
-        "SELECT COUNT(*) as total FROM data_forum_subject WHERE sub_status = '1' " +
-        hot +
-        ' AND sub_board_id=' +
-        boardId;
-      console.log(sqlcount);
-      const re = await app.mysql.query(sqlcount);
-      const paginate = new Paginate(page, size, re[0].total);
-      const first = paginate.first() > -1 ? paginate.first() : 0;
-      console.log(re[0].total);
-      console.log('first');
-      // const last = paginate.last();
-      // const total = paginate.total;
-      const prev = paginate.prev();
-      const next = paginate.next();
-      const sql =
-        "SELECT sub_title FROM data_forum_subject WHERE sub_status = '1' AND sub_board_id=" +
-        boardId +
-        ' ORDER BY `sub_id` DESC LIMIT ' +
-        first +
-        ',' +
-        size;
+    // 主题列表
+    async sublist(start, size, boardId) {
+      // const sql = 'SELECT sub_title FROM data_forum_subject WHERE sub_status = \'1\'  AND sub_board_id=' + boardId + ' ORDER BY `sub_id` DESC LIMIT ' + start + ',' + size;
+      const field = '*';
+      const sql = `SELECT ${field} FROM data_forum_subject WHERE sub_status = 1  AND sub_board_id='${boardId}' ORDER BY sub_id DESC LIMIT ${start},${size}`;
       console.log(sql);
+
       const result = await app.mysql.query(sql);
-      return {
-        page,
-        result,
-        prev,
-        next,
-      };
+      return result;
     }
+    // 获取热门主题总的记录数
+    async getSubHotTotal(boardId, type) {
+      const sql = `SELECT COUNT(*) as total FROM data_forum_subject WHERE sub_status = 1 AND sub_hot_type= ${type} AND sub_board_id='${boardId}'`;
+      const result = await app.mysql.query(sql);
+      return result[0].total;
+    }
+    // 主题热门列表
+    async subHotlist(start, size, boardId, type) {
+      let hot;
+      if (type === 1) {
+        hot = "and sub_hot_type='1'";
+      } else {
+        hot = '';
+      }
+      const field = '*';
+      const sql = `SELECT ${field} FROM data_forum_subject WHERE sub_status = 1 ${hot} AND sub_board_id='${boardId}' ORDER BY sub_id DESC LIMIT ${start},${size}`;
+      const result = await app.mysql.query(sql);
+      return result;
+    }
+
+
+
     // 股吧主题详情
     async forumSubjectDetail(subId) {
       const field =

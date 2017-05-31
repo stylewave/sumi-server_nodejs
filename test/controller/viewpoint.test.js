@@ -30,6 +30,8 @@ describe('test/controller/viewpoint.test.js', () => {
       .send({
         page: 1,
         size: 2,
+        userId: 62,
+        token: '12ASfxQk68dkY7MmZ4dpEeuoxZxBO6tkxEoJVyTscDs=',
       })
       .end((err, res) => {
         const info = JSON.parse(res.text);
