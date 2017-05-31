@@ -12,6 +12,14 @@ module.exports = app => {
       const userInfo = await app.mysql.get('data_user', { user_id: uid, user_token: token });
       return userInfo;
     }
+    // 头像和昵称设置
+    async setUserPhoto(userId, photo, nickname) {
+      const userphoto = '/public/images/icon/' + photo + '.png';
+      const userSql = `UPDATE data_user SET user_photo ='${userphoto}',user_nickname='${nickname}'  WHERE user_id = '${userId}'`;
+      const result = await this.app.mysql.query(userSql);
+      return result.affectedRows;
+
+    }
   }
   return UserService;
 };

@@ -15,6 +15,7 @@ module.exports = app => {
   app.post('/api/news/detail', 'news.newsDetail');
   app.get('/api/login/crypt', 'login.crypt');
 
+  app.post('/api/user/setUserPhoto', 'user.setUserPhoto');
   // 股吧模板详情
   app.post('/api/forum/boardDetail', 'forum.boardDetail');
   // 股吧模板列表
