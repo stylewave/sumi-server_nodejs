@@ -164,9 +164,6 @@ module.exports = app => {
       const result = await app.mysql.query(sql);
       return result;
     }
-
-
-
     // 股吧主题详情
     async forumSubjectDetail(subId) {
       const field =
