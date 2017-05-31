@@ -29,7 +29,6 @@ module.exports = app => {
     // 豆币记录
     async userBeanLog(userId, page, size) {
       const start = (page - 1) * size;
-      // consloe.log();
       this.ctx.service.utils.page.paginate(page, size, await this.getBeanTotal(userId));
       const prev = await this.ctx.service.utils.page.prev();
       const next = await this.ctx.service.utils.page.next();
@@ -45,6 +44,33 @@ module.exports = app => {
       };
 
     }
+    //  豆币回收列表
+    async beanReturnList(userId, page, size) {
+      const start = (page - 1) * size;
+      const sqlcount = `SELECT COUNT(*) as total FROM data_user_bean_return WHERE return_uid='${userId}'`;
+      const total = await app.mysql.query(sqlcount);
+      const beantotal = total[0].total;
+      this.ctx.service.utils.page.paginate(page, size, beantotal);
+      const prev = await this.ctx.service.utils.page.prev();
+      const next = await this.ctx.service.utils.page.next();
+      const field = 'return_id,return_uid,return_beans,return_money,return_account_type,return_create_time,return_finish_time,return_status';
+
+      const sql = `SELECT ${field} FROM data_user_bean_return  WHERE return_uid = ${userId} ORDER BY return_id DESC LIMIT ${start},${size}`;
+      const result = await app.mysql.query(sql);
+      console.log(result);
+      return {
+        result,
+        prev,
+        next,
+      };
+
+    }
+    //  豆币回收详情
+    async beanReturnDetail(returnId) {
+      const data = await app.mysql.get('data_user_bean_return', { return_id: returnId });
+      return data;
+    }
+
   }
   return ViewpointService;
 };

@@ -71,7 +71,7 @@ describe('test/controller/forum.test.js', () => {
       });
   });
 
-  it.only('get /api/forum/sublist', done => {
+  it('get /api/forum/sublist', done => {
     request(app.callback())
       .post('/api/forum/sublist')
       .send({

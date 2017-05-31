@@ -1,34 +1,14 @@
-2017-05-27 16:06:42,372 ERROR 46472 nodejs.unhandledExceptionError: read ECONNRESET
+2017-05-31 12:02:55,942 ERROR 33120 nodejs.unhandledExceptionError: read ECONNRESET
     at exports._errnoException (util.js:1050:11)
     at TCP.onread (net.js:582:26)
 code: 'ECONNRESET'
 errno: 'ECONNRESET'
 syscall: 'read'
 name: 'unhandledExceptionError'
-pid: 46472
+pid: 33120
 hostname: xiaomo
 
-2017-05-27 16:09:35,335 ERROR 46472 nodejs.unhandledExceptionError: read ECONNRESET
-    at exports._errnoException (util.js:1050:11)
-    at TCP.onread (net.js:582:26)
-code: 'ECONNRESET'
-errno: 'ECONNRESET'
-syscall: 'read'
-name: 'unhandledExceptionError'
-pid: 46472
-hostname: xiaomo
-
-2017-05-27 16:11:13,326 ERROR 46472 nodejs.unhandledExceptionError: read ECONNRESET
-    at exports._errnoException (util.js:1050:11)
-    at TCP.onread (net.js:582:26)
-code: 'ECONNRESET'
-errno: 'ECONNRESET'
-syscall: 'read'
-name: 'unhandledExceptionError'
-pid: 46472
-hostname: xiaomo
-
-2017-05-27 16:31:45,746 ERROR 52680 [-/192.168.16.22/-/33ms POST /api/myaccount/userBeanLog] nodejs.ER_SP_UNDECLARED_VARError: ER_SP_UNDECLARED_VAR: Undeclared variable: undefined
+2017-05-31 12:05:59,438 ERROR 37168 [-/127.0.0.1/-/24ms POST /api/myaccount/beanReturnList] nodejs.ER_BAD_FIELD_ERRORError: ER_BAD_FIELD_ERROR: Unknown column 'log_uid' in 'where clause'
     at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
     at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
     at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
@@ -50,36 +30,16 @@ hostname: xiaomo
     at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
     at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
     at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
-    sql: SELECT log_id,log_content,log_uid,log_type,log_count,log_main_table,log_main_id,log_create_time,log_remark FROM data_user_bean_log  WHERE log_uid = '1' ORDER BY log_id DESC LIMIT undefined,undefined
-code: 'ER_SP_UNDECLARED_VAR'
-errno: 1327
-sqlState: '42000'
+    sql: SELECT COUNT(*) as total FROM data_user_bean_return WHERE log_uid='62'
+code: 'ER_BAD_FIELD_ERROR'
+errno: 1054
+sqlState: '42S22'
 index: 0
-name: 'ER_SP_UNDECLARED_VARError'
-pid: 52680
+name: 'ER_BAD_FIELD_ERRORError'
+pid: 37168
 hostname: xiaomo
 
-2017-05-27 16:43:53,806 ERROR 46472 nodejs.unhandledExceptionError: read ECONNRESET
-    at exports._errnoException (util.js:1050:11)
-    at TCP.onread (net.js:582:26)
-code: 'ECONNRESET'
-errno: 'ECONNRESET'
-syscall: 'read'
-name: 'unhandledExceptionError'
-pid: 46472
-hostname: xiaomo
-
-2017-05-27 16:49:51,379 ERROR 46472 nodejs.unhandledExceptionError: read ECONNRESET
-    at exports._errnoException (util.js:1050:11)
-    at TCP.onread (net.js:582:26)
-code: 'ECONNRESET'
-errno: 'ECONNRESET'
-syscall: 'read'
-name: 'unhandledExceptionError'
-pid: 46472
-hostname: xiaomo
-
-2017-05-27 16:59:29,751 ERROR 54456 [-/192.168.16.22/-/15ms POST /api/myaccount/userBeanLog] nodejs.ER_SP_UNDECLARED_VARError: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+2017-05-31 12:06:35,528 ERROR 37380 [-/127.0.0.1/-/45ms POST /api/myaccount/beanReturnList] nodejs.ER_BAD_FIELD_ERRORError: ER_BAD_FIELD_ERROR: Unknown column 'return_id' in 'field list'
     at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
     at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
     at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
@@ -101,16 +61,16 @@ hostname: xiaomo
     at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
     at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
     at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
-    sql: SELECT log_id FROM data_user_bean_log  WHERE log_uid = '1' ORDER BY log_id DESC LIMIT NaN,2
-code: 'ER_SP_UNDECLARED_VAR'
-errno: 1327
-sqlState: '42000'
+    sql: SELECT return_id,return_uid,return_beans,return_money,return_account_type,return_create_time,return_finish_time,return_status FROM data_user_bean_log  WHERE return_uid = '62' ORDER BY return_id DESC LIMIT 0,1
+code: 'ER_BAD_FIELD_ERROR'
+errno: 1054
+sqlState: '42S22'
 index: 0
-name: 'ER_SP_UNDECLARED_VARError'
-pid: 54456
+name: 'ER_BAD_FIELD_ERRORError'
+pid: 37380
 hostname: xiaomo
 
-2017-05-27 17:06:26,190 ERROR 53316 [-/192.168.16.22/-/9ms POST /api/myaccount/userBeanLog] nodejs.ER_SP_UNDECLARED_VARError: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+2017-05-31 12:09:12,314 ERROR 36920 [-/127.0.0.1/-/24ms POST /api/myaccount/beanReturnList] nodejs.ER_BAD_FIELD_ERRORError: ER_BAD_FIELD_ERROR: Unknown column 'return_id' in 'field list'
     at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
     at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
     at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
@@ -132,16 +92,16 @@ hostname: xiaomo
     at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
     at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
     at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
-    sql: SELECT log_id FROM data_user_bean_log  WHERE log_uid = '1' ORDER BY log_id DESC LIMIT NaN,2q
-code: 'ER_SP_UNDECLARED_VAR'
-errno: 1327
-sqlState: '42000'
+    sql: SELECT return_id,return_uid,return_beans,return_money,return_account_type,return_create_time,return_finish_time,return_status FROM data_user_bean_log  WHERE return_uid = 62 ORDER BY return_id DESC LIMIT 0,1
+code: 'ER_BAD_FIELD_ERROR'
+errno: 1054
+sqlState: '42S22'
 index: 0
-name: 'ER_SP_UNDECLARED_VARError'
-pid: 53316
+name: 'ER_BAD_FIELD_ERRORError'
+pid: 36920
 hostname: xiaomo
 
-2017-05-27 17:15:26,366 ERROR 54468 [-/192.168.16.22/-/16ms POST /api/myaccount/userBeanLog] nodejs.ER_SP_UNDECLARED_VARError: ER_SP_UNDECLARED_VAR: Undeclared variable: NaN
+2017-05-31 12:09:13,732 ERROR 36920 [-/127.0.0.1/-/8ms POST /api/myaccount/beanReturnList] nodejs.ER_BAD_FIELD_ERRORError: ER_BAD_FIELD_ERROR: Unknown column 'return_id' in 'field list'
     at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
     at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
     at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
@@ -163,296 +123,261 @@ hostname: xiaomo
     at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
     at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
     at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
-    sql: SELECT log_id FROM data_user_bean_log  WHERE log_uid = '11' ORDER BY log_id DESC LIMIT NaN,2
-code: 'ER_SP_UNDECLARED_VAR'
-errno: 1327
-sqlState: '42000'
+    sql: SELECT return_id,return_uid,return_beans,return_money,return_account_type,return_create_time,return_finish_time,return_status FROM data_user_bean_log  WHERE return_uid = 62 ORDER BY return_id DESC LIMIT 0,1
+code: 'ER_BAD_FIELD_ERROR'
+errno: 1054
+sqlState: '42S22'
 index: 0
-name: 'ER_SP_UNDECLARED_VARError'
-pid: 54468
+name: 'ER_BAD_FIELD_ERRORError'
+pid: 36920
 hostname: xiaomo
 
-2017-05-27 17:17:20,514 ERROR 46472 nodejs.unhandledExceptionError: read ECONNRESET
-    at exports._errnoException (util.js:1050:11)
-    at TCP.onread (net.js:582:26)
-code: 'ECONNRESET'
-errno: 'ECONNRESET'
-syscall: 'read'
-name: 'unhandledExceptionError'
-pid: 46472
-hostname: xiaomo
-
-2017-05-27 17:27:45,553 ERROR 46472 nodejs.unhandledExceptionError: read ECONNRESET
-    at exports._errnoException (util.js:1050:11)
-    at TCP.onread (net.js:582:26)
-code: 'ECONNRESET'
-errno: 'ECONNRESET'
-syscall: 'read'
-name: 'unhandledExceptionError'
-pid: 46472
-hostname: xiaomo
-
-2017-05-27 17:49:25,293 ERROR 46472 nodejs.unhandledExceptionError: read ECONNRESET
-    at exports._errnoException (util.js:1050:11)
-    at TCP.onread (net.js:582:26)
-code: 'ECONNRESET'
-errno: 'ECONNRESET'
-syscall: 'read'
-name: 'unhandledExceptionError'
-pid: 46472
-hostname: xiaomo
-
-2017-05-27 17:51:30,277 ERROR 55940 [-/192.168.16.22/-/5ms POST /api/myaccount/userBeanLog] nodejs.TypeError: this.ctx.service.utils.db.paginate is not a function
-    at ViewpointService.userBeanLog (E:\nodejs\sumi-server\app\service\myaccount.js:32:33)
-    at MyaccountController.userBeanLog (E:\nodejs\sumi-server\app\controller\myaccount.js:55:55)
-    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
-    at classControllerMiddleware.next (<anonymous>)
-    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
-    at dispatch.next (<anonymous>)
-    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
-    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
-    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
-    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
-
-pid: 55940
-hostname: xiaomo
-
-2017-05-27 17:51:50,225 ERROR 58304 [-/192.168.16.22/-/25ms POST /api/myaccount/userBeanLog] nodejs.TypeError: this.ctx.service.utils.db.paginate is not a function
-    at ViewpointService.userBeanLog (E:\nodejs\sumi-server\app\service\myaccount.js:32:33)
-    at MyaccountController.userBeanLog (E:\nodejs\sumi-server\app\controller\myaccount.js:55:55)
-    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
-    at classControllerMiddleware.next (<anonymous>)
-    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
-    at dispatch.next (<anonymous>)
-    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
-    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
-    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
-    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
-
-pid: 58304
-hostname: xiaomo
-
-2017-05-27 17:52:17,798 ERROR 57304 [-/192.168.16.22/-/26ms POST /api/myaccount/userBeanLog] nodejs.TypeError: this.ctx.service.utils.db.paginate is not a function
-    at ViewpointService.userBeanLog (E:\nodejs\sumi-server\app\service\myaccount.js:32:33)
-    at MyaccountController.userBeanLog (E:\nodejs\sumi-server\app\controller\myaccount.js:55:55)
-    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
-    at classControllerMiddleware.next (<anonymous>)
-    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
-    at dispatch.next (<anonymous>)
-    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
-    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
-    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
-    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
-
-pid: 57304
-hostname: xiaomo
-
-2017-05-27 17:53:04,227 ERROR 56004 [-/192.168.16.22/-/23ms POST /api/myaccount/userBeanLog] nodejs.TypeError: this.ctx.service.utils.db.paginate is not a function
-    at ViewpointService.userBeanLog (E:\nodejs\sumi-server\app\service\myaccount.js:32:33)
-    at MyaccountController.userBeanLog (E:\nodejs\sumi-server\app\controller\myaccount.js:55:55)
-    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
-    at classControllerMiddleware.next (<anonymous>)
-    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
-    at dispatch.next (<anonymous>)
-    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
-    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
-    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
-    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
-
-pid: 56004
-hostname: xiaomo
-
-2017-05-27 17:53:39,550 ERROR 56572 [-/192.168.16.22/-/22ms POST /api/myaccount/userBeanLog] nodejs.TypeError: this.ctx.service.utils.db.paginate is not a function
-    at ViewpointService.userBeanLog (E:\nodejs\sumi-server\app\service\myaccount.js:32:33)
-    at MyaccountController.userBeanLog (E:\nodejs\sumi-server\app\controller\myaccount.js:55:55)
-    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
-    at classControllerMiddleware.next (<anonymous>)
-    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
-    at dispatch.next (<anonymous>)
-    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
-    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
-    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
-    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
-
-pid: 56572
-hostname: xiaomo
-
-2017-05-27 17:57:27,454 ERROR 45060 [-/192.168.16.22/-/22ms POST /api/myaccount/userBeanLog] nodejs.TypeError: this.ctx.service.utils.db.paginate is not a function
-    at ViewpointService.userBeanLog (E:\nodejs\sumi-server\app\service\myaccount.js:32:33)
-    at MyaccountController.userBeanLog (E:\nodejs\sumi-server\app\controller\myaccount.js:55:55)
-    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
-    at classControllerMiddleware.next (<anonymous>)
-    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
-    at dispatch.next (<anonymous>)
-    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
-    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
-    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
-    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
-
-pid: 45060
-hostname: xiaomo
-
-2017-05-27 17:57:28,997 ERROR 45060 [-/192.168.16.22/-/3ms POST /api/myaccount/userBeanLog] nodejs.TypeError: this.ctx.service.utils.db.paginate is not a function
-    at ViewpointService.userBeanLog (E:\nodejs\sumi-server\app\service\myaccount.js:32:33)
-    at MyaccountController.userBeanLog (E:\nodejs\sumi-server\app\controller\myaccount.js:55:55)
-    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
-    at classControllerMiddleware.next (<anonymous>)
-    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
-    at dispatch.next (<anonymous>)
-    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
-    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
-    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
-    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
-
-pid: 45060
-hostname: xiaomo
-
-2017-05-27 17:58:14,042 ERROR 56816 [-/192.168.16.22/-/21ms POST /api/myaccount/userBeanLog] nodejs.TypeError: this.ctx.service.utils.db.paginate is not a function
-    at ViewpointService.userBeanLog (E:\nodejs\sumi-server\app\service\myaccount.js:32:33)
-    at MyaccountController.userBeanLog (E:\nodejs\sumi-server\app\controller\myaccount.js:55:55)
-    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
-    at classControllerMiddleware.next (<anonymous>)
-    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
-    at dispatch.next (<anonymous>)
-    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
-    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
-    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
-    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
-
-pid: 56816
-hostname: xiaomo
-
-2017-05-27 17:58:55,003 ERROR 58176 [-/192.168.16.22/-/22ms POST /api/myaccount/userBeanLog] nodejs.TypeError: this.ctx.service.utils.db.paginate is not a function
-    at ViewpointService.userBeanLog (E:\nodejs\sumi-server\app\service\myaccount.js:32:33)
-    at MyaccountController.userBeanLog (E:\nodejs\sumi-server\app\controller\myaccount.js:55:55)
-    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
-    at classControllerMiddleware.next (<anonymous>)
-    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
-    at dispatch.next (<anonymous>)
-    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
-    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
-    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
-    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
-
-pid: 58176
-hostname: xiaomo
-
-2017-05-27 17:59:37,719 ERROR 56212 [-/192.168.16.22/-/29ms POST /api/myaccount/userBeanLog] nodejs.TypeError: this.ctx.service.utils.db.paginate is not a function
-    at ViewpointService.userBeanLog (E:\nodejs\sumi-server\app\service\myaccount.js:32:33)
-    at MyaccountController.userBeanLog (E:\nodejs\sumi-server\app\controller\myaccount.js:55:55)
-    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
-    at classControllerMiddleware.next (<anonymous>)
-    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
-    at dispatch.next (<anonymous>)
-    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
-    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
-    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
-    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
-
-pid: 56212
-hostname: xiaomo
-
-2017-05-27 18:00:45,944 ERROR 57268 [-/192.168.16.22/-/27ms POST /api/myaccount/userBeanLog] nodejs.TypeError: this.ctx.service.utils.db.prev is not a function
-    at ViewpointService.userBeanLog (E:\nodejs\sumi-server\app\service\myaccount.js:33:50)
-    at MyaccountController.userBeanLog (E:\nodejs\sumi-server\app\controller\myaccount.js:55:55)
-    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
-    at classControllerMiddleware.next (<anonymous>)
-    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
-    at dispatch.next (<anonymous>)
-    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
-    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
-    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
-    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
-
-pid: 57268
-hostname: xiaomo
-
-2017-05-31 10:08:11,690 ERROR 18696 nodejs.unhandledExceptionError: read ECONNRESET
-    at exports._errnoException (util.js:1050:11)
-    at TCP.onread (net.js:582:26)
-code: 'ECONNRESET'
-errno: 'ECONNRESET'
-syscall: 'read'
-name: 'unhandledExceptionError'
-pid: 18696
-hostname: xiaomo
-
-2017-05-31 10:10:23,523 ERROR 18696 nodejs.unhandledExceptionError: read ECONNRESET
-    at exports._errnoException (util.js:1050:11)
-    at TCP.onread (net.js:582:26)
-code: 'ECONNRESET'
-errno: 'ECONNRESET'
-syscall: 'read'
-name: 'unhandledExceptionError'
-pid: 18696
-hostname: xiaomo
-
-2017-05-31 10:10:37,807 ERROR 18696 nodejs.unhandledExceptionError: read ECONNRESET
-    at exports._errnoException (util.js:1050:11)
-    at TCP.onread (net.js:582:26)
-code: 'ECONNRESET'
-errno: 'ECONNRESET'
-syscall: 'read'
-name: 'unhandledExceptionError'
-pid: 18696
-hostname: xiaomo
-
-2017-05-31 10:10:52,982 ERROR 18696 nodejs.unhandledExceptionError: read ECONNRESET
-    at exports._errnoException (util.js:1050:11)
-    at TCP.onread (net.js:582:26)
-code: 'ECONNRESET'
-errno: 'ECONNRESET'
-syscall: 'read'
-name: 'unhandledExceptionError'
-pid: 18696
-hostname: xiaomo
-
-2017-05-31 10:31:47,382 ERROR 18696 nodejs.unhandledExceptionError: read ECONNRESET
-    at exports._errnoException (util.js:1050:11)
-    at TCP.onread (net.js:582:26)
-code: 'ECONNRESET'
-errno: 'ECONNRESET'
-syscall: 'read'
-name: 'unhandledExceptionError'
-pid: 18696
-hostname: xiaomo
-
-2017-05-31 10:36:14,493 ERROR 18696 nodejs.unhandledExceptionError: read ECONNRESET
-    at exports._errnoException (util.js:1050:11)
-    at TCP.onread (net.js:582:26)
-code: 'ECONNRESET'
-errno: 'ECONNRESET'
-syscall: 'read'
-name: 'unhandledExceptionError'
-pid: 18696
-hostname: xiaomo
-
-2017-05-31 10:47:45,991 ERROR 25776 [-/127.0.0.1/-/1ms GET /] nodejs.ETIMEDOUTError: connect ETIMEDOUT
-    at PoolConnection.Connection._handleConnectTimeout (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:419:13)
-    at Object.onceWrapper (events.js:293:19)
-    at emitNone (events.js:86:13)
-    at Socket.emit (events.js:188:7)
-    at Socket._onTimeout (net.js:352:8)
+2017-05-31 13:59:41,150 ERROR 33120 nodejs.ClusterClientNoResponseError: client no response in 2256637ms exceeding maxIdleTime 30000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:72:23)
     at ontimeout (timers.js:386:14)
     at tryOnTimeout (timers.js:250:5)
     at Timer.listOnTimeout (timers.js:214:5)
-    --------------------
-    at Protocol._enqueue (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:141:48)
-    at Protocol.handshake (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:52:41)
-    at PoolConnection.connect (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:130:18)
-    at Pool.getConnection (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:48:16)
-    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
-    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
-    at Pool.ret [as getConnection] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
-    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:202:8)
-    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
-    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
-    sql: select now() as currentTime;
-errorno: 'ETIMEDOUT'
-code: 'ETIMEDOUT'
-syscall: 'connect'
-fatal: true
-name: 'ETIMEDOUTError'
-pid: 25776
+name: 'ClusterClientNoResponseError'
+pid: 33120
+hostname: xiaomo
+
+2017-05-31 13:59:47,870 ERROR 33120 nodejs.ClusterRequestTypeError: unsupport data type: register_channel
+    at Leader._handleRequest (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:354:23)
+    at Connection.conn.on (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:261:43)
+    at emitTwo (events.js:106:13)
+    at Connection.emit (events.js:194:7)
+    at process.nextTick (E:\nodejs\sumi-server\node_modules\cluster-client\lib\connection.js:174:35)
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+name: 'ClusterRequestTypeError'
+pid: 33120
+hostname: xiaomo
+
+2017-05-31 13:59:53,651 ERROR 33120 nodejs.ClusterRequestTypeError: unsupport data type: register_channel
+    at Leader._handleRequest (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:354:23)
+    at Connection.conn.on (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:261:43)
+    at emitTwo (events.js:106:13)
+    at Connection.emit (events.js:194:7)
+    at process.nextTick (E:\nodejs\sumi-server\node_modules\cluster-client\lib\connection.js:174:35)
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+name: 'ClusterRequestTypeError'
+pid: 33120
+hostname: xiaomo
+
+2017-05-31 14:00:01,652 ERROR 33120 nodejs.ClusterRequestTypeError: unsupport data type: register_channel
+    at Leader._handleRequest (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:354:23)
+    at Connection.conn.on (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:261:43)
+    at emitTwo (events.js:106:13)
+    at Connection.emit (events.js:194:7)
+    at process.nextTick (E:\nodejs\sumi-server\node_modules\cluster-client\lib\connection.js:174:35)
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+name: 'ClusterRequestTypeError'
+pid: 33120
+hostname: xiaomo
+
+2017-05-31 14:00:09,652 ERROR 33120 nodejs.ClusterRequestTypeError: unsupport data type: register_channel
+    at Leader._handleRequest (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:354:23)
+    at Connection.conn.on (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:261:43)
+    at emitTwo (events.js:106:13)
+    at Connection.emit (events.js:194:7)
+    at process.nextTick (E:\nodejs\sumi-server\node_modules\cluster-client\lib\connection.js:174:35)
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+name: 'ClusterRequestTypeError'
+pid: 33120
+hostname: xiaomo
+
+2017-05-31 14:00:17,652 ERROR 33120 nodejs.ClusterRequestTypeError: unsupport data type: register_channel
+    at Leader._handleRequest (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:354:23)
+    at Connection.conn.on (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:261:43)
+    at emitTwo (events.js:106:13)
+    at Connection.emit (events.js:194:7)
+    at process.nextTick (E:\nodejs\sumi-server\node_modules\cluster-client\lib\connection.js:174:35)
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+name: 'ClusterRequestTypeError'
+pid: 33120
+hostname: xiaomo
+
+2017-05-31 14:00:25,653 ERROR 33120 nodejs.ClusterRequestTypeError: unsupport data type: register_channel
+    at Leader._handleRequest (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:354:23)
+    at Connection.conn.on (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:261:43)
+    at emitTwo (events.js:106:13)
+    at Connection.emit (events.js:194:7)
+    at process.nextTick (E:\nodejs\sumi-server\node_modules\cluster-client\lib\connection.js:174:35)
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+name: 'ClusterRequestTypeError'
+pid: 33120
+hostname: xiaomo
+
+2017-05-31 14:00:33,653 ERROR 33120 nodejs.ClusterRequestTypeError: unsupport data type: register_channel
+    at Leader._handleRequest (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:354:23)
+    at Connection.conn.on (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:261:43)
+    at emitTwo (events.js:106:13)
+    at Connection.emit (events.js:194:7)
+    at process.nextTick (E:\nodejs\sumi-server\node_modules\cluster-client\lib\connection.js:174:35)
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+name: 'ClusterRequestTypeError'
+pid: 33120
+hostname: xiaomo
+
+2017-05-31 14:00:41,654 ERROR 33120 nodejs.ClusterRequestTypeError: unsupport data type: register_channel
+    at Leader._handleRequest (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:354:23)
+    at Connection.conn.on (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:261:43)
+    at emitTwo (events.js:106:13)
+    at Connection.emit (events.js:194:7)
+    at process.nextTick (E:\nodejs\sumi-server\node_modules\cluster-client\lib\connection.js:174:35)
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+name: 'ClusterRequestTypeError'
+pid: 33120
+hostname: xiaomo
+
+2017-05-31 14:00:49,654 ERROR 33120 nodejs.ClusterRequestTypeError: unsupport data type: register_channel
+    at Leader._handleRequest (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:354:23)
+    at Connection.conn.on (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:261:43)
+    at emitTwo (events.js:106:13)
+    at Connection.emit (events.js:194:7)
+    at process.nextTick (E:\nodejs\sumi-server\node_modules\cluster-client\lib\connection.js:174:35)
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+name: 'ClusterRequestTypeError'
+pid: 33120
+hostname: xiaomo
+
+2017-05-31 14:00:57,656 ERROR 33120 nodejs.ClusterRequestTypeError: unsupport data type: register_channel
+    at Leader._handleRequest (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:354:23)
+    at Connection.conn.on (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:261:43)
+    at emitTwo (events.js:106:13)
+    at Connection.emit (events.js:194:7)
+    at process.nextTick (E:\nodejs\sumi-server\node_modules\cluster-client\lib\connection.js:174:35)
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+name: 'ClusterRequestTypeError'
+pid: 33120
+hostname: xiaomo
+
+2017-05-31 14:01:05,692 ERROR 33120 nodejs.ClusterRequestTypeError: unsupport data type: register_channel
+    at Leader._handleRequest (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:354:23)
+    at Connection.conn.on (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:261:43)
+    at emitTwo (events.js:106:13)
+    at Connection.emit (events.js:194:7)
+    at process.nextTick (E:\nodejs\sumi-server\node_modules\cluster-client\lib\connection.js:174:35)
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+name: 'ClusterRequestTypeError'
+pid: 33120
+hostname: xiaomo
+
+2017-05-31 14:01:13,694 ERROR 33120 nodejs.ClusterRequestTypeError: unsupport data type: register_channel
+    at Leader._handleRequest (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:354:23)
+    at Connection.conn.on (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:261:43)
+    at emitTwo (events.js:106:13)
+    at Connection.emit (events.js:194:7)
+    at process.nextTick (E:\nodejs\sumi-server\node_modules\cluster-client\lib\connection.js:174:35)
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+name: 'ClusterRequestTypeError'
+pid: 33120
+hostname: xiaomo
+
+2017-05-31 14:01:21,694 ERROR 33120 nodejs.ClusterRequestTypeError: unsupport data type: register_channel
+    at Leader._handleRequest (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:354:23)
+    at Connection.conn.on (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:261:43)
+    at emitTwo (events.js:106:13)
+    at Connection.emit (events.js:194:7)
+    at process.nextTick (E:\nodejs\sumi-server\node_modules\cluster-client\lib\connection.js:174:35)
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+name: 'ClusterRequestTypeError'
+pid: 33120
+hostname: xiaomo
+
+2017-05-31 14:01:29,695 ERROR 33120 nodejs.ClusterRequestTypeError: unsupport data type: register_channel
+    at Leader._handleRequest (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:354:23)
+    at Connection.conn.on (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:261:43)
+    at emitTwo (events.js:106:13)
+    at Connection.emit (events.js:194:7)
+    at process.nextTick (E:\nodejs\sumi-server\node_modules\cluster-client\lib\connection.js:174:35)
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+name: 'ClusterRequestTypeError'
+pid: 33120
+hostname: xiaomo
+
+2017-05-31 14:01:37,694 ERROR 33120 nodejs.ClusterRequestTypeError: unsupport data type: register_channel
+    at Leader._handleRequest (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:354:23)
+    at Connection.conn.on (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:261:43)
+    at emitTwo (events.js:106:13)
+    at Connection.emit (events.js:194:7)
+    at process.nextTick (E:\nodejs\sumi-server\node_modules\cluster-client\lib\connection.js:174:35)
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+name: 'ClusterRequestTypeError'
+pid: 33120
+hostname: xiaomo
+
+2017-05-31 14:01:45,697 ERROR 33120 nodejs.ClusterRequestTypeError: unsupport data type: register_channel
+    at Leader._handleRequest (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:354:23)
+    at Connection.conn.on (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:261:43)
+    at emitTwo (events.js:106:13)
+    at Connection.emit (events.js:194:7)
+    at process.nextTick (E:\nodejs\sumi-server\node_modules\cluster-client\lib\connection.js:174:35)
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+name: 'ClusterRequestTypeError'
+pid: 33120
+hostname: xiaomo
+
+2017-05-31 14:01:53,697 ERROR 33120 nodejs.ClusterRequestTypeError: unsupport data type: register_channel
+    at Leader._handleRequest (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:354:23)
+    at Connection.conn.on (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:261:43)
+    at emitTwo (events.js:106:13)
+    at Connection.emit (events.js:194:7)
+    at process.nextTick (E:\nodejs\sumi-server\node_modules\cluster-client\lib\connection.js:174:35)
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+name: 'ClusterRequestTypeError'
+pid: 33120
+hostname: xiaomo
+
+2017-05-31 14:02:01,708 ERROR 33120 nodejs.ClusterRequestTypeError: unsupport data type: register_channel
+    at Leader._handleRequest (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:354:23)
+    at Connection.conn.on (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:261:43)
+    at emitTwo (events.js:106:13)
+    at Connection.emit (events.js:194:7)
+    at process.nextTick (E:\nodejs\sumi-server\node_modules\cluster-client\lib\connection.js:174:35)
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+name: 'ClusterRequestTypeError'
+pid: 33120
+hostname: xiaomo
+
+2017-05-31 14:02:09,698 ERROR 33120 nodejs.ClusterRequestTypeError: unsupport data type: register_channel
+    at Leader._handleRequest (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:354:23)
+    at Connection.conn.on (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:261:43)
+    at emitTwo (events.js:106:13)
+    at Connection.emit (events.js:194:7)
+    at process.nextTick (E:\nodejs\sumi-server\node_modules\cluster-client\lib\connection.js:174:35)
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+name: 'ClusterRequestTypeError'
+pid: 33120
+hostname: xiaomo
+
+2017-05-31 14:02:17,698 ERROR 33120 nodejs.ClusterRequestTypeError: unsupport data type: register_channel
+    at Leader._handleRequest (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:354:23)
+    at Connection.conn.on (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:261:43)
+    at emitTwo (events.js:106:13)
+    at Connection.emit (events.js:194:7)
+    at process.nextTick (E:\nodejs\sumi-server\node_modules\cluster-client\lib\connection.js:174:35)
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+name: 'ClusterRequestTypeError'
+pid: 33120
 hostname: xiaomo
 
