@@ -60,24 +60,24 @@ module.exports = app => {
 
     // 股吧热门四条
     async get_stock_board_hot() {
-      let { size, userId } = this.ctx.request.body;
+      let { size } = this.ctx.request.body;
 
-      if (this.ctx.service.utils.common.chechtype(userId) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '用户ID格式不正确',
-        };
-        return;
-      }
+      // if (this.ctx.service.utils.common.chechtype(userId) === false) {
+      //   this.ctx.body = {
+      //     status: 0,
+      //     tips: '用户ID格式不正确',
+      //   };
+      //   return;
+      // }
       if (this.ctx.service.utils.common.chechtype(size) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '页码数量格式不正确',
+          tips: '数量格式不正确',
         };
         return;
       }
       size = parseInt(size, 10);
-      const result = await this.ctx.service.forum.hot(size, userId);
+      const result = await this.ctx.service.forum.hot(size);
       this.ctx.body = {
         status: 1,
         list: result,
@@ -136,8 +136,49 @@ module.exports = app => {
       };
     }
 
-    // 股吧板块关注与取消
+    // 股吧板块关注
     async follow() {
+      const { state, boardId, userId } = this.ctx.request.body;
+      if (this.ctx.service.utils.common.chechtype(boardId) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: 'ID格式不正确',
+        };
+        return;
+      }
+      if (this.ctx.service.utils.common.chechtype(userId) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户ID格式不正确',
+        };
+        return;
+      }
+      if (this.ctx.service.utils.common.chechtype(state) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '状态格式不正确',
+        };
+        return;
+      }
+
+
+      const result = await this.ctx.service.forum.followForum(state, boardId, userId);
+
+      if (result === 0) {
+        this.ctx.body = {
+          status: 0,
+          tips: '该股吧板块已关注',
+        };
+        return;
+      }
+      this.ctx.body = {
+        status: 1,
+        detail: result,
+        tip: '关注成功',
+      };
+    }
+    // 取消关注
+    async cancelfollow() {
       const { state, boardId, userId } = this.ctx.request.body;
       if (this.ctx.service.utils.common.chechtype(boardId) === false) {
         this.ctx.body = {
@@ -167,41 +208,22 @@ module.exports = app => {
         };
         return;
       }
-      if (state === 1) {
-        console.log('取消关注');
-        const cancle = await this.ctx.service.forum.cancleFollowForum(state, boardId, userId);
-        console.log(cancle);
-        console.log('cancle');
-        if (cancle === 0) {
-          this.ctx.body = {
-            status: 0,
-            tips: '您之前没关注此板块内容',
-            detail: cancle,
-          };
-          return;
-        }
+
+      console.log('取消关注');
+      const cancle = await this.ctx.service.forum.cancleFollowForum(state, boardId, userId);
+      if (cancle === 0) {
         this.ctx.body = {
-          status: 1,
+          status: 0,
+          tips: '您之前没关注此板块内容',
           detail: cancle,
-          tip: '取消关注成功',
         };
-
-      } else {
-        const result = await this.ctx.service.forum.followForum(state, boardId, userId);
-
-        if (result === 0) {
-          this.ctx.body = {
-            status: 0,
-            tips: '该股吧板块已关注',
-          };
-          return;
-        }
-        this.ctx.body = {
-          status: 1,
-          detail: result,
-          tip: '关注成功',
-        };
+        return;
       }
+      this.ctx.body = {
+        status: 1,
+        detail: cancle,
+        tip: '取消关注成功',
+      };
 
     }
     // 获取主题最大页码

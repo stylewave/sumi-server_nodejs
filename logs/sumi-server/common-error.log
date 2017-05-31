@@ -367,3 +367,92 @@ hostname: xiaomo
 pid: 57268
 hostname: xiaomo
 
+2017-05-31 10:08:11,690 ERROR 18696 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 18696
+hostname: xiaomo
+
+2017-05-31 10:10:23,523 ERROR 18696 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 18696
+hostname: xiaomo
+
+2017-05-31 10:10:37,807 ERROR 18696 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 18696
+hostname: xiaomo
+
+2017-05-31 10:10:52,982 ERROR 18696 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 18696
+hostname: xiaomo
+
+2017-05-31 10:31:47,382 ERROR 18696 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 18696
+hostname: xiaomo
+
+2017-05-31 10:36:14,493 ERROR 18696 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 18696
+hostname: xiaomo
+
+2017-05-31 10:47:45,991 ERROR 25776 [-/127.0.0.1/-/1ms GET /] nodejs.ETIMEDOUTError: connect ETIMEDOUT
+    at PoolConnection.Connection._handleConnectTimeout (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:419:13)
+    at Object.onceWrapper (events.js:293:19)
+    at emitNone (events.js:86:13)
+    at Socket.emit (events.js:188:7)
+    at Socket._onTimeout (net.js:352:8)
+    at ontimeout (timers.js:386:14)
+    at tryOnTimeout (timers.js:250:5)
+    at Timer.listOnTimeout (timers.js:214:5)
+    --------------------
+    at Protocol._enqueue (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:141:48)
+    at Protocol.handshake (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:52:41)
+    at PoolConnection.connect (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:130:18)
+    at Pool.getConnection (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:48:16)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as getConnection] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:202:8)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    sql: select now() as currentTime;
+errorno: 'ETIMEDOUT'
+code: 'ETIMEDOUT'
+syscall: 'connect'
+fatal: true
+name: 'ETIMEDOUTError'
+pid: 25776
+hostname: xiaomo
+

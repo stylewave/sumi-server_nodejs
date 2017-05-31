@@ -30,16 +30,13 @@ module.exports = app => {
     async userBeanLog(userId, page, size) {
       const start = (page - 1) * size;
       // consloe.log();
-      this.ctx.service.utils.page.paginate(page, size, this.getBeanTotal(userId));
+      this.ctx.service.utils.page.paginate(page, size, await this.getBeanTotal(userId));
       const prev = await this.ctx.service.utils.page.prev();
       const next = await this.ctx.service.utils.page.next();
-      console.log(prev);
-      console.log('rs2');
-      console.log(next);
-      // const field = 'log_id,log_content,log_uid,log_type,log_count,log_main_table,log_main_id,log_create_time,log_remark';
-      const field = 'log_id';
+      const field = 'log_id,log_content,log_uid,log_type,log_count,log_main_table,log_main_id,log_create_time,log_remark';
+
       const sql = `SELECT ${field} FROM data_user_bean_log  WHERE log_uid = '${userId}' ORDER BY log_id DESC LIMIT ${start},${size}`;
-      console.log(sql);
+      // console.log(sql);
       const result = await app.mysql.query(sql);
       return {
         result,

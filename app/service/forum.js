@@ -24,22 +24,22 @@ module.exports = app => {
       return result;
     }
     // 热门股吧
-    async hot(size, userId) {
+    async hot(size) {
       const field = 'board_id,board_title,board_description,board_stock_code,board_follow,board_hits,board_ishot';
       const sql = 'SELECT ' + field + ' FROM data_forum_board WHERE board_status = \'1\'  AND board_ishot=1 ORDER BY board_id DESC LIMIT ' + size;
       const result = await app.mysql.query(sql);
 
-      const user = await this.userBoard(userId);
-      for (const i in result) {
-        const followb = ',' + result[i].board_id + ',';
-        if (user.user_follow_board.indexOf(followb) !== -1) {
-          console.log('已关注');
-          result[i].isfollow = 1;
-        } else {
-          console.log('没关注');
-          result[i].isfollow = 0;
-        }
-      }
+      // const user = await this.userBoard(userId);
+      // for (const i in result) {
+      //   const followb = ',' + result[i].board_id + ',';
+      //   if (user.user_follow_board.indexOf(followb) !== -1) {
+      //     console.log('已关注');
+      //     result[i].isfollow = 1;
+      //   } else {
+      //     console.log('没关注');
+      //     result[i].isfollow = 0;
+      //   }
+      // }
       return result;
     }
     async userBoard(userId) {
