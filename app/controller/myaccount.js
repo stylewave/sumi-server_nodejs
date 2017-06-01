@@ -99,9 +99,11 @@ module.exports = app => {
         return;
       }
       const result = await this.ctx.service.myaccount.beanReturnDetail(returnId);
+
       this.ctx.body = {
         status: 1,
         list: result,
+        // time: formatted,
       };
     }
 

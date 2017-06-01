@@ -54,6 +54,8 @@ module.exports = app => {
   app.post('/api/myaccount/beanReturnList', 'myaccount.beanReturnList');
   app.post('/api/myaccount/beanReturnDetail', 'myaccount.beanReturnDetail');
 
+  app.post('/api/user/chatRootList', 'user.chatRootList');
+
   /** socket请求**/
   app.io.route('join', app.io.controllers.chat);
 

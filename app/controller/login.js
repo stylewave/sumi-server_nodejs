@@ -14,21 +14,31 @@ module.exports = app => {
         };
         return;
       }
-      const find = await this.ctx.service.veCode.find(mobile, code);
-      if (find === false) {
+      const check = await this.ctx.service.userLogin.checkuser(mobile, code);
+      console.log(check);
+      console.log('check');
+      if (check !== 0) {
         this.ctx.body = {
           status: 0,
-          tips: '验证码不正确',
+          tips: '该号码已经注册过了',
         };
         return;
       }
+      const find = await this.ctx.service.veCode.find(mobile, code);
+      console.log(find);
+      // if (find === false) {
+      //   this.ctx.body = {
+      //     status: 0,
+      //     tips: '验证码不正确',
+      //   };
+      //   return;
+      // }
 
       this.ctx.service.veCode.update(mobile, code, 1);
       const salt = charUtil.getRandomChar(4);
       const md5Pwd = charUtil.md5PWD(pwd, salt);
       const userInfo = await this.ctx.service.userLogin.reg(mobile, md5Pwd, salt);
       if (userInfo) {
-        this.ctx.session.userInfo = userInfo;
         this.ctx.body = {
           status: 1,
           row: userInfo,

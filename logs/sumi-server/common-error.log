@@ -381,3 +381,941 @@ name: 'ClusterRequestTypeError'
 pid: 33120
 hostname: xiaomo
 
+2017-05-31 15:16:51,241 ERROR 33120 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 33120
+hostname: xiaomo
+
+2017-05-31 15:23:40,442 ERROR 47284 [-/127.0.0.1/-/51ms POST /api/myaccount/beanReturnDetail] nodejs.TypeError: (intermediate value).Format is not a function
+    at MyaccountController.beanReturnDetail (E:\nodejs\sumi-server\app\controller\myaccount.js:102:32)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 47284
+hostname: xiaomo
+
+2017-05-31 15:24:39,598 ERROR 43744 [-/127.0.0.1/-/23ms POST /api/myaccount/beanReturnDetail] nodejs.MODULE_NOT_FOUNDError: Cannot find module 'node-datetime'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at MyaccountController.beanReturnDetail (E:\nodejs\sumi-server\app\controller\myaccount.js:102:7)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+code: 'MODULE_NOT_FOUND'
+name: 'MODULE_NOT_FOUNDError'
+pid: 43744
+hostname: xiaomo
+
+2017-05-31 15:29:48,968 ERROR 51032 [-/127.0.0.1/-/28ms POST /api/myaccount/beanReturnDetail] nodejs.MODULE_NOT_FOUNDError: Cannot find module 'node-datetime'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at MyaccountController.beanReturnDetail (E:\nodejs\sumi-server\app\controller\myaccount.js:103:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+code: 'MODULE_NOT_FOUND'
+name: 'MODULE_NOT_FOUNDError'
+pid: 51032
+hostname: xiaomo
+
+2017-05-31 15:30:14,826 ERROR 49448 [-/127.0.0.1/-/28ms POST /api/myaccount/beanReturnDetail] nodejs.MODULE_NOT_FOUNDError: Cannot find module 'node-datetime'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at MyaccountController.beanReturnDetail (E:\nodejs\sumi-server\app\controller\myaccount.js:103:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+code: 'MODULE_NOT_FOUND'
+name: 'MODULE_NOT_FOUNDError'
+pid: 49448
+hostname: xiaomo
+
+2017-05-31 15:32:02,856 ERROR 51104 [-/127.0.0.1/-/23ms POST /api/myaccount/beanReturnDetail] nodejs.MODULE_NOT_FOUNDError: Cannot find module 'date-utils'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at MyaccountController.beanReturnDetail (E:\nodejs\sumi-server\app\controller\myaccount.js:103:7)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+code: 'MODULE_NOT_FOUND'
+name: 'MODULE_NOT_FOUNDError'
+pid: 51104
+hostname: xiaomo
+
+2017-05-31 15:32:04,488 ERROR 51104 [-/127.0.0.1/-/7ms POST /api/myaccount/beanReturnDetail] nodejs.MODULE_NOT_FOUNDError: Cannot find module 'date-utils'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at MyaccountController.beanReturnDetail (E:\nodejs\sumi-server\app\controller\myaccount.js:103:7)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+code: 'MODULE_NOT_FOUND'
+name: 'MODULE_NOT_FOUNDError'
+pid: 51104
+hostname: xiaomo
+
+2017-05-31 15:34:46,036 ERROR 51116 [-/127.0.0.1/-/27ms POST /api/myaccount/beanReturnDetail] nodejs.MODULE_NOT_FOUNDError: Cannot find module 'date-utils'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at MyaccountController.beanReturnDetail (E:\nodejs\sumi-server\app\controller\myaccount.js:103:7)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+code: 'MODULE_NOT_FOUND'
+name: 'MODULE_NOT_FOUNDError'
+pid: 51116
+hostname: xiaomo
+
+2017-05-31 15:34:47,545 ERROR 51116 [-/127.0.0.1/-/8ms POST /api/myaccount/beanReturnDetail] nodejs.MODULE_NOT_FOUNDError: Cannot find module 'date-utils'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at MyaccountController.beanReturnDetail (E:\nodejs\sumi-server\app\controller\myaccount.js:103:7)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+code: 'MODULE_NOT_FOUND'
+name: 'MODULE_NOT_FOUNDError'
+pid: 51116
+hostname: xiaomo
+
+2017-05-31 15:38:21,902 ERROR 51116 [-/127.0.0.1/-/9ms POST /api/myaccount/beanReturnDetail] nodejs.MODULE_NOT_FOUNDError: Cannot find module 'date-utils'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at MyaccountController.beanReturnDetail (E:\nodejs\sumi-server\app\controller\myaccount.js:103:7)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+code: 'MODULE_NOT_FOUND'
+name: 'MODULE_NOT_FOUNDError'
+pid: 51116
+hostname: xiaomo
+
+2017-05-31 15:39:48,725 ERROR 50252 [-/127.0.0.1/-/26ms POST /api/myaccount/beanReturnDetail] nodejs.MODULE_NOT_FOUNDError: Cannot find module 'date-utils'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at MyaccountController.beanReturnDetail (E:\nodejs\sumi-server\app\controller\myaccount.js:103:7)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+code: 'MODULE_NOT_FOUND'
+name: 'MODULE_NOT_FOUNDError'
+pid: 50252
+hostname: xiaomo
+
+2017-05-31 16:11:44,855 ERROR 54228 [-/192.168.16.25/-/79ms POST /api/login/register] nodejs.ER_DUP_ENTRYError: ER_DUP_ENTRY: Duplicate entry '18507499394' for key 'name'
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: INSERT INTO `data_user`(`user_name`, `user_pwd`, `user_salt`, `user_reg_time`) VALUES('18507499394', '9df57280e02731568dd31daa682e6373', 'BfQ9', now())
+code: 'ER_DUP_ENTRY'
+errno: 1062
+sqlState: '23000'
+index: 0
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+name: 'ER_DUP_ENTRYError'
+pid: 54228
+hostname: xiaomo
+
+2017-05-31 16:13:25,876 ERROR 54228 [-/192.168.16.25/-/48ms POST /api/login/register] nodejs.ER_DUP_ENTRYError: ER_DUP_ENTRY: Duplicate entry '18507499394' for key 'name'
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: INSERT INTO `data_user`(`user_name`, `user_pwd`, `user_salt`, `user_reg_time`) VALUES('18507499394', 'faac8ecfa772e796931c40a39f2d6902', '0g2a', now())
+code: 'ER_DUP_ENTRY'
+errno: 1062
+sqlState: '23000'
+index: 0
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+name: 'ER_DUP_ENTRYError'
+pid: 54228
+hostname: xiaomo
+
+2017-05-31 16:13:29,959 ERROR 54228 [-/192.168.16.25/-/52ms POST /api/login/register] nodejs.ER_DUP_ENTRYError: ER_DUP_ENTRY: Duplicate entry '18507499394' for key 'name'
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: INSERT INTO `data_user`(`user_name`, `user_pwd`, `user_salt`, `user_reg_time`) VALUES('18507499394', 'dd037c50a9a63b6cab8f7cf66415d4a0', '3OZQ', now())
+code: 'ER_DUP_ENTRY'
+errno: 1062
+sqlState: '23000'
+index: 0
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+name: 'ER_DUP_ENTRYError'
+pid: 54228
+hostname: xiaomo
+
+2017-05-31 16:18:16,958 ERROR 50144 [-/192.168.16.25/-/56ms POST /api/login/register] nodejs.ER_DUP_ENTRYError: ER_DUP_ENTRY: Duplicate entry '18507499394' for key 'name'
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: INSERT INTO `data_user`(`user_name`, `user_pwd`, `user_salt`, `user_reg_time`) VALUES('18507499394', 'c4e3f9b72accd493a33f9d1c6f8ee6cc', '269G', now())
+code: 'ER_DUP_ENTRY'
+errno: 1062
+sqlState: '23000'
+index: 0
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+name: 'ER_DUP_ENTRYError'
+pid: 50144
+hostname: xiaomo
+
+2017-05-31 16:20:13,049 ERROR 50144 [-/127.0.0.1/-/47ms POST /api/login/register] nodejs.ER_DUP_ENTRYError: ER_DUP_ENTRY: Duplicate entry '18814188611' for key 'name'
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: INSERT INTO `data_user`(`user_name`, `user_pwd`, `user_salt`, `user_reg_time`) VALUES('18814188611', '49fc097d8eeab560db0129d1a4b3ad7e', 'WUVx', now())
+code: 'ER_DUP_ENTRY'
+errno: 1062
+sqlState: '23000'
+index: 0
+name: 'ER_DUP_ENTRYError'
+pid: 50144
+hostname: xiaomo
+
+2017-05-31 16:25:46,444 ERROR 50144 [-/192.168.16.25/-/49ms POST /api/login/register] nodejs.ER_DUP_ENTRYError: ER_DUP_ENTRY: Duplicate entry '18507499394' for key 'name'
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: INSERT INTO `data_user`(`user_name`, `user_pwd`, `user_salt`, `user_reg_time`) VALUES('18507499394', 'bbd8044d2532336e7772b10913f2493c', 'hNje', now())
+code: 'ER_DUP_ENTRY'
+errno: 1062
+sqlState: '23000'
+index: 0
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+name: 'ER_DUP_ENTRYError'
+pid: 50144
+hostname: xiaomo
+
+2017-05-31 16:28:10,301 ERROR 50352 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 50352
+hostname: xiaomo
+
+2017-05-31 16:28:38,379 ERROR 50352 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 50352
+hostname: xiaomo
+
+2017-05-31 16:28:40,275 ERROR 50352 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 50352
+hostname: xiaomo
+
+2017-05-31 16:29:26,522 ERROR 54712 [-/127.0.0.1/-/18ms POST /api/login/register] nodejs.TypeError: this.ctx.service.veCode.checkuser is not a function
+    at LoginController.register (E:\nodejs\sumi-server\app\controller\login.js:17:51)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
+    at next (E:\nodejs\sumi-server\node_modules\co\index.js:99:29)
+
+pid: 54712
+hostname: xiaomo
+
+2017-05-31 16:29:57,887 ERROR 55696 [-/127.0.0.1/-/25ms POST /api/login/register] nodejs.ER_BAD_FIELD_ERRORError: ER_BAD_FIELD_ERROR: Unknown column 'user_name' in 'where clause'
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT * FROM `data_user_bean_return` WHERE `user_name` = '18814188611' LIMIT 0, 1
+code: 'ER_BAD_FIELD_ERROR'
+errno: 1054
+sqlState: '42S22'
+index: 0
+name: 'ER_BAD_FIELD_ERRORError'
+pid: 55696
+hostname: xiaomo
+
+2017-05-31 16:33:20,584 ERROR 56224 [-/127.0.0.1/-/64ms POST /api/login/register] nodejs.ER_DUP_ENTRYError: ER_DUP_ENTRY: Duplicate entry '18814188611' for key 'name'
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: INSERT INTO `data_user`(`user_name`, `user_pwd`, `user_salt`, `user_reg_time`) VALUES('18814188611', 'c0f22f90df594215960c8ee75f7e168e', 'VOtS', now())
+code: 'ER_DUP_ENTRY'
+errno: 1062
+sqlState: '23000'
+index: 0
+name: 'ER_DUP_ENTRYError'
+pid: 56224
+hostname: xiaomo
+
+2017-05-31 16:35:16,861 ERROR 54560 [-/127.0.0.1/-/78ms POST /api/login/register] nodejs.ER_DUP_ENTRYError: ER_DUP_ENTRY: Duplicate entry '18814188611' for key 'name'
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: INSERT INTO `data_user`(`user_name`, `user_pwd`, `user_salt`, `user_reg_time`) VALUES('18814188611', 'fcd19b371d2ea0f61c73c1b21c2bcfdf', 'Obiq', now())
+code: 'ER_DUP_ENTRY'
+errno: 1062
+sqlState: '23000'
+index: 0
+name: 'ER_DUP_ENTRYError'
+pid: 54560
+hostname: xiaomo
+
+2017-05-31 16:35:17,800 ERROR 54560 [-/127.0.0.1/-/58ms POST /api/login/register] nodejs.ER_DUP_ENTRYError: ER_DUP_ENTRY: Duplicate entry '18814188611' for key 'name'
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: INSERT INTO `data_user`(`user_name`, `user_pwd`, `user_salt`, `user_reg_time`) VALUES('18814188611', 'b35b171980e79b22a90a5f52ceed282a', 'Jqkn', now())
+code: 'ER_DUP_ENTRY'
+errno: 1062
+sqlState: '23000'
+index: 0
+name: 'ER_DUP_ENTRYError'
+pid: 54560
+hostname: xiaomo
+
+2017-05-31 16:36:58,929 ERROR 55968 [-/127.0.0.1/-/63ms POST /api/login/register] nodejs.ER_DUP_ENTRYError: ER_DUP_ENTRY: Duplicate entry '18814188611' for key 'name'
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: INSERT INTO `data_user`(`user_name`, `user_pwd`, `user_salt`, `user_reg_time`) VALUES('18814188611', '989dd3455da2746ae1309135dbba63f4', 'ewHY', now())
+code: 'ER_DUP_ENTRY'
+errno: 1062
+sqlState: '23000'
+index: 0
+name: 'ER_DUP_ENTRYError'
+pid: 55968
+hostname: xiaomo
+
+2017-05-31 16:37:33,620 ERROR 53552 [-/127.0.0.1/-/76ms POST /api/login/register] nodejs.ER_DUP_ENTRYError: ER_DUP_ENTRY: Duplicate entry '18814188611' for key 'name'
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: INSERT INTO `data_user`(`user_name`, `user_pwd`, `user_salt`, `user_reg_time`) VALUES('18814188611', '513e4eeddf8e504ac343745b8b49b02c', 'DT2f', now())
+code: 'ER_DUP_ENTRY'
+errno: 1062
+sqlState: '23000'
+index: 0
+name: 'ER_DUP_ENTRYError'
+pid: 53552
+hostname: xiaomo
+
+2017-05-31 16:37:35,202 ERROR 53552 [-/127.0.0.1/-/45ms POST /api/login/register] nodejs.ER_DUP_ENTRYError: ER_DUP_ENTRY: Duplicate entry '18814188611' for key 'name'
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: INSERT INTO `data_user`(`user_name`, `user_pwd`, `user_salt`, `user_reg_time`) VALUES('18814188611', 'bb405598d6e8d331eac1ad001a702d42', 'rgCF', now())
+code: 'ER_DUP_ENTRY'
+errno: 1062
+sqlState: '23000'
+index: 0
+name: 'ER_DUP_ENTRYError'
+pid: 53552
+hostname: xiaomo
+
+2017-05-31 16:37:36,059 ERROR 53552 [-/127.0.0.1/-/44ms POST /api/login/register] nodejs.ER_DUP_ENTRYError: ER_DUP_ENTRY: Duplicate entry '18814188611' for key 'name'
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: INSERT INTO `data_user`(`user_name`, `user_pwd`, `user_salt`, `user_reg_time`) VALUES('18814188611', '70c120ecb3a9feb32df6a00dfd679176', 'p3Nj', now())
+code: 'ER_DUP_ENTRY'
+errno: 1062
+sqlState: '23000'
+index: 0
+name: 'ER_DUP_ENTRYError'
+pid: 53552
+hostname: xiaomo
+
+2017-05-31 16:37:36,426 ERROR 53552 [-/127.0.0.1/-/62ms POST /api/login/register] nodejs.ER_DUP_ENTRYError: ER_DUP_ENTRY: Duplicate entry '18814188611' for key 'name'
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: INSERT INTO `data_user`(`user_name`, `user_pwd`, `user_salt`, `user_reg_time`) VALUES('18814188611', '27b80cd6801dbce0b187796b4956fce9', '8Xd4', now())
+code: 'ER_DUP_ENTRY'
+errno: 1062
+sqlState: '23000'
+index: 0
+name: 'ER_DUP_ENTRYError'
+pid: 53552
+hostname: xiaomo
+
+2017-05-31 16:37:36,610 ERROR 53552 [-/127.0.0.1/-/46ms POST /api/login/register] nodejs.ER_DUP_ENTRYError: ER_DUP_ENTRY: Duplicate entry '18814188611' for key 'name'
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    at TCP.onread (net.js:561:20)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: INSERT INTO `data_user`(`user_name`, `user_pwd`, `user_salt`, `user_reg_time`) VALUES('18814188611', 'a40a45aa9aabc0d34544847eeeff3202', '7i0H', now())
+code: 'ER_DUP_ENTRY'
+errno: 1062
+sqlState: '23000'
+index: 0
+name: 'ER_DUP_ENTRYError'
+pid: 53552
+hostname: xiaomo
+
+2017-05-31 16:37:36,810 ERROR 53552 [-/127.0.0.1/-/45ms POST /api/login/register] nodejs.ER_DUP_ENTRYError: ER_DUP_ENTRY: Duplicate entry '18814188611' for key 'name'
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    at TCP.onread (net.js:561:20)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: INSERT INTO `data_user`(`user_name`, `user_pwd`, `user_salt`, `user_reg_time`) VALUES('18814188611', '1251d30e848acddb620ebe095d3a9ff0', '3zHG', now())
+code: 'ER_DUP_ENTRY'
+errno: 1062
+sqlState: '23000'
+index: 0
+name: 'ER_DUP_ENTRYError'
+pid: 53552
+hostname: xiaomo
+
+2017-05-31 16:38:13,479 ERROR 55444 [-/127.0.0.1/-/65ms POST /api/login/register] nodejs.ER_DUP_ENTRYError: ER_DUP_ENTRY: Duplicate entry '18814188611' for key 'name'
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: INSERT INTO `data_user`(`user_name`, `user_pwd`, `user_salt`, `user_reg_time`) VALUES('18814188611', 'b977ec9daaa52570dec75a98d9d728e9', 'BKv2', now())
+code: 'ER_DUP_ENTRY'
+errno: 1062
+sqlState: '23000'
+index: 0
+name: 'ER_DUP_ENTRYError'
+pid: 55444
+hostname: xiaomo
+
+2017-05-31 16:38:54,771 ERROR 55016 [-/127.0.0.1/-/104ms POST /api/login/register] nodejs.ER_DUP_ENTRYError: ER_DUP_ENTRY: Duplicate entry '18814188611' for key 'name'
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: INSERT INTO `data_user`(`user_name`, `user_pwd`, `user_salt`, `user_reg_time`) VALUES('18814188611', 'ce7a5648b593a0a45ccb521baecf78e9', 'ZoRy', now())
+code: 'ER_DUP_ENTRY'
+errno: 1062
+sqlState: '23000'
+index: 0
+name: 'ER_DUP_ENTRYError'
+pid: 55016
+hostname: xiaomo
+
+2017-05-31 16:48:10,971 ERROR 55576 [-/127.0.0.1/-/60ms POST /api/user/chatRootList] nodejs.ER_BAD_FIELD_ERRORError: ER_BAD_FIELD_ERROR: Unknown column 'return_status' in 'field list'
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT log_id,log_main_id,log_room_expire,room_title as log_title ,room_photo as log_photo ,room_hits as log_hits,return_status FROM data_user_bean_log left join data_room on (room_id=log_main_id) WHERE log_uid = 1 AND log_type='join_room' ORDER BY return_id DESC LIMIT 0,5
+code: 'ER_BAD_FIELD_ERROR'
+errno: 1054
+sqlState: '42S22'
+index: 0
+name: 'ER_BAD_FIELD_ERRORError'
+pid: 55576
+hostname: xiaomo
+
+2017-05-31 16:49:50,727 ERROR 56152 [-/127.0.0.1/-/45ms POST /api/user/chatRootList] nodejs.ER_BAD_FIELD_ERRORError: ER_BAD_FIELD_ERROR: Unknown column 'return_id' in 'order clause'
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT log_id,log_main_id,log_room_expire,room_title as log_title ,room_photo as log_photo ,room_hits as log_hits FROM data_user_bean_log left join data_room on (room_id=log_main_id) WHERE log_uid = 1 AND log_type='join_room' ORDER BY return_id DESC LIMIT 0,5
+code: 'ER_BAD_FIELD_ERROR'
+errno: 1054
+sqlState: '42S22'
+index: 0
+name: 'ER_BAD_FIELD_ERRORError'
+pid: 56152
+hostname: xiaomo
+
+2017-05-31 17:25:24,323 ERROR 50352 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 50352
+hostname: xiaomo
+
+2017-05-31 17:26:39,231 ERROR 50352 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 50352
+hostname: xiaomo
+
+2017-05-31 17:28:30,610 ERROR 50352 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 50352
+hostname: xiaomo
+
+2017-05-31 17:47:15,112 ERROR 50352 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 50352
+hostname: xiaomo
+
+2017-05-31 17:51:12,266 ERROR 50352 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 50352
+hostname: xiaomo
+
+2017-05-31 17:51:46,427 ERROR 50352 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 50352
+hostname: xiaomo
+
+2017-05-31 17:54:17,916 ERROR 50352 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 50352
+hostname: xiaomo
+
+2017-05-31 18:01:55,768 ERROR 50352 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 50352
+hostname: xiaomo
+
+2017-05-31 18:07:45,664 ERROR 50352 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 50352
+hostname: xiaomo
+
+2017-05-31 18:19:23,729 ERROR 50352 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 50352
+hostname: xiaomo
+
+2017-05-31 18:20:03,997 ERROR 50352 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 50352
+hostname: xiaomo
+

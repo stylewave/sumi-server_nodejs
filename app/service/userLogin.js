@@ -25,6 +25,14 @@ module.exports = app => {
       }
       return result.affectedRows === 1;
     }
+    // 判断是否存在该手机号码
+    async checkuser(mobile) {
+      const field =
+        'user_id,user_name,user_nickname,user_phone,user_photo,user_headimg,user_status,user_level,user_vip_to,user_wx_openid,user_token,user_beans,user_bonus_beans,user_job_id,user_job_name,user_job_level,user_job_exp,user_assessment_score,user_debug';
+      const sql = `SELECT  ${field} FROM data_user WHERE user_name = '${mobile}' LIMIT 1`;
+      const result = await app.mysql.query(sql);
+      return result.length ? result[0] : 0;
+    }
 
     // 修改密码
     async updatePwd(mobile, pwd, salt) {
