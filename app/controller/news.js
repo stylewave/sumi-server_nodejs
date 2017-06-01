@@ -21,13 +21,6 @@ module.exports = app => {
         };
         return;
       }
-      // if (this.ctx.service.utils.common.chechtype(userId) === false) {
-      //   this.ctx.body = {
-      //     status: 0,
-      //     tips: '用户ID格式不正确',
-      //   };
-      //   return;
-      // }
       if (this.ctx.service.utils.common.chechtype(size) === false) {
         this.ctx.body = {
           status: 0,

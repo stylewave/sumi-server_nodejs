@@ -4,6 +4,7 @@ module.exports = app => {
   app.get('/debug/:mobile', 'debug.get');
   app.get('/api/alipay', 'alipay.pay');
 
+  app.post('/api/ad/create', 'ad.create');
   /** http post请求**/
   app.post('/api/sendCode', 'veCode.sendCode');
   app.post('/api/login/register', 'login.register');
@@ -14,6 +15,7 @@ module.exports = app => {
   app.post('/api/news/list', 'news.list');
   app.post('/api/news/detail', 'news.newsDetail');
   app.get('/api/login/crypt', 'login.crypt');
+
 
   app.post('/api/user/setUserPhoto', 'user.setUserPhoto');
   // 股吧模板详情
@@ -55,6 +57,8 @@ module.exports = app => {
   app.post('/api/myaccount/beanReturnDetail', 'myaccount.beanReturnDetail');
 
   app.post('/api/user/chatRootList', 'user.chatRootList');
+
+  app.post('/api/task/taskList', 'task.taskList');
 
   /** socket请求**/
   app.io.route('join', app.io.controllers.chat);

@@ -86,7 +86,7 @@ module.exports = app => {
 
     // 模块详情
     async boardDetail() {
-      const { id } = this.ctx.request.body;
+      const { id, uid } = this.ctx.request.body;
 
       if (this.ctx.service.utils.common.chechtype(id) === false) {
         this.ctx.body = {
@@ -95,8 +95,15 @@ module.exports = app => {
         };
         return;
       }
+      if (this.ctx.service.utils.common.chechtype(uid) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户ID格式不正确',
+        };
+        return;
+      }
 
-      const result = await this.ctx.service.forum.boardDetail(id);
+      const result = await this.ctx.service.forum.boardDetail(id, uid);
       if (_.isEmpty(result)) {
         this.ctx.body = {
           status: 0,
@@ -110,35 +117,35 @@ module.exports = app => {
       };
     }
 
-    // 股吧板块详情
-    async detail() {
-      const { boardId } = this.ctx.request.body;
+    // // 股吧板块详情
+    // async detail() {
+    //   const { boardId, userId } = this.ctx.request.body;
 
-      if (this.ctx.service.utils.common.chechtype(boardId) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: 'ID格式不正确',
-        };
-        return;
-      }
+    //   if (this.ctx.service.utils.common.chechtype(boardId) === false) {
+    //     this.ctx.body = {
+    //       status: 0,
+    //       tips: 'ID格式不正确',
+    //     };
+    //     return;
+    //   }
 
-      const result = await this.ctx.service.forum.forumDetail(boardId);
-      if (_.isEmpty(result)) {
-        this.ctx.body = {
-          status: 0,
-          tips: '该股吧板块不存在',
-        };
-        return;
-      }
-      this.ctx.body = {
-        status: 1,
-        detail: result,
-      };
-    }
+    //   const result = await this.ctx.service.forum.forumDetail(boardId, userId);
+    //   if (_.isEmpty(result)) {
+    //     this.ctx.body = {
+    //       status: 0,
+    //       tips: '该股吧板块不存在',
+    //     };
+    //     return;
+    //   }
+    //   this.ctx.body = {
+    //     status: 1,
+    //     detail: result,
+    //   };
+    // }
 
-    // 股吧板块关注
+    // 股吧板块关注与取消
     async follow() {
-      const { state, boardId, userId } = this.ctx.request.body;
+      let { state, boardId, uid } = this.ctx.request.body;
       if (this.ctx.service.utils.common.chechtype(boardId) === false) {
         this.ctx.body = {
           status: 0,
@@ -146,40 +153,52 @@ module.exports = app => {
         };
         return;
       }
-      if (this.ctx.service.utils.common.chechtype(userId) === false) {
+      if (this.ctx.service.utils.common.chechtype(uid) === false) {
         this.ctx.body = {
           status: 0,
           tips: '用户ID格式不正确',
         };
         return;
       }
-      if (this.ctx.service.utils.common.chechtype(state) === false) {
+      state = parseInt(state, 10);
+
+      if (state === 0) {
+        const cancle = await this.ctx.service.forum.cancleFollowForum(state, boardId, uid);
+        if (cancle === 0) {
+          this.ctx.body = {
+            status: 0,
+            tips: '您之前没关注此板块内容',
+            detail: cancle,
+          };
+          return;
+        }
         this.ctx.body = {
-          status: 0,
-          tips: '状态格式不正确',
+          status: 1,
+          detail: cancle,
+          tip: '取消关注成功',
         };
-        return;
+
+      } else {
+        const result = await this.ctx.service.forum.followForum(state, boardId, uid);
+
+        if (result === 0) {
+          this.ctx.body = {
+            status: 0,
+            tips: '该股吧板块已关注',
+          };
+          return;
+        }
+        this.ctx.body = {
+          status: 1,
+          detail: result,
+          tip: '关注成功',
+        };
       }
 
-
-      const result = await this.ctx.service.forum.followForum(state, boardId, userId);
-
-      if (result === 0) {
-        this.ctx.body = {
-          status: 0,
-          tips: '该股吧板块已关注',
-        };
-        return;
-      }
-      this.ctx.body = {
-        status: 1,
-        detail: result,
-        tip: '关注成功',
-      };
     }
     // 取消关注
     async cancelfollow() {
-      const { state, boardId, userId } = this.ctx.request.body;
+      const { state, boardId, uid } = this.ctx.request.body;
       if (this.ctx.service.utils.common.chechtype(boardId) === false) {
         this.ctx.body = {
           status: 0,
@@ -187,7 +206,7 @@ module.exports = app => {
         };
         return;
       }
-      if (this.ctx.service.utils.common.chechtype(userId) === false) {
+      if (this.ctx.service.utils.common.chechtype(uid) === false) {
         this.ctx.body = {
           status: 0,
           tips: '用户ID格式不正确',
@@ -210,7 +229,7 @@ module.exports = app => {
       }
 
       console.log('取消关注');
-      const cancle = await this.ctx.service.forum.cancleFollowForum(state, boardId, userId);
+      const cancle = await this.ctx.service.forum.cancleFollowForum(state, boardId, uid);
       if (cancle === 0) {
         this.ctx.body = {
           status: 0,
@@ -233,7 +252,7 @@ module.exports = app => {
     }
     // 股吧主题列表
     async sublist() {
-      let { page, size, boardId } = this.ctx.request.body;
+      let { page, size, boardId, order } = this.ctx.request.body;
       if (this.ctx.service.utils.common.chechtype(page) === false) {
         this.ctx.body = {
           status: 0,
@@ -277,22 +296,26 @@ module.exports = app => {
         };
         return;
       }
+      // 总共页数
+      const total = Math.ceil(maxPage / size);
       const start = (page - 1) * size;
-      const result = await this.ctx.service.forum.sublist(start, size, boardId);
+      const result = await this.ctx.service.forum.sublist(start, size, boardId, order);
       this.ctx.body = {
         status: 1,
+        totalsub: total,
         list: result,
+
       };
     }
 
     // 获取热门主题最大页码
-    async getSubHotTotal(boardId, type) {
-      const result = await this.ctx.service.forum.getSubHotTotal(boardId, type);
+    async getSubHotTotal(boardId) {
+      const result = await this.ctx.service.forum.getSubHotTotal(boardId);
       return result;
     }
     // 主题热门列表
     async subHotlist() {
-      let { page, size, boardId, type } = this.ctx.request.body;
+      let { page, size, boardId } = this.ctx.request.body;
       if (this.ctx.service.utils.common.chechtype(page) === false) {
         this.ctx.body = {
           status: 0,
@@ -314,17 +337,11 @@ module.exports = app => {
         };
         return;
       }
-      if (this.ctx.service.utils.common.chechtype(type) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '主题的参数格式不正确',
-        };
-        return;
-      }
+
 
       page = parseInt(page, 10);
       size = parseInt(size, 10);
-      const maxPage = await this.getSubHotTotal(boardId, type);
+      const maxPage = await this.getSubHotTotal(boardId);
 
       if (page > maxPage) {
         this.ctx.body = {
@@ -342,7 +359,7 @@ module.exports = app => {
         return;
       }
       const start = (page - 1) * size;
-      const result = await this.ctx.service.forum.subHotlist(start, size, boardId, type);
+      const result = await this.ctx.service.forum.subHotlist(start, size, boardId);
       this.ctx.body = {
         status: 1,
         list: result,
@@ -394,7 +411,7 @@ module.exports = app => {
     // 股吧主题评论增加
     async commentadd() {
       // let { subId, content } = this.ctx.request.body;
-      const { subId, content, userId } = this.ctx.request.body;
+      const { subId, content, uid } = this.ctx.request.body;
       if (this.ctx.service.utils.common.chechtype(subId) === false) {
         this.ctx.body = {
           status: 0,
@@ -402,7 +419,7 @@ module.exports = app => {
         };
         return;
       }
-      if (this.ctx.service.utils.common.chechtype(userId) === false) {
+      if (this.ctx.service.utils.common.chechtype(uid) === false) {
         this.ctx.body = {
           status: 0,
           tips: '用户ID格式不正确',
@@ -417,7 +434,7 @@ module.exports = app => {
         };
         return;
       }
-      const result = await this.ctx.service.forum.commentadd(subId, content, userId);
+      const result = await this.ctx.service.forum.commentadd(subId, content, uid);
       this.ctx.body = {
         status: 1,
         detail: result,
@@ -425,7 +442,7 @@ module.exports = app => {
     }
     // 股吧主题的增加
     async addForumSubject() {
-      const { title, content, boardId, userId } = this.ctx.request.body;
+      const { title, content, boardId, uid } = this.ctx.request.body;
       if (this.ctx.service.utils.common.chechtype(boardId) === false) {
         this.ctx.body = {
           status: 0,
@@ -433,7 +450,7 @@ module.exports = app => {
         };
         return;
       }
-      if (this.ctx.service.utils.common.chechtype(userId) === false) {
+      if (this.ctx.service.utils.common.chechtype(uid) === false) {
         this.ctx.body = {
           status: 0,
           tips: '用户ID格式不正确',
@@ -465,7 +482,7 @@ module.exports = app => {
         };
         return;
       }
-      const result = await this.ctx.service.forum.addForumSubject(title, content, boardId, userId);
+      const result = await this.ctx.service.forum.addForumSubject(title, content, boardId, uid);
       this.ctx.body = {
         status: 1,
         detail: result,

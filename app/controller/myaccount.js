@@ -10,9 +10,9 @@ module.exports = app => {
     }
     // 充值记录
     async userMoneylog() {
-      const { userId } = this.ctx.request.body;
+      const { uid } = this.ctx.request.body;
 
-      if (this.ctx.service.utils.common.chechtype(userId) === false) {
+      if (this.ctx.service.utils.common.chechtype(uid) === false) {
         this.ctx.body = {
           status: 0,
           tips: '用户ID格式不正确',
@@ -20,7 +20,7 @@ module.exports = app => {
         return;
       }
 
-      const result = await this.ctx.service.myaccount.userMoneylog(userId);
+      const result = await this.ctx.service.myaccount.userMoneylog(uid);
       this.ctx.body = {
         status: 1,
         list: result,
@@ -28,7 +28,7 @@ module.exports = app => {
     }
     // 豆币记录
     async userBeanLog() {
-      const { userId, page, size } = this.ctx.request.body;
+      const { uid, page, size } = this.ctx.request.body;
       // const rs = this.ctx.service.utils.common.chechtype(page);
       if (this.ctx.service.utils.common.chechtype(page) === false) {
         this.ctx.body = {
@@ -37,7 +37,7 @@ module.exports = app => {
         };
         return;
       }
-      if (this.ctx.service.utils.common.chechtype(userId) === false) {
+      if (this.ctx.service.utils.common.chechtype(uid) === false) {
         this.ctx.body = {
           status: 0,
           tips: '用户ID格式不正确',
@@ -51,7 +51,7 @@ module.exports = app => {
         };
         return;
       }
-      const result = await this.ctx.service.myaccount.userBeanLog(userId, page, size);
+      const result = await this.ctx.service.myaccount.userBeanLog(uid, page, size);
       this.ctx.body = {
         status: 1,
         list: result,
@@ -60,7 +60,7 @@ module.exports = app => {
     }
     //  豆币回收列表
     async beanReturnList() {
-      const { userId, page, size } = this.ctx.request.body;
+      const { uid, page, size } = this.ctx.request.body;
       if (this.ctx.service.utils.common.chechtype(page) === false) {
         this.ctx.body = {
           status: 0,
@@ -68,7 +68,7 @@ module.exports = app => {
         };
         return;
       }
-      if (this.ctx.service.utils.common.chechtype(userId) === false) {
+      if (this.ctx.service.utils.common.chechtype(uid) === false) {
         this.ctx.body = {
           status: 0,
           tips: '用户ID格式不正确',
@@ -82,7 +82,7 @@ module.exports = app => {
         };
         return;
       }
-      const result = await this.ctx.service.myaccount.beanReturnList(userId, page, size);
+      const result = await this.ctx.service.myaccount.beanReturnList(uid, page, size);
       this.ctx.body = {
         status: 1,
         list: result,

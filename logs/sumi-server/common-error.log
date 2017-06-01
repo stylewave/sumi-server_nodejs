@@ -1319,3 +1319,876 @@ name: 'unhandledExceptionError'
 pid: 50352
 hostname: xiaomo
 
+2017-06-01 09:10:02,397 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 10:23:03,188 ERROR 16376 [-/127.0.0.1/-/25ms POST /api/news/list] nodejs.ER_BAD_FIELD_ERRORError: ER_BAD_FIELD_ERROR: Unknown column 'time' in 'field list'
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT news_id,news_title,news_intro,news_create_time,news_hits,DATE_FORMAT(time,'%d-%m %H:%i') FROM data_news WHERE news_show = '1' ORDER BY news_id DESC LIMIT 0 , 20
+code: 'ER_BAD_FIELD_ERROR'
+errno: 1054
+sqlState: '42S22'
+index: 0
+name: 'ER_BAD_FIELD_ERRORError'
+pid: 16376
+hostname: xiaomo
+
+2017-06-01 10:29:20,024 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 10:31:06,603 ERROR 17280 [-/127.0.0.1/-/118ms POST /api/ad/list] nodejs.TypeError: result2.set is not a function
+    at AdController.list (E:\nodejs\sumi-server\app\controller\ad.js:9:15)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 17280
+hostname: xiaomo
+
+2017-06-01 10:33:18,860 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 10:38:58,962 ERROR 17672 [-/127.0.0.1/-/368ms POST /api/ad/list] nodejs.JSONResponseFormatError: Unexpected token < in JSON at position 0 (data json format: "<!DOCTYPE html>\r\n<html>\r\n    <head>\r\n        <title>仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。</title>\r\n        <meta name=\"viewport\" content=\"width=device-width\" />\r\n        <style>\r\n         body {font-family:\"Verdana\";font-weight:normal;font-size: .7em;color:black;} \r\n         p {font-family:\"Verdana\";font-weight:normal;color:black;margin-top: -5px}\r\n         b {font-family:\"Verdana\";font-weight:bold;color:black;margin-top: -5px}\r\n         H1 { font-family:\"Verdana\";font-weight:normal;font-size:18pt;col" ...skip... "cript.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)\r\n   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()\r\n   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)\r\n--><!-- \r\n此错误页可能包含敏感信息，因为 ASP.NET 通过 &lt;customErrors mode=\"Off\"/&gt; 被配置为显示详细错误消息。请考虑在生产环境中使用 &lt;customErrors mode=\"On\"/&gt; 或 &lt;customErrors mode=\"RemoteOnly\"/&gt;。-->"), POST http://sdk.entinfo.cn:8061/webservice.asmx/mdsmssend?sn=SDK-ZZB-010-00025&pwd=93C8CF517DC35B021D7B50ADCA564850&mobile=18814188612&content=1234566【速米科技】&ext=&stime=&rrid=&msgfmt= 500 (connected: true, keepalive socket: false, agent status: {"createSocketCount":2,"createSocketErrorCount":0,"closeSocketCount":1,"errorSocketCount":0,"timeoutSocketCount":0,"requestCount":0,"freeSockets":{},"sockets":{"sdk.entinfo.cn:8061:":1},"requests":{}})
+headers: {"cache-control":"private","content-type":"text/html; charset=utf-8","server":"Microsoft-IIS/7.5","x-aspnet-version":"4.0.30319","x-powered-by":"ASP.NET","date":"Thu, 01 Jun 2017 02:39:50 GMT","content-length":"5159"}
+headers: {"cache-control":"private","content-type":"text/html; charset=utf-8","server":"Microsoft-IIS/7.5","x-aspnet-version":"4.0.30319","x-powered-by":"ASP.NET","date":"Thu, 01 Jun 2017 02:39:50 GMT","content-length":"5159"}
+    at JSON.parse (<anonymous>)
+    at parseJSON (E:\nodejs\sumi-server\node_modules\urllib\lib\urllib.js:894:24)
+    at E:\nodejs\sumi-server\node_modules\urllib\lib\urllib.js:677:23
+    at decodeContent (E:\nodejs\sumi-server\node_modules\urllib\lib\urllib.js:517:14)
+    at IncomingMessage.<anonymous> (E:\nodejs\sumi-server\node_modules\urllib\lib\urllib.js:658:7)
+    at emitNone (events.js:91:20)
+    at IncomingMessage.emit (events.js:188:7)
+    at endReadableNT (_stream_readable.js:975:12)
+    at _combinedTickCallback (internal/process/next_tick.js:80:11)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+name: 'JSONResponseFormatError'
+data: '<!DOCTYPE html>\r\n<html>\r\n    <head>\r\n        <title>仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。</title>\r\n        <meta name="viewport" content="width=device-width" />\r\n        <style>\r\n         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} \r\n         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}\r\n         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}\r\n         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }\r\n         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }\r\n         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}\r\n         .marker {font-weight: bold; color: black;text-decoration: none;}\r\n         .version {color: gray;}\r\n         .error {margin-bottom: 10px;}\r\n         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }\r\n         @media screen and (max-width: 639px) {\r\n          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }\r\n         }\r\n         @media screen and (max-width: 479px) {\r\n          pre { width: 280px; }\r\n         }\r\n        </style>\r\n    </head>\r\n\r\n    <body bgcolor="white">\r\n\r\n            <span><H1>“/”应用程序中的服务器错误。<hr width=100% size=1 color=silver></H1>\r\n\r\n            <h2> <i>仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。</i> </h2></span>\r\n\r\n            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">\r\n\r\n            <b> 说明: </b>执行当前 Web 请求期间，出现未经处理的异常。请检查堆栈跟踪信息，以了解有关该错误以及代码中导致错误的出处的详细信息。\r\n\r\n            <br><br>\r\n\r\n            <b> 异常详细信息: </b>System.InvalidOperationException: 仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。<br><br>\r\n\r\n            <b>源错误:</b> <br><br>\r\n\r\n            <table width=100% bgcolor="#ffffcc">\r\n               <tr>\r\n                  <td>\r\n                      <code>\r\n\r\n执行当前 Web 请求期间生成了未经处理的异常。可以使用下面的异常堆栈跟踪信息确定有关异常原因和发生位置的信息。</code>\r\n\r\n                  </td>\r\n               </tr>\r\n            </table>\r\n\r\n            <br>\r\n\r\n            <b>堆栈跟踪:</b> <br><br>\r\n\r\n            <table width=100% bgcolor="#ffffcc">\r\n               <tr>\r\n                  <td>\r\n                      <code><pre>\r\n\r\n[InvalidOperationException: 仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。]\r\n   System.Web.Script.Services.WebServiceData..ctor(Type type, Boolean pageMethods) +484469\r\n   System.Web.Script.Services.WebServiceData.GetWebServiceData(HttpContext context, String virtualPath, Boolean failIfNoData, Boolean pageMethods, Boolean inlineScript) +244\r\n   System.Web.Script.Services.RestHandler.CreateHandler(HttpContext context) +102\r\n   System.Web.Script.Services.RestHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated) +62\r\n   System.Web.Script.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated) +47\r\n   System.Web.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +346\r\n   System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously) +155\r\n</pre></code>\r\n\r\n                  </td>\r\n               </tr>\r\n            </table>\r\n\r\n            <br>\r\n\r\n            <hr width=100% size=1 color=silver>\r\n\r\n            <b>版本信息:</b>&nbsp;Microsoft .NET Framework 版本:4.0.30319; ASP.NET 版本:4.0.30319.18408\r\n\r\n            </font>\r\n\r\n    </body>\r\n</html>\r\n<!-- \r\n[InvalidOperationException]: 仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。\r\n   在 System.Web.Script.Services.WebServiceData..ctor(Type type, Boolean pageMethods)\r\n   在 System.Web.Script.Services.WebServiceData.GetWebServiceData(HttpContext context, String virtualPath, Boolean failIfNoData, Boolean pageMethods, Boolean inlineScript)\r\n   在 System.Web.Script.Services.RestHandler.CreateHandler(HttpContext context)\r\n   在 System.Web.Script.Services.RestHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)\r\n   在 System.Web.Script.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)\r\n   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()\r\n   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)\r\n--><!-- \r\n此错误页可能包含敏感信息，因为 ASP.NET 通过 &lt;customErrors mode="Off"/&gt; 被配置为显示详细错误消息。请考虑在生产环境中使用 &lt;customErrors mode="On"/&gt; 或 &lt;customErrors mode="RemoteOnly"/&gt;。-->'
+path: '/webservice.asmx/mdsmssend?sn=SDK-ZZB-010-00025&pwd=93C8CF517DC35B021D7B50ADCA564850&mobile=18814188612&content=1234566【速米科技】&ext=&stime=&rrid=&msgfmt='
+status: 500
+headers: { 'cache-control': 'private', 'content-type': 'text/html; charset=utf-8', server: 'Microsoft-IIS/7.5', 'x-aspnet-version': '4.0.30319', 'x-powered-by': 'ASP.NET', date: 'Thu, 01 Jun 2017 02:39:50 GMT', 'content-length': '5159' }
+res: { status: 500, statusCode: 500, headers:  { 'cache-control': 'private', 'content-type': 'text/html; charset=utf-8', server: 'Microsoft-IIS/7.5', 'x-aspnet-version': '4.0.30319', 'x-powered-by': 'ASP.NET', date: 'Thu, 01 Jun 2017 02:39:50 GMT', 'content-length': '5159' }, size: 5159, aborted: false, rt: 250, keepAliveSocket: false, data: '<!DOCTYPE html>\r\n<html>\r\n    <head>\r\n        <title>仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。</title>\r\n        <meta name="viewport" content="width=device-width" />\r\n        <style>\r\n         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} \r\n         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}\r\n         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}\r\n         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }\r\n         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }\r\n         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}\r\n         .marker {font-weight: bold; color: black;text-decoration: none;}\r\n         .version {color: gray;}\r\n         .error {margin-bottom: 10px;}\r\n         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }\r\n         @media screen and (max-width: 639px) {\r\n          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }\r\n         }\r\n         @media screen and (max-width: 479px) {\r\n          pre { width: 280px; }\r\n         }\r\n        </style>\r\n    </head>\r\n\r\n    <body bgcolor="white">\r\n\r\n            <span><H1>“/”应用程序中的服务器错误。<hr width=100% size=1 color=silver></H1>\r\n\r\n            <h2> <i>仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。</i> </h2></span>\r\n\r\n            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">\r\n\r\n            <b> 说明: </b>执行当前 Web 请求期间，出现未经处理的异常。请检查堆栈跟踪信息，以了解有关该错误以及代码中导致错误的出处的详细信息。\r\n\r\n            <br><br>\r\n\r\n            <b> 异常详细信息: </b>System.InvalidOperationException: 仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。<br><br>\r\n\r\n            <b>源错误:</b> <br><br>\r\n\r\n            <table width=100% bgcolor="#ffffcc">\r\n               <tr>\r\n                  <td>\r\n                      <code>\r\n\r\n执行当前 Web 请求期间生成了未经处理的异常。可以使用下面的异常堆栈跟踪信息确定有关异常原因和发生位置的信息。</code>\r\n\r\n                  </td>\r\n               </tr>\r\n            </table>\r\n\r\n            <br>\r\n\r\n            <b>堆栈跟踪:</b> <br><br>\r\n\r\n            <table width=100% bgcolor="#ffffcc">\r\n               <tr>\r\n                  <td>\r\n                      <code><pre>\r\n\r\n[InvalidOperationException: 仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。]\r\n   System.Web.Script.Services.WebServiceData..ctor(Type type, Boolean pageMethods) +484469\r\n   System.Web.Script.Services.WebServiceData.GetWebServiceData(HttpContext context, String virtualPath, Boolean failIfNoData, Boolean pageMethods, Boolean inlineScript) +244\r\n   System.Web.Script.Services.RestHandler.CreateHandler(HttpContext context) +102\r\n   System.Web.Script.Services.RestHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated) +62\r\n   System.Web.Script.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated) +47\r\n   System.Web.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +346\r\n   System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously) +155\r\n</pre></code>\r\n\r\n                  </td>\r\n               </tr>\r\n            </table>\r\n\r\n            <br>\r\n\r\n            <hr width=100% size=1 color=silver>\r\n\r\n            <b>版本信息:</b>&nbsp;Microsoft .NET Framework 版本:4.0.30319; ASP.NET 版本:4.0.30319.18408\r\n\r\n            </font>\r\n\r\n    </body>\r\n</html>\r\n<!-- \r\n[InvalidOperationException]: 仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。\r\n   在 System.Web.Script.Services.WebServiceData..ctor(Type type, Boolean pageMethods)\r\n   在 System.Web.Script.Services.WebServiceData.GetWebServiceData(HttpContext context, String virtualPath, Boolean failIfNoData, Boolean pageMethods, Boolean inlineScript)\r\n   在 System.Web.Script.Services.RestHandler.CreateHandler(HttpContext context)\r\n   在 System.Web.Script.Services.RestHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)\r\n   在 System.Web.Script.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)\r\n   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()\r\n   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)\r\n--><!-- \r\n此错误页可能包含敏感信息，因为 ASP.NET 通过 &lt;customErrors mode="Off"/&gt; 被配置为显示详细错误消息。请考虑在生产环境中使用 &lt;customErrors mode="On"/&gt; 或 &lt;customErrors mode="RemoteOnly"/&gt;。-->', requestUrls: [ 'http://sdk.entinfo.cn:8061/webservice.asmx/mdsmssend?sn=SDK-ZZB-010-00025&pwd=93C8CF517DC35B021D7B50ADCA564850&mobile=18814188612&content=1234566【速米科技】&ext=&stime=&rrid=&msgfmt=' ], timing: null, remoteAddress: '115.182.203.188', remotePort: 8061 }
+pid: 17672
+hostname: xiaomo
+
+2017-06-01 10:39:56,514 ERROR 2488 [-/127.0.0.1/-/264ms POST /api/ad/list] nodejs.JSONResponseFormatError: Unexpected token < in JSON at position 0 (data json format: "<!DOCTYPE html>\r\n<html>\r\n    <head>\r\n        <title>仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。</title>\r\n        <meta name=\"viewport\" content=\"width=device-width\" />\r\n        <style>\r\n         body {font-family:\"Verdana\";font-weight:normal;font-size: .7em;color:black;} \r\n         p {font-family:\"Verdana\";font-weight:normal;color:black;margin-top: -5px}\r\n         b {font-family:\"Verdana\";font-weight:bold;color:black;margin-top: -5px}\r\n         H1 { font-family:\"Verdana\";font-weight:normal;font-size:18pt;col" ...skip... "cript.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)\r\n   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()\r\n   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)\r\n--><!-- \r\n此错误页可能包含敏感信息，因为 ASP.NET 通过 &lt;customErrors mode=\"Off\"/&gt; 被配置为显示详细错误消息。请考虑在生产环境中使用 &lt;customErrors mode=\"On\"/&gt; 或 &lt;customErrors mode=\"RemoteOnly\"/&gt;。-->"), POST http://sdk.entinfo.cn:8061/webservice.asmx/mdsmssend?sn=SDK-ZZB-010-00025&pwd=93C8CF517DC35B021D7B50ADCA564850&mobile=18814188612&content=1234566【速米科技】&ext=&stime=&rrid=&msgfmt= 500 (connected: true, keepalive socket: false, agent status: {"createSocketCount":2,"createSocketErrorCount":0,"closeSocketCount":1,"errorSocketCount":0,"timeoutSocketCount":0,"requestCount":0,"freeSockets":{},"sockets":{"sdk.entinfo.cn:8061:":1},"requests":{}})
+headers: {"cache-control":"private","content-type":"text/html; charset=utf-8","server":"Microsoft-IIS/7.5","x-aspnet-version":"4.0.30319","x-powered-by":"ASP.NET","date":"Thu, 01 Jun 2017 02:40:47 GMT","content-length":"5159"}
+headers: {"cache-control":"private","content-type":"text/html; charset=utf-8","server":"Microsoft-IIS/7.5","x-aspnet-version":"4.0.30319","x-powered-by":"ASP.NET","date":"Thu, 01 Jun 2017 02:40:47 GMT","content-length":"5159"}
+    at JSON.parse (<anonymous>)
+    at parseJSON (E:\nodejs\sumi-server\node_modules\urllib\lib\urllib.js:894:24)
+    at E:\nodejs\sumi-server\node_modules\urllib\lib\urllib.js:677:23
+    at decodeContent (E:\nodejs\sumi-server\node_modules\urllib\lib\urllib.js:517:14)
+    at IncomingMessage.<anonymous> (E:\nodejs\sumi-server\node_modules\urllib\lib\urllib.js:658:7)
+    at emitNone (events.js:91:20)
+    at IncomingMessage.emit (events.js:188:7)
+    at endReadableNT (_stream_readable.js:975:12)
+    at _combinedTickCallback (internal/process/next_tick.js:80:11)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+name: 'JSONResponseFormatError'
+data: '<!DOCTYPE html>\r\n<html>\r\n    <head>\r\n        <title>仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。</title>\r\n        <meta name="viewport" content="width=device-width" />\r\n        <style>\r\n         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} \r\n         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}\r\n         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}\r\n         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }\r\n         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }\r\n         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}\r\n         .marker {font-weight: bold; color: black;text-decoration: none;}\r\n         .version {color: gray;}\r\n         .error {margin-bottom: 10px;}\r\n         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }\r\n         @media screen and (max-width: 639px) {\r\n          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }\r\n         }\r\n         @media screen and (max-width: 479px) {\r\n          pre { width: 280px; }\r\n         }\r\n        </style>\r\n    </head>\r\n\r\n    <body bgcolor="white">\r\n\r\n            <span><H1>“/”应用程序中的服务器错误。<hr width=100% size=1 color=silver></H1>\r\n\r\n            <h2> <i>仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。</i> </h2></span>\r\n\r\n            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">\r\n\r\n            <b> 说明: </b>执行当前 Web 请求期间，出现未经处理的异常。请检查堆栈跟踪信息，以了解有关该错误以及代码中导致错误的出处的详细信息。\r\n\r\n            <br><br>\r\n\r\n            <b> 异常详细信息: </b>System.InvalidOperationException: 仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。<br><br>\r\n\r\n            <b>源错误:</b> <br><br>\r\n\r\n            <table width=100% bgcolor="#ffffcc">\r\n               <tr>\r\n                  <td>\r\n                      <code>\r\n\r\n执行当前 Web 请求期间生成了未经处理的异常。可以使用下面的异常堆栈跟踪信息确定有关异常原因和发生位置的信息。</code>\r\n\r\n                  </td>\r\n               </tr>\r\n            </table>\r\n\r\n            <br>\r\n\r\n            <b>堆栈跟踪:</b> <br><br>\r\n\r\n            <table width=100% bgcolor="#ffffcc">\r\n               <tr>\r\n                  <td>\r\n                      <code><pre>\r\n\r\n[InvalidOperationException: 仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。]\r\n   System.Web.Script.Services.WebServiceData..ctor(Type type, Boolean pageMethods) +484469\r\n   System.Web.Script.Services.WebServiceData.GetWebServiceData(HttpContext context, String virtualPath, Boolean failIfNoData, Boolean pageMethods, Boolean inlineScript) +244\r\n   System.Web.Script.Services.RestHandler.CreateHandler(HttpContext context) +102\r\n   System.Web.Script.Services.RestHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated) +62\r\n   System.Web.Script.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated) +47\r\n   System.Web.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +346\r\n   System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously) +155\r\n</pre></code>\r\n\r\n                  </td>\r\n               </tr>\r\n            </table>\r\n\r\n            <br>\r\n\r\n            <hr width=100% size=1 color=silver>\r\n\r\n            <b>版本信息:</b>&nbsp;Microsoft .NET Framework 版本:4.0.30319; ASP.NET 版本:4.0.30319.18408\r\n\r\n            </font>\r\n\r\n    </body>\r\n</html>\r\n<!-- \r\n[InvalidOperationException]: 仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。\r\n   在 System.Web.Script.Services.WebServiceData..ctor(Type type, Boolean pageMethods)\r\n   在 System.Web.Script.Services.WebServiceData.GetWebServiceData(HttpContext context, String virtualPath, Boolean failIfNoData, Boolean pageMethods, Boolean inlineScript)\r\n   在 System.Web.Script.Services.RestHandler.CreateHandler(HttpContext context)\r\n   在 System.Web.Script.Services.RestHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)\r\n   在 System.Web.Script.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)\r\n   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()\r\n   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)\r\n--><!-- \r\n此错误页可能包含敏感信息，因为 ASP.NET 通过 &lt;customErrors mode="Off"/&gt; 被配置为显示详细错误消息。请考虑在生产环境中使用 &lt;customErrors mode="On"/&gt; 或 &lt;customErrors mode="RemoteOnly"/&gt;。-->'
+path: '/webservice.asmx/mdsmssend?sn=SDK-ZZB-010-00025&pwd=93C8CF517DC35B021D7B50ADCA564850&mobile=18814188612&content=1234566【速米科技】&ext=&stime=&rrid=&msgfmt='
+status: 500
+headers: { 'cache-control': 'private', 'content-type': 'text/html; charset=utf-8', server: 'Microsoft-IIS/7.5', 'x-aspnet-version': '4.0.30319', 'x-powered-by': 'ASP.NET', date: 'Thu, 01 Jun 2017 02:40:47 GMT', 'content-length': '5159' }
+res: { status: 500, statusCode: 500, headers:  { 'cache-control': 'private', 'content-type': 'text/html; charset=utf-8', server: 'Microsoft-IIS/7.5', 'x-aspnet-version': '4.0.30319', 'x-powered-by': 'ASP.NET', date: 'Thu, 01 Jun 2017 02:40:47 GMT', 'content-length': '5159' }, size: 5159, aborted: false, rt: 139, keepAliveSocket: false, data: '<!DOCTYPE html>\r\n<html>\r\n    <head>\r\n        <title>仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。</title>\r\n        <meta name="viewport" content="width=device-width" />\r\n        <style>\r\n         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} \r\n         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}\r\n         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}\r\n         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }\r\n         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }\r\n         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}\r\n         .marker {font-weight: bold; color: black;text-decoration: none;}\r\n         .version {color: gray;}\r\n         .error {margin-bottom: 10px;}\r\n         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }\r\n         @media screen and (max-width: 639px) {\r\n          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }\r\n         }\r\n         @media screen and (max-width: 479px) {\r\n          pre { width: 280px; }\r\n         }\r\n        </style>\r\n    </head>\r\n\r\n    <body bgcolor="white">\r\n\r\n            <span><H1>“/”应用程序中的服务器错误。<hr width=100% size=1 color=silver></H1>\r\n\r\n            <h2> <i>仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。</i> </h2></span>\r\n\r\n            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">\r\n\r\n            <b> 说明: </b>执行当前 Web 请求期间，出现未经处理的异常。请检查堆栈跟踪信息，以了解有关该错误以及代码中导致错误的出处的详细信息。\r\n\r\n            <br><br>\r\n\r\n            <b> 异常详细信息: </b>System.InvalidOperationException: 仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。<br><br>\r\n\r\n            <b>源错误:</b> <br><br>\r\n\r\n            <table width=100% bgcolor="#ffffcc">\r\n               <tr>\r\n                  <td>\r\n                      <code>\r\n\r\n执行当前 Web 请求期间生成了未经处理的异常。可以使用下面的异常堆栈跟踪信息确定有关异常原因和发生位置的信息。</code>\r\n\r\n                  </td>\r\n               </tr>\r\n            </table>\r\n\r\n            <br>\r\n\r\n            <b>堆栈跟踪:</b> <br><br>\r\n\r\n            <table width=100% bgcolor="#ffffcc">\r\n               <tr>\r\n                  <td>\r\n                      <code><pre>\r\n\r\n[InvalidOperationException: 仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。]\r\n   System.Web.Script.Services.WebServiceData..ctor(Type type, Boolean pageMethods) +484469\r\n   System.Web.Script.Services.WebServiceData.GetWebServiceData(HttpContext context, String virtualPath, Boolean failIfNoData, Boolean pageMethods, Boolean inlineScript) +244\r\n   System.Web.Script.Services.RestHandler.CreateHandler(HttpContext context) +102\r\n   System.Web.Script.Services.RestHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated) +62\r\n   System.Web.Script.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated) +47\r\n   System.Web.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +346\r\n   System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously) +155\r\n</pre></code>\r\n\r\n                  </td>\r\n               </tr>\r\n            </table>\r\n\r\n            <br>\r\n\r\n            <hr width=100% size=1 color=silver>\r\n\r\n            <b>版本信息:</b>&nbsp;Microsoft .NET Framework 版本:4.0.30319; ASP.NET 版本:4.0.30319.18408\r\n\r\n            </font>\r\n\r\n    </body>\r\n</html>\r\n<!-- \r\n[InvalidOperationException]: 仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。\r\n   在 System.Web.Script.Services.WebServiceData..ctor(Type type, Boolean pageMethods)\r\n   在 System.Web.Script.Services.WebServiceData.GetWebServiceData(HttpContext context, String virtualPath, Boolean failIfNoData, Boolean pageMethods, Boolean inlineScript)\r\n   在 System.Web.Script.Services.RestHandler.CreateHandler(HttpContext context)\r\n   在 System.Web.Script.Services.RestHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)\r\n   在 System.Web.Script.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)\r\n   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()\r\n   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)\r\n--><!-- \r\n此错误页可能包含敏感信息，因为 ASP.NET 通过 &lt;customErrors mode="Off"/&gt; 被配置为显示详细错误消息。请考虑在生产环境中使用 &lt;customErrors mode="On"/&gt; 或 &lt;customErrors mode="RemoteOnly"/&gt;。-->', requestUrls: [ 'http://sdk.entinfo.cn:8061/webservice.asmx/mdsmssend?sn=SDK-ZZB-010-00025&pwd=93C8CF517DC35B021D7B50ADCA564850&mobile=18814188612&content=1234566【速米科技】&ext=&stime=&rrid=&msgfmt=' ], timing: null, remoteAddress: '115.182.203.188', remotePort: 8061 }
+pid: 2488
+hostname: xiaomo
+
+2017-06-01 10:40:14,532 ERROR 16676 [-/127.0.0.1/-/176ms POST /api/ad/list] nodejs.JSONResponseFormatError: Unexpected token < in JSON at position 0 (data json format: "<!DOCTYPE html>\r\n<html>\r\n    <head>\r\n        <title>仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。</title>\r\n        <meta name=\"viewport\" content=\"width=device-width\" />\r\n        <style>\r\n         body {font-family:\"Verdana\";font-weight:normal;font-size: .7em;color:black;} \r\n         p {font-family:\"Verdana\";font-weight:normal;color:black;margin-top: -5px}\r\n         b {font-family:\"Verdana\";font-weight:bold;color:black;margin-top: -5px}\r\n         H1 { font-family:\"Verdana\";font-weight:normal;font-size:18pt;col" ...skip... "cript.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)\r\n   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()\r\n   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)\r\n--><!-- \r\n此错误页可能包含敏感信息，因为 ASP.NET 通过 &lt;customErrors mode=\"Off\"/&gt; 被配置为显示详细错误消息。请考虑在生产环境中使用 &lt;customErrors mode=\"On\"/&gt; 或 &lt;customErrors mode=\"RemoteOnly\"/&gt;。-->"), POST http://sdk.entinfo.cn:8061/webservice.asmx/mdsmssend?sn=SDK-ZZB-010-00025&pwd=93C8CF517DC35B021D7B50ADCA564850&mobile=18814188612&content=1234566【速米科技】&ext=&stime=&rrid=&msgfmt= 500 (connected: true, keepalive socket: false, agent status: {"createSocketCount":1,"createSocketErrorCount":0,"closeSocketCount":0,"errorSocketCount":0,"timeoutSocketCount":0,"requestCount":0,"freeSockets":{},"sockets":{"sdk.entinfo.cn:8061:":1},"requests":{}})
+headers: {"cache-control":"private","content-type":"text/html; charset=utf-8","server":"Microsoft-IIS/7.5","x-aspnet-version":"4.0.30319","x-powered-by":"ASP.NET","date":"Thu, 01 Jun 2017 02:41:05 GMT","content-length":"5159"}
+headers: {"cache-control":"private","content-type":"text/html; charset=utf-8","server":"Microsoft-IIS/7.5","x-aspnet-version":"4.0.30319","x-powered-by":"ASP.NET","date":"Thu, 01 Jun 2017 02:41:05 GMT","content-length":"5159"}
+    at JSON.parse (<anonymous>)
+    at parseJSON (E:\nodejs\sumi-server\node_modules\urllib\lib\urllib.js:894:24)
+    at E:\nodejs\sumi-server\node_modules\urllib\lib\urllib.js:677:23
+    at decodeContent (E:\nodejs\sumi-server\node_modules\urllib\lib\urllib.js:517:14)
+    at IncomingMessage.<anonymous> (E:\nodejs\sumi-server\node_modules\urllib\lib\urllib.js:658:7)
+    at emitNone (events.js:91:20)
+    at IncomingMessage.emit (events.js:188:7)
+    at endReadableNT (_stream_readable.js:975:12)
+    at _combinedTickCallback (internal/process/next_tick.js:80:11)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+name: 'JSONResponseFormatError'
+data: '<!DOCTYPE html>\r\n<html>\r\n    <head>\r\n        <title>仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。</title>\r\n        <meta name="viewport" content="width=device-width" />\r\n        <style>\r\n         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} \r\n         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}\r\n         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}\r\n         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }\r\n         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }\r\n         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}\r\n         .marker {font-weight: bold; color: black;text-decoration: none;}\r\n         .version {color: gray;}\r\n         .error {margin-bottom: 10px;}\r\n         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }\r\n         @media screen and (max-width: 639px) {\r\n          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }\r\n         }\r\n         @media screen and (max-width: 479px) {\r\n          pre { width: 280px; }\r\n         }\r\n        </style>\r\n    </head>\r\n\r\n    <body bgcolor="white">\r\n\r\n            <span><H1>“/”应用程序中的服务器错误。<hr width=100% size=1 color=silver></H1>\r\n\r\n            <h2> <i>仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。</i> </h2></span>\r\n\r\n            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">\r\n\r\n            <b> 说明: </b>执行当前 Web 请求期间，出现未经处理的异常。请检查堆栈跟踪信息，以了解有关该错误以及代码中导致错误的出处的详细信息。\r\n\r\n            <br><br>\r\n\r\n            <b> 异常详细信息: </b>System.InvalidOperationException: 仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。<br><br>\r\n\r\n            <b>源错误:</b> <br><br>\r\n\r\n            <table width=100% bgcolor="#ffffcc">\r\n               <tr>\r\n                  <td>\r\n                      <code>\r\n\r\n执行当前 Web 请求期间生成了未经处理的异常。可以使用下面的异常堆栈跟踪信息确定有关异常原因和发生位置的信息。</code>\r\n\r\n                  </td>\r\n               </tr>\r\n            </table>\r\n\r\n            <br>\r\n\r\n            <b>堆栈跟踪:</b> <br><br>\r\n\r\n            <table width=100% bgcolor="#ffffcc">\r\n               <tr>\r\n                  <td>\r\n                      <code><pre>\r\n\r\n[InvalidOperationException: 仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。]\r\n   System.Web.Script.Services.WebServiceData..ctor(Type type, Boolean pageMethods) +484469\r\n   System.Web.Script.Services.WebServiceData.GetWebServiceData(HttpContext context, String virtualPath, Boolean failIfNoData, Boolean pageMethods, Boolean inlineScript) +244\r\n   System.Web.Script.Services.RestHandler.CreateHandler(HttpContext context) +102\r\n   System.Web.Script.Services.RestHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated) +62\r\n   System.Web.Script.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated) +47\r\n   System.Web.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +346\r\n   System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously) +155\r\n</pre></code>\r\n\r\n                  </td>\r\n               </tr>\r\n            </table>\r\n\r\n            <br>\r\n\r\n            <hr width=100% size=1 color=silver>\r\n\r\n            <b>版本信息:</b>&nbsp;Microsoft .NET Framework 版本:4.0.30319; ASP.NET 版本:4.0.30319.18408\r\n\r\n            </font>\r\n\r\n    </body>\r\n</html>\r\n<!-- \r\n[InvalidOperationException]: 仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。\r\n   在 System.Web.Script.Services.WebServiceData..ctor(Type type, Boolean pageMethods)\r\n   在 System.Web.Script.Services.WebServiceData.GetWebServiceData(HttpContext context, String virtualPath, Boolean failIfNoData, Boolean pageMethods, Boolean inlineScript)\r\n   在 System.Web.Script.Services.RestHandler.CreateHandler(HttpContext context)\r\n   在 System.Web.Script.Services.RestHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)\r\n   在 System.Web.Script.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)\r\n   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()\r\n   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)\r\n--><!-- \r\n此错误页可能包含敏感信息，因为 ASP.NET 通过 &lt;customErrors mode="Off"/&gt; 被配置为显示详细错误消息。请考虑在生产环境中使用 &lt;customErrors mode="On"/&gt; 或 &lt;customErrors mode="RemoteOnly"/&gt;。-->'
+path: '/webservice.asmx/mdsmssend?sn=SDK-ZZB-010-00025&pwd=93C8CF517DC35B021D7B50ADCA564850&mobile=18814188612&content=1234566【速米科技】&ext=&stime=&rrid=&msgfmt='
+status: 500
+headers: { 'cache-control': 'private', 'content-type': 'text/html; charset=utf-8', server: 'Microsoft-IIS/7.5', 'x-aspnet-version': '4.0.30319', 'x-powered-by': 'ASP.NET', date: 'Thu, 01 Jun 2017 02:41:05 GMT', 'content-length': '5159' }
+res: { status: 500, statusCode: 500, headers:  { 'cache-control': 'private', 'content-type': 'text/html; charset=utf-8', server: 'Microsoft-IIS/7.5', 'x-aspnet-version': '4.0.30319', 'x-powered-by': 'ASP.NET', date: 'Thu, 01 Jun 2017 02:41:05 GMT', 'content-length': '5159' }, size: 5159, aborted: false, rt: 135, keepAliveSocket: false, data: '<!DOCTYPE html>\r\n<html>\r\n    <head>\r\n        <title>仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。</title>\r\n        <meta name="viewport" content="width=device-width" />\r\n        <style>\r\n         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} \r\n         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}\r\n         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}\r\n         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }\r\n         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }\r\n         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}\r\n         .marker {font-weight: bold; color: black;text-decoration: none;}\r\n         .version {color: gray;}\r\n         .error {margin-bottom: 10px;}\r\n         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }\r\n         @media screen and (max-width: 639px) {\r\n          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }\r\n         }\r\n         @media screen and (max-width: 479px) {\r\n          pre { width: 280px; }\r\n         }\r\n        </style>\r\n    </head>\r\n\r\n    <body bgcolor="white">\r\n\r\n            <span><H1>“/”应用程序中的服务器错误。<hr width=100% size=1 color=silver></H1>\r\n\r\n            <h2> <i>仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。</i> </h2></span>\r\n\r\n            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">\r\n\r\n            <b> 说明: </b>执行当前 Web 请求期间，出现未经处理的异常。请检查堆栈跟踪信息，以了解有关该错误以及代码中导致错误的出处的详细信息。\r\n\r\n            <br><br>\r\n\r\n            <b> 异常详细信息: </b>System.InvalidOperationException: 仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。<br><br>\r\n\r\n            <b>源错误:</b> <br><br>\r\n\r\n            <table width=100% bgcolor="#ffffcc">\r\n               <tr>\r\n                  <td>\r\n                      <code>\r\n\r\n执行当前 Web 请求期间生成了未经处理的异常。可以使用下面的异常堆栈跟踪信息确定有关异常原因和发生位置的信息。</code>\r\n\r\n                  </td>\r\n               </tr>\r\n            </table>\r\n\r\n            <br>\r\n\r\n            <b>堆栈跟踪:</b> <br><br>\r\n\r\n            <table width=100% bgcolor="#ffffcc">\r\n               <tr>\r\n                  <td>\r\n                      <code><pre>\r\n\r\n[InvalidOperationException: 仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。]\r\n   System.Web.Script.Services.WebServiceData..ctor(Type type, Boolean pageMethods) +484469\r\n   System.Web.Script.Services.WebServiceData.GetWebServiceData(HttpContext context, String virtualPath, Boolean failIfNoData, Boolean pageMethods, Boolean inlineScript) +244\r\n   System.Web.Script.Services.RestHandler.CreateHandler(HttpContext context) +102\r\n   System.Web.Script.Services.RestHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated) +62\r\n   System.Web.Script.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated) +47\r\n   System.Web.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +346\r\n   System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously) +155\r\n</pre></code>\r\n\r\n                  </td>\r\n               </tr>\r\n            </table>\r\n\r\n            <br>\r\n\r\n            <hr width=100% size=1 color=silver>\r\n\r\n            <b>版本信息:</b>&nbsp;Microsoft .NET Framework 版本:4.0.30319; ASP.NET 版本:4.0.30319.18408\r\n\r\n            </font>\r\n\r\n    </body>\r\n</html>\r\n<!-- \r\n[InvalidOperationException]: 仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。\r\n   在 System.Web.Script.Services.WebServiceData..ctor(Type type, Boolean pageMethods)\r\n   在 System.Web.Script.Services.WebServiceData.GetWebServiceData(HttpContext context, String virtualPath, Boolean failIfNoData, Boolean pageMethods, Boolean inlineScript)\r\n   在 System.Web.Script.Services.RestHandler.CreateHandler(HttpContext context)\r\n   在 System.Web.Script.Services.RestHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)\r\n   在 System.Web.Script.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)\r\n   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()\r\n   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)\r\n--><!-- \r\n此错误页可能包含敏感信息，因为 ASP.NET 通过 &lt;customErrors mode="Off"/&gt; 被配置为显示详细错误消息。请考虑在生产环境中使用 &lt;customErrors mode="On"/&gt; 或 &lt;customErrors mode="RemoteOnly"/&gt;。-->', requestUrls: [ 'http://sdk.entinfo.cn:8061/webservice.asmx/mdsmssend?sn=SDK-ZZB-010-00025&pwd=93C8CF517DC35B021D7B50ADCA564850&mobile=18814188612&content=1234566【速米科技】&ext=&stime=&rrid=&msgfmt=' ], timing: null, remoteAddress: '115.182.203.188', remotePort: 8061 }
+pid: 16676
+hostname: xiaomo
+
+2017-06-01 11:05:52,777 ERROR 15660 [-/127.0.0.1/-/241ms GET /api/ad/create] nodejs.JSONResponseFormatError: Unexpected token < in JSON at position 0 (data json format: "<!DOCTYPE html>\r\n<html>\r\n    <head>\r\n        <title>仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。</title>\r\n        <meta name=\"viewport\" content=\"width=device-width\" />\r\n        <style>\r\n         body {font-family:\"Verdana\";font-weight:normal;font-size: .7em;color:black;} \r\n         p {font-family:\"Verdana\";font-weight:normal;color:black;margin-top: -5px}\r\n         b {font-family:\"Verdana\";font-weight:bold;color:black;margin-top: -5px}\r\n         H1 { font-family:\"Verdana\";font-weight:normal;font-size:18pt;col" ...skip... "cript.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)\r\n   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()\r\n   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)\r\n--><!-- \r\n此错误页可能包含敏感信息，因为 ASP.NET 通过 &lt;customErrors mode=\"Off\"/&gt; 被配置为显示详细错误消息。请考虑在生产环境中使用 &lt;customErrors mode=\"On\"/&gt; 或 &lt;customErrors mode=\"RemoteOnly\"/&gt;。-->"), POST http://sdk.entinfo.cn:8061/webservice.asmx/mdsmssend?sn=SDK-ZZB-010-00025&pwd=93C8CF517DC35B021D7B50ADCA564850&mobile=18814188612&content=123456【速米科技】&ext=&stime=&rrid=&msgfmt= 500 (connected: true, keepalive socket: false, agent status: {"createSocketCount":1,"createSocketErrorCount":0,"closeSocketCount":0,"errorSocketCount":0,"timeoutSocketCount":0,"requestCount":0,"freeSockets":{},"sockets":{"sdk.entinfo.cn:8061:":1},"requests":{}})
+headers: {"cache-control":"private","content-type":"text/html; charset=utf-8","server":"Microsoft-IIS/7.5","x-aspnet-version":"4.0.30319","x-powered-by":"ASP.NET","date":"Thu, 01 Jun 2017 03:06:44 GMT","content-length":"5159"}
+headers: {"cache-control":"private","content-type":"text/html; charset=utf-8","server":"Microsoft-IIS/7.5","x-aspnet-version":"4.0.30319","x-powered-by":"ASP.NET","date":"Thu, 01 Jun 2017 03:06:44 GMT","content-length":"5159"}
+    at JSON.parse (<anonymous>)
+    at parseJSON (E:\nodejs\sumi-server\node_modules\urllib\lib\urllib.js:894:24)
+    at E:\nodejs\sumi-server\node_modules\urllib\lib\urllib.js:677:23
+    at decodeContent (E:\nodejs\sumi-server\node_modules\urllib\lib\urllib.js:517:14)
+    at IncomingMessage.<anonymous> (E:\nodejs\sumi-server\node_modules\urllib\lib\urllib.js:658:7)
+    at emitNone (events.js:91:20)
+    at IncomingMessage.emit (events.js:188:7)
+    at endReadableNT (_stream_readable.js:975:12)
+    at _combinedTickCallback (internal/process/next_tick.js:80:11)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+name: 'JSONResponseFormatError'
+data: '<!DOCTYPE html>\r\n<html>\r\n    <head>\r\n        <title>仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。</title>\r\n        <meta name="viewport" content="width=device-width" />\r\n        <style>\r\n         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} \r\n         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}\r\n         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}\r\n         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }\r\n         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }\r\n         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}\r\n         .marker {font-weight: bold; color: black;text-decoration: none;}\r\n         .version {color: gray;}\r\n         .error {margin-bottom: 10px;}\r\n         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }\r\n         @media screen and (max-width: 639px) {\r\n          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }\r\n         }\r\n         @media screen and (max-width: 479px) {\r\n          pre { width: 280px; }\r\n         }\r\n        </style>\r\n    </head>\r\n\r\n    <body bgcolor="white">\r\n\r\n            <span><H1>“/”应用程序中的服务器错误。<hr width=100% size=1 color=silver></H1>\r\n\r\n            <h2> <i>仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。</i> </h2></span>\r\n\r\n            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">\r\n\r\n            <b> 说明: </b>执行当前 Web 请求期间，出现未经处理的异常。请检查堆栈跟踪信息，以了解有关该错误以及代码中导致错误的出处的详细信息。\r\n\r\n            <br><br>\r\n\r\n            <b> 异常详细信息: </b>System.InvalidOperationException: 仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。<br><br>\r\n\r\n            <b>源错误:</b> <br><br>\r\n\r\n            <table width=100% bgcolor="#ffffcc">\r\n               <tr>\r\n                  <td>\r\n                      <code>\r\n\r\n执行当前 Web 请求期间生成了未经处理的异常。可以使用下面的异常堆栈跟踪信息确定有关异常原因和发生位置的信息。</code>\r\n\r\n                  </td>\r\n               </tr>\r\n            </table>\r\n\r\n            <br>\r\n\r\n            <b>堆栈跟踪:</b> <br><br>\r\n\r\n            <table width=100% bgcolor="#ffffcc">\r\n               <tr>\r\n                  <td>\r\n                      <code><pre>\r\n\r\n[InvalidOperationException: 仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。]\r\n   System.Web.Script.Services.WebServiceData..ctor(Type type, Boolean pageMethods) +484389\r\n   System.Web.Script.Services.WebServiceData.GetWebServiceData(HttpContext context, String virtualPath, Boolean failIfNoData, Boolean pageMethods, Boolean inlineScript) +244\r\n   System.Web.Script.Services.RestHandler.CreateHandler(HttpContext context) +102\r\n   System.Web.Script.Services.RestHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated) +62\r\n   System.Web.Script.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated) +47\r\n   System.Web.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +346\r\n   System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously) +155\r\n</pre></code>\r\n\r\n                  </td>\r\n               </tr>\r\n            </table>\r\n\r\n            <br>\r\n\r\n            <hr width=100% size=1 color=silver>\r\n\r\n            <b>版本信息:</b>&nbsp;Microsoft .NET Framework 版本:4.0.30319; ASP.NET 版本:4.0.30319.34237\r\n\r\n            </font>\r\n\r\n    </body>\r\n</html>\r\n<!-- \r\n[InvalidOperationException]: 仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。\r\n   在 System.Web.Script.Services.WebServiceData..ctor(Type type, Boolean pageMethods)\r\n   在 System.Web.Script.Services.WebServiceData.GetWebServiceData(HttpContext context, String virtualPath, Boolean failIfNoData, Boolean pageMethods, Boolean inlineScript)\r\n   在 System.Web.Script.Services.RestHandler.CreateHandler(HttpContext context)\r\n   在 System.Web.Script.Services.RestHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)\r\n   在 System.Web.Script.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)\r\n   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()\r\n   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)\r\n--><!-- \r\n此错误页可能包含敏感信息，因为 ASP.NET 通过 &lt;customErrors mode="Off"/&gt; 被配置为显示详细错误消息。请考虑在生产环境中使用 &lt;customErrors mode="On"/&gt; 或 &lt;customErrors mode="RemoteOnly"/&gt;。-->'
+path: '/webservice.asmx/mdsmssend?sn=SDK-ZZB-010-00025&pwd=93C8CF517DC35B021D7B50ADCA564850&mobile=18814188612&content=123456【速米科技】&ext=&stime=&rrid=&msgfmt='
+status: 500
+headers: { 'cache-control': 'private', 'content-type': 'text/html; charset=utf-8', server: 'Microsoft-IIS/7.5', 'x-aspnet-version': '4.0.30319', 'x-powered-by': 'ASP.NET', date: 'Thu, 01 Jun 2017 03:06:44 GMT', 'content-length': '5159' }
+res: { status: 500, statusCode: 500, headers:  { 'cache-control': 'private', 'content-type': 'text/html; charset=utf-8', server: 'Microsoft-IIS/7.5', 'x-aspnet-version': '4.0.30319', 'x-powered-by': 'ASP.NET', date: 'Thu, 01 Jun 2017 03:06:44 GMT', 'content-length': '5159' }, size: 5159, aborted: false, rt: 232, keepAliveSocket: false, data: '<!DOCTYPE html>\r\n<html>\r\n    <head>\r\n        <title>仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。</title>\r\n        <meta name="viewport" content="width=device-width" />\r\n        <style>\r\n         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} \r\n         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}\r\n         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}\r\n         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }\r\n         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }\r\n         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}\r\n         .marker {font-weight: bold; color: black;text-decoration: none;}\r\n         .version {color: gray;}\r\n         .error {margin-bottom: 10px;}\r\n         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }\r\n         @media screen and (max-width: 639px) {\r\n          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }\r\n         }\r\n         @media screen and (max-width: 479px) {\r\n          pre { width: 280px; }\r\n         }\r\n        </style>\r\n    </head>\r\n\r\n    <body bgcolor="white">\r\n\r\n            <span><H1>“/”应用程序中的服务器错误。<hr width=100% size=1 color=silver></H1>\r\n\r\n            <h2> <i>仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。</i> </h2></span>\r\n\r\n            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">\r\n\r\n            <b> 说明: </b>执行当前 Web 请求期间，出现未经处理的异常。请检查堆栈跟踪信息，以了解有关该错误以及代码中导致错误的出处的详细信息。\r\n\r\n            <br><br>\r\n\r\n            <b> 异常详细信息: </b>System.InvalidOperationException: 仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。<br><br>\r\n\r\n            <b>源错误:</b> <br><br>\r\n\r\n            <table width=100% bgcolor="#ffffcc">\r\n               <tr>\r\n                  <td>\r\n                      <code>\r\n\r\n执行当前 Web 请求期间生成了未经处理的异常。可以使用下面的异常堆栈跟踪信息确定有关异常原因和发生位置的信息。</code>\r\n\r\n                  </td>\r\n               </tr>\r\n            </table>\r\n\r\n            <br>\r\n\r\n            <b>堆栈跟踪:</b> <br><br>\r\n\r\n            <table width=100% bgcolor="#ffffcc">\r\n               <tr>\r\n                  <td>\r\n                      <code><pre>\r\n\r\n[InvalidOperationException: 仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。]\r\n   System.Web.Script.Services.WebServiceData..ctor(Type type, Boolean pageMethods) +484389\r\n   System.Web.Script.Services.WebServiceData.GetWebServiceData(HttpContext context, String virtualPath, Boolean failIfNoData, Boolean pageMethods, Boolean inlineScript) +244\r\n   System.Web.Script.Services.RestHandler.CreateHandler(HttpContext context) +102\r\n   System.Web.Script.Services.RestHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated) +62\r\n   System.Web.Script.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated) +47\r\n   System.Web.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +346\r\n   System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously) +155\r\n</pre></code>\r\n\r\n                  </td>\r\n               </tr>\r\n            </table>\r\n\r\n            <br>\r\n\r\n            <hr width=100% size=1 color=silver>\r\n\r\n            <b>版本信息:</b>&nbsp;Microsoft .NET Framework 版本:4.0.30319; ASP.NET 版本:4.0.30319.34237\r\n\r\n            </font>\r\n\r\n    </body>\r\n</html>\r\n<!-- \r\n[InvalidOperationException]: 仅在类定义上有 [ScriptService] 特性的 Web 服务才能从脚本中调用。\r\n   在 System.Web.Script.Services.WebServiceData..ctor(Type type, Boolean pageMethods)\r\n   在 System.Web.Script.Services.WebServiceData.GetWebServiceData(HttpContext context, String virtualPath, Boolean failIfNoData, Boolean pageMethods, Boolean inlineScript)\r\n   在 System.Web.Script.Services.RestHandler.CreateHandler(HttpContext context)\r\n   在 System.Web.Script.Services.RestHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)\r\n   在 System.Web.Script.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)\r\n   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()\r\n   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)\r\n--><!-- \r\n此错误页可能包含敏感信息，因为 ASP.NET 通过 &lt;customErrors mode="Off"/&gt; 被配置为显示详细错误消息。请考虑在生产环境中使用 &lt;customErrors mode="On"/&gt; 或 &lt;customErrors mode="RemoteOnly"/&gt;。-->', requestUrls: [ 'http://sdk.entinfo.cn:8061/webservice.asmx/mdsmssend?sn=SDK-ZZB-010-00025&pwd=93C8CF517DC35B021D7B50ADCA564850&mobile=18814188612&content=123456【速米科技】&ext=&stime=&rrid=&msgfmt=' ], timing: null, remoteAddress: '115.182.203.188', remotePort: 8061 }
+pid: 15660
+hostname: xiaomo
+
+2017-06-01 11:50:41,921 ERROR 19956 nodejs.ENOTFOUNDError: getaddrinfo ENOTFOUND http://sdk.entinfo.cn:8061 http://sdk.entinfo.cn:8061:80 (uncaughtException throw 1 times on pid:19956) (http://sdk.entinfo.cn:8061)
+    at errnoException (dns.js:28:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:73:26)
+code: 'ENOTFOUND'
+errno: 'ENOTFOUND'
+syscall: 'getaddrinfo'
+hostname: 'http://sdk.entinfo.cn:8061'
+host: 'http://sdk.entinfo.cn:8061'
+port: 80
+name: 'ENOTFOUNDError'
+pid: 19956
+hostname: xiaomo
+
+2017-06-01 11:50:43,693 ERROR 19956 nodejs.ENOTFOUNDError: getaddrinfo ENOTFOUND http://sdk.entinfo.cn:8061 http://sdk.entinfo.cn:8061:80 (uncaughtException throw 2 times on pid:19956) (http://sdk.entinfo.cn:8061)
+    at errnoException (dns.js:28:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:73:26)
+code: 'ENOTFOUND'
+errno: 'ENOTFOUND'
+syscall: 'getaddrinfo'
+hostname: 'http://sdk.entinfo.cn:8061'
+host: 'http://sdk.entinfo.cn:8061'
+port: 80
+name: 'ENOTFOUNDError'
+pid: 19956
+hostname: xiaomo
+
+2017-06-01 12:07:40,810 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 12:07:51,253 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 12:08:30,231 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 12:08:50,598 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 12:09:01,545 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 12:49:05,818 ERROR 9556 nodejs.ClusterClientNoResponseError: client no response in 531591ms exceeding maxIdleTime 30000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:72:23)
+    at ontimeout (timers.js:386:14)
+    at tryOnTimeout (timers.js:250:5)
+    at Timer.listOnTimeout (timers.js:214:5)
+name: 'ClusterClientNoResponseError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 12:49:39,421 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 12:49:52,363 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 12:50:07,446 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 14:00:52,308 ERROR 9556 nodejs.ClusterClientNoResponseError: client no response in 567320ms exceeding maxIdleTime 30000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:72:23)
+    at ontimeout (timers.js:386:14)
+    at tryOnTimeout (timers.js:250:5)
+    at Timer.listOnTimeout (timers.js:214:5)
+name: 'ClusterClientNoResponseError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 14:07:09,314 ERROR 24064 [-/127.0.0.1/-/2ms GET /ad/test/2/] nodejs.TypeError: Cannot match against 'undefined' or 'null'.
+    at AdController.test (E:\nodejs\sumi-server\app\controller\ad.js:14:40)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
+    at next (E:\nodejs\sumi-server\node_modules\co\index.js:99:29)
+
+pid: 24064
+hostname: xiaomo
+
+2017-06-01 15:02:07,131 ERROR 35000 [-/127.0.0.1/-/21ms POST /api/ad/create] nodejs.TypeError: this.curl is not a function
+    at AdController.create (E:\nodejs\sumi-server\app\controller\ad.js:38:33)
+    at create.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
+    at next (E:\nodejs\sumi-server\node_modules\co\index.js:99:29)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:69:7)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+
+pid: 35000
+hostname: xiaomo
+
+2017-06-01 15:04:03,463 ERROR 36996 [-/127.0.0.1/-/18ms POST /api/ad/create] nodejs.TypeError: this.curl is not a function
+    at AdController.create (E:\nodejs\sumi-server\app\controller\ad.js:38:33)
+    at create.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
+    at next (E:\nodejs\sumi-server\node_modules\co\index.js:99:29)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:69:7)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+
+pid: 36996
+hostname: xiaomo
+
+2017-06-01 15:12:52,535 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 15:35:45,275 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 15:36:01,085 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 15:36:44,757 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 15:37:11,155 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 15:37:17,003 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 15:39:00,162 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 15:39:08,016 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 15:41:37,208 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 15:47:24,581 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 16:00:47,657 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 16:01:09,233 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 16:15:21,399 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 16:16:27,328 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 16:21:36,737 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 16:27:09,550 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 16:27:15,192 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 16:39:01,977 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 16:42:37,508 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 17:05:58,234 ERROR 48552 [-/127.0.0.1/-/68ms POST /api/task/taskList] nodejs.TypeError: Cannot read property 'task_title' of undefined
+    at TaskService.taskList (E:\nodejs\sumi-server\app\service\task.js:64:35)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 48552
+hostname: xiaomo
+
+2017-06-01 17:08:39,492 ERROR 46364 [-/127.0.0.1/-/22ms POST /api/task/taskList] nodejs.TypeError: Cannot read property 'task_title' of undefined
+    at TaskService.taskList (E:\nodejs\sumi-server\app\service\task.js:64:30)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 46364
+hostname: xiaomo
+
+2017-06-01 17:19:45,085 ERROR 34608 [-/127.0.0.1/-/39ms POST /api/task/taskList] nodejs.TypeError: .iterator.next is not a function
+    at TaskService.taskList (E:\nodejs\sumi-server\app\service\task.js:66:31)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 34608
+hostname: xiaomo
+
+2017-06-01 17:20:04,149 ERROR 49240 [-/127.0.0.1/-/22ms POST /api/task/taskList] nodejs.TypeError: .iterator.next is not a function
+    at TaskService.taskList (E:\nodejs\sumi-server\app\service\task.js:66:31)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 49240
+hostname: xiaomo
+
+2017-06-01 17:20:06,195 ERROR 49240 [-/127.0.0.1/-/4ms POST /api/task/taskList] nodejs.TypeError: .iterator.next is not a function
+    at TaskService.taskList (E:\nodejs\sumi-server\app\service\task.js:66:31)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 49240
+hostname: xiaomo
+
+2017-06-01 17:26:51,261 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 17:29:40,381 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 17:29:50,366 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 17:39:33,206 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 17:39:48,610 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 17:40:55,483 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 17:41:08,859 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 17:43:17,639 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 17:47:29,368 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 17:47:42,438 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 17:48:51,372 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 17:50:00,399 ERROR 48408 [-/127.0.0.1/-/21ms POST /api/task/taskList] nodejs.SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at TaskService.taskList (E:\nodejs\sumi-server\app\service\task.js:56:23)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 48408
+hostname: xiaomo
+
+2017-06-01 17:57:26,408 ERROR 51528 [-/127.0.0.1/-/22ms POST /api/task/taskList] nodejs.TypeError: .iterator.next is not a function
+    at TaskService.taskList (E:\nodejs\sumi-server\app\service\task.js:66:31)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 51528
+hostname: xiaomo
+
+2017-06-01 17:58:27,507 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 18:01:37,206 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 18:05:48,115 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 18:07:32,437 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 18:37:49,493 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 18:37:56,174 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 19:10:40,071 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 19:13:37,181 ERROR 57236 [-/127.0.0.1/-/43ms POST /api/task/taskList] nodejs.TypeError: Cannot read property 'key' of undefined
+    at TaskService.taskList (E:\nodejs\sumi-server\app\service\task.js:50:41)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 57236
+hostname: xiaomo
+
+2017-06-01 19:25:12,141 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 19:25:17,790 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 19:26:00,081 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 19:28:53,047 ERROR 43764 [-/127.0.0.1/-/10ms POST /api/task/taskList] nodejs.TypeError: Cannot create property 'task_status' on string 'sign'
+    at TaskService.taskList (E:\nodejs\sumi-server\app\service\task.js:40:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 43764
+hostname: xiaomo
+
+2017-06-01 19:40:51,628 ERROR 58632 [-/127.0.0.1/-/28ms POST /api/task/taskList] nodejs.TypeError: rs[value].push is not a function
+    at TaskService.taskList (E:\nodejs\sumi-server\app\service\task.js:40:21)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 58632
+hostname: xiaomo
+
+2017-06-01 19:42:14,200 ERROR 59188 [-/127.0.0.1/-/23ms POST /api/task/taskList] nodejs.SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at TaskService.taskList (E:\nodejs\sumi-server\app\service\task.js:34:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 59188
+hostname: xiaomo
+
+2017-06-01 19:48:34,924 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+
+2017-06-01 20:05:25,741 ERROR 59356 [-/192.168.16.25/-/43ms POST /api/forum/boardDetail] nodejs.TypeError: Cannot read property 'user_follow_board' of null
+    at ForumService.boardDetail (E:\nodejs\sumi-server\app\service\forum.js:11:17)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+pid: 59356
+hostname: xiaomo
+
+2017-06-01 20:07:18,899 ERROR 60508 [-/192.168.16.25/-/54ms POST /api/forum/boardDetail] nodejs.TypeError: Cannot read property 'user_follow_board' of null
+    at ForumService.boardDetail (E:\nodejs\sumi-server\app\service\forum.js:11:17)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+pid: 60508
+hostname: xiaomo
+
+2017-06-01 20:07:38,630 ERROR 60508 [-/127.0.0.1/-/10ms POST /api/forum/boardDetail] nodejs.TypeError: Cannot read property 'user_follow_board' of null
+    at ForumService.boardDetail (E:\nodejs\sumi-server\app\service\forum.js:11:17)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 60508
+hostname: xiaomo
+
+2017-06-01 20:08:31,466 ERROR 59148 [-/127.0.0.1/-/57ms POST /api/forum/boardDetail] nodejs.TypeError: Cannot read property 'user_follow_board' of null
+    at ForumService.boardDetail (E:\nodejs\sumi-server\app\service\forum.js:12:17)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 59148
+hostname: xiaomo
+
+2017-06-01 20:13:33,648 ERROR 62364 [-/192.168.16.25/-/33ms POST /api/forum/boardDetail] nodejs.TypeError: Cannot read property 'user_follow_board' of null
+    at ForumService.boardDetail (E:\nodejs\sumi-server\app\service\forum.js:12:17)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+pid: 62364
+hostname: xiaomo
+
+2017-06-01 20:14:40,938 ERROR 58208 [-/192.168.16.25/-/16ms POST /api/forum/boardDetail] nodejs.TypeError: Cannot read property 'user_follow_board' of null
+    at ForumService.boardDetail (E:\nodejs\sumi-server\app\service\forum.js:12:17)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+pid: 58208
+hostname: xiaomo
+
+2017-06-01 20:14:54,045 ERROR 58208 [-/192.168.16.25/-/16ms POST /api/forum/boardDetail] nodejs.TypeError: Cannot read property 'user_follow_board' of null
+    at ForumService.boardDetail (E:\nodejs\sumi-server\app\service\forum.js:12:17)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+pid: 58208
+hostname: xiaomo
+
+2017-06-01 20:36:36,071 ERROR 9556 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9556
+hostname: xiaomo
+

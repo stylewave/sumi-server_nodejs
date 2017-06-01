@@ -47,9 +47,9 @@ module.exports = app => {
 
       };
     }
-    // 购买房间列表
-    async chatRootList() {
-      const { uid, page, size } = this.ctx.request.body;
+    // 任务列表
+    async taskList() {
+      const { uid } = this.ctx.request.body;
       if (this.ctx.service.utils.common.chechtype(uid) === false) {
         this.ctx.body = {
           status: 0,
@@ -57,22 +57,18 @@ module.exports = app => {
         };
         return;
       }
-      if (this.ctx.service.utils.common.chechtype(page) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '页数格式不正确',
-        };
-        return;
-      }
-      if (this.ctx.service.utils.common.chechtype(size) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '页码数量格式不正确',
-        };
-        return;
-      }
-      const result = await this.ctx.service.user.chatRootList(uid, page, size);
 
+      const result = await this.ctx.service.task.taskList(uid);
+      // const rs = await this.ctx.service.utils.taskArray.task();
+      // for (const i in rs) {
+      //   console.log(i);
+      //   if (rs[i].sign) {
+      //     console.log(rs[i].sign.task_title);
+      //   }
+      //   // console.log(rs[i]);
+      // }
+
+      // console.log(rs);
       this.ctx.body = {
         status: 1,
         list: result,
