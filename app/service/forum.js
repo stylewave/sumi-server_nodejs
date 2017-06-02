@@ -133,7 +133,7 @@ module.exports = app => {
     // 股吧主题评论
     async commentdata(subId) {
       const field =
-        'reply_id,reply_board_id,reply_user,reply_user_icon,reply_nickname,reply_content,reply_create_time,reply_status';
+        'reply_id,reply_board_id,reply_user,reply_user_icon,reply_nickname,reply_content,reply_status,DATE_FORMAT(reply_create_time,"%m-%d %H:%i") AS reply_create_time ';
       const sql =
         'SELECT ' +
         field +
@@ -155,7 +155,7 @@ module.exports = app => {
       let sql;
       const field = 'sub_id,sub_board_id,sub_title,sub_uid,sub_nickname,sub_user_icon,sub_hits,sub_hot_type,sub_reply_count,DATE_FORMAT(sub_create_time,"%m/%d %H:%i") AS sub_create_time';
       console.log(order);
-      if (order === '1') {
+      if (order === 1) {
         sql = `SELECT ${field} FROM data_forum_subject WHERE sub_status = 1  AND sub_board_id='${boardId}' ORDER BY sub_hits DESC LIMIT ${start},${size}`;
       } else {
         sql = `SELECT ${field} FROM data_forum_subject WHERE sub_status = 1  AND sub_board_id='${boardId}' ORDER BY sub_id DESC LIMIT ${start},${size}`;
@@ -242,6 +242,17 @@ module.exports = app => {
       const boardallow = await app.mysql.get('data_forum_board', { board_id: boardId });
       return boardallow.board_allow_subject > 0 ? boardallow.board_allow_subject : 0;
     }
+    // 我的关注股吧列表
+    async myBoardlist(uid) {
+      const userrow = await app.mysql.get('data_user', { user_id: uid });
+      const field = "board_id,board_title,board_description,board_stock_code,board_follow,board_hits,board_ishot";
+      const board_id_list = userrow.user_follow_board.replace(/(^,*)|(,*$)/g, "");
+      const sql = `SELECT ${field} FROM data_forum_board where board_status='1' AND board_id in (${board_id_list})`;
+      const result = await app.mysql.query(sql);
+      return result;
+    }
+
+
   }
   return ForumService;
 };

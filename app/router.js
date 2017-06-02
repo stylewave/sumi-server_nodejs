@@ -36,11 +36,13 @@ module.exports = app => {
   // 股吧主题详情
   app.post('/api/forum/forumSubjectDetail', 'forum.forumSubjectDetail');
   // 股吧主题评论的提交
-  app.post('/api/forum/commentadd', 'forum.commentadd');
+  app.post('/api/forum/addComment', 'forum.addComment');
   // 股吧主题增加
   app.post('/api/forum/addForumSubject', 'forum.addForumSubject');
   // 股吧主题热门列表
   app.post('/api/forum/subHotlist', 'forum.subHotlist');
+  // 我的关注股吧列表
+  app.post('/api/forum/myBoardlist', 'forum.myBoardlist');
 
   // 观点列表
   app.post('/api/viewpoint/expertCommentList', 'viewpoint.expertCommentList');
@@ -59,6 +61,7 @@ module.exports = app => {
   app.post('/api/user/chatRootList', 'user.chatRootList');
 
   app.post('/api/task/taskList', 'task.taskList');
+  app.post('/api/task/finishTask', 'task.finishTask');
 
   /** socket请求**/
   app.io.route('join', app.io.controllers.chat);
