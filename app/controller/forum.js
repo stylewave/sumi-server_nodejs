@@ -1,5 +1,5 @@
 const _ = require('lodash');
-
+const charUtil = require('./utils/charUtil.js');
 module.exports = app => {
   // const charUtil = require('./utils/charUtil.js');
 
@@ -15,21 +15,22 @@ module.exports = app => {
     // 股吧板块列表
     async get_stock_board_list() {
       let { cpage, size } = this.ctx.request.body;
-      if (this.ctx.service.utils.common.chechtype(cpage) === false) {
+      if (charUtil.checkNumT(cpage) === false) {
         this.ctx.body = {
           status: 0,
           tips: '页码格式不正确',
         };
         return;
       }
-
-      if (this.ctx.service.utils.common.chechtype(size) === false) {
+      if (charUtil.checkNumT(size) === false) {
         this.ctx.body = {
           status: 0,
           tips: '页码数量格式不正确',
         };
         return;
       }
+
+
       cpage = parseInt(cpage, 10);
       size = parseInt(size, 10);
       // let { page, size } = this.ctx.request.body;
@@ -55,14 +56,14 @@ module.exports = app => {
     // 股吧热门四条
     async get_stock_board_hot() {
       let { size } = this.ctx.request.body;
-
-      if (this.ctx.service.utils.common.chechtype(size) === false) {
+      if (charUtil.checkNumT(size) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '数量格式不正确',
+          tips: '页码数量格式不正确',
         };
         return;
       }
+
       size = parseInt(size, 10);
       const result = await this.ctx.service.forum.hot(size);
       this.ctx.body = {
@@ -74,22 +75,20 @@ module.exports = app => {
     // 模块详情
     async boardDetail() {
       const { id, uid } = this.ctx.request.body;
-
-      if (this.ctx.service.utils.common.chechtype(id) === false) {
+      if (charUtil.checkNumT(id) === false) {
         this.ctx.body = {
           status: 0,
           tips: 'ID格式不正确',
         };
         return;
       }
-      if (this.ctx.service.utils.common.chechtype(uid) === false) {
+      if (charUtil.checkNumT(uid) === false) {
         this.ctx.body = {
           status: 0,
           tips: '用户ID格式不正确',
         };
         return;
       }
-
       const result = await this.ctx.service.forum.boardDetail(id, uid);
       if (_.isEmpty(result)) {
         this.ctx.body = {
@@ -107,14 +106,14 @@ module.exports = app => {
     // 股吧板块关注与取消
     async follow() {
       let { state, boardId, uid } = this.ctx.request.body;
-      if (this.ctx.service.utils.common.chechtype(boardId) === false) {
+      if (charUtil.checkNumT(boardId) === false) {
         this.ctx.body = {
           status: 0,
           tips: 'ID格式不正确',
         };
         return;
       }
-      if (this.ctx.service.utils.common.chechtype(uid) === false) {
+      if (charUtil.checkNumT(uid) === false) {
         this.ctx.body = {
           status: 0,
           tips: '用户ID格式不正确',
@@ -160,27 +159,21 @@ module.exports = app => {
     // 取消关注
     async cancelfollow() {
       const { state, boardId, uid } = this.ctx.request.body;
-      if (this.ctx.service.utils.common.chechtype(boardId) === false) {
+      if (charUtil.checkNumT(boardId) === false) {
         this.ctx.body = {
           status: 0,
           tips: 'ID格式不正确',
         };
         return;
       }
-      if (this.ctx.service.utils.common.chechtype(uid) === false) {
+      if (charUtil.checkNumT(uid) === false) {
         this.ctx.body = {
           status: 0,
           tips: '用户ID格式不正确',
         };
         return;
       }
-      if (this.ctx.service.utils.common.chechtype(state) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '状态格式不正确',
-        };
-        return;
-      }
+
       if (state === '1') {
         this.ctx.body = {
           status: 0,
@@ -215,27 +208,28 @@ module.exports = app => {
     async sublist() {
       let { page, size, boardId, order } = this.ctx.request.body;
       order = parseInt(order, 10);
-      if (this.ctx.service.utils.common.chechtype(page) === false) {
+      if (charUtil.checkNumT(page) === false) {
         this.ctx.body = {
           status: 0,
           tips: '页码格式不正确',
         };
         return;
       }
-      if (this.ctx.service.utils.common.chechtype(boardId) === false) {
+      if (charUtil.checkNumT(boardId) === false) {
         this.ctx.body = {
           status: 0,
           tips: '股吧ID格式不正确',
         };
         return;
       }
-      if (this.ctx.service.utils.common.chechtype(size) === false) {
+      if (charUtil.checkNumT(size) === false) {
         this.ctx.body = {
           status: 0,
           tips: '页码数量格式不正确',
         };
         return;
       }
+
 
       page = parseInt(page, 10);
       size = parseInt(size, 10);
@@ -278,28 +272,27 @@ module.exports = app => {
     // 主题热门列表
     async subHotlist() {
       let { page, size, boardId } = this.ctx.request.body;
-      if (this.ctx.service.utils.common.chechtype(page) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '页码格式不正确',
-        };
-        return;
-      }
-      if (this.ctx.service.utils.common.chechtype(boardId) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '股吧ID格式不正确',
-        };
-        return;
-      }
-      if (this.ctx.service.utils.common.chechtype(size) === false) {
+      if (charUtil.checkNumT(size) === false) {
         this.ctx.body = {
           status: 0,
           tips: '页码数量格式不正确',
         };
         return;
       }
-
+      if (charUtil.checkNumT(page) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '页码格式不正确',
+        };
+        return;
+      }
+      if (charUtil.checkNumT(boardId) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '股吧ID格式不正确',
+        };
+        return;
+      }
 
       page = parseInt(page, 10);
       size = parseInt(size, 10);
@@ -331,8 +324,7 @@ module.exports = app => {
     // 股吧主题详情
     async forumSubjectDetail() {
       const { subId } = this.ctx.request.body;
-
-      if (this.ctx.service.utils.common.chechtype(subId) === false) {
+      if (charUtil.checkNumT(subId) === false) {
         this.ctx.body = {
           status: 0,
           tips: '主题ID格式不正确',
@@ -356,7 +348,7 @@ module.exports = app => {
     async commentdata() {
       const { subId } = this.ctx.request.body;
 
-      if (this.ctx.service.utils.common.chechtype(subId) === false) {
+      if (charUtil.checkNumT(subId) === false) {
         this.ctx.body = {
           status: 0,
           tips: '主题ID格式不正确',
@@ -374,21 +366,20 @@ module.exports = app => {
     async addComment() {
       // let { subId, content } = this.ctx.request.body;
       const { subId, content, uid } = this.ctx.request.body;
-      if (this.ctx.service.utils.common.chechtype(subId) === false) {
+      if (charUtil.checkNumT(subId) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '主题格式不正确',
+          tips: '主题ID格式不正确',
         };
         return;
       }
-      if (this.ctx.service.utils.common.chechtype(uid) === false) {
+      if (charUtil.checkNumT(uid) === false) {
         this.ctx.body = {
           status: 0,
           tips: '用户ID格式不正确',
         };
         return;
       }
-
       if (content.length < 5) {
         this.ctx.body = {
           status: 0,
@@ -406,14 +397,15 @@ module.exports = app => {
     // 股吧主题的增加
     async addForumSubject() {
       const { title, content, boardId, uid } = this.ctx.request.body;
-      if (this.ctx.service.utils.common.chechtype(boardId) === false) {
+
+      if (charUtil.checkNumT(boardId) === false) {
         this.ctx.body = {
           status: 0,
           tips: '股吧id格式不正确',
         };
         return;
       }
-      if (this.ctx.service.utils.common.chechtype(uid) === false) {
+      if (charUtil.checkNumT(uid) === false) {
         this.ctx.body = {
           status: 0,
           tips: '用户ID格式不正确',
@@ -455,13 +447,14 @@ module.exports = app => {
     // 我的关注股吧列表
     async myBoardlist() {
       const { uid } = this.ctx.request.body;
-      if (this.ctx.service.utils.common.chechtype(uid) === false) {
+      if (charUtil.checkNumT(uid) === false) {
         this.ctx.body = {
           status: 0,
           tips: '用户id格式不正确',
         };
         return;
       }
+
       const result = await this.ctx.service.forum.myBoardlist(uid);
       this.ctx.body = {
         status: 1,

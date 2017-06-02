@@ -63,6 +63,7 @@ module.exports = app => {
       let taskSql;
       let userSql;
       let result;
+      let exp;
       switch (tcontent.status) {
         // 完成未领取
         case '1':
@@ -74,7 +75,7 @@ module.exports = app => {
           console.log(taskSql);
           console.log(userSql);
           console.log(task_row.task_title);
-          const exp = await this.ctx.service.utils.expArray.exp();
+          exp = await this.ctx.service.utils.expArray.exp();
           console.log(exp.length);
           let i;
           for (i = exp.length; i >= 1; i--) {

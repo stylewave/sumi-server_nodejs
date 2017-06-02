@@ -55,14 +55,6 @@ module.exports = app => {
 
     checkVersion() { }
 
-    // 检测参数的类型
-    chechtype(arr) {
-      // const re = /^[0-9]+.?[0-9]*$/;
-      const re = /^[0-9]*[1-9][0-9]*$/;
-      return re.test(arr);
-
-    }
-
   }
 
   return CommonService;

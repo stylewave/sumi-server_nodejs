@@ -1,22 +1,25 @@
+const charUtil = require('./utils/charUtil.js');
 module.exports = app => {
   class UserController extends app.Controller {
     // 头像和昵称设置
     async setUserPhoto() {
       const { uid, photo, nickname } = this.ctx.request.body;
-      if (this.ctx.service.utils.common.chechtype(uid) === false) {
+
+      if (charUtil.checkNumT(uid) === false) {
         this.ctx.body = {
           status: 0,
           tips: '用户ID格式不正确',
         };
         return;
       }
-      if (this.ctx.service.utils.common.chechtype(photo) === false) {
+      if (charUtil.checkNumT(photo) === false) {
         this.ctx.body = {
           status: 0,
           tips: '头像图片的格式不正确',
         };
         return;
       }
+
 
       if (nickname.length < 2) {
         this.ctx.body = {
@@ -50,27 +53,29 @@ module.exports = app => {
     // 购买房间列表
     async chatRootList() {
       const { uid, page, size } = this.ctx.request.body;
-      if (this.ctx.service.utils.common.chechtype(uid) === false) {
+
+      if (charUtil.checkNumT(uid) === false) {
         this.ctx.body = {
           status: 0,
           tips: '用户ID格式不正确',
         };
         return;
       }
-      if (this.ctx.service.utils.common.chechtype(page) === false) {
+      if (charUtil.checkNumT(page) === false) {
         this.ctx.body = {
           status: 0,
           tips: '页数格式不正确',
         };
         return;
       }
-      if (this.ctx.service.utils.common.chechtype(size) === false) {
+      if (charUtil.checkNumT(size) === false) {
         this.ctx.body = {
           status: 0,
           tips: '页码数量格式不正确',
         };
         return;
       }
+
       const result = await this.ctx.service.user.chatRootList(uid, page, size);
 
       this.ctx.body = {

@@ -1,10 +1,11 @@
+const charUtil = require('./utils/charUtil.js');
 module.exports = app => {
   class TaskController extends app.Controller {
 
     // 任务列表
     async taskList() {
       const { uid } = this.ctx.request.body;
-      if (this.ctx.service.utils.common.chechtype(uid) === false) {
+      if (charUtil.checkNumT(uid) === false) {
         this.ctx.body = {
           status: 0,
           tips: '用户ID格式不正确',
@@ -23,13 +24,14 @@ module.exports = app => {
     // 领取完成任务
     async finishTask() {
       const { key, uid } = this.ctx.request.body;
-      if (this.ctx.service.utils.common.chechtype(uid) === false) {
+      if (charUtil.checkNumT(uid) === false) {
         this.ctx.body = {
           status: 0,
           tips: '用户ID格式不正确',
         };
         return;
       }
+
       const rs = await this.ctx.service.utils.taskArray.task();
       const task_row = rs[key];
       if (!task_row) {
