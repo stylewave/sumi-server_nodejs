@@ -81,6 +81,20 @@ module.exports = app => {
     // 登录
     async login() {
       const { mobile, pwd } = this.ctx.request.body;
+      if (regExp.checkMobile(mobile) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '手机号码格式不正确',
+        };
+        return;
+      }
+      if (pwd.length < 3) {
+        this.ctx.body = {
+          status: 0,
+          tips: '密码不正确',
+        };
+        return;
+      }
       const userInfo = await this.ctx.service.userLogin.login(mobile, pwd);
 
       if (_.isEmpty(userInfo)) {

@@ -21,13 +21,6 @@ module.exports = app => {
         };
         return;
       }
-      // if (charUtil.checkNumT(uid) === false) {
-      //   this.ctx.body = {
-      //     status: 0,
-      //     tips: '用户ID格式不正确',
-      //   };
-      //   return;
-      // }
       if (charUtil.checkNumT(size) === false) {
         this.ctx.body = {
           status: 0,
@@ -61,7 +54,15 @@ module.exports = app => {
 
     // 观点详情
     async commentDetail() {
-      const { commentId, uid } = this.ctx.request.body;
+      const { commentId, uid, token } = this.ctx.request.body;
+      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoken)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户信息已过期,请重新登录',
+        };
+        return;
+      }
       if (charUtil.checkNumT(commentId) === false) {
         this.ctx.body = {
           status: 0,
@@ -127,7 +128,15 @@ module.exports = app => {
 
     // 购买观点
     async buyExpertComment() {
-      const { commentId, uid } = this.ctx.request.body;
+      const { commentId, uid, token } = this.ctx.request.body;
+      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoken)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户信息已过期,请重新登录',
+        };
+        return;
+      }
       if (charUtil.checkNumT(uid) === false) {
         this.ctx.body = {
           status: 0,
@@ -152,8 +161,6 @@ module.exports = app => {
         return;
       }
       const buyda = await this.ctx.service.viewpoint.buydata(commentId, uid);
-      console.log(buyda);
-      console.log('buyda');
       if (buyda) {
         this.ctx.body = {
           status: 0,
@@ -229,35 +236,6 @@ module.exports = app => {
       };
     }
 
-    // 观点详情
-    async forumDetail() {
-      const { newsId } = this.ctx.request.body;
-      if (charUtil.checkNumT(newsId) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '资讯ID格式不正确',
-        };
-        return;
-      }
-
-      const result = await this.ctx.service.news.newsDetail(newsId);
-      if (_.isEmpty(result)) {
-        this.ctx.body = {
-          status: 0,
-          tips: '访问的新闻不存在',
-        };
-        return;
-      }
-      this.ctx.body = {
-        status: 1,
-        detail: result,
-      };
-    }
-
-    // // 股吧评论
-    // async forumComment() {
-
-    // }
   }
   return ViewpointController;
 };

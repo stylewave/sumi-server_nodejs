@@ -2932,3 +2932,103 @@ name: 'unhandledExceptionError'
 pid: 9212
 hostname: xiaomo
 
+2017-06-05 10:43:59,064 ERROR 7176 [-/127.0.0.1/-/144ms POST /api/login/login] nodejs.ER_BAD_FIELD_ERRORError: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT user_id,user_status,user_name,user_last_login  FROM data_user WHERE user_pwd = MD5(CONCAT(MD5(undefined),user_salt)) AND user_name = 'undefined' LIMIT 1
+code: 'ER_BAD_FIELD_ERROR'
+errno: 1054
+sqlState: '42S22'
+index: 0
+name: 'ER_BAD_FIELD_ERRORError'
+pid: 7176
+hostname: xiaomo
+
+2017-06-05 10:45:35,178 ERROR 8120 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 8120
+hostname: xiaomo
+
+2017-06-05 10:55:06,728 ERROR 7336 [-/127.0.0.1/-/20ms POST /api/login/login] nodejs.TypeError: Cannot read property 'user_id' of undefined
+    at UserLoginService.login (E:\nodejs\sumi-server\app\service\userLogin.js:51:74)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 7336
+hostname: xiaomo
+
+2017-06-05 10:55:34,051 ERROR 8908 [-/127.0.0.1/-/23ms POST /api/login/login] nodejs.TypeError: Cannot read property 'user_id' of undefined
+    at UserLoginService.login (E:\nodejs\sumi-server\app\service\userLogin.js:51:74)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 8908
+hostname: xiaomo
+
+2017-06-05 10:55:35,377 ERROR 8908 [-/127.0.0.1/-/6ms POST /api/login/login] nodejs.TypeError: Cannot read property 'user_id' of undefined
+    at UserLoginService.login (E:\nodejs\sumi-server\app\service\userLogin.js:51:74)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 8908
+hostname: xiaomo
+
+2017-06-05 10:57:49,351 ERROR 1396 [-/127.0.0.1/-/23ms POST /api/login/login] nodejs.TypeError: Cannot read property 'user_id' of undefined
+    at UserLoginService.login (E:\nodejs\sumi-server\app\service\userLogin.js:51:74)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 1396
+hostname: xiaomo
+
+2017-06-05 10:58:16,077 ERROR 1396 [-/127.0.0.1/-/9ms POST /api/login/login] nodejs.TypeError: Cannot read property 'user_id' of undefined
+    at UserLoginService.login (E:\nodejs\sumi-server\app\service\userLogin.js:51:74)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 1396
+hostname: xiaomo
+
+2017-06-05 11:00:02,999 ERROR 6136 [-/127.0.0.1/-/22ms POST /api/login/login] nodejs.TypeError: Cannot read property 'user_id' of undefined
+    at UserLoginService.login (E:\nodejs\sumi-server\app\service\userLogin.js:52:74)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 6136
+hostname: xiaomo
+
+2017-06-05 11:00:25,209 ERROR 8852 [-/127.0.0.1/-/22ms POST /api/login/login] nodejs.TypeError: Cannot read property 'user_id' of undefined
+    at UserLoginService.login (E:\nodejs\sumi-server\app\service\userLogin.js:53:74)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 8852
+hostname: xiaomo
+
+2017-06-05 11:10:17,619 ERROR 8120 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 8120
+hostname: xiaomo
+

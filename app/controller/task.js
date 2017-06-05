@@ -1,4 +1,5 @@
 const charUtil = require('./utils/charUtil.js');
+const _ = require('lodash');
 module.exports = app => {
   class TaskController extends app.Controller {
 
@@ -23,7 +24,15 @@ module.exports = app => {
     }
     // 领取完成任务
     async finishTask() {
-      const { key, uid } = this.ctx.request.body;
+      const { key, uid, token } = this.ctx.request.body;
+      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoken)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户信息已过期,请重新登录',
+        };
+        return;
+      }
       if (charUtil.checkNumT(uid) === false) {
         this.ctx.body = {
           status: 0,

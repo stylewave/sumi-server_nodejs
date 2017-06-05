@@ -74,7 +74,8 @@ module.exports = app => {
 
     // 模块详情
     async boardDetail() {
-      const { id, uid } = this.ctx.request.body;
+      const { id, uid, token } = this.ctx.request.body;
+
       if (charUtil.checkNumT(id) === false) {
         this.ctx.body = {
           status: 0,
@@ -86,6 +87,14 @@ module.exports = app => {
         this.ctx.body = {
           status: 0,
           tips: '用户ID格式不正确',
+        };
+        return;
+      }
+      const rs = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(rs)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户信息已过期,请重新登录',
         };
         return;
       }
@@ -105,7 +114,8 @@ module.exports = app => {
 
     // 股吧板块关注与取消
     async follow() {
-      let { state, boardId, uid } = this.ctx.request.body;
+      let { state, boardId, uid, token } = this.ctx.request.body;
+
       if (charUtil.checkNumT(boardId) === false) {
         this.ctx.body = {
           status: 0,
@@ -113,6 +123,7 @@ module.exports = app => {
         };
         return;
       }
+
       if (charUtil.checkNumT(uid) === false) {
         this.ctx.body = {
           status: 0,
@@ -121,6 +132,14 @@ module.exports = app => {
         return;
       }
       state = parseInt(state, 10);
+      const rs = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(rs)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户信息已过期,请重新登录',
+        };
+        return;
+      }
 
       if (state === 0) {
         const cancle = await this.ctx.service.forum.cancleFollowForum(state, boardId, uid);
@@ -156,9 +175,9 @@ module.exports = app => {
       }
 
     }
-    // 取消关注
+    // 取消关注,现在暂时没用
     async cancelfollow() {
-      const { state, boardId, uid } = this.ctx.request.body;
+      const { state, boardId, uid, token } = this.ctx.request.body;
       if (charUtil.checkNumT(boardId) === false) {
         this.ctx.body = {
           status: 0,
@@ -170,6 +189,14 @@ module.exports = app => {
         this.ctx.body = {
           status: 0,
           tips: '用户ID格式不正确',
+        };
+        return;
+      }
+      const rs = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(rs)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户信息已过期,请重新登录',
         };
         return;
       }
@@ -365,7 +392,8 @@ module.exports = app => {
     // 股吧主题评论增加
     async addComment() {
       // let { subId, content } = this.ctx.request.body;
-      const { subId, content, uid } = this.ctx.request.body;
+      const { subId, content, uid, token } = this.ctx.request.body;
+
       if (charUtil.checkNumT(subId) === false) {
         this.ctx.body = {
           status: 0,
@@ -384,6 +412,14 @@ module.exports = app => {
         this.ctx.body = {
           status: 0,
           tips: '评论的内容太少了',
+        };
+        return;
+      }
+      const rs = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(rs)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户信息已过期,请重新登录',
         };
         return;
       }
@@ -446,11 +482,20 @@ module.exports = app => {
     }
     // 我的关注股吧列表
     async myBoardlist() {
-      const { uid } = this.ctx.request.body;
+      const { uid, token } = this.ctx.request.body;
       if (charUtil.checkNumT(uid) === false) {
         this.ctx.body = {
           status: 0,
           tips: '用户id格式不正确',
+        };
+        return;
+      }
+      const rs = await this.ctx.service.utils.common.checkToken(uid, token);
+
+      if (_.isEmpty(rs)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户信息已过期,请重新登录',
         };
         return;
       }
