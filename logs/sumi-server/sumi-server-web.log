@@ -2135,3 +2135,19 @@ message: 'Method Not Allowed'
 pid: 12136
 hostname: xiaomo
 
+2017-06-12 09:11:17,559 INFO 8256 [egg-development-proxyworker] client worker ready to connect proxyworker.
+2017-06-12 09:20:16,146 WARN 8256 [-/192.168.16.25/-/20ms OPTIONS /api/login/login] nodejs.MethodNotAllowedError: Method Not Allowed
+    at Object.throw (E:\nodejs\sumi-server\node_modules\koa\lib\context.js:89:23)
+    at Object.notAllow (E:\nodejs\sumi-server\node_modules\egg-security\lib\middlewares\methodnoallow.js:18:17)
+    at notAllow.next (<anonymous>)
+    at Object.<anonymous> (E:\nodejs\sumi-server\node_modules\koa-compose\index.js:28:19)
+    at Generator.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
+    at next (E:\nodejs\sumi-server\node_modules\co\index.js:99:29)
+message: 'Method Not Allowed'
+pid: 8256
+hostname: xiaomo
+
