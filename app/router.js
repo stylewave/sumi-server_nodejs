@@ -46,13 +46,13 @@ module.exports = app => {
 
   // 观点列表
   app.post('/api/viewpoint/expertCommentList', 'viewpoint.expertCommentList');
-  // 没购买观点详情
+  // 观点详情
   app.post('/api/viewpoint/commentDetail', 'viewpoint.commentDetail');
   // 多空舆情列表
   app.post('/api/viewpoint/marketList', 'viewpoint.marketList');
-  // 购买观点详情
+  // 购买观点
   app.post('/api/viewpoint/buyExpertComment', 'viewpoint.buyExpertComment');
-
+  // 用户资金记录
   app.post('/api/myaccount/userMoneylog', 'myaccount.userMoneylog');
   app.post('/api/myaccount/userBeanLog', 'myaccount.userBeanLog');
   app.post('/api/myaccount/beanReturnList', 'myaccount.beanReturnList');

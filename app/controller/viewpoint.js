@@ -41,16 +41,16 @@ module.exports = app => {
         return;
       }
       const start = (page - 1) * size;
+      // 总共页数
+      const total = Math.ceil(maxPage / size);
       const result = await this.ctx.service.viewpoint.expertCommentList(start, size);
       this.ctx.body = {
         status: 1,
+        viewtotal: total,
         list: result,
+
       };
     }
-    // // 观点购买
-    // async commentbuy() {
-
-    // }
 
     // 观点详情
     async commentDetail() {
@@ -94,7 +94,7 @@ module.exports = app => {
           status: 1,
           tips: '还没购买该文章',
           data: detail,
-          style: 'nobuy',
+          style: '0',
         };
         // return;
 
@@ -119,7 +119,7 @@ module.exports = app => {
           status: 1,
           tips: '已购买该文章',
           data: detail2,
-          style: 'buy',
+          style: '1',
         };
 
       }

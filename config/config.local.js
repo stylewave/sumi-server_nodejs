@@ -1,6 +1,7 @@
 module.exports = {
   custom: 'local hello',
   crypKeys: '12345678',
+  host: 'http://192.168.16.254:2050',
   mysql: {
     client: {
       // host

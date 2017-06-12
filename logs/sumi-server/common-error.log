@@ -3032,3 +3032,23 @@ name: 'unhandledExceptionError'
 pid: 8120
 hostname: xiaomo
 
+2017-06-05 15:31:09,616 ERROR 8120 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 8120
+hostname: xiaomo
+
+2017-06-05 15:31:22,241 ERROR 8120 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 8120
+hostname: xiaomo
+

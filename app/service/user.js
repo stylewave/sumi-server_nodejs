@@ -35,6 +35,10 @@ module.exports = app => {
 
       const sql = `SELECT ${field} FROM data_user_bean_log left join data_room on (room_id=log_main_id) WHERE log_uid = ${userId} AND log_type='join_room' AND log_room_expire >='${time}' ORDER BY log_id DESC LIMIT ${start},${size}`;
       const result = await app.mysql.query(sql);
+      for (const v in result) {
+        console.log(v);
+        result[v].log_photo = app.config.host + result[v].log_photo;
+      }
       // console.log(result);
       return {
         result,

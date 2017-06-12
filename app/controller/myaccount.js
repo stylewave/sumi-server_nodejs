@@ -1,20 +1,24 @@
-// const _ = require('lodash');
+const _ = require('lodash');
 const charUtil = require('./utils/charUtil.js');
 module.exports = app => {
   // 我的账户模块
   class MyaccountController extends app.Controller {
-    // 获取观点最大页码
-    async getMaxPage() {
-      const result = await this.ctx.service.viewpoint.getTotal();
-      return result;
-    }
-    // 充值记录
+
+    // 用户资金记录
     async userMoneylog() {
-      const { uid } = this.ctx.request.body;
+      const { uid, token } = this.ctx.request.body;
       if (charUtil.checkNumT(uid) === false) {
         this.ctx.body = {
           status: 0,
           tips: '用户ID格式不正确',
+        };
+        return;
+      }
+      const checktoke = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoke)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户信息已过期,请重新登录',
         };
         return;
       }
@@ -25,9 +29,12 @@ module.exports = app => {
         list: result,
       };
     }
+    // async user_bean_log() {
+
+    // }
     // 豆币记录
     async userBeanLog() {
-      const { uid, page, size } = this.ctx.request.body;
+      const { uid, page, size, token, test } = this.ctx.request.body;
       // const rs = this.ctx.service.utils.common.chechtype(page);
       if (charUtil.checkNumT(uid) === false) {
         this.ctx.body = {
@@ -36,6 +43,22 @@ module.exports = app => {
         };
         return;
       }
+      for (const value in test) {
+        console.log(value);
+        console.log('test');
+        console.log(test[value]);
+
+      }
+      // console.log(test[0]);
+      // const checktoke = await this.ctx.service.utils.common.checkToken(uid, token);
+
+      // if (_.isEmpty(checktoke)) {
+      //   this.ctx.body = {
+      //     status: 0,
+      //     tips: '用户信息已过期,请重新登录',
+      //   };
+      //   return;
+      // }
       if (charUtil.checkNumT(size) === false) {
         this.ctx.body = {
           status: 0,
@@ -60,11 +83,19 @@ module.exports = app => {
     }
     //  豆币回收列表
     async beanReturnList() {
-      const { uid, page, size } = this.ctx.request.body;
+      const { uid, page, size, token } = this.ctx.request.body;
       if (charUtil.checkNumT(uid) === false) {
         this.ctx.body = {
           status: 0,
           tips: '用户ID格式不正确',
+        };
+        return;
+      }
+      const checktoke = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoke)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户信息已过期,请重新登录',
         };
         return;
       }

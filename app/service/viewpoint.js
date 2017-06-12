@@ -12,29 +12,46 @@ module.exports = app => {
     // 观点列表
     async expertCommentList(start, size) {
 
-      const field = 'comment_id,comment_expert_id,comment_title,comment_hits,comment_beans,comment_intro,comment_create_time,ep_name as  comment_expert_name,ep_photo as comment_expert_photo';
+      const field = 'comment_id,comment_expert_id,comment_title,comment_hits,comment_beans,comment_intro,ep_name as  comment_expert_name,ep_photo as comment_expert_photo,DATE_FORMAT(comment_create_time,"%m/%d %H:%i") as comment_create_time';
       const sql = 'SELECT ' + field + ' FROM data_expert_comment left join data_expert on (comment_expert_id=ep_id) WHERE comment_status = \'1\' ORDER BY comment_id DESC LIMIT ' + start + ',' + size;
       console.log(sql);
       const result = await app.mysql.query(sql);
+      for (const v in result) {
+        console.log(v);
+        result[v].comment_expert_photo = app.config.host + result[v].comment_expert_photo;
+      }
+      // result[0].comment_expert_photo = app.config.host + result[0].comment_expert_photo;
+      // result.push(result.comment_expert_photo);
+
+      console.log(result);
+      // this.ctx.body = app.config.custom;
       return result;
 
     }
 
     // 没购买观点详情
     async commentDetail(commentId) {
-      const field = 'comment_id,comment_title,comment_intro,comment_hits,comment_create_time,comment_beans,comment_expert_id,ep_name as comment_expert_name,ep_photo as comment_expert_photo';
+      const field = 'comment_id,comment_title,comment_intro,comment_hits,comment_beans,comment_expert_id,ep_name as comment_expert_name,ep_photo as comment_expert_photo,DATE_FORMAT(comment_create_time,"%m-%d %H:%i") as comment_create_time';
       const sql = 'SELECT ' + field + " FROM data_expert_comment left join data_expert on (comment_expert_id=ep_id) WHERE comment_status = \'1\' AND comment_id = '" + commentId + "' ";
       console.log(sql);
       const result = await app.mysql.query(sql);
+      for (const v in result) {
+        console.log(v);
+        result[v].comment_expert_photo = app.config.host + result[v].comment_expert_photo;
+      }
       return result.length > 0 ? result[0] : null;
     }
 
 
     // 购买观点详情
     async commentDetailBuy(commentId) {
-      const field = 'comment_id,comment_title,comment_intro,comment_hits,comment_create_time,comment_beans,comment_content,comment_expert_id,ep_name as comment_expert_name,ep_photo as comment_expert_photo';
+      const field = 'comment_id,comment_title,comment_intro,comment_hits,comment_beans,comment_content,comment_expert_id,ep_name as comment_expert_name,ep_photo as comment_expert_photo,DATE_FORMAT(comment_create_time,"%m-%d %H:%i") as comment_create_time';
       const sql = 'SELECT ' + field + " FROM data_expert_comment left join data_expert on (comment_expert_id=ep_id) WHERE comment_status = \'1\' AND comment_id = '" + commentId + "' ";
       const result = await app.mysql.query(sql);
+      for (const v in result) {
+        console.log(v);
+        result[v].comment_expert_photo = app.config.host + result[v].comment_expert_photo;
+      }
       return result.length > 0 ? result[0] : null;
     }
 
