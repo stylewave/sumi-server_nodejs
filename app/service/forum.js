@@ -1,10 +1,23 @@
 module.exports = app => {
   class ForumService extends app.Service {
     // 股吧板块详情
-    async boardDetail(id) {
+    async boardDetail(id, uid) {
       const field = '*';
       const sql = 'SELECT ' + field + " FROM data_forum_board WHERE board_id = '" + id + "' ";
       const result = await app.mysql.query(sql);
+      const user = await this.userBoard(uid);
+
+      for (const i in result) {
+        const followb = ',' + result[i].board_id + ',';
+        if (user.user_follow_board.indexOf(followb) !== -1) {
+          console.log('已关注');
+          result[i].isfollow = 1;
+        } else {
+          console.log('没关注');
+          result[i].isfollow = 0;
+        }
+      }
+      console.log(result);
       return result.length > 0 ? result[0] : null;
     }
 
@@ -24,26 +37,26 @@ module.exports = app => {
       return result;
     }
     // 热门股吧
-    async hot(size, userId) {
+    async hot(size) {
       const field = 'board_id,board_title,board_description,board_stock_code,board_follow,board_hits,board_ishot';
       const sql = 'SELECT ' + field + ' FROM data_forum_board WHERE board_status = \'1\'  AND board_ishot=1 ORDER BY board_id DESC LIMIT ' + size;
       const result = await app.mysql.query(sql);
 
-      const user = await this.userBoard(userId);
-      for (const i in result) {
-        const followb = ',' + result[i].board_id + ',';
-        if (user.user_follow_board.indexOf(followb) !== -1) {
-          console.log('已关注');
-          result[i].isfollow = 1;
-        } else {
-          console.log('没关注');
-          result[i].isfollow = 0;
-        }
-      }
+      // const user = await this.userBoard(userId);
+      // for (const i in result) {
+      //   const followb = ',' + result[i].board_id + ',';
+      //   if (user.user_follow_board.indexOf(followb) !== -1) {
+      //     console.log('已关注');
+      //     result[i].isfollow = 1;
+      //   } else {
+      //     console.log('没关注');
+      //     result[i].isfollow = 0;
+      //   }
+      // }
       return result;
     }
-    async userBoard(userId) {
-      const user = await app.mysql.get('data_user', { user_id: userId });
+    async userBoard(uid) {
+      const user = await app.mysql.get('data_user', { user_id: uid });
       return user;
     }
 
@@ -56,9 +69,11 @@ module.exports = app => {
       return result.length > 0 ? result[0] : null;
     }
     // 关注股吧板块
-    async followForum(state, boardId, userId) {
-      const user = await app.mysql.get('data_user', { user_id: userId });
+    async followForum(state, boardId, uid) {
+      const user = await app.mysql.get('data_user', { user_id: uid });
       const boardid = ',' + boardId + ',';
+      console.log(boardid);
+      console.log(user);
       if (user.user_follow_board.indexOf(boardid) !== -1) {
         console.log('已关注');
         return 0;
@@ -68,11 +83,11 @@ module.exports = app => {
       const boardfollowcount = parseInt(board.board_follow) + parseInt(1);
 
       const userSql = 'UPDATE data_user SET user_follow_board = "' + userfollow + '"  WHERE user_id = ' + user.user_id;
-      console.log(userSql);
+      // console.log(userSql);
 
       const forumSql =
         'UPDATE data_forum_board SET board_follow = ' + boardfollowcount + ' WHERE board_id = ' + boardId;
-      console.log(forumSql);
+      // console.log(forumSql);
       const conn = await app.mysql.beginTransaction(); // 初始化事务
       try {
         await conn.query(userSql);
@@ -85,11 +100,11 @@ module.exports = app => {
     }
 
     // 取消关注股吧板块
-    async cancleFollowForum(state, boardId, userId) {
-      const user = await app.mysql.get('data_user', { user_id: userId });
+    async cancleFollowForum(state, boardId, uid) {
+      const user = await app.mysql.get('data_user', { user_id: uid });
       const boardid = ',' + boardId + ',';
       if (user.user_follow_board.indexOf(boardid) === -1) {
-        console.log('您之前没关注此板块内容');
+        // console.log('您之前没关注此板块内容');
         return 0;
       }
       const board = await app.mysql.get('data_forum_board', { board_id: boardId });
@@ -103,7 +118,7 @@ module.exports = app => {
       // console.log(userfollow);
       const forumSql =
         'UPDATE data_forum_board SET board_follow = ' + boardfollowcount + ' WHERE board_id = ' + boardId;
-      console.log(forumSql);
+      // console.log(forumSql);
       const conn = await app.mysql.beginTransaction(); // 初始化事务
       try {
         await conn.query(userSql);
@@ -118,7 +133,7 @@ module.exports = app => {
     // 股吧主题评论
     async commentdata(subId) {
       const field =
-        'reply_id,reply_board_id,reply_user,reply_user_icon,reply_nickname,reply_content,reply_create_time,reply_status';
+        'reply_id,reply_board_id,reply_user,reply_user_icon,reply_nickname,reply_content,reply_status,DATE_FORMAT(reply_create_time,"%m-%d %H:%i") AS reply_create_time ';
       const sql =
         'SELECT ' +
         field +
@@ -135,38 +150,40 @@ module.exports = app => {
       const result = await app.mysql.query(sql);
       return result[0].total;
     }
-    // 主题列表
-    async sublist(start, size, boardId) {
-      // const sql = 'SELECT sub_title FROM data_forum_subject WHERE sub_status = \'1\'  AND sub_board_id=' + boardId + ' ORDER BY `sub_id` DESC LIMIT ' + start + ',' + size;
-      const field = '*';
-      const sql = `SELECT ${field} FROM data_forum_subject WHERE sub_status = 1  AND sub_board_id='${boardId}' ORDER BY sub_id DESC LIMIT ${start},${size}`;
+    // 主题列表 order:0表示全部，１表示热门
+    async sublist(start, size, boardId, order) {
+      let sql;
+      const field = 'sub_id,sub_board_id,sub_title,sub_uid,sub_nickname,sub_user_icon,sub_hits,sub_hot_type,sub_reply_count,DATE_FORMAT(sub_create_time,"%m/%d %H:%i") AS sub_create_time';
+      console.log(order);
+      if (order === 1) {
+        sql = `SELECT ${field} FROM data_forum_subject WHERE sub_status = 1  AND sub_board_id='${boardId}' ORDER BY sub_hits DESC LIMIT ${start},${size}`;
+      } else {
+        sql = `SELECT ${field} FROM data_forum_subject WHERE sub_status = 1  AND sub_board_id='${boardId}' ORDER BY sub_id DESC LIMIT ${start},${size}`;
+      }
       console.log(sql);
 
       const result = await app.mysql.query(sql);
       return result;
     }
     // 获取热门主题总的记录数
-    async getSubHotTotal(boardId, type) {
-      const sql = `SELECT COUNT(*) as total FROM data_forum_subject WHERE sub_status = 1 AND sub_hot_type= ${type} AND sub_board_id='${boardId}'`;
+    async getSubHotTotal(boardId) {
+      const sql = `SELECT COUNT(*) as total FROM data_forum_subject WHERE sub_status = 1  AND sub_board_id='${boardId}'`;
       const result = await app.mysql.query(sql);
       return result[0].total;
     }
     // 主题热门列表
-    async subHotlist(start, size, boardId, type) {
-      let hot;
-      if (type === 1) {
-        hot = "and sub_hot_type='1'";
-      } else {
-        hot = '';
-      }
+    async subHotlist(start, size, boardId) {
+      // let hot;
+      // if (type === 1) {
+      //   hot = "and sub_hot_type='1'";
+      // } else {
+      //   hot = '';
+      // }
       const field = '*';
-      const sql = `SELECT ${field} FROM data_forum_subject WHERE sub_status = 1 ${hot} AND sub_board_id='${boardId}' ORDER BY sub_id DESC LIMIT ${start},${size}`;
+      const sql = `SELECT ${field} FROM data_forum_subject WHERE sub_status = 1  AND sub_board_id='${boardId}' ORDER BY sub_hits DESC LIMIT ${start},${size}`;
       const result = await app.mysql.query(sql);
       return result;
     }
-
-
-
     // 股吧主题详情
     async forumSubjectDetail(subId) {
       const field =
@@ -180,9 +197,9 @@ module.exports = app => {
       return result.length > 0 ? result[0] : null;
     }
     // 股吧主题评论增加
-    async commentadd(subId, content, userId) {
+    async commentadd(subId, content, uid) {
       const board = await app.mysql.get('data_forum_subject', { sub_id: subId });
-      const user = await app.mysql.get('data_user', { user_id: userId });
+      const user = await app.mysql.get('data_user', { user_id: uid });
       const reply_board_id1 = board.sub_board_id;
       const subSql = 'UPDATE data_forum_subject SET sub_reply_count =sub_reply_count+1 WHERE sub_id = ' + subId;
       const conn = await app.mysql.beginTransaction(); // 初始化事务
@@ -225,6 +242,17 @@ module.exports = app => {
       const boardallow = await app.mysql.get('data_forum_board', { board_id: boardId });
       return boardallow.board_allow_subject > 0 ? boardallow.board_allow_subject : 0;
     }
+    // 我的关注股吧列表
+    async myBoardlist(uid) {
+      const userrow = await app.mysql.get('data_user', { user_id: uid });
+      const field = "board_id,board_title,board_description,board_stock_code,board_follow,board_hits,board_ishot";
+      const board_id_list = userrow.user_follow_board.replace(/(^,*)|(,*$)/g, "");
+      const sql = `SELECT ${field} FROM data_forum_board where board_status='1' AND board_id in (${board_id_list})`;
+      const result = await app.mysql.query(sql);
+      return result;
+    }
+
+
   }
   return ForumService;
 };

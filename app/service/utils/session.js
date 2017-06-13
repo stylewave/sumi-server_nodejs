@@ -5,7 +5,7 @@
 */
 // const charUtil = require('../../controller/utils/charUtil.js');
 module.exports = app => {
-  class SessionService extends app.Service {}
+  class SessionService extends app.Service { }
 
   return SessionService;
 };

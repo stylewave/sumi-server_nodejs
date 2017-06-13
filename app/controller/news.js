@@ -1,5 +1,5 @@
 const _ = require('lodash');
-
+const charUtil = require('./utils/charUtil.js');
 module.exports = app => {
   // 新闻资讯模块
   class NewsController extends app.Controller {
@@ -14,6 +14,23 @@ module.exports = app => {
     // 拉取新闻列表
     async list() {
       let { page, size } = this.ctx.request.body;
+
+      if (charUtil.checkNumT(page) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '页码格式不正确',
+        };
+        return;
+      }
+      if (charUtil.checkNumT(size) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '页码数量格式不正确',
+        };
+        return;
+      }
+
+
       page = parseInt(page, 10);
       size = parseInt(size, 10);
       const maxPage = await this.getMaxPage();
@@ -37,6 +54,15 @@ module.exports = app => {
     // 拉取新闻详情
     async newsDetail() {
       const { newsId } = this.ctx.request.body;
+
+      if (charUtil.checkNumT(newsId) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '资讯ID格式不正确',
+        };
+        return;
+      }
+
       const result = await this.ctx.service.news.newsDetail(newsId);
       console.log(result);
       if (_.isEmpty(result)) {

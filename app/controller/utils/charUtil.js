@@ -119,4 +119,12 @@ module.exports = {
     txt += decipher.final('utf8');
     return txt;
   },
+
+  // 检测参数是否为的正整数
+  checkNumT(arr) {
+    const re = /^[0-9]*[1-9][0-9]*$/;
+    return re.test(arr);
+
+  },
+
 };

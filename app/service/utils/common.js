@@ -47,13 +47,15 @@ module.exports = app => {
 
       const sql = `SELECT ${field} FROM data_user WHERE user_id='${uid}' AND user_token='${token}' LIMIT 1`;
       const result = await this.app.mysql.query(sql);
-      if (result) {
-        // console.log('>>>>>>>', result[0]);
-        return result[0];
-      }
+      return result.length > 0 ? result[0] : null;
+      // if (result) {
+      //   // console.log('>>>>>>>', result[0]);
+      //   return result[0];
+      // }
     }
 
     checkVersion() { }
+
   }
 
   return CommonService;

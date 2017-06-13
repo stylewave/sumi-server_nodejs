@@ -7,6 +7,7 @@ module.exports = app => {
       const result = await app.mysql.query(sql);
       return result;
     }
+
   }
   return AdService;
 };
