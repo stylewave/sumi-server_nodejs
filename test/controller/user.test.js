@@ -11,12 +11,12 @@ describe('test/controller/user.test.js', () => {
     return app.ready();
   });
 
-  it('get api/login/login', done => {
+  it.only('get api/login/login', done => {
     request(app.callback())
       .post('/api/login/login')
       .send({
-        mobile: '13928491884',
-        pwd: '123456',
+        mobile: '18814188612',
+        pwd: '111111',
       })
       .end((err, res) => {
         const info = JSON.parse(res.text);
@@ -56,11 +56,11 @@ describe('test/controller/user.test.js', () => {
         done();
       });
   });
-  it.only('get api/user/setUserPhoto', done => {
+  it('get api/user/setUserPhoto', done => {
     request(app.callback())
       .post('/api/user/setUserPhoto')
       .send({
-        userId: '62',
+        uid: 62,
         photo: 1,
         nickname: 'wave',
         token: 'qhASfxQk68dkY7MmZ4dpEeuoxZxBO6tkxEoJVyTscDs=',
