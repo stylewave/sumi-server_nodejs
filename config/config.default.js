@@ -3,7 +3,7 @@ module.exports = {
   crypKeys: '12345678',
   security: {
     csrf: { enable: false },
-    domainWhiteList: ['http://192.168.16.22:7001', 'http://192.168.16.25:3000', 'http://192.168.16.19:3000'],
+    domainWhiteList: ['http://192.168.16.22:7001', 'http://192.168.16.25:3000', 'http://192.168.16.19:3000', 'http://localhost:3000'],
   },
   view: {
     mapping: {
