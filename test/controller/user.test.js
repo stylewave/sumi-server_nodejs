@@ -11,7 +11,7 @@ describe('test/controller/user.test.js', () => {
     return app.ready();
   });
 
-  it.only('get api/login/login', done => {
+  it('get api/login/login', done => {
     request(app.callback())
       .post('/api/login/login')
       .send({
@@ -56,14 +56,14 @@ describe('test/controller/user.test.js', () => {
         done();
       });
   });
-  it('get api/user/setUserPhoto', done => {
+  it.only('get api/user/setUserPhoto', done => {
     request(app.callback())
       .post('/api/user/setUserPhoto')
       .send({
         uid: 62,
         photo: 1,
         nickname: 'wave',
-        token: 'qhASfxQk68dkY7MmZ4dpEeuoxZxBO6tkxEoJVyTscDs=',
+        token: 'qhASfxQk68dkY7MmZ4dpEdztvCu+Qa1u0zKKvhEWwTw=',
       })
       .end((err, res) => {
         const info = JSON.parse(res.text);

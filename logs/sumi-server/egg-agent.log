@@ -1,2 +1,68 @@
-2017-06-14 10:35:24,075 INFO 9228 [egg:logger] init all loggers with options: {"dir":"E:\\nodejs\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"unittest","level":"INFO","consoleLevel":"WARN","outputJSON":false,"buffer":false,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{},"type":"agent"}
-2017-06-14 10:35:24,148 INFO 9228 [egg-watcher:agent] watcher start success
+2017-06-14 11:58:50,683 INFO 9492 [egg:logger] init all loggers with options: {"dir":"E:\\nodejs\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"unittest","level":"INFO","consoleLevel":"WARN","outputJSON":false,"buffer":false,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{},"type":"agent"}
+2017-06-14 11:58:50,757 INFO 9492 [egg-watcher:agent] watcher start success
+2017-06-14 11:59:25,047 INFO 9256 [egg-development-proxyworker] debugger attached
+2017-06-14 11:59:25,049 INFO 9256 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-14 11:59:24,196 INFO 9256 [egg:logger] init all loggers with options: {"dir":"E:\\nodejs\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","outputJSON":false,"buffer":true,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"type":"agent"}
+2017-06-14 11:59:24,267 INFO 9256 [egg-watcher:agent] watcher start success
+2017-06-14 14:47:16,482 WARN 9256 [agent:development] reload worker because E:\nodejs\sumi-server\app\controller\job.js change
+2017-06-14 14:47:23,619 INFO 9256 [egg-development-proxyworker] debugger attached
+2017-06-14 14:47:23,635 INFO 9256 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-14 14:47:25,253 WARN 9256 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-14 14:47:53,032 WARN 9256 [agent:development] reload worker because E:\nodejs\sumi-server\app\controller\job.js change
+2017-06-14 14:47:53,951 INFO 9256 [egg-development-proxyworker] debugger attached
+2017-06-14 14:47:53,966 INFO 9256 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-14 14:47:54,148 WARN 9256 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-14 14:51:10,346 WARN 9256 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\job.js change
+2017-06-14 14:51:11,326 INFO 9256 [egg-development-proxyworker] debugger attached
+2017-06-14 14:51:11,327 INFO 9256 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-14 14:51:11,521 WARN 9256 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-14 15:25:13,356 WARN 9256 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\job.js change
+2017-06-14 15:25:15,010 INFO 9256 [egg-development-proxyworker] debugger attached
+2017-06-14 15:25:15,045 INFO 9256 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-14 15:25:15,276 WARN 9256 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-14 16:26:11,938 WARN 9256 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\job.js change
+2017-06-14 16:26:12,933 INFO 9256 [egg-development-proxyworker] debugger attached
+2017-06-14 16:26:12,934 INFO 9256 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-14 16:26:13,153 WARN 9256 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-14 16:26:46,074 WARN 9256 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\job.js change
+2017-06-14 16:26:46,889 INFO 9256 [egg-development-proxyworker] debugger attached
+2017-06-14 16:26:46,890 INFO 9256 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-14 16:26:47,905 WARN 9256 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-14 16:27:54,638 WARN 9256 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\job.js change
+2017-06-14 16:27:55,633 WARN 9256 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-14 16:27:55,482 INFO 9256 [egg-development-proxyworker] debugger attached
+2017-06-14 16:27:55,483 INFO 9256 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-14 16:29:01,207 WARN 9256 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\utils\jobArray.js change
+2017-06-14 16:29:02,044 INFO 9256 [egg-development-proxyworker] debugger attached
+2017-06-14 16:29:02,045 INFO 9256 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-14 16:29:02,530 WARN 9256 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-14 16:29:21,454 WARN 9256 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\utils\jobArray.js change
+2017-06-14 16:29:22,305 INFO 9256 [egg-development-proxyworker] debugger attached
+2017-06-14 16:29:22,306 INFO 9256 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-14 16:29:43,939 WARN 9256 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\utils\jobArray.js change
+2017-06-14 16:29:44,771 INFO 9256 [egg-development-proxyworker] debugger attached
+2017-06-14 16:29:44,772 INFO 9256 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-14 16:30:16,572 WARN 9256 [agent:development] reload worker because E:\nodejs\sumi-server\app\controller\job.js change
+2017-06-14 16:30:17,562 INFO 9256 [egg-development-proxyworker] debugger attached
+2017-06-14 16:30:17,581 INFO 9256 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-14 16:30:17,882 WARN 9256 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-14 16:36:23,782 WARN 9256 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\job.js change
+2017-06-14 16:36:24,737 INFO 9256 [egg-development-proxyworker] debugger attached
+2017-06-14 16:36:24,738 INFO 9256 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-14 16:36:25,222 WARN 9256 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\job.js change
+2017-06-14 16:36:24,942 WARN 9256 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-14 16:36:26,069 INFO 9256 [egg-development-proxyworker] debugger attached
+2017-06-14 16:36:26,070 INFO 9256 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-14 16:36:26,275 WARN 9256 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-14 16:38:12,405 WARN 9256 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\job.js change
+2017-06-14 16:38:13,208 INFO 9256 [egg-development-proxyworker] debugger attached
+2017-06-14 16:38:13,208 INFO 9256 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-14 16:38:13,461 WARN 9256 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-14 16:43:34,443 WARN 9256 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\job.js change
+2017-06-14 16:43:35,429 WARN 9256 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-14 16:43:35,283 INFO 9256 [egg-development-proxyworker] debugger attached
+2017-06-14 16:43:35,284 INFO 9256 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-14 16:45:15,896 WARN 9256 [agent:development] reload worker because E:\nodejs\sumi-server\app\service\job.js change
+2017-06-14 16:45:16,701 INFO 9256 [egg-development-proxyworker] debugger attached
+2017-06-14 16:45:16,702 INFO 9256 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-14 16:45:16,986 WARN 9256 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer

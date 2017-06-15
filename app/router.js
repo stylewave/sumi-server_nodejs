@@ -63,6 +63,10 @@ module.exports = app => {
   app.post('/api/task/taskList', 'task.taskList');
   app.post('/api/task/finishTask', 'task.finishTask');
 
+  app.post('/api/job/skillList', 'job.skillList');
+  app.post('/api/job/joblList', 'job.joblList');
+  app.post('/api/job/jobDetail', 'job.jobDetail');
+
   /** socket请求**/
   app.io.route('join', app.io.controllers.chat);
 

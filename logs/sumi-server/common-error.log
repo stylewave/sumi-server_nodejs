@@ -1,0 +1,524 @@
+2017-06-14 11:59:28,605 ERROR 10336 [-/127.0.0.1/-/19ms POST /api/job/jobDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at JobController.jobDetail (E:\nodejs\sumi-server\app\controller\job.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 11:59:41,987 ERROR 10336 [-/127.0.0.1/-/15ms POST /api/job/jobDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at JobController.jobDetail (E:\nodejs\sumi-server\app\controller\job.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 11:59:43,559 ERROR 10336 [-/127.0.0.1/-/5ms POST /api/job/jobDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at JobController.jobDetail (E:\nodejs\sumi-server\app\controller\job.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 11:59:44,000 ERROR 10336 [-/127.0.0.1/-/1ms POST /api/job/jobDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at JobController.jobDetail (E:\nodejs\sumi-server\app\controller\job.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 11:59:44,224 ERROR 10336 [-/127.0.0.1/-/5ms POST /api/job/jobDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at JobController.jobDetail (E:\nodejs\sumi-server\app\controller\job.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 11:59:44,481 ERROR 10336 [-/127.0.0.1/-/6ms POST /api/job/jobDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at JobController.jobDetail (E:\nodejs\sumi-server\app\controller\job.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 11:59:44,752 ERROR 10336 [-/127.0.0.1/-/3ms POST /api/job/jobDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at JobController.jobDetail (E:\nodejs\sumi-server\app\controller\job.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 11:59:45,074 ERROR 10336 [-/127.0.0.1/-/5ms POST /api/job/jobDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at JobController.jobDetail (E:\nodejs\sumi-server\app\controller\job.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 11:59:45,289 ERROR 10336 [-/127.0.0.1/-/3ms POST /api/job/jobDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at JobController.jobDetail (E:\nodejs\sumi-server\app\controller\job.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:01:12,443 ERROR 10336 [-/127.0.0.1/-/13ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:01:15,253 ERROR 10336 [-/127.0.0.1/-/2ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:01:15,793 ERROR 10336 [-/127.0.0.1/-/14ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:06:10,740 ERROR 10336 [-/127.0.0.1/-/3ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:06:11,676 ERROR 10336 [-/127.0.0.1/-/3ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:06:12,180 ERROR 10336 [-/127.0.0.1/-/3ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:06:12,394 ERROR 10336 [-/127.0.0.1/-/3ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:06:12,670 ERROR 10336 [-/127.0.0.1/-/22ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:06:12,949 ERROR 10336 [-/127.0.0.1/-/2ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:06:13,360 ERROR 10336 [-/127.0.0.1/-/14ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:06:38,688 ERROR 10336 [-/127.0.0.1/-/2ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:07:08,509 ERROR 10336 [-/127.0.0.1/-/2ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:07:09,236 ERROR 10336 [-/127.0.0.1/-/3ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:07:09,468 ERROR 10336 [-/127.0.0.1/-/3ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:07:12,989 ERROR 10336 [-/127.0.0.1/-/2ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:07:16,741 ERROR 10336 [-/127.0.0.1/-/16ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:07:17,933 ERROR 10336 [-/127.0.0.1/-/2ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:07:27,784 ERROR 10336 [-/127.0.0.1/-/2ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 14:02:52,497 ERROR 9256 nodejs.ClusterClientNoResponseError: client no response in 960950ms exceeding maxIdleTime 30000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:72:23)
+    at ontimeout (timers.js:386:14)
+    at tryOnTimeout (timers.js:250:5)
+    at Timer.listOnTimeout (timers.js:214:5)
+name: 'ClusterClientNoResponseError'
+pid: 9256
+hostname: xiaomo
+
+2017-06-14 14:46:48,900 ERROR 10336 [-/127.0.0.1/-/430ms POST /api/job/jobDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at JobController.jobDetail (E:\nodejs\sumi-server\app\controller\job.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 14:47:17,725 ERROR 10336 [-/127.0.0.1/-/94ms POST /api/job/jobDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at JobController.jobDetail (E:\nodejs\sumi-server\app\controller\job.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 14:47:19,237 ERROR 10336 [-/127.0.0.1/-/10ms POST /api/job/jobDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at JobController.jobDetail (E:\nodejs\sumi-server\app\controller\job.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 14:47:20,610 ERROR 10336 [-/127.0.0.1/-/1ms POST /api/job/jobDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at JobController.jobDetail (E:\nodejs\sumi-server\app\controller\job.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 14:47:21,353 ERROR 10336 [-/127.0.0.1/-/51ms POST /api/job/jobDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at JobController.jobDetail (E:\nodejs\sumi-server\app\controller\job.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 14:47:22,070 ERROR 10336 [-/127.0.0.1/-/1ms POST /api/job/jobDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at JobController.jobDetail (E:\nodejs\sumi-server\app\controller\job.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 16:29:02,484 ERROR 9256 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9256
+hostname: xiaomo
+
+2017-06-14 16:29:22,393 ERROR 9256 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9256
+hostname: xiaomo
+

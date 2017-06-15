@@ -16,13 +16,18 @@ module.exports = app => {
     // 检测token
     async checkToken(uid, token, field = '') {
       uid = Number(uid);
+
       if (uid <= 0) {
         return false;
       }
       if (_.isEmpty(token)) {
         return false;
       }
+      console.log(uid);
+      console.log('eeee');
+      console.log(app.config.crypKeys);
       const str = charUtil.decrypt(token, app.config.crypKeys);
+      console.log(app.config.crypKeys);
       let array = {}; // 定义一数组
       array = str.split('|'); // 字符分割
       const user_id = Number(array[0]);
