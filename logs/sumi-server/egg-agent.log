@@ -66,3 +66,7 @@
 2017-06-14 16:45:16,701 INFO 9256 [egg-development-proxyworker] debugger attached
 2017-06-14 16:45:16,702 INFO 9256 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
 2017-06-14 16:45:16,986 WARN 9256 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-15 09:25:54,527 INFO 9168 [egg:logger] init all loggers with options: {"dir":"E:\\nodejs\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","outputJSON":false,"buffer":true,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"type":"agent"}
+2017-06-15 09:25:55,057 INFO 9168 [egg-watcher:agent] watcher start success
+2017-06-15 09:25:57,190 INFO 9168 [egg-development-proxyworker] debugger attached
+2017-06-15 09:25:57,192 INFO 9168 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086

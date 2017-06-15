@@ -28,21 +28,11 @@ module.exports = app => {
 
         }
       }
+
       const list = task_none.concat(task_going);
       return list;
     }
-    async loadinfo(type = '') {
-      const rs = await this.ctx.service.utils.taskArray.task();
-      console.log(rs);
-      console.log(type);
-      for (const value in rs) {
-        console.log("'key is: " + value);
-        // console.log(tt[value]);
-        console.log('name');
-        // console.log(rs);
-      }
-      // if (type === '0') {
-    }
+
     // 判断任务是否存在
     async taskContent(uid, content) {
       const field = 'task_id,' + content + ' as content';
@@ -57,14 +47,13 @@ module.exports = app => {
       const tcontent = JSON.parse(taskcontent.content);
       const user_bonus_beans = userrow.user_bonus_beans + task_row.task_bonus_beans;
       const user_job_exp = userrow.user_job_exp + task_row.task_exp;
-      console.log(user_bonus_beans);
-      console.log(user_job_exp);
       let contentdata;
       let taskSql;
       let userSql;
       let result;
-      let exp;
-      let i;
+      let conn;
+      let re;
+      let output;
       switch (tcontent.status) {
         // 完成未领取
         case '1':
@@ -73,52 +62,40 @@ module.exports = app => {
           console.log(contentdata);
           taskSql = `UPDATE data_task SET ${content}='${contentdata}' WHERE task_uid = ${uid}`;
           userSql = `UPDATE data_user SET user_bonus_beans='${user_bonus_beans}',user_job_exp=${user_job_exp} WHERE user_id = ${uid}`;
-          console.log(taskSql);
-          console.log(userSql);
-          console.log(task_row.task_title);
-          exp = await this.ctx.service.utils.expArray.exp();
-          console.log(exp.length);
 
-          for (i = exp.length; i >= 1; i--) {
-            // console.log(i);
-            // console.log(exp[i]);
-            if (user_job_exp >= exp[i]) {
-              console.log(user_job_exp);
-              if (i >= userrow.user_job_level) {
-                console.log('us');
-                console.log(i);
-                // 职业级别 还没做完
-                // $data = array('uid'=>$uid, 'level'=>$i + 1);
-                // $rs = $this ->set_job_level($data);
+          app.mysql.query(taskSql);
+          conn = await app.mysql.beginTransaction(); // 初始化事务
+          try {
+            await conn.query(userSql);
+            await conn.query(taskSql);
+            await conn.insert('data_user_bean_log', {
+              log_uid: userrow.user_id,
+              log_user: userrow.user_name,
+              log_nickname: userrow.user_nickname,
+              log_type: 'finish_task',
+              log_main_table: 'data_task',
+              log_main_id: task_row.task_id,
+              log_content: '完成任务获得' + task_row.task_bonus_beans + '赠豆',
+              log_count: task_row.task_bonus_beans,
+              log_bean_before: userrow.user_beans + userrow.user_bonus_beans,
+              log_bean_end: userrow.user_beans + userrow.user_bonus_beans + task_row.task_bonus_beans,
+              log_create_time: this.app.mysql.literals.now,
+            });
+            await conn.commit(); // 提交事务
+            // 返回级别及2经验
+            re = await this.ctx.service.job.checkUpgrade(uid, userrow.user_job_level, user_job_exp);
+            // re = [{ comet: 2222 }];
+            //  const task_going = [];
 
-              }
-              break;
-            }
+            output = { status: 1, bonus_beans: task_row.task_bonus_beans, exp: task_row.task_exp };
+            console.log(output);
 
+            //  result = output.concat(re);
+            result = output;
+          } catch (err) {
+            await conn.rollback(); // 一定记得捕获异常后回滚事务！！
+            throw err;
           }
-          //  app.mysql.query(taskSql);
-          // const conn = await app.mysql.beginTransaction(); // 初始化事务
-          // try {
-          //   // await conn.query(userSql);
-          //   await conn.query(taskSql);
-          //   await conn.insert('data_user_bean_log', {
-          //     log_uid: userrow.user_id,
-          //     log_user: userrow.user_name,
-          //     log_nickname: userrow.user_nickname,
-          //     log_type: 'finish_task',
-          //     log_main_table: 'data_task',
-          //     log_main_id: task_row.task_id,
-          //     log_content: '完成任务获得' + task_row.task_bonus_beans + '赠豆',
-          //     log_count: task_row.task_bonus_beans,
-          //     log_bean_before: userrow.user_beans + userrow.user_bonus_beans,
-          //     log_bean_end: userrow.user_beans + userrow.user_bonus_beans + task_row.task_bonus_beans,
-          //     log_create_time: this.app.mysql.literals.now,
-          //   });
-          //   await conn.commit(); // 提交事务
-          // } catch (err) {
-          //   await conn.rollback(); // 一定记得捕获异常后回滚事务！！
-          //   throw err;
-          // }
 
 
           break;

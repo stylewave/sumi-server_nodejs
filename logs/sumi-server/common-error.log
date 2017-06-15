@@ -522,3 +522,494 @@ name: 'unhandledExceptionError'
 pid: 9256
 hostname: xiaomo
 
+2017-06-15 11:35:42,186 ERROR 9248 [-/127.0.0.1/-/21ms POST /api/job/setJob] nodejs.TypeError: Cannot read property 'user_job_id' of null
+    at jobService.jobDetail (E:\nodejs\sumi-server\app\service\job.js:50:34)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 9248
+hostname: xiaomo
+
+2017-06-15 11:43:34,320 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 11:43:44,865 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 15:06:39,387 ERROR 11548 [-/127.0.0.1/-/31ms POST /api/task/finishTask] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at TaskController.finishTask (E:\nodejs\sumi-server\app\controller\task.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 11548
+hostname: xiaomo
+
+2017-06-15 15:06:49,761 ERROR 11548 [-/127.0.0.1/-/4ms POST /api/task/finishTask] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at TaskController.finishTask (E:\nodejs\sumi-server\app\controller\task.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 11548
+hostname: xiaomo
+
+2017-06-15 15:18:29,641 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 15:23:08,341 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 15:43:25,479 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 15:43:52,070 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 15:50:39,868 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 16:03:14,748 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 16:03:53,834 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 16:27:15,034 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 17:22:53,224 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 17:34:55,775 ERROR 11320 [-/127.0.0.1/-/86ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:89:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 11320
+hostname: xiaomo
+
+2017-06-15 17:39:59,175 ERROR 228 [-/127.0.0.1/-/203ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:90:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 228
+hostname: xiaomo
+
+2017-06-15 17:40:56,399 ERROR 10308 [-/127.0.0.1/-/110ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:91:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 10308
+hostname: xiaomo
+
+2017-06-15 17:48:18,325 ERROR 9908 [-/127.0.0.1/-/103ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 9908
+hostname: xiaomo
+
+2017-06-15 17:50:22,375 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 17:50:50,873 ERROR 10312 [-/127.0.0.1/-/94ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 10312
+hostname: xiaomo
+
+2017-06-15 17:51:40,495 ERROR 10420 [-/127.0.0.1/-/116ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 10420
+hostname: xiaomo
+
+2017-06-15 17:52:32,286 ERROR 5832 [-/127.0.0.1/-/106ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 5832
+hostname: xiaomo
+
+2017-06-15 17:53:19,370 ERROR 11956 [-/127.0.0.1/-/116ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 11956
+hostname: xiaomo
+
+2017-06-15 17:54:08,303 ERROR 3184 [-/127.0.0.1/-/104ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 3184
+hostname: xiaomo
+
+2017-06-15 17:54:59,466 ERROR 10944 [-/127.0.0.1/-/123ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 10944
+hostname: xiaomo
+
+2017-06-15 17:55:30,721 ERROR 3104 [-/127.0.0.1/-/100ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 3104
+hostname: xiaomo
+
+2017-06-15 17:57:28,878 ERROR 12004 [-/127.0.0.1/-/108ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12004
+hostname: xiaomo
+
+2017-06-15 17:58:15,931 ERROR 11596 [-/127.0.0.1/-/112ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 11596
+hostname: xiaomo
+
+2017-06-15 17:59:22,707 ERROR 10280 [-/127.0.0.1/-/88ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 10280
+hostname: xiaomo
+
+2017-06-15 18:00:02,784 ERROR 7116 [-/127.0.0.1/-/115ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 7116
+hostname: xiaomo
+
+2017-06-15 18:01:34,673 ERROR 8936 [-/127.0.0.1/-/105ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 8936
+hostname: xiaomo
+
+2017-06-15 18:04:11,153 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 18:08:21,171 ERROR 12904 [-/127.0.0.1/-/185ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12904
+hostname: xiaomo
+
+2017-06-15 18:08:44,793 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 18:09:15,520 ERROR 12432 [-/127.0.0.1/-/121ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12432
+hostname: xiaomo
+
+2017-06-15 18:10:15,677 ERROR 12572 [-/127.0.0.1/-/125ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12572
+hostname: xiaomo
+
+2017-06-15 18:11:29,832 ERROR 10420 [-/127.0.0.1/-/128ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 10420
+hostname: xiaomo
+
+2017-06-15 18:13:16,758 ERROR 12696 [-/127.0.0.1/-/129ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12696
+hostname: xiaomo
+
+2017-06-15 18:14:15,221 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 18:15:35,628 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+

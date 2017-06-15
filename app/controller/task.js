@@ -25,14 +25,14 @@ module.exports = app => {
     // 领取完成任务
     async finishTask() {
       const { key, uid, token } = this.ctx.request.body;
-      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
-      if (_.isEmpty(checktoken)) {
-        this.ctx.body = {
-          status: 0,
-          tips: '用户信息已过期,请重新登录',
-        };
-        return;
-      }
+      // const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
+      // if (_.isEmpty(checktoken)) {
+      //   this.ctx.body = {
+      //     status: 0,
+      //     tips: '用户信息已过期,请重新登录',
+      //   };
+      //   return;
+      // }
       if (charUtil.checkNumT(uid) === false) {
         this.ctx.body = {
           status: 0,
@@ -74,11 +74,7 @@ module.exports = app => {
         };
         return;
       }
-      this.ctx.body = {
-        status: 1,
-        list: result,
-
-      };
+      this.ctx.body = result;
     }
 
 
