@@ -1321,3 +1321,11 @@ hostname: xiaomo
 pid: 13740
 hostname: xiaomo
 
+2017-06-15 20:12:12,277 ERROR 13356 [-/127.0.0.1/-/36ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:49:25)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 13356
+hostname: xiaomo
+
