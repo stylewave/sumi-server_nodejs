@@ -2,8 +2,8 @@ module.exports = {
   job() {
 
     const jobArray = {
-      job: {
-        1: {
+      job: [
+        {
           job_id: '1',
           job_name: '赌神',
           job_description: '赌神赌神赌神赌神,我是赌神!',
@@ -12,7 +12,7 @@ module.exports = {
           job_level2: { level: '20', title: '千王', key: 'nomal_box_count1', value: '2', description: '千道出奇制胜，每日可获取2次免费砸开好运蛋的机会！' },
           job_level3: { level: '40', title: '赌神', key: 'new_box', value: '3', description: '赌神的奥义，就是想要什么出什么，可砸破发财蛋！' },
         },
-        2: {
+        {
           job_id: '2',
           job_name: '股神',
           job_description: '股神股神股神股神,我是股神!!',
@@ -23,7 +23,7 @@ module.exports = {
             level: '40', title: '股神', key: 'sign_more_bean2', value: '15', description: '万众敬仰的股神，每日签到额外获得15赠豆！！',
           },
         },
-        3: {
+        {
           job_id: '3',
           job_name: '财神',
           job_description: '财神财神财神财神,我是财财神!!',
@@ -32,7 +32,7 @@ module.exports = {
           job_level2: { level: '20', title: '巨商', key: 'recharge_more_bean1', value: '2', description: '作为一个巨商，每次充值都会额外获取2%赠豆！' },
           job_level3: { level: '40', title: '财神', key: 'recharge_more_bean2', value: '3', description: '财神爷不缺钱！每次充值都会额外获取3%赠豆！' },
         },
-      },
+      ],
       skill: {
         nomal_box_count1: { level: '20', title: '千王', key: 'nomal_box_count1', value: '2', description: '千道出奇制胜，每日可获取2次免费砸开好运蛋的机会！' },
         new_box: { level: '40', title: '赌神', key: 'new_box', value: '3', description: '赌神的奥义，就是想要什么出什么，可砸破发财蛋！' },

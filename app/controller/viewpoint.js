@@ -28,8 +28,6 @@ module.exports = app => {
         };
         return;
       }
-
-
       page = parseInt(page, 10);
       size = parseInt(size, 10);
       const maxPage = await this.getMaxPage();
@@ -48,7 +46,6 @@ module.exports = app => {
         status: 1,
         viewtotal: total,
         list: result,
-
       };
     }
 
@@ -90,14 +87,12 @@ module.exports = app => {
           };
           return;
         }
+        detail.style = '0';
         this.ctx.body = {
           status: 1,
           tips: '还没购买该文章',
           data: detail,
-          style: '0',
         };
-        // return;
-
       } else {
         console.log('已购买该文章');
         const detail2 = await this.ctx.service.viewpoint.commentDetailBuy(commentId);
@@ -108,22 +103,13 @@ module.exports = app => {
           };
           return;
         }
-        // if (detail2.comment_beans === 0) {
-        //   this.ctx.body = {
-        //     status: 0,
-        //     tips: '此文章暂时免费,不需要购买',
-        //   };
-        //   return;
-        // }
+        detail2.style = '1';
         this.ctx.body = {
           status: 1,
           tips: '已购买该文章',
           data: detail2,
-          style: '1',
         };
-
       }
-
     }
 
     // 购买观点

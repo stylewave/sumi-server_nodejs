@@ -102,6 +102,7 @@ module.exports = app => {
         await conn.query(subSql);
 
         await conn.commit(); // 提交事务
+        return end;
       } catch (err) {
         await conn.rollback(); // 一定记得捕获异常后回滚事务！！
         throw err;
