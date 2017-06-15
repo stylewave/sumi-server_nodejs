@@ -1,5 +1,5 @@
 const charUtil = require('./utils/charUtil.js');
-const _ = require('lodash');
+// const _ = require('lodash');
 module.exports = app => {
   class TaskController extends app.Controller {
 
@@ -25,6 +25,7 @@ module.exports = app => {
     // 领取完成任务
     async finishTask() {
       const { key, uid, token } = this.ctx.request.body;
+      console.log(token);
       // const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
       // if (_.isEmpty(checktoken)) {
       //   this.ctx.body = {

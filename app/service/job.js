@@ -87,19 +87,17 @@ module.exports = app => {
     async setJobLevel(uid, level) {
       const user_row = await app.mysql.get('data_user', { user_id: uid });
       const job_list = await this.ctx.service.utils.jobArray.job();
-      const job_row = [];
+      let job_row;
       console.log(job_list);
-      console.log('job_list');
+      console.log('output');
       if (user_row.user_job_id) {
-        console.log('eeeee');
-        // job_row = job_list.user_row.user_job_id;
+        job_row = job_list[user_row.user_job_id];
         // if(!job_row){
         // //	result ={status:0,tips:'您选择的职业不存在'};
         // //	return result;
         // }
       }
-      console.log(job_row);
-      console.log('job_row');
+
       let skill;
       let job_name;
       let job_stage;

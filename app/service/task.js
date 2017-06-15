@@ -9,8 +9,9 @@ module.exports = app => {
       const task_going = [];
       const task_none = [];
       for (const value in rs) {
-        const task_json_row = result[rs[value].task_db_field];
-        const task_row = JSON.parse(task_json_row);
+        const task_json_row = await result[rs[value].task_db_field];
+        // const task_row = JSON.parse(task_json_row);
+        const task_row = task_json_row;
         // 已领取
         if (task_row.status === '2') {
           rs[value].task_status = '2';
@@ -43,8 +44,13 @@ module.exports = app => {
     // 领取完成任务
     async finishTask(uid, taskcontent, content, task_row) {
       const userrow = await app.mysql.get('data_user', { user_id: uid });
-      console.log(userrow);
-      const tcontent = JSON.parse(taskcontent.content);
+      console.log('taskcontent');
+      const e = await this.taskContent(uid, content);
+      const info = JSON.parse(e.content);
+      console.log(info.key);
+
+      const tcontent = taskcontent.content;
+      // console.log(taskcontent.content);
       const user_bonus_beans = userrow.user_bonus_beans + task_row.task_bonus_beans;
       const user_job_exp = userrow.user_job_exp + task_row.task_exp;
       let contentdata;
@@ -54,11 +60,14 @@ module.exports = app => {
       let conn;
       let re;
       let output;
+      console.log('tcontent');
+      console.log(tcontent);
       switch (tcontent.status) {
         // 完成未领取
         case '1':
           tcontent.status = '2';
-          contentdata = JSON.stringify(tcontent);
+          // contentdata = JSON.stringify(tcontent);
+          contentdata = tcontent;
           console.log(contentdata);
           taskSql = `UPDATE data_task SET ${content}='${contentdata}' WHERE task_uid = ${uid}`;
           userSql = `UPDATE data_user SET user_bonus_beans='${user_bonus_beans}',user_job_exp=${user_job_exp} WHERE user_id = ${uid}`;
@@ -89,6 +98,7 @@ module.exports = app => {
 
             output = { status: 1, bonus_beans: task_row.task_bonus_beans, exp: task_row.task_exp };
             console.log(output);
+            console.log(re);
 
             //  result = output.concat(re);
             result = output;

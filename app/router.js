@@ -67,6 +67,7 @@ module.exports = app => {
   app.post('/api/job/joblList', 'job.joblList');
   app.post('/api/job/jobDetail', 'job.jobDetail');
   app.post('/api/job/setJob', 'job.setJob');
+  app.post('/api/job/setJob', 'job.setJob');
 
   /** socket请求**/
   app.io.route('join', app.io.controllers.chat);

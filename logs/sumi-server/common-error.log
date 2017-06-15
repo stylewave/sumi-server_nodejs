@@ -1013,3 +1013,311 @@ name: 'unhandledExceptionError'
 pid: 9168
 hostname: xiaomo
 
+2017-06-15 19:11:15,145 ERROR 13132 [-/127.0.0.1/-/103ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 13132
+hostname: xiaomo
+
+2017-06-15 19:12:06,437 ERROR 12916 [-/127.0.0.1/-/128ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12916
+hostname: xiaomo
+
+2017-06-15 19:14:00,295 ERROR 12392 [-/127.0.0.1/-/35ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:47:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12392
+hostname: xiaomo
+
+2017-06-15 19:18:38,228 ERROR 5836 [-/127.0.0.1/-/32ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:47:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 5836
+hostname: xiaomo
+
+2017-06-15 19:20:20,872 ERROR 11204 [-/127.0.0.1/-/31ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:47:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 11204
+hostname: xiaomo
+
+2017-06-15 19:20:47,224 ERROR 11204 [-/127.0.0.1/-/24ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:47:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 11204
+hostname: xiaomo
+
+2017-06-15 19:21:43,748 ERROR 9996 [-/127.0.0.1/-/29ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:47:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 9996
+hostname: xiaomo
+
+2017-06-15 19:22:03,705 ERROR 12912 [-/127.0.0.1/-/30ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:47:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12912
+hostname: xiaomo
+
+2017-06-15 19:23:47,135 ERROR 13276 [-/127.0.0.1/-/32ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:47:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 13276
+hostname: xiaomo
+
+2017-06-15 19:24:55,544 ERROR 9048 [-/127.0.0.1/-/30ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:47:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 9048
+hostname: xiaomo
+
+2017-06-15 19:25:47,203 ERROR 12144 [-/127.0.0.1/-/28ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:47:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12144
+hostname: xiaomo
+
+2017-06-15 19:26:25,862 ERROR 12144 [-/127.0.0.1/-/13ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:47:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12144
+hostname: xiaomo
+
+2017-06-15 19:26:26,834 ERROR 12144 [-/127.0.0.1/-/10ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:47:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12144
+hostname: xiaomo
+
+2017-06-15 19:27:11,583 ERROR 12356 [-/127.0.0.1/-/31ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:48:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12356
+hostname: xiaomo
+
+2017-06-15 19:28:31,172 ERROR 10480 [-/127.0.0.1/-/34ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:48:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 10480
+hostname: xiaomo
+
+2017-06-15 19:30:05,370 ERROR 9796 [-/127.0.0.1/-/35ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:48:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 9796
+hostname: xiaomo
+
+2017-06-15 19:32:48,197 ERROR 12888 [-/127.0.0.1/-/44ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:48:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12888
+hostname: xiaomo
+
+2017-06-15 19:34:44,788 ERROR 4192 [-/127.0.0.1/-/31ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:48:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 4192
+hostname: xiaomo
+
+2017-06-15 19:35:33,685 ERROR 4192 [-/127.0.0.1/-/6ms POST /api/task/taskList] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.taskList (E:\nodejs\sumi-server\app\service\task.js:13:31)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 4192
+hostname: xiaomo
+
+2017-06-15 19:35:35,906 ERROR 4192 [-/127.0.0.1/-/4ms POST /api/task/taskList] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.taskList (E:\nodejs\sumi-server\app\service\task.js:13:31)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 4192
+hostname: xiaomo
+
+2017-06-15 19:41:53,798 ERROR 12424 [-/127.0.0.1/-/24ms POST /api/task/taskList] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.taskList (E:\nodejs\sumi-server\app\service\task.js:13:31)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12424
+hostname: xiaomo
+
+2017-06-15 19:42:58,242 ERROR 11132 [-/127.0.0.1/-/28ms POST /api/task/taskList] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.taskList (E:\nodejs\sumi-server\app\service\task.js:13:31)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 11132
+hostname: xiaomo
+
+2017-06-15 19:44:08,076 ERROR 12600 [-/127.0.0.1/-/38ms POST /api/task/taskList] nodejs.ReferenceError: task_row is not defined
+    at TaskService.taskList (E:\nodejs\sumi-server\app\service\task.js:15:13)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12600
+hostname: xiaomo
+
+2017-06-15 19:47:24,435 ERROR 12344 [-/127.0.0.1/-/17ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:49:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12344
+hostname: xiaomo
+
+2017-06-15 19:48:39,312 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 19:57:20,703 ERROR 12708 [-/127.0.0.1/-/29ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:50:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12708
+hostname: xiaomo
+
+2017-06-15 19:59:16,461 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 20:00:19,716 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 20:01:01,697 ERROR 12560 [-/127.0.0.1/-/28ms POST /api/task/finishTask] nodejs.ReferenceError: count is not defined
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:51:39)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12560
+hostname: xiaomo
+
+2017-06-15 20:03:59,303 ERROR 14060 [-/127.0.0.1/-/32ms POST /api/task/finishTask] nodejs.TypeError: Cannot read property 'status' of undefined
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:63:23)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 14060
+hostname: xiaomo
+
+2017-06-15 20:04:47,142 ERROR 14276 [-/127.0.0.1/-/107ms POST /api/task/finishTask] nodejs.TypeError: Cannot read property 'status' of undefined
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:63:23)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 14276
+hostname: xiaomo
+
+2017-06-15 20:05:13,943 ERROR 13512 [-/127.0.0.1/-/36ms POST /api/task/finishTask] nodejs.TypeError: Cannot read property 'key' of undefined
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:51:38)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 13512
+hostname: xiaomo
+
+2017-06-15 20:05:34,115 ERROR 10360 [-/127.0.0.1/-/35ms POST /api/task/finishTask] nodejs.TypeError: Cannot read property 'status' of undefined
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:63:23)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 10360
+hostname: xiaomo
+
+2017-06-15 20:05:50,997 ERROR 12456 [-/127.0.0.1/-/42ms POST /api/task/finishTask] nodejs.TypeError: Cannot read property 'status' of undefined
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:63:23)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12456
+hostname: xiaomo
+
+2017-06-15 20:06:14,735 ERROR 13288 [-/127.0.0.1/-/30ms POST /api/task/finishTask] nodejs.TypeError: Cannot read property 'status' of undefined
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:63:23)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 13288
+hostname: xiaomo
+
+2017-06-15 20:11:31,779 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 20:12:01,066 ERROR 13740 [-/127.0.0.1/-/33ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:49:23)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 13740
+hostname: xiaomo
+
