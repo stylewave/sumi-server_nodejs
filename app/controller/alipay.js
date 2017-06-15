@@ -5,6 +5,9 @@ module.exports = app => {
       // console.log(alipay);
       const url = alipay.alipayto();
       console.log(url);
+
+      // this.ctx.redirect(url);
+      this.ctx.redirect('http://www.baidu.com');
       // return this.ctx.render('hello.html', {
       //   data: 'world',
       // });
