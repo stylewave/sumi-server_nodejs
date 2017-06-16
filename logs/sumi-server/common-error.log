@@ -1329,3 +1329,63 @@ hostname: xiaomo
 pid: 13356
 hostname: xiaomo
 
+2017-06-15 20:18:47,349 ERROR 12620 [-/127.0.0.1/-/30ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:49:25)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12620
+hostname: xiaomo
+
+2017-06-15 20:21:48,176 ERROR 11952 [-/127.0.0.1/-/33ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:49:25)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 11952
+hostname: xiaomo
+
+2017-06-15 20:33:04,504 ERROR 8884 [-/127.0.0.1/-/30ms POST /api/task/finishTask] nodejs.TypeError: Cannot read property 'key' of undefined
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:50:23)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 8884
+hostname: xiaomo
+
+2017-06-15 20:44:17,208 ERROR 13508 [-/127.0.0.1/-/34ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:51:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 13508
+hostname: xiaomo
+
+2017-06-15 20:48:13,018 ERROR 11496 [-/127.0.0.1/-/24ms POST /api/task/taskList] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.taskList (E:\nodejs\sumi-server\app\service\task.js:13:31)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 11496
+hostname: xiaomo
+
+2017-06-15 20:58:13,451 ERROR 10448 [-/127.0.0.1/-/44ms POST /api/task/finishTask] nodejs.ReferenceError: tcontent is not defined
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:66:15)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 10448
+hostname: xiaomo
+
+2017-06-15 21:00:36,437 ERROR 13720 [-/127.0.0.1/-/224ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:107:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 13720
+hostname: xiaomo
+
