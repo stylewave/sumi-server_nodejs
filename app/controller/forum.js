@@ -480,9 +480,14 @@ module.exports = app => {
         detail: result,
       };
     }
+    // 获取 我的关注股吧最大页码
+    async myBoardTotal(uid) {
+      const result = await this.ctx.service.forum.myBoardTotal(uid);
+      return result;
+    }
     // 我的关注股吧列表
     async myBoardlist() {
-      const { uid, token } = this.ctx.request.body;
+      let { uid, token, page, size } = this.ctx.request.body;
       if (charUtil.checkNumT(uid) === false) {
         this.ctx.body = {
           status: 0,
@@ -499,10 +504,24 @@ module.exports = app => {
         };
         return;
       }
+      page = parseInt(page, 10);
+      size = parseInt(size, 10);
+      const maxPage = await this.myBoardTotal(uid);
+      if (page > maxPage) {
+        this.ctx.body = {
+          status: 0,
+          tips: '没有更多数据了',
+        };
+        return;
+      }
+      // 总共页数
+      const total = Math.ceil(maxPage / size);
+      const start = (page - 1) * size;
 
-      const result = await this.ctx.service.forum.myBoardlist(uid);
+      const result = await this.ctx.service.forum.myBoardlist(start, size, uid);
       this.ctx.body = {
         status: 1,
+        totalsub: total,
         list: result,
       };
     }
