@@ -52,7 +52,7 @@ module.exports = app => {
       const result = await this.ctx.service.job.jobDetail(uid);
       this.ctx.body = {
         status: 1,
-        list: result,
+        detail: result,
 
       };
     }
@@ -60,7 +60,7 @@ module.exports = app => {
     async setJob() {
       const { id, uid, token } = this.ctx.request.body;
       console.log(token);
-      // const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
+      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
       // if (_.isEmpty(checktoken)) {
       //   this.ctx.body = {
       //     status: 0,
