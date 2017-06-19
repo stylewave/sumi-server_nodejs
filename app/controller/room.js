@@ -37,7 +37,7 @@ module.exports = app => {
       const result = await this.ctx.service.room.roomList(start, size, order);
       this.ctx.body = {
         status: 1,
-        totalsub: total,
+        count: total,
         list: result,
       };
     }
