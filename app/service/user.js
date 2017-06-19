@@ -46,6 +46,30 @@ module.exports = app => {
         next,
       };
     }
+    // 用户消息总的记录数
+    async userMsg(uid, type = '') {
+      let sql;
+      if (type) {
+        sql = `SELECT COUNT(*) as total FROM data_msg WHERE msg_uid='${uid}' AND msg_type='${type}'`;
+      } else {
+        sql = `SELECT COUNT(*) as total FROM data_msg WHERE msg_uid='${uid}'`;
+      }
+      const result = await app.mysql.query(sql);
+      return result[0].total;
+    }
+    // 用户消息列表
+    async userMsgList(start, size, uid, type = '') {
+      const field = 'msg_id,msg_type,msg_action,msg_isread,msg_main_id,msg_title,DATE_FORMAT(msg_create_time,"%Y-%m-%d %H:%i:%s") as msg_create_time';
+      let sql;
+      if (type) {
+        sql = `SELECT ${field} FROM data_msg WHERE msg_uid='${uid}' AND msg_type='${type}' ORDER BY msg_id DESC LIMIT ${start},${size}`;
+      } else {
+        sql = `SELECT ${field} FROM data_msg WHERE msg_uid='${uid}' ORDER BY msg_id DESC LIMIT ${start},${size}`;
+      }
+      console.log(sql);
+      const result = await app.mysql.query(sql);
+      return result.length > 0 ? result : null;
+    }
 
   }
   return UserService;

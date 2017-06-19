@@ -1,0 +1,2629 @@
+2017-06-14 11:59:28,605 ERROR 10336 [-/127.0.0.1/-/19ms POST /api/job/jobDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at JobController.jobDetail (E:\nodejs\sumi-server\app\controller\job.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 11:59:41,987 ERROR 10336 [-/127.0.0.1/-/15ms POST /api/job/jobDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at JobController.jobDetail (E:\nodejs\sumi-server\app\controller\job.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 11:59:43,559 ERROR 10336 [-/127.0.0.1/-/5ms POST /api/job/jobDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at JobController.jobDetail (E:\nodejs\sumi-server\app\controller\job.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 11:59:44,000 ERROR 10336 [-/127.0.0.1/-/1ms POST /api/job/jobDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at JobController.jobDetail (E:\nodejs\sumi-server\app\controller\job.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 11:59:44,224 ERROR 10336 [-/127.0.0.1/-/5ms POST /api/job/jobDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at JobController.jobDetail (E:\nodejs\sumi-server\app\controller\job.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 11:59:44,481 ERROR 10336 [-/127.0.0.1/-/6ms POST /api/job/jobDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at JobController.jobDetail (E:\nodejs\sumi-server\app\controller\job.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 11:59:44,752 ERROR 10336 [-/127.0.0.1/-/3ms POST /api/job/jobDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at JobController.jobDetail (E:\nodejs\sumi-server\app\controller\job.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 11:59:45,074 ERROR 10336 [-/127.0.0.1/-/5ms POST /api/job/jobDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at JobController.jobDetail (E:\nodejs\sumi-server\app\controller\job.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 11:59:45,289 ERROR 10336 [-/127.0.0.1/-/3ms POST /api/job/jobDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at JobController.jobDetail (E:\nodejs\sumi-server\app\controller\job.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:01:12,443 ERROR 10336 [-/127.0.0.1/-/13ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:01:15,253 ERROR 10336 [-/127.0.0.1/-/2ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:01:15,793 ERROR 10336 [-/127.0.0.1/-/14ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:06:10,740 ERROR 10336 [-/127.0.0.1/-/3ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:06:11,676 ERROR 10336 [-/127.0.0.1/-/3ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:06:12,180 ERROR 10336 [-/127.0.0.1/-/3ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:06:12,394 ERROR 10336 [-/127.0.0.1/-/3ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:06:12,670 ERROR 10336 [-/127.0.0.1/-/22ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:06:12,949 ERROR 10336 [-/127.0.0.1/-/2ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:06:13,360 ERROR 10336 [-/127.0.0.1/-/14ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:06:38,688 ERROR 10336 [-/127.0.0.1/-/2ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:07:08,509 ERROR 10336 [-/127.0.0.1/-/2ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:07:09,236 ERROR 10336 [-/127.0.0.1/-/3ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:07:09,468 ERROR 10336 [-/127.0.0.1/-/3ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:07:12,989 ERROR 10336 [-/127.0.0.1/-/2ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:07:16,741 ERROR 10336 [-/127.0.0.1/-/16ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:07:17,933 ERROR 10336 [-/127.0.0.1/-/2ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 12:07:27,784 ERROR 10336 [-/127.0.0.1/-/2ms POST /api/user/setUserPhoto] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at UserController.setUserPhoto (E:\nodejs\sumi-server\app\controller\user.js:8:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 14:02:52,497 ERROR 9256 nodejs.ClusterClientNoResponseError: client no response in 960950ms exceeding maxIdleTime 30000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:72:23)
+    at ontimeout (timers.js:386:14)
+    at tryOnTimeout (timers.js:250:5)
+    at Timer.listOnTimeout (timers.js:214:5)
+name: 'ClusterClientNoResponseError'
+pid: 9256
+hostname: xiaomo
+
+2017-06-14 14:46:48,900 ERROR 10336 [-/127.0.0.1/-/430ms POST /api/job/jobDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at JobController.jobDetail (E:\nodejs\sumi-server\app\controller\job.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 14:47:17,725 ERROR 10336 [-/127.0.0.1/-/94ms POST /api/job/jobDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at JobController.jobDetail (E:\nodejs\sumi-server\app\controller\job.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 14:47:19,237 ERROR 10336 [-/127.0.0.1/-/10ms POST /api/job/jobDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at JobController.jobDetail (E:\nodejs\sumi-server\app\controller\job.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 14:47:20,610 ERROR 10336 [-/127.0.0.1/-/1ms POST /api/job/jobDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at JobController.jobDetail (E:\nodejs\sumi-server\app\controller\job.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 14:47:21,353 ERROR 10336 [-/127.0.0.1/-/51ms POST /api/job/jobDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at JobController.jobDetail (E:\nodejs\sumi-server\app\controller\job.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 14:47:22,070 ERROR 10336 [-/127.0.0.1/-/1ms POST /api/job/jobDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at JobController.jobDetail (E:\nodejs\sumi-server\app\controller\job.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 10336
+hostname: xiaomo
+
+2017-06-14 16:29:02,484 ERROR 9256 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9256
+hostname: xiaomo
+
+2017-06-14 16:29:22,393 ERROR 9256 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9256
+hostname: xiaomo
+
+2017-06-15 11:35:42,186 ERROR 9248 [-/127.0.0.1/-/21ms POST /api/job/setJob] nodejs.TypeError: Cannot read property 'user_job_id' of null
+    at jobService.jobDetail (E:\nodejs\sumi-server\app\service\job.js:50:34)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 9248
+hostname: xiaomo
+
+2017-06-15 11:43:34,320 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 11:43:44,865 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 15:06:39,387 ERROR 11548 [-/127.0.0.1/-/31ms POST /api/task/finishTask] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at TaskController.finishTask (E:\nodejs\sumi-server\app\controller\task.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 11548
+hostname: xiaomo
+
+2017-06-15 15:06:49,761 ERROR 11548 [-/127.0.0.1/-/4ms POST /api/task/finishTask] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:29:28)
+    at TaskController.finishTask (E:\nodejs\sumi-server\app\controller\task.js:28:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 11548
+hostname: xiaomo
+
+2017-06-15 15:18:29,641 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 15:23:08,341 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 15:43:25,479 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 15:43:52,070 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 15:50:39,868 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 16:03:14,748 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 16:03:53,834 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 16:27:15,034 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 17:22:53,224 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 17:34:55,775 ERROR 11320 [-/127.0.0.1/-/86ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:89:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 11320
+hostname: xiaomo
+
+2017-06-15 17:39:59,175 ERROR 228 [-/127.0.0.1/-/203ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:90:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 228
+hostname: xiaomo
+
+2017-06-15 17:40:56,399 ERROR 10308 [-/127.0.0.1/-/110ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:91:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 10308
+hostname: xiaomo
+
+2017-06-15 17:48:18,325 ERROR 9908 [-/127.0.0.1/-/103ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 9908
+hostname: xiaomo
+
+2017-06-15 17:50:22,375 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 17:50:50,873 ERROR 10312 [-/127.0.0.1/-/94ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 10312
+hostname: xiaomo
+
+2017-06-15 17:51:40,495 ERROR 10420 [-/127.0.0.1/-/116ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 10420
+hostname: xiaomo
+
+2017-06-15 17:52:32,286 ERROR 5832 [-/127.0.0.1/-/106ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 5832
+hostname: xiaomo
+
+2017-06-15 17:53:19,370 ERROR 11956 [-/127.0.0.1/-/116ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 11956
+hostname: xiaomo
+
+2017-06-15 17:54:08,303 ERROR 3184 [-/127.0.0.1/-/104ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 3184
+hostname: xiaomo
+
+2017-06-15 17:54:59,466 ERROR 10944 [-/127.0.0.1/-/123ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 10944
+hostname: xiaomo
+
+2017-06-15 17:55:30,721 ERROR 3104 [-/127.0.0.1/-/100ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 3104
+hostname: xiaomo
+
+2017-06-15 17:57:28,878 ERROR 12004 [-/127.0.0.1/-/108ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12004
+hostname: xiaomo
+
+2017-06-15 17:58:15,931 ERROR 11596 [-/127.0.0.1/-/112ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 11596
+hostname: xiaomo
+
+2017-06-15 17:59:22,707 ERROR 10280 [-/127.0.0.1/-/88ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 10280
+hostname: xiaomo
+
+2017-06-15 18:00:02,784 ERROR 7116 [-/127.0.0.1/-/115ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 7116
+hostname: xiaomo
+
+2017-06-15 18:01:34,673 ERROR 8936 [-/127.0.0.1/-/105ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 8936
+hostname: xiaomo
+
+2017-06-15 18:04:11,153 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 18:08:21,171 ERROR 12904 [-/127.0.0.1/-/185ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12904
+hostname: xiaomo
+
+2017-06-15 18:08:44,793 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 18:09:15,520 ERROR 12432 [-/127.0.0.1/-/121ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12432
+hostname: xiaomo
+
+2017-06-15 18:10:15,677 ERROR 12572 [-/127.0.0.1/-/125ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12572
+hostname: xiaomo
+
+2017-06-15 18:11:29,832 ERROR 10420 [-/127.0.0.1/-/128ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 10420
+hostname: xiaomo
+
+2017-06-15 18:13:16,758 ERROR 12696 [-/127.0.0.1/-/129ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12696
+hostname: xiaomo
+
+2017-06-15 18:14:15,221 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 18:15:35,628 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 19:11:15,145 ERROR 13132 [-/127.0.0.1/-/103ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 13132
+hostname: xiaomo
+
+2017-06-15 19:12:06,437 ERROR 12916 [-/127.0.0.1/-/128ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:96:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12916
+hostname: xiaomo
+
+2017-06-15 19:14:00,295 ERROR 12392 [-/127.0.0.1/-/35ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:47:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12392
+hostname: xiaomo
+
+2017-06-15 19:18:38,228 ERROR 5836 [-/127.0.0.1/-/32ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:47:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 5836
+hostname: xiaomo
+
+2017-06-15 19:20:20,872 ERROR 11204 [-/127.0.0.1/-/31ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:47:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 11204
+hostname: xiaomo
+
+2017-06-15 19:20:47,224 ERROR 11204 [-/127.0.0.1/-/24ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:47:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 11204
+hostname: xiaomo
+
+2017-06-15 19:21:43,748 ERROR 9996 [-/127.0.0.1/-/29ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:47:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 9996
+hostname: xiaomo
+
+2017-06-15 19:22:03,705 ERROR 12912 [-/127.0.0.1/-/30ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:47:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12912
+hostname: xiaomo
+
+2017-06-15 19:23:47,135 ERROR 13276 [-/127.0.0.1/-/32ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:47:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 13276
+hostname: xiaomo
+
+2017-06-15 19:24:55,544 ERROR 9048 [-/127.0.0.1/-/30ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:47:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 9048
+hostname: xiaomo
+
+2017-06-15 19:25:47,203 ERROR 12144 [-/127.0.0.1/-/28ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:47:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12144
+hostname: xiaomo
+
+2017-06-15 19:26:25,862 ERROR 12144 [-/127.0.0.1/-/13ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:47:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12144
+hostname: xiaomo
+
+2017-06-15 19:26:26,834 ERROR 12144 [-/127.0.0.1/-/10ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:47:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12144
+hostname: xiaomo
+
+2017-06-15 19:27:11,583 ERROR 12356 [-/127.0.0.1/-/31ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:48:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12356
+hostname: xiaomo
+
+2017-06-15 19:28:31,172 ERROR 10480 [-/127.0.0.1/-/34ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:48:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 10480
+hostname: xiaomo
+
+2017-06-15 19:30:05,370 ERROR 9796 [-/127.0.0.1/-/35ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:48:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 9796
+hostname: xiaomo
+
+2017-06-15 19:32:48,197 ERROR 12888 [-/127.0.0.1/-/44ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:48:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12888
+hostname: xiaomo
+
+2017-06-15 19:34:44,788 ERROR 4192 [-/127.0.0.1/-/31ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:48:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 4192
+hostname: xiaomo
+
+2017-06-15 19:35:33,685 ERROR 4192 [-/127.0.0.1/-/6ms POST /api/task/taskList] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.taskList (E:\nodejs\sumi-server\app\service\task.js:13:31)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 4192
+hostname: xiaomo
+
+2017-06-15 19:35:35,906 ERROR 4192 [-/127.0.0.1/-/4ms POST /api/task/taskList] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.taskList (E:\nodejs\sumi-server\app\service\task.js:13:31)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 4192
+hostname: xiaomo
+
+2017-06-15 19:41:53,798 ERROR 12424 [-/127.0.0.1/-/24ms POST /api/task/taskList] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.taskList (E:\nodejs\sumi-server\app\service\task.js:13:31)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12424
+hostname: xiaomo
+
+2017-06-15 19:42:58,242 ERROR 11132 [-/127.0.0.1/-/28ms POST /api/task/taskList] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.taskList (E:\nodejs\sumi-server\app\service\task.js:13:31)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 11132
+hostname: xiaomo
+
+2017-06-15 19:44:08,076 ERROR 12600 [-/127.0.0.1/-/38ms POST /api/task/taskList] nodejs.ReferenceError: task_row is not defined
+    at TaskService.taskList (E:\nodejs\sumi-server\app\service\task.js:15:13)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12600
+hostname: xiaomo
+
+2017-06-15 19:47:24,435 ERROR 12344 [-/127.0.0.1/-/17ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:49:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12344
+hostname: xiaomo
+
+2017-06-15 19:48:39,312 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 19:57:20,703 ERROR 12708 [-/127.0.0.1/-/29ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:50:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12708
+hostname: xiaomo
+
+2017-06-15 19:59:16,461 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 20:00:19,716 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 20:01:01,697 ERROR 12560 [-/127.0.0.1/-/28ms POST /api/task/finishTask] nodejs.ReferenceError: count is not defined
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:51:39)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12560
+hostname: xiaomo
+
+2017-06-15 20:03:59,303 ERROR 14060 [-/127.0.0.1/-/32ms POST /api/task/finishTask] nodejs.TypeError: Cannot read property 'status' of undefined
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:63:23)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 14060
+hostname: xiaomo
+
+2017-06-15 20:04:47,142 ERROR 14276 [-/127.0.0.1/-/107ms POST /api/task/finishTask] nodejs.TypeError: Cannot read property 'status' of undefined
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:63:23)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 14276
+hostname: xiaomo
+
+2017-06-15 20:05:13,943 ERROR 13512 [-/127.0.0.1/-/36ms POST /api/task/finishTask] nodejs.TypeError: Cannot read property 'key' of undefined
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:51:38)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 13512
+hostname: xiaomo
+
+2017-06-15 20:05:34,115 ERROR 10360 [-/127.0.0.1/-/35ms POST /api/task/finishTask] nodejs.TypeError: Cannot read property 'status' of undefined
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:63:23)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 10360
+hostname: xiaomo
+
+2017-06-15 20:05:50,997 ERROR 12456 [-/127.0.0.1/-/42ms POST /api/task/finishTask] nodejs.TypeError: Cannot read property 'status' of undefined
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:63:23)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12456
+hostname: xiaomo
+
+2017-06-15 20:06:14,735 ERROR 13288 [-/127.0.0.1/-/30ms POST /api/task/finishTask] nodejs.TypeError: Cannot read property 'status' of undefined
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:63:23)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 13288
+hostname: xiaomo
+
+2017-06-15 20:11:31,779 ERROR 9168 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9168
+hostname: xiaomo
+
+2017-06-15 20:12:01,066 ERROR 13740 [-/127.0.0.1/-/33ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:49:23)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 13740
+hostname: xiaomo
+
+2017-06-15 20:12:12,277 ERROR 13356 [-/127.0.0.1/-/36ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:49:25)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 13356
+hostname: xiaomo
+
+2017-06-15 20:18:47,349 ERROR 12620 [-/127.0.0.1/-/30ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:49:25)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 12620
+hostname: xiaomo
+
+2017-06-15 20:21:48,176 ERROR 11952 [-/127.0.0.1/-/33ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:49:25)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 11952
+hostname: xiaomo
+
+2017-06-15 20:33:04,504 ERROR 8884 [-/127.0.0.1/-/30ms POST /api/task/finishTask] nodejs.TypeError: Cannot read property 'key' of undefined
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:50:23)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 8884
+hostname: xiaomo
+
+2017-06-15 20:44:17,208 ERROR 13508 [-/127.0.0.1/-/34ms POST /api/task/finishTask] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:51:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 13508
+hostname: xiaomo
+
+2017-06-15 20:48:13,018 ERROR 11496 [-/127.0.0.1/-/24ms POST /api/task/taskList] nodejs.SyntaxError: Unexpected string in JSON at position 24
+    at JSON.parse (<anonymous>)
+    at TaskService.taskList (E:\nodejs\sumi-server\app\service\task.js:13:31)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 11496
+hostname: xiaomo
+
+2017-06-15 20:58:13,451 ERROR 10448 [-/127.0.0.1/-/44ms POST /api/task/finishTask] nodejs.ReferenceError: tcontent is not defined
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:66:15)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 10448
+hostname: xiaomo
+
+2017-06-15 21:00:36,437 ERROR 13720 [-/127.0.0.1/-/224ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:107:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 13720
+hostname: xiaomo
+
+2017-06-16 09:51:33,722 ERROR 8520 [-/127.0.0.1/-/94ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:102:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 8520
+hostname: xiaomo
+
+2017-06-16 10:46:49,832 ERROR 6616 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 6616
+hostname: xiaomo
+
+2017-06-16 10:53:53,751 ERROR 3220 [-/127.0.0.1/-/31ms POST /api/myaccount/beanReturnList] nodejs.ER_PARSE_ERRORError: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DATE_FORMAT(return_create_time,"%m-%d %H:%i") as return_create_time,return_finis' at line 1
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT return_id,return_uid,return_beans,return_money,return_account_type,,DATE_FORMAT(return_create_time,"%m-%d %H:%i") as return_create_time,return_finish_time,return_status FROM data_user_bean_return  WHERE return_uid = 59 AND return_status=2 ORDER BY return_id DESC 
+code: 'ER_PARSE_ERROR'
+errno: 1064
+sqlState: '42000'
+index: 0
+name: 'ER_PARSE_ERRORError'
+pid: 3220
+hostname: xiaomo
+
+2017-06-16 11:10:44,823 ERROR 6616 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 6616
+hostname: xiaomo
+
+2017-06-16 11:17:39,642 ERROR 8804 [-/127.0.0.1/-/32ms POST /api/forum/myBoardlist] nodejs.ER_PARSE_ERRORError: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT COUNT(*) as total FROM data_forum_board WHERE board_status = 1  AND board_id in ()
+code: 'ER_PARSE_ERROR'
+errno: 1064
+sqlState: '42000'
+index: 0
+name: 'ER_PARSE_ERRORError'
+pid: 8804
+hostname: xiaomo
+
+2017-06-16 11:21:39,188 ERROR 9768 [-/127.0.0.1/-/28ms POST /api/forum/myBoardlist] nodejs.ER_BAD_FIELD_ERRORError: ER_BAD_FIELD_ERROR: Unknown column 'NaN' in 'where clause'
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT * FROM `data_user` WHERE `user_id` = NaN LIMIT 0, 1
+code: 'ER_BAD_FIELD_ERROR'
+errno: 1054
+sqlState: '42S22'
+index: 0
+name: 'ER_BAD_FIELD_ERRORError'
+pid: 9768
+hostname: xiaomo
+
+2017-06-16 11:23:30,277 ERROR 10204 [-/127.0.0.1/-/32ms POST /api/forum/myBoardlist] nodejs.ER_BAD_FIELD_ERRORError: ER_BAD_FIELD_ERROR: Unknown column 'NaN' in 'where clause'
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT * FROM `data_user` WHERE `user_id` = NaN LIMIT 0, 1
+code: 'ER_BAD_FIELD_ERROR'
+errno: 1054
+sqlState: '42S22'
+index: 0
+name: 'ER_BAD_FIELD_ERRORError'
+pid: 10204
+hostname: xiaomo
+
+2017-06-16 11:23:59,951 ERROR 7880 [-/127.0.0.1/-/34ms POST /api/forum/myBoardlist] nodejs.ER_BAD_FIELD_ERRORError: ER_BAD_FIELD_ERROR: Unknown column 'NaN' in 'where clause'
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT * FROM `data_user` WHERE `user_id` = NaN LIMIT 0, 1
+code: 'ER_BAD_FIELD_ERROR'
+errno: 1054
+sqlState: '42S22'
+index: 0
+name: 'ER_BAD_FIELD_ERRORError'
+pid: 7880
+hostname: xiaomo
+
+2017-06-16 11:25:11,750 ERROR 4668 [-/127.0.0.1/-/41ms POST /api/forum/myBoardlist] nodejs.ER_PARSE_ERRORError: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT board_id,board_title,board_description,board_stock_code,board_follow,board_hits,board_ishot FROM data_forum_board where board_status='1' AND board_id in ()
+code: 'ER_PARSE_ERROR'
+errno: 1064
+sqlState: '42000'
+index: 0
+name: 'ER_PARSE_ERRORError'
+pid: 4668
+hostname: xiaomo
+
+2017-06-16 11:34:02,805 ERROR 9276 [-/127.0.0.1/-/8ms POST /api/forum/myBoardlist] nodejs.TypeError: Cannot read property 'user_follow_board' of null
+    at ForumService.myBoardTotal (E:\nodejs\sumi-server\app\service\forum.js:264:36)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 9276
+hostname: xiaomo
+
+2017-06-16 11:35:24,561 ERROR 6616 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 6616
+hostname: xiaomo
+
+2017-06-16 11:44:33,310 ERROR 6616 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 6616
+hostname: xiaomo
+
+2017-06-16 11:44:44,988 ERROR 6616 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 6616
+hostname: xiaomo
+
+2017-06-16 11:51:32,124 ERROR 6616 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 6616
+hostname: xiaomo
+
+2017-06-16 11:52:32,474 ERROR 6616 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 6616
+hostname: xiaomo
+
+2017-06-16 11:52:42,632 ERROR 6616 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 6616
+hostname: xiaomo
+
+2017-06-16 12:47:12,532 ERROR 6616 nodejs.ClusterClientNoResponseError: client no response in 444987ms exceeding maxIdleTime 30000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:72:23)
+    at ontimeout (timers.js:386:14)
+    at tryOnTimeout (timers.js:250:5)
+    at Timer.listOnTimeout (timers.js:214:5)
+name: 'ClusterClientNoResponseError'
+pid: 6616
+hostname: xiaomo
+
+2017-06-16 12:47:49,562 ERROR 10952 [-/127.0.0.1/-/40ms POST /api/room/buyRoomList] nodejs.ReferenceError: uid is not defined
+    at RoomService.getTotal (E:\nodejs\sumi-server\app\controller\room.js:9:64)
+    at RoomService.buyRoomList (E:\nodejs\sumi-server\app\controller\room.js:34:34)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
+
+pid: 10952
+hostname: xiaomo
+
+2017-06-16 12:48:21,002 ERROR 8552 [-/127.0.0.1/-/18ms POST /api/room/buyRoomList] nodejs.ReferenceError: uid is not defined
+    at RoomService.getTotal (E:\nodejs\sumi-server\app\controller\room.js:9:64)
+    at RoomService.buyRoomList (E:\nodejs\sumi-server\app\controller\room.js:34:34)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
+
+pid: 8552
+hostname: xiaomo
+
+2017-06-16 12:57:25,783 ERROR 9968 [-/127.0.0.1/-/109ms POST /api/room/buyRoomList] nodejs.ER_PARSE_ERRORError: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'data_room join on (room_id=log_room_id) where log_uid = '1' AND log_type='join_r' at line 1
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT * FROM data_user_bean_log left data_room join on (room_id=log_room_id) where log_uid = '1' AND log_type='join_room' AND log_room_expire>=DATE_FORMAT(now(),"%Y-%m-%d")  ORDER BY log_id DESC LIMIT 0,3
+code: 'ER_PARSE_ERROR'
+errno: 1064
+sqlState: '42000'
+index: 0
+name: 'ER_PARSE_ERRORError'
+pid: 9968
+hostname: xiaomo
+
+2017-06-16 14:01:03,305 ERROR 6616 nodejs.ClusterClientNoResponseError: client no response in 1165636ms exceeding maxIdleTime 30000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:72:23)
+    at ontimeout (timers.js:386:14)
+    at tryOnTimeout (timers.js:250:5)
+    at Timer.listOnTimeout (timers.js:214:5)
+name: 'ClusterClientNoResponseError'
+pid: 6616
+hostname: xiaomo
+
+2017-06-16 14:52:30,348 ERROR 11284 [-/127.0.0.1/-/36ms POST /api/room/roomList] nodejs.ER_PARSE_ERRORError: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY room_id DESC LIMIT 0,2' at line 1
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT room_id,room_title,room_photo,room_description,room_open_time,room_status,room_close_time,room_ishot,room_beans,room_at_least_beans,room_hits,room_ishot,room_max_client,DATE_FORMAT(log_room_expire,"%Y-%m-%d") as log_room_expire FROM data_room WHERE  ORDER BY room_id DESC LIMIT 0,2
+code: 'ER_PARSE_ERROR'
+errno: 1064
+sqlState: '42000'
+index: 0
+name: 'ER_PARSE_ERRORError'
+pid: 11284
+hostname: xiaomo
+
+2017-06-16 14:53:39,344 ERROR 11468 [-/127.0.0.1/-/31ms POST /api/room/roomList] nodejs.ER_PARSE_ERRORError: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY room_id DESC LIMIT 0,2' at line 1
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT room_id,room_title,room_photo,room_description,room_open_time,room_status,room_close_time,room_ishot,room_beans,room_at_least_beans,room_hits,room_ishot,room_max_client,DATE_FORMAT(log_room_expire,"%Y-%m-%d") as log_room_expire FROM data_room WHERE  ORDER BY room_id DESC LIMIT 0,2
+code: 'ER_PARSE_ERROR'
+errno: 1064
+sqlState: '42000'
+index: 0
+name: 'ER_PARSE_ERRORError'
+pid: 11468
+hostname: xiaomo
+
+2017-06-16 14:54:13,598 ERROR 8728 [-/127.0.0.1/-/27ms POST /api/room/roomList] nodejs.ER_BAD_FIELD_ERRORError: ER_BAD_FIELD_ERROR: Unknown column 'log_room_expire' in 'field list'
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT room_id,room_title,room_photo,room_description,room_open_time,room_status,room_close_time,room_ishot,room_beans,room_at_least_beans,room_hits,room_ishot,room_max_client,DATE_FORMAT(log_room_expire,"%Y-%m-%d") as log_room_expire FROM data_room   ORDER BY room_id DESC LIMIT 0,2
+code: 'ER_BAD_FIELD_ERROR'
+errno: 1054
+sqlState: '42S22'
+index: 0
+name: 'ER_BAD_FIELD_ERRORError'
+pid: 8728
+hostname: xiaomo
+
+2017-06-16 14:54:33,395 ERROR 11092 [-/127.0.0.1/-/33ms POST /api/room/roomList] nodejs.ER_BAD_FIELD_ERRORError: ER_BAD_FIELD_ERROR: Unknown column 'log_room_expire' in 'field list'
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT room_id,room_title,room_photo,room_description,room_open_time,room_status,room_close_time,room_ishot,room_beans,room_at_least_beans,room_hits,room_ishot,room_max_client,DATE_FORMAT(log_room_expire,"%Y-%m-%d") as log_room_expire FROM data_room ORDER BY room_id DESC LIMIT 0,2
+code: 'ER_BAD_FIELD_ERROR'
+errno: 1054
+sqlState: '42S22'
+index: 0
+name: 'ER_BAD_FIELD_ERRORError'
+pid: 11092
+hostname: xiaomo
+
+2017-06-16 15:06:22,990 ERROR 10828 [-/192.168.16.25/-/19ms POST /api/job/jobDetail] nodejs.TypeError: Cannot read property 'job_level3' of undefined
+    at jobService.jobDetail (E:\nodejs\sumi-server\app\service\job.js:8:14)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+pid: 10828
+hostname: xiaomo
+
+2017-06-16 15:07:19,845 ERROR 10828 [-/192.168.16.25/-/8ms POST /api/job/jobDetail] nodejs.TypeError: Cannot read property 'job_level3' of undefined
+    at jobService.jobDetail (E:\nodejs\sumi-server\app\service\job.js:8:14)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+pid: 10828
+hostname: xiaomo
+
+2017-06-16 15:18:27,516 ERROR 10284 [-/127.0.0.1/-/12ms POST /api/job/jobDetail] nodejs.TypeError: Cannot read property 'job_level3' of undefined
+    at jobService.jobDetail (E:\nodejs\sumi-server\app\service\job.js:10:14)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 10284
+hostname: xiaomo
+
+2017-06-16 15:19:31,922 ERROR 10284 [-/127.0.0.1/-/14ms POST /api/job/jobDetail] nodejs.TypeError: Cannot read property 'job_level3' of undefined
+    at jobService.jobDetail (E:\nodejs\sumi-server\app\service\job.js:10:14)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 10284
+hostname: xiaomo
+
+2017-06-16 15:19:32,663 ERROR 10284 [-/127.0.0.1/-/7ms POST /api/job/jobDetail] nodejs.TypeError: Cannot read property 'job_level3' of undefined
+    at jobService.jobDetail (E:\nodejs\sumi-server\app\service\job.js:10:14)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 10284
+hostname: xiaomo
+
+2017-06-16 15:19:33,238 ERROR 10284 [-/127.0.0.1/-/11ms POST /api/job/jobDetail] nodejs.TypeError: Cannot read property 'job_level3' of undefined
+    at jobService.jobDetail (E:\nodejs\sumi-server\app\service\job.js:10:14)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 10284
+hostname: xiaomo
+
+2017-06-16 15:19:33,418 ERROR 10284 [-/127.0.0.1/-/11ms POST /api/job/jobDetail] nodejs.TypeError: Cannot read property 'job_level3' of undefined
+    at jobService.jobDetail (E:\nodejs\sumi-server\app\service\job.js:10:14)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 10284
+hostname: xiaomo
+
+2017-06-16 15:19:33,620 ERROR 10284 [-/127.0.0.1/-/9ms POST /api/job/jobDetail] nodejs.TypeError: Cannot read property 'job_level3' of undefined
+    at jobService.jobDetail (E:\nodejs\sumi-server\app\service\job.js:10:14)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 10284
+hostname: xiaomo
+
+2017-06-16 15:19:56,803 ERROR 10284 [-/192.168.16.25/-/14ms POST /api/job/jobDetail] nodejs.TypeError: Cannot read property 'job_level3' of undefined
+    at jobService.jobDetail (E:\nodejs\sumi-server\app\service\job.js:10:14)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+pid: 10284
+hostname: xiaomo
+
+2017-06-16 15:47:34,240 ERROR 6616 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 6616
+hostname: xiaomo
+
+2017-06-16 15:48:07,828 ERROR 6616 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 6616
+hostname: xiaomo
+
+2017-06-16 15:50:35,941 ERROR 6616 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 6616
+hostname: xiaomo
+
+2017-06-16 15:53:09,063 ERROR 6616 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 6616
+hostname: xiaomo
+
+2017-06-16 15:53:19,617 ERROR 6616 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 6616
+hostname: xiaomo
+
+2017-06-16 15:53:50,137 ERROR 6616 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 6616
+hostname: xiaomo
+
+2017-06-16 15:53:58,475 ERROR 6616 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 6616
+hostname: xiaomo
+
+2017-06-16 15:54:44,087 ERROR 6616 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 6616
+hostname: xiaomo
+
+2017-06-16 15:55:09,533 ERROR 6616 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 6616
+hostname: xiaomo
+
+2017-06-16 15:56:36,546 ERROR 6616 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 6616
+hostname: xiaomo
+
+2017-06-16 15:57:27,804 ERROR 6616 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 6616
+hostname: xiaomo
+
+2017-06-16 15:58:24,753 ERROR 8636 [-/127.0.0.1/-/24ms POST /api/job/jobDetail] nodejs.TypeError: Cannot read property 'job_level3' of undefined
+    at jobService.jobDetail (E:\nodejs\sumi-server\app\service\job.js:9:14)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 8636
+hostname: xiaomo
+
+2017-06-16 16:02:53,146 ERROR 11312 [-/127.0.0.1/-/34ms POST /api/job/jobDetail] nodejs.TypeError: Cannot set property 'job_level1' of undefined
+    at jobService.jobDetail (E:\nodejs\sumi-server\app\service\job.js:22:32)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 11312
+hostname: xiaomo
+
+2017-06-16 16:05:00,601 ERROR 10236 [-/127.0.0.1/-/36ms POST /api/job/jobDetail] nodejs.TypeError: Cannot set property 'job_level1' of undefined
+    at jobService.jobDetail (E:\nodejs\sumi-server\app\service\job.js:22:33)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 10236
+hostname: xiaomo
+
+2017-06-16 16:06:02,618 ERROR 7992 [-/127.0.0.1/-/38ms POST /api/job/jobDetail] nodejs.TypeError: Cannot set property 'job_level1' of undefined
+    at jobService.jobDetail (E:\nodejs\sumi-server\app\service\job.js:22:29)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 7992
+hostname: xiaomo
+
+2017-06-16 16:06:16,508 ERROR 11368 [-/127.0.0.1/-/28ms POST /api/job/jobDetail] nodejs.TypeError: Cannot set property 'job_level3' of undefined
+    at jobService.jobDetail (E:\nodejs\sumi-server\app\service\job.js:24:30)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 11368
+hostname: xiaomo
+
+2017-06-16 16:06:38,130 ERROR 7696 [-/127.0.0.1/-/30ms POST /api/job/jobDetail] nodejs.TypeError: Cannot set property 'ee' of undefined
+    at jobService.jobDetail (E:\nodejs\sumi-server\app\service\job.js:24:30)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 7696
+hostname: xiaomo
+
+2017-06-16 16:22:12,554 ERROR 6616 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 6616
+hostname: xiaomo
+
+2017-06-16 16:22:25,943 ERROR 6616 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 6616
+hostname: xiaomo
+
+2017-06-16 16:24:32,486 ERROR 6616 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 6616
+hostname: xiaomo
+
+2017-06-16 16:26:51,758 ERROR 11104 [-/127.0.0.1/-/33ms POST /api/job/jobDetail] nodejs.TypeError: Cannot read property 'level' of undefined
+    at jobService.jobDetail (E:\nodejs\sumi-server\app\service\job.js:12:61)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 11104
+hostname: xiaomo
+
+2017-06-16 17:33:03,461 ERROR 6616 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 6616
+hostname: xiaomo
+
+2017-06-16 17:33:06,556 ERROR 6616 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 6616
+hostname: xiaomo
+
+2017-06-16 17:33:31,499 ERROR 6616 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 6616
+hostname: xiaomo
+
+2017-06-16 17:49:11,750 ERROR 6616 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 6616
+hostname: xiaomo
+
+2017-06-16 17:49:22,442 ERROR 6616 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 6616
+hostname: xiaomo
+
+2017-06-16 17:55:22,792 ERROR 6616 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 6616
+hostname: xiaomo
+
+2017-06-16 18:29:08,524 ERROR 6616 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 6616
+hostname: xiaomo
+
+2017-06-16 18:30:04,604 ERROR 10484 [-/127.0.0.1/-/8ms POST /api/myaccount/test] nodejs.ER_NO_DEFAULT_FOR_FIELDError: ER_NO_DEFAULT_FOR_FIELD: Field 'user_salt' doesn't have a default value
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: INSERT INTO `data_user`(`user_name`, `user_pwd`, `user_reg_time`) VALUES('12345666', '1423', now())
+code: 'ER_NO_DEFAULT_FOR_FIELD'
+errno: 1364
+sqlState: 'HY000'
+index: 0
+name: 'ER_NO_DEFAULT_FOR_FIELDError'
+pid: 10484
+hostname: xiaomo
+
+2017-06-16 18:32:10,274 ERROR 10896 [-/127.0.0.1/-/58ms POST /api/myaccount/test] nodejs.ER_DUP_ENTRYError: ER_DUP_ENTRY: Duplicate entry '12345666' for key 'name'
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: INSERT INTO `data_user`(`user_name`, `user_pwd`, `user_salt`, `user_reg_time`) VALUES('12345666', '1423', '12342', now())
+code: 'ER_DUP_ENTRY'
+errno: 1062
+sqlState: '23000'
+index: 0
+name: 'ER_DUP_ENTRYError'
+pid: 10896
+hostname: xiaomo
+
+2017-06-16 18:33:11,159 ERROR 5652 [-/127.0.0.1/-/52ms POST /api/myaccount/test] nodejs.ER_DUP_ENTRYError: ER_DUP_ENTRY: Duplicate entry '1234566611' for key 'name'
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: INSERT INTO `data_user`(`user_name`, `user_pwd`, `user_salt`, `user_reg_time`) VALUES('1234566611', '142113', '1122', now())
+code: 'ER_DUP_ENTRY'
+errno: 1062
+sqlState: '23000'
+index: 0
+name: 'ER_DUP_ENTRYError'
+pid: 5652
+hostname: xiaomo
+
+2017-06-19 10:02:05,389 ERROR 9312 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9312
+hostname: xiaomo
+
+2017-06-19 10:03:48,057 ERROR 9312 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9312
+hostname: xiaomo
+
+2017-06-19 10:05:25,407 ERROR 9312 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9312
+hostname: xiaomo
+
+2017-06-19 10:05:47,897 ERROR 9312 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9312
+hostname: xiaomo
+
+2017-06-19 10:06:36,804 ERROR 9312 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9312
+hostname: xiaomo
+
+2017-06-19 10:06:45,072 ERROR 9312 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9312
+hostname: xiaomo
+
+2017-06-19 10:06:49,922 ERROR 9312 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9312
+hostname: xiaomo
+
+2017-06-19 10:07:40,482 ERROR 9312 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9312
+hostname: xiaomo
+
+2017-06-19 10:08:06,517 ERROR 9312 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9312
+hostname: xiaomo
+
+2017-06-19 10:08:38,880 ERROR 9312 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9312
+hostname: xiaomo
+
+2017-06-19 10:09:14,387 ERROR 9312 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9312
+hostname: xiaomo
+
+2017-06-19 10:09:20,635 ERROR 9312 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9312
+hostname: xiaomo
+
+2017-06-19 11:04:51,614 ERROR 4672 [-/127.0.0.1/-/25ms POST /api/user/userMsgList] nodejs.TypeError: this.ctx.service.task.taskMsg is not a function
+    at UserController.taskMsg (E:\nodejs\sumi-server\app\controller\user.js:101:50)
+    at UserController.userMsgList (E:\nodejs\sumi-server\app\controller\user.js:125:34)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
+
+pid: 4672
+hostname: xiaomo
+
+2017-06-19 13:08:01,305 ERROR 9312 nodejs.ClusterClientNoResponseError: client no response in 3141809ms exceeding maxIdleTime 30000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:72:23)
+    at ontimeout (timers.js:386:14)
+    at tryOnTimeout (timers.js:250:5)
+    at Timer.listOnTimeout (timers.js:214:5)
+name: 'ClusterClientNoResponseError'
+pid: 9312
+hostname: xiaomo
+
+2017-06-19 14:04:11,527 ERROR 9312 nodejs.ClusterClientNoResponseError: client no response in 1422264ms exceeding maxIdleTime 30000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:72:23)
+    at ontimeout (timers.js:386:14)
+    at tryOnTimeout (timers.js:250:5)
+    at Timer.listOnTimeout (timers.js:214:5)
+name: 'ClusterClientNoResponseError'
+pid: 9312
+hostname: xiaomo
+
+2017-06-19 14:06:43,377 ERROR 8772 [-/192.168.16.25/-/9ms POST /api/task/taskList] nodejs.TypeError: Cannot read property 'taskList' of undefined
+    at TaskController.taskList (E:\nodejs\sumi-server\app\controller\task.js:37:48)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
+    at next (E:\nodejs\sumi-server\node_modules\co\index.js:99:29)
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+pid: 8772
+hostname: xiaomo
+
+2017-06-19 14:06:45,756 ERROR 8772 [-/192.168.16.25/-/2ms POST /api/task/taskList] nodejs.TypeError: Cannot read property 'taskList' of undefined
+    at TaskController.taskList (E:\nodejs\sumi-server\app\controller\task.js:37:48)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
+    at next (E:\nodejs\sumi-server\node_modules\co\index.js:99:29)
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+pid: 8772
+hostname: xiaomo
+
+2017-06-19 14:13:38,446 ERROR 6060 [-/127.0.0.1/-/176ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:107:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 6060
+hostname: xiaomo
+
+2017-06-19 14:24:02,463 ERROR 9596 [-/127.0.0.1/-/153ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:108:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 9596
+hostname: xiaomo
+
+2017-06-19 14:24:55,425 ERROR 7580 [-/127.0.0.1/-/153ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:108:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 7580
+hostname: xiaomo
+
+2017-06-19 14:27:05,023 ERROR 11056 [-/127.0.0.1/-/123ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:108:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 11056
+hostname: xiaomo
+
+2017-06-19 14:29:15,017 ERROR 6888 [-/127.0.0.1/-/106ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:108:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 6888
+hostname: xiaomo
+
+2017-06-19 14:30:22,035 ERROR 9364 [-/127.0.0.1/-/124ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:108:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 9364
+hostname: xiaomo
+
+2017-06-19 14:30:47,423 ERROR 9364 [-/192.168.16.25/-/15ms POST /api/user/userMsgList] nodejs.ER_PARSE_ERRORError: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM data_msg WHERE msg_uid='50' ORDER BY msg_id DESC LIMIT 0,5' at line 1
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    at TCP.onread (net.js:561:20)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT msg_id,msg_type,msg_action,msg_isread,msg_main_id,msg_title,DATE_FORMAT(msg_create_time,"%Y-%m-%d %H:%i:%s") as msg_create_time, FROM data_msg WHERE msg_uid='50' ORDER BY msg_id DESC LIMIT 0,5
+code: 'ER_PARSE_ERROR'
+errno: 1064
+sqlState: '42000'
+index: 0
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+name: 'ER_PARSE_ERRORError'
+pid: 9364
+hostname: xiaomo
+
+2017-06-19 14:30:49,142 ERROR 9364 [-/192.168.16.25/-/33ms POST /api/user/userMsgList] nodejs.ER_PARSE_ERRORError: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM data_msg WHERE msg_uid='50' ORDER BY msg_id DESC LIMIT 0,5' at line 1
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    at TCP.onread (net.js:561:20)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT msg_id,msg_type,msg_action,msg_isread,msg_main_id,msg_title,DATE_FORMAT(msg_create_time,"%Y-%m-%d %H:%i:%s") as msg_create_time, FROM data_msg WHERE msg_uid='50' ORDER BY msg_id DESC LIMIT 0,5
+code: 'ER_PARSE_ERROR'
+errno: 1064
+sqlState: '42000'
+index: 0
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+name: 'ER_PARSE_ERRORError'
+pid: 9364
+hostname: xiaomo
+

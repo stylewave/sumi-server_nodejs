@@ -18,6 +18,7 @@ module.exports = app => {
 
 
   app.post('/api/user/setUserPhoto', 'user.setUserPhoto');
+  app.post('/api/user/userMsgList', 'user.userMsgList');
   // 股吧模板详情
   app.post('/api/forum/boardDetail', 'forum.boardDetail');
   // 股吧模板列表
@@ -57,6 +58,7 @@ module.exports = app => {
   app.post('/api/myaccount/userBeanLog', 'myaccount.userBeanLog');
   app.post('/api/myaccount/beanReturnList', 'myaccount.beanReturnList');
   app.post('/api/myaccount/beanReturnDetail', 'myaccount.beanReturnDetail');
+  app.post('/api/myaccount/beanReturn', 'myaccount.beanReturn');
 
   app.post('/api/user/chatRootList', 'user.chatRootList');
 

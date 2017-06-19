@@ -61,7 +61,7 @@ module.exports = app => {
       const exp_array = await this.ctx.service.utils.expArray.exp();
       let i;
       for (i = exp_array.length; i >= 1; i--) {
-        if (exp >= exp_array[i]) {
+        if (exp >= exp_array[i - 1]) {
           if (i >= level) {
             // 升级操作
             await this.setJobLevel(uid, i + 1);
@@ -79,8 +79,8 @@ module.exports = app => {
         output.jop_exp = 0;
         output.jop_next_exp = 0;
       } else {
-        output.jop_exp = exp - exp_array[new_level - 1];
-        output.jop_next_exp = exp_array[new_level] - exp_array[new_level - 1];
+        output.jop_exp = exp - exp_array[new_level - 2];
+        output.jop_next_exp = exp_array[new_level - 1] - exp_array[new_level - 2];
       }
 
       return output;
@@ -88,10 +88,9 @@ module.exports = app => {
 
     async setJobLevel(uid, level) {
       const user_row = await app.mysql.get('data_user', { user_id: uid });
-      const job_list = await this.ctx.service.utils.jobArray.job();
+      const job_list = await this.ctx.service.utils.jobArray.job().job;
       let job_row;
-      console.log(job_list);
-      console.log('output');
+
       if (user_row.user_job_id) {
         job_row = job_list[user_row.user_job_id];
         // if(!job_row){
@@ -99,31 +98,30 @@ module.exports = app => {
         // //	return result;
         // }
       }
-
+      console.log('output3');
       let skill;
       let job_name;
       let job_stage;
       skill = '';
-      if (level >= job_row.job_level1.level) {
-        skill += job_row.job_level1.key;
-        job_name = job_row.job_level1.title;
+      if (level >= job_row.list[0].level) {
+        skill += job_row.list[0].key;
+        job_name = job_row.list[0].title;
         job_stage = 'job_level1';
       }
-      if (level >= job_row.job_level2.level) {
-        skill += skill ? ',' + job_row.job_level2.key : job_row.job_level2.key;
-        job_name = job_row.job_level2.title;
+      if (level >= job_row.list[1].level) {
+        skill += skill ? ',' + job_row.list[1].key : job_row.list[1].key;
+        job_name = job_row.list[1].title;
         job_stage = 'job_level2';
       }
-      if (level >= job_row.job_level3.level) {
-        skill += skill ? ',' + job_row.job_level3.key : job_row.job_level3.key;
-        job_name = job_row.job_level3.title;
+      if (level >= job_row.list[2].level) {
+        skill += skill ? ',' + job_row.list[2].key : job_row.list[2].key;
+        job_name = job_row.list[2].title;
         job_stage = 'job_level3';
       }
       let userSql;
       let taskSql;
       let output;
 
-      // 这个只能单独更新
       if (skill.indexOf('nomal_box_count1') !== -1) {
         const skill_list = await this.ctx.service.utils.jobArray.job().skill;
         taskSql = `UPDATE data_task SET task_nomal_box_max='${skill_list.nomal_box_count1.value}',task_las_update=${this.app.mysql.literals.now} WHERE task_uid = ${uid}`;
