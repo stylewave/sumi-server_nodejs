@@ -2294,3 +2294,336 @@ name: 'ER_DUP_ENTRYError'
 pid: 5652
 hostname: xiaomo
 
+2017-06-19 10:02:05,389 ERROR 9312 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9312
+hostname: xiaomo
+
+2017-06-19 10:03:48,057 ERROR 9312 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9312
+hostname: xiaomo
+
+2017-06-19 10:05:25,407 ERROR 9312 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9312
+hostname: xiaomo
+
+2017-06-19 10:05:47,897 ERROR 9312 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9312
+hostname: xiaomo
+
+2017-06-19 10:06:36,804 ERROR 9312 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9312
+hostname: xiaomo
+
+2017-06-19 10:06:45,072 ERROR 9312 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9312
+hostname: xiaomo
+
+2017-06-19 10:06:49,922 ERROR 9312 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9312
+hostname: xiaomo
+
+2017-06-19 10:07:40,482 ERROR 9312 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9312
+hostname: xiaomo
+
+2017-06-19 10:08:06,517 ERROR 9312 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9312
+hostname: xiaomo
+
+2017-06-19 10:08:38,880 ERROR 9312 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9312
+hostname: xiaomo
+
+2017-06-19 10:09:14,387 ERROR 9312 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9312
+hostname: xiaomo
+
+2017-06-19 10:09:20,635 ERROR 9312 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 9312
+hostname: xiaomo
+
+2017-06-19 11:04:51,614 ERROR 4672 [-/127.0.0.1/-/25ms POST /api/user/userMsgList] nodejs.TypeError: this.ctx.service.task.taskMsg is not a function
+    at UserController.taskMsg (E:\nodejs\sumi-server\app\controller\user.js:101:50)
+    at UserController.userMsgList (E:\nodejs\sumi-server\app\controller\user.js:125:34)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
+
+pid: 4672
+hostname: xiaomo
+
+2017-06-19 13:08:01,305 ERROR 9312 nodejs.ClusterClientNoResponseError: client no response in 3141809ms exceeding maxIdleTime 30000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:72:23)
+    at ontimeout (timers.js:386:14)
+    at tryOnTimeout (timers.js:250:5)
+    at Timer.listOnTimeout (timers.js:214:5)
+name: 'ClusterClientNoResponseError'
+pid: 9312
+hostname: xiaomo
+
+2017-06-19 14:04:11,527 ERROR 9312 nodejs.ClusterClientNoResponseError: client no response in 1422264ms exceeding maxIdleTime 30000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:72:23)
+    at ontimeout (timers.js:386:14)
+    at tryOnTimeout (timers.js:250:5)
+    at Timer.listOnTimeout (timers.js:214:5)
+name: 'ClusterClientNoResponseError'
+pid: 9312
+hostname: xiaomo
+
+2017-06-19 14:06:43,377 ERROR 8772 [-/192.168.16.25/-/9ms POST /api/task/taskList] nodejs.TypeError: Cannot read property 'taskList' of undefined
+    at TaskController.taskList (E:\nodejs\sumi-server\app\controller\task.js:37:48)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
+    at next (E:\nodejs\sumi-server\node_modules\co\index.js:99:29)
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+pid: 8772
+hostname: xiaomo
+
+2017-06-19 14:06:45,756 ERROR 8772 [-/192.168.16.25/-/2ms POST /api/task/taskList] nodejs.TypeError: Cannot read property 'taskList' of undefined
+    at TaskController.taskList (E:\nodejs\sumi-server\app\controller\task.js:37:48)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at Object.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at Object.toPromise (E:\nodejs\sumi-server\node_modules\co\index.js:118:63)
+    at next (E:\nodejs\sumi-server\node_modules\co\index.js:99:29)
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+pid: 8772
+hostname: xiaomo
+
+2017-06-19 14:13:38,446 ERROR 6060 [-/127.0.0.1/-/176ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:107:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 6060
+hostname: xiaomo
+
+2017-06-19 14:24:02,463 ERROR 9596 [-/127.0.0.1/-/153ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:108:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 9596
+hostname: xiaomo
+
+2017-06-19 14:24:55,425 ERROR 7580 [-/127.0.0.1/-/153ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:108:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 7580
+hostname: xiaomo
+
+2017-06-19 14:27:05,023 ERROR 11056 [-/127.0.0.1/-/123ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:108:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 11056
+hostname: xiaomo
+
+2017-06-19 14:29:15,017 ERROR 6888 [-/127.0.0.1/-/106ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:108:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 6888
+hostname: xiaomo
+
+2017-06-19 14:30:22,035 ERROR 9364 [-/127.0.0.1/-/124ms POST /api/task/finishTask] nodejs.Error: transaction was commit or rollback
+    at RDSTransaction.proto._check (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:50:11)
+    at RDSTransaction.proto.rollback (E:\nodejs\sumi-server\node_modules\ali-rds\lib\transaction.js:34:8)
+    at proto.rollback.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSTransaction.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSTransaction.createPromise [as rollback] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at TaskService.finishTask (E:\nodejs\sumi-server\app\service\task.js:108:24)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 9364
+hostname: xiaomo
+
+2017-06-19 14:30:47,423 ERROR 9364 [-/192.168.16.25/-/15ms POST /api/user/userMsgList] nodejs.ER_PARSE_ERRORError: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM data_msg WHERE msg_uid='50' ORDER BY msg_id DESC LIMIT 0,5' at line 1
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    at TCP.onread (net.js:561:20)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT msg_id,msg_type,msg_action,msg_isread,msg_main_id,msg_title,DATE_FORMAT(msg_create_time,"%Y-%m-%d %H:%i:%s") as msg_create_time, FROM data_msg WHERE msg_uid='50' ORDER BY msg_id DESC LIMIT 0,5
+code: 'ER_PARSE_ERROR'
+errno: 1064
+sqlState: '42000'
+index: 0
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+name: 'ER_PARSE_ERRORError'
+pid: 9364
+hostname: xiaomo
+
+2017-06-19 14:30:49,142 ERROR 9364 [-/192.168.16.25/-/33ms POST /api/user/userMsgList] nodejs.ER_PARSE_ERRORError: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM data_msg WHERE msg_uid='50' ORDER BY msg_id DESC LIMIT 0,5' at line 1
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    at TCP.onread (net.js:561:20)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT msg_id,msg_type,msg_action,msg_isread,msg_main_id,msg_title,DATE_FORMAT(msg_create_time,"%Y-%m-%d %H:%i:%s") as msg_create_time, FROM data_msg WHERE msg_uid='50' ORDER BY msg_id DESC LIMIT 0,5
+code: 'ER_PARSE_ERROR'
+errno: 1064
+sqlState: '42000'
+index: 0
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+name: 'ER_PARSE_ERRORError'
+pid: 9364
+hostname: xiaomo
+

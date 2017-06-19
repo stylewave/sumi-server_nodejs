@@ -90,14 +90,14 @@ module.exports = app => {
         };
         return;
       }
-      // const checktoke = await this.ctx.service.utils.common.checkToken(uid, token);
-      // if (_.isEmpty(checktoke)) {
-      //   this.ctx.body = {
-      //     status: 0,
-      //     tips: '用户信息已过期,请重新登录',
-      //   };
-      //   return;
-      // }
+      const checktoke = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoke)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户信息已过期,请重新登录',
+        };
+        return;
+      }
       const result = await this.ctx.service.myaccount.beanReturnList(uid, status);
       this.ctx.body = {
         status: 1,
@@ -143,12 +143,20 @@ module.exports = app => {
         return;
       }
       const result = await this.ctx.service.myaccount.beanReturn(uid, beans, account_type, alipay_account, wxpay_account, unionpay_account, unionpay_name, unionpay_bank, mobile);
+      if (result) {
+        this.ctx.body = {
+          status: 1,
+          tips: '回收提交成功',
+          // time: formatted,
+        };
+      } else {
+        this.ctx.body = {
+          status: 1,
+          tips: '回收提交失败',
+          // time: formatted,
+        };
+      }
 
-      this.ctx.body = {
-        status: 1,
-        list: result,
-        // time: formatted,
-      };
     }
     async test() {
       const result = await this.app.mysql.insert('data_user', {

@@ -95,6 +95,55 @@ module.exports = app => {
 
     }
 
+
+    // 获取任务列表最大页码
+    async userMsg(uid, type) {
+      const result = await this.ctx.service.user.userMsg(uid, type);
+      return result;
+    }
+
+    // 用户消息列表
+    async userMsgList() {
+      let { uid, token, type, page, size } = this.ctx.request.body;
+      if (charUtil.checkNumT(uid) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户ID格式不正确',
+        };
+        return;
+      }
+      const checktoke = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoke)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户信息已过期,请重新登录',
+        };
+        return;
+      }
+      page = parseInt(page, 10);
+      size = parseInt(size, 10);
+      const maxPage = await this.userMsg(uid, type);
+
+      if (page > maxPage) {
+        this.ctx.body = {
+          status: 0,
+          tips: '没有更多数据了',
+        };
+        return;
+      }
+
+      // 总共页数
+      const total = Math.ceil(maxPage / size);
+      const start = (page - 1) * size;
+      const result = await this.ctx.service.user.userMsgList(start, size, uid, type);
+      this.ctx.body = {
+        status: 1,
+        totalsub: total,
+        list: result,
+      };
+    }
+
+
   }
   return UserController;
 };

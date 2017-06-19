@@ -1,5 +1,10 @@
 module.exports = app => {
   class TaskService extends app.Service {
+    // async taskTotal() {
+    //   const sql = `SELECT COUNT(*) as total FROM data_task WHERE log_uid='${userId}'`;
+    //   const result = await app.mysql.query(sql);
+    //   return result[0].total;
+    // }
 
     //  任务列表
     async taskList(userId) {
@@ -64,7 +69,7 @@ module.exports = app => {
           tcontent.status = '2';
           contentdata = JSON.stringify(tcontent);
           // contentdata = tcontent;
-          console.log(contentdata);
+          // console.log(contentdata);
           taskSql = `UPDATE data_task SET ${content}='${contentdata}' WHERE task_uid = ${uid}`;
           userSql = `UPDATE data_user SET user_bonus_beans='${user_bonus_beans}',user_job_exp=${user_job_exp} WHERE user_id = ${uid}`;
 
@@ -89,12 +94,13 @@ module.exports = app => {
             await conn.commit(); // 提交事务
             // 返回级别及2经验
             re = await this.ctx.service.job.checkUpgrade(uid, userrow.user_job_level, user_job_exp);
+            console.log(re);
             // re = [{ comet: 2222 }];
             //  const task_going = [];
 
             output = { status: 1, bonus_beans: task_row.task_bonus_beans, exp: task_row.task_exp };
-            console.log(output);
-            console.log(re);
+            // console.log(output);
+            // console.log(re);
 
             //  result = output.concat(re);
             result = output;

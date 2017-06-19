@@ -3,6 +3,12 @@ const charUtil = require('./utils/charUtil.js');
 module.exports = app => {
   class TaskController extends app.Controller {
 
+    // 获取任务列表最大页码
+    async taskTotal() {
+      const result = await this.ctx.service.task.taskTotal();
+      return result;
+    }
+
     // 任务列表
     async taskList() {
       const { uid } = this.ctx.request.body;
@@ -13,14 +19,28 @@ module.exports = app => {
         };
         return;
       }
+      // page = parseInt(page, 10);
+      // size = parseInt(size, 10);
+      // const maxPage = await this.taskTotal();
 
+      // if (page > maxPage) {
+      //   this.ctx.body = {
+      //     status: 0,
+      //     tips: '没有更多数据了',
+      //   };
+      //   return;
+      // }
+
+      // // 总共页数
+      // const total = Math.ceil(maxPage / size);
+      // const start = (page - 1) * size;
       const result = await this.ctx.service.task.taskList(uid);
-
       this.ctx.body = {
         status: 1,
         list: result,
 
       };
+
     }
     // 领取完成任务
     async finishTask() {
