@@ -98,12 +98,13 @@ module.exports = app => {
             // re = [{ comet: 2222 }];
             //  const task_going = [];
 
-            output = { status: 1, bonus_beans: task_row.task_bonus_beans, exp: task_row.task_exp };
-            // console.log(output);
+            output = { user_job_level: re.user_job_level, jop_exp: re.jop_exp, jop_next_exp: re.jop_next_exp, status: 1, bonus_beans: task_row.task_bonus_beans, exp: task_row.task_exp };
+            console.log(output);
+
             // console.log(re);
 
-            //  result = output.concat(re);
             result = output;
+            // result = output;
           } catch (err) {
             await conn.rollback(); // 一定记得捕获异常后回滚事务！！
             throw err;
@@ -123,6 +124,7 @@ module.exports = app => {
       // console.log(test);
       return result;
     }
+
 
   }
   return TaskService;
