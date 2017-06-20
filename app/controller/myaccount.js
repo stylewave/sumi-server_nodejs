@@ -6,14 +6,7 @@ module.exports = app => {
 
     // 用户资金记录
     async userMoneylog() {
-      const { uid, token } = this.ctx.request.body;
-      if (charUtil.checkNumT(uid) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '用户ID格式不正确',
-        };
-        return;
-      }
+      const { uid, token, page, size } = this.ctx.request.body;
       const checktoke = await this.ctx.service.utils.common.checkToken(uid, token);
       if (_.isEmpty(checktoke)) {
         this.ctx.body = {
@@ -22,27 +15,28 @@ module.exports = app => {
         };
         return;
       }
-
-      const result = await this.ctx.service.myaccount.userMoneylog(uid);
+      const maxPage = await this.ctx.service.myaccount.getMoneylogTotal(uid);
+      if (page > maxPage) {
+        this.ctx.body = {
+          status: 0,
+          tips: '没有更多数据了',
+        };
+        return;
+      }
+      // 总共页数
+      const total = Math.ceil(maxPage / size);
+      const start = (page - 1) * size;
+      const result = await this.ctx.service.myaccount.userMoneylog(uid, start, size);
       this.ctx.body = {
         status: 1,
+        count: total,
         list: result,
       };
     }
-    // async user_bean_log() {
 
-    // }
     // 豆币记录
     async userBeanLog() {
-      const { uid, page, size, token, test } = this.ctx.request.body;
-      // const rs = this.ctx.service.utils.common.chechtype(page);
-      if (charUtil.checkNumT(uid) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '用户ID格式不正确',
-        };
-        return;
-      }
+      const { uid, page, size, token } = this.ctx.request.body;
       const checktoke = await this.ctx.service.utils.common.checkToken(uid, token);
       if (_.isEmpty(checktoke)) {
         this.ctx.body = {
@@ -51,13 +45,6 @@ module.exports = app => {
         };
         return;
       }
-      for (const value in test) {
-        console.log(value);
-        console.log('test');
-        console.log(test[value]);
-
-      }
-
       if (charUtil.checkNumT(size) === false) {
         this.ctx.body = {
           status: 0,
