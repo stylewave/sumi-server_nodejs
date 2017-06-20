@@ -1,6 +1,7 @@
 module.exports = {
   exp() {
     const extArray = [
+      '0',
       '100',
       '500',
       '1000',

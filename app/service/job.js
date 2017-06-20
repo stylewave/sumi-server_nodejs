@@ -61,10 +61,11 @@ module.exports = app => {
       const exp_array = await this.ctx.service.utils.expArray.exp();
       let i;
       for (i = exp_array.length; i >= 1; i--) {
-        if (exp >= exp_array[i - 1]) {
+        if (exp >= exp_array[i]) {
           if (i >= level) {
             // 升级操作
-            await this.setJobLevel(uid, i + 1);
+            level = i + 1;
+            await this.setJobLevel(uid, level);
           }
           break;
         }
@@ -79,8 +80,8 @@ module.exports = app => {
         output.jop_exp = 0;
         output.jop_next_exp = 0;
       } else {
-        output.jop_exp = exp - exp_array[new_level - 2];
-        output.jop_next_exp = exp_array[new_level - 1] - exp_array[new_level - 2];
+        output.jop_exp = exp - exp_array[new_level - 1];
+        output.jop_next_exp = exp_array[new_level] - exp_array[new_level - 1];
       }
 
       return output;
