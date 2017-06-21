@@ -4,7 +4,6 @@ const regExp = require('./utils/regExpUtil.js');
 module.exports = app => {
   // 我的账户模块
   class MyaccountController extends app.Controller {
-
     // 用户资金记录
     async userMoneylog() {
       const { uid, token, page, size } = this.ctx.request.body;
@@ -18,14 +17,7 @@ module.exports = app => {
         return;
       }
 
-      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
-      if (_.isEmpty(checktoken)) {
-        this.ctx.body = {
-          status: 0,
-          tips: '用户信息已过期,请重新登录',
-        };
-        return;
-      }
+
       const checktoke = await this.ctx.service.utils.common.checkToken(uid, token);
       if (_.isEmpty(checktoke)) {
         this.ctx.body = {
@@ -34,7 +26,9 @@ module.exports = app => {
         };
         return;
       }
-      const maxPage = await this.ctx.service.myaccount.getMoneylogTotal(uid);
+      const total = await this.ctx.service.myaccount.getMoneylogTotal(uid);
+      // 总共页数
+      const maxPage = Math.ceil(total / size);
       if (page > maxPage) {
         this.ctx.body = {
           status: 0,
@@ -42,8 +36,6 @@ module.exports = app => {
         };
         return;
       }
-      // 总共页数
-      const total = Math.ceil(maxPage / size);
       const start = (page - 1) * size;
       const result = await this.ctx.service.myaccount.userMoneylog(uid, start, size);
       this.ctx.body = {
@@ -62,10 +54,10 @@ module.exports = app => {
 
     async userBeanLog() {
       let { uid, page, size, token } = this.ctx.request.body;
-
       const numArr = [uid, page, size];
       const strArr = [token];
       if (charUtil.checkType(numArr, strArr) === false) {
+
         this.ctx.body = {
           status: 0,
           tips: '参数有错',
@@ -81,11 +73,25 @@ module.exports = app => {
         };
         return;
       }
-
+      if (charUtil.checkNumT(size) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '页码数量格式不正确',
+        };
+        return;
+      }
+      if (charUtil.checkNumT(page) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '页码格式不正确',
+        };
+        return;
+      }
       page = parseInt(page, 10);
       size = parseInt(size, 10);
-      const maxPage = await this.userBeanLogTotal(uid);
-
+      const total = await this.userBeanLogTotal(uid);
+      // 总共页数
+      const maxPage = Math.ceil(total / size);
       if (page > maxPage) {
         this.ctx.body = {
           status: 0,
@@ -93,19 +99,13 @@ module.exports = app => {
         };
         return;
       }
-
-      // 总共页数
-      const total = Math.ceil(maxPage / size);
       const start = (page - 1) * size;
-
       const result = await this.ctx.service.myaccount.userBeanLog(uid, start, size);
       this.ctx.body = {
         status: 1,
-        totalsub: total,
+        count: total,
         list: result,
-
       };
-
     }
     //  豆币回收列表
     async beanReturnList() {
@@ -125,6 +125,13 @@ module.exports = app => {
         return;
       }
 
+      if (charUtil.checkStringType(strArr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
       const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
       if (_.isEmpty(checktoken)) {
         this.ctx.body = {
@@ -152,7 +159,6 @@ module.exports = app => {
         };
         return;
       }
-
       const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
       if (_.isEmpty(checktoken)) {
         this.ctx.body = {
@@ -215,7 +221,17 @@ module.exports = app => {
         };
         return;
       }
-      const result = await this.ctx.service.myaccount.beanReturn(uid, beans, account_type, alipay_account, wxpay_account, unionpay_account, unionpay_name, unionpay_bank, mobile);
+      const result = await this.ctx.service.myaccount.beanReturn(
+        uid,
+        beans,
+        account_type,
+        alipay_account,
+        wxpay_account,
+        unionpay_account,
+        unionpay_name,
+        unionpay_bank,
+        mobile
+      );
       if (result) {
         this.ctx.body = {
           status: 1,
@@ -229,9 +245,22 @@ module.exports = app => {
           // time: formatted,
         };
       }
-
     }
 
+    async test() {
+      const result = await this.app.mysql.insert('data_user', {
+        user_name: '123456633',
+        user_pwd: '1413',
+        user_salt: '1222',
+        user_reg_time: this.app.mysql.literals.now,
+      });
+      console.log(result.insertId);
+      this.ctx.body = {
+        status: 1,
+        list: result.insertId,
+        // time: formatted,
+      };
+    }
   }
   return MyaccountController;
 };

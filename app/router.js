@@ -3,6 +3,7 @@ module.exports = app => {
   // app.get('/', 'home.index');
   app.get('/debug/:mobile', 'debug.get');
   app.get('/api/alipay', 'alipay.pay');
+  app.get('/api/chat', 'chat.chat');
 
   app.post('/api/ad/create', 'ad.create');
   /** http post请求**/
@@ -15,7 +16,6 @@ module.exports = app => {
   app.post('/api/news/list', 'news.list');
   app.post('/api/news/detail', 'news.newsDetail');
   app.get('/api/login/crypt', 'login.crypt');
-
 
   app.post('/api/user/setUserPhoto', 'user.setUserPhoto');
   app.post('/api/user/userMsgList', 'user.userMsgList');
@@ -76,7 +76,13 @@ module.exports = app => {
   app.post('/api/user/test', 'user.test');
 
   /** socket请求**/
-  app.io.route('join', app.io.controllers.chat);
+  app.io.route('join', app.io.controllers.join);
+  app.io.route('send', app.io.controllers.send);
+  app.io.route('gift', app.io.controllers.gift);
+
+  app.io.route('reply', app.io.controllers.reply); // admin reply
+  app.io.route('pass', app.io.controllers.pass); // admin pass
+  app.io.route('sendAll', app.io.controllers.sendAll); // admin broadcast to this room
 
   // app.get('/home','home.index');
 };
