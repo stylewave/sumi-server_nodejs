@@ -66,13 +66,12 @@ module.exports = app => {
   app.post('/api/task/finishTask', 'task.finishTask');
 
   app.post('/api/job/skillList', 'job.skillList');
-  app.post('/api/job/joblList', 'job.joblList');
+  app.post('/api/job/jobList', 'job.jobList');
   app.post('/api/job/jobDetail', 'job.jobDetail');
   app.post('/api/job/setJob', 'job.setJob');
 
   app.post('/api/room/roomList', 'room.roomList');
   app.post('/api/room/buyRoomList', 'room.buyRoomList');
-  app.post('/api/myaccount/test', 'myaccount.test');
 
   app.post('/api/user/test', 'user.test');
 

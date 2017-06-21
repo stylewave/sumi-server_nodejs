@@ -15,19 +15,15 @@ module.exports = app => {
     // 拉取新闻列表
     async list() {
       let { page, size, uid, token } = this.ctx.request.body;
-
-      const arr = [page, size, uid];
-      const string = [token];
-
-      token = this.ctx.request.header.token;
-      if (charUtil.checkNumT(arr) === false) {
+      const numArr = [uid, page, size];
+      const strArr = [token];
+      if (charUtil.checkType(numArr, strArr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '参数格式不正确',
+          tips: '参数有错',
         };
         return;
       }
-
       const checktoke = await this.ctx.service.utils.common.checkToken(uid, token);
       if (_.isEmpty(checktoke)) {
         this.ctx.body = {
@@ -37,21 +33,6 @@ module.exports = app => {
         return;
       }
 
-      if (charUtil.checkIntType(arr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
-        };
-        return;
-      }
-
-      if (charUtil.checkStringType(string) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
-        };
-        return;
-      }
 
 
       page = parseInt(page, 10);
@@ -80,23 +61,19 @@ module.exports = app => {
     // 拉取新闻详情
     async newsDetail() {
       const { newsId, uid, token } = this.ctx.request.body;
+      let numArr;
       if (newsId) {
-        const arr = [newsId];
-
-        if (charUtil.checkNumT(arr) === false) {
-          this.ctx.body = {
-            status: 0,
-            tips: '参数格式不正确',
-          };
-          return;
-        }
-        if (charUtil.checkIntType(arr) === false) {
-          this.ctx.body = {
-            status: 0,
-            tips: '参数类型不正确',
-          };
-          return;
-        }
+        numArr = [uid, newsId];
+      } else {
+        numArr = [uid];
+      }
+      const strArr = [token];
+      if (charUtil.checkType(numArr, strArr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数有错',
+        };
+        return;
       }
 
       const checktoke = await this.ctx.service.utils.common.checkToken(uid, token);

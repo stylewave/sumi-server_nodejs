@@ -12,32 +12,16 @@ module.exports = app => {
     //  房间列表列表
     async roomList() {
       let { page, size, order, uid, token } = this.ctx.request.body;
-      const arr = [uid, page, size];
+      const numArr = [uid, page, size];
       const strArr = [token];
-      if (charUtil.checkNumT(arr) === false) {
+      if (charUtil.checkType(numArr, strArr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '参数格式不正确',
+          tips: '参数有错',
         };
         return;
       }
 
-      if (charUtil.checkIntType(arr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
-        };
-        return;
-      }
-
-
-      if (charUtil.checkStringType(strArr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
-        };
-        return;
-      }
       const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
       if (_.isEmpty(checktoken)) {
         this.ctx.body = {
@@ -64,7 +48,7 @@ module.exports = app => {
       const result = await this.ctx.service.room.roomList(start, size, order);
       this.ctx.body = {
         status: 1,
-        count: total,
+        totalsub: total,
         list: result,
       };
     }
@@ -78,32 +62,16 @@ module.exports = app => {
     //  购买房间列表列表
     async buyRoomList() {
       let { uid, token, page, size } = this.ctx.request.body;
-      const arr = [uid, page, size];
+      const numArr = [uid, page, size];
       const strArr = [token];
-      if (charUtil.checkNumT(arr) === false) {
+      if (charUtil.checkType(numArr, strArr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '参数格式不正确',
+          tips: '参数有错',
         };
         return;
       }
 
-      if (charUtil.checkIntType(arr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
-        };
-        return;
-      }
-
-
-      if (charUtil.checkStringType(strArr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
-        };
-        return;
-      }
       const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
       if (_.isEmpty(checktoken)) {
         this.ctx.body = {

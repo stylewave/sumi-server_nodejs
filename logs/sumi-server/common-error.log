@@ -22,3 +22,605 @@ name: 'unhandledExceptionError'
 pid: 11816
 hostname: xiaomo
 
+2017-06-21 09:28:11,738 ERROR 7940 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 7940
+hostname: xiaomo
+
+2017-06-21 09:28:24,191 ERROR 7940 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 7940
+hostname: xiaomo
+
+2017-06-21 09:29:26,124 ERROR 7940 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 7940
+hostname: xiaomo
+
+2017-06-21 09:30:25,419 ERROR 7940 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 7940
+hostname: xiaomo
+
+2017-06-21 10:19:47,116 ERROR 8996 [-/192.168.16.25/-/16ms POST /api/room/roomList] nodejs.MODULE_NOT_FOUNDError: Cannot find module 'locutus/php/var/unserialize'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\service\room.js:21:27)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\controller\room.js:64:50)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+code: 'MODULE_NOT_FOUND'
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+name: 'MODULE_NOT_FOUNDError'
+pid: 8996
+hostname: xiaomo
+
+2017-06-21 10:25:57,585 ERROR 8756 [-/127.0.0.1/-/34ms POST /api/user/userMsgList] nodejs.TypeError: this.ctx.service.user.userMsg is not a function
+    at UserController.userMsgTotal (E:\nodejs\sumi-server\app\controller\user.js:130:50)
+    at UserController.userMsgList (E:\nodejs\sumi-server\app\controller\user.js:165:34)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 8756
+hostname: xiaomo
+
+2017-06-21 10:35:45,405 ERROR 8260 [-/127.0.0.1/-/19ms POST /api/room/roomList] nodejs.MODULE_NOT_FOUNDError: Cannot find module 'locutus/php/var/unserialize'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\service\room.js:21:27)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\controller\room.js:64:50)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+code: 'MODULE_NOT_FOUND'
+name: 'MODULE_NOT_FOUNDError'
+pid: 8260
+hostname: xiaomo
+
+2017-06-21 10:40:51,876 ERROR 8260 [-/127.0.0.1/-/9ms POST /api/room/roomList] nodejs.MODULE_NOT_FOUNDError: Cannot find module 'locutus/php/var/unserialize'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\service\room.js:21:27)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\controller\room.js:64:50)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+code: 'MODULE_NOT_FOUND'
+name: 'MODULE_NOT_FOUNDError'
+pid: 8260
+hostname: xiaomo
+
+2017-06-21 10:41:09,300 ERROR 8260 [-/127.0.0.1/-/10ms POST /api/room/roomList] nodejs.MODULE_NOT_FOUNDError: Cannot find module 'locutus/php/var/unserialize'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\service\room.js:21:27)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\controller\room.js:64:50)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+code: 'MODULE_NOT_FOUND'
+name: 'MODULE_NOT_FOUNDError'
+pid: 8260
+hostname: xiaomo
+
+2017-06-21 10:45:32,427 ERROR 9100 [-/127.0.0.1/-/31ms POST /api/room/roomList] nodejs.MODULE_NOT_FOUNDError: Cannot find module 'locutus/php/var/unserialize'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\service\room.js:21:27)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\controller\room.js:64:50)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+code: 'MODULE_NOT_FOUND'
+name: 'MODULE_NOT_FOUNDError'
+pid: 9100
+hostname: xiaomo
+
+2017-06-21 10:46:22,555 ERROR 9100 [-/127.0.0.1/-/11ms POST /api/room/roomList] nodejs.MODULE_NOT_FOUNDError: Cannot find module 'locutus/php/var/unserialize'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\service\room.js:21:27)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\controller\room.js:64:50)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+code: 'MODULE_NOT_FOUND'
+name: 'MODULE_NOT_FOUNDError'
+pid: 9100
+hostname: xiaomo
+
+2017-06-21 10:47:33,603 ERROR 9100 [-/127.0.0.1/-/10ms POST /api/room/roomList] nodejs.MODULE_NOT_FOUNDError: Cannot find module 'locutus/php/var/unserialize'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\service\room.js:21:27)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\controller\room.js:64:50)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+code: 'MODULE_NOT_FOUND'
+name: 'MODULE_NOT_FOUNDError'
+pid: 9100
+hostname: xiaomo
+
+2017-06-21 10:47:48,689 ERROR 9100 [-/127.0.0.1/-/17ms POST /api/room/roomList] nodejs.MODULE_NOT_FOUNDError: Cannot find module 'locutus/php/var/unserialize'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\service\room.js:21:27)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\controller\room.js:64:50)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+code: 'MODULE_NOT_FOUND'
+name: 'MODULE_NOT_FOUNDError'
+pid: 9100
+hostname: xiaomo
+
+2017-06-21 11:08:14,746 ERROR 7940 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 7940
+hostname: xiaomo
+
+2017-06-21 11:10:00,091 ERROR 7940 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 7940
+hostname: xiaomo
+
+2017-06-21 11:13:40,023 ERROR 9120 [-/127.0.0.1/-/4ms POST /api/myaccount/beanReturnDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:27:28)
+    at MyaccountController.beanReturnDetail (E:\nodejs\sumi-server\app\controller\myaccount.js:212:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 9120
+hostname: xiaomo
+
+2017-06-21 11:13:43,758 ERROR 9120 [-/127.0.0.1/-/2ms POST /api/myaccount/beanReturnDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:27:28)
+    at MyaccountController.beanReturnDetail (E:\nodejs\sumi-server\app\controller\myaccount.js:212:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 9120
+hostname: xiaomo
+
+2017-06-21 11:13:59,124 ERROR 9120 [-/127.0.0.1/-/6ms POST /api/myaccount/beanReturnDetail] nodejs.Error: error:0606506D:digital envelope routines:EVP_DecryptFinal_ex:wrong final block length
+    at Decipheriv.final (crypto.js:160:26)
+    at Object.decrypt (E:\nodejs\sumi-server\app\controller\utils\charUtil.js:119:21)
+    at CommonService.checkToken (E:\nodejs\sumi-server\app\service\utils\common.js:27:28)
+    at MyaccountController.beanReturnDetail (E:\nodejs\sumi-server\app\controller\myaccount.js:212:62)
+    at Object.classControllerMiddleware (E:\nodejs\sumi-server\node_modules\egg-core\lib\loader\mixin\controller.js:74:32)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (E:\nodejs\sumi-server\node_modules\koa-router\lib\router.js:335:14)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+
+pid: 9120
+hostname: xiaomo
+
+2017-06-21 11:16:28,753 ERROR 7940 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 7940
+hostname: xiaomo
+
+2017-06-21 11:27:06,732 ERROR 7940 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 7940
+hostname: xiaomo
+
+2017-06-21 11:27:30,886 ERROR 7940 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 7940
+hostname: xiaomo
+
+2017-06-21 11:28:06,282 ERROR 7940 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 7940
+hostname: xiaomo
+
+2017-06-21 11:28:35,637 ERROR 7940 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 7940
+hostname: xiaomo
+
+2017-06-21 11:34:26,651 ERROR 7940 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 7940
+hostname: xiaomo
+
+2017-06-21 11:40:50,396 ERROR 7940 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 7940
+hostname: xiaomo
+
+2017-06-21 14:01:27,223 ERROR 7940 nodejs.ClusterClientNoResponseError: client no response in 4661545ms exceeding maxIdleTime 30000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (E:\nodejs\sumi-server\node_modules\cluster-client\lib\leader.js:72:23)
+    at ontimeout (timers.js:386:14)
+    at tryOnTimeout (timers.js:250:5)
+    at Timer.listOnTimeout (timers.js:214:5)
+name: 'ClusterClientNoResponseError'
+pid: 7940
+hostname: xiaomo
+
+2017-06-21 14:06:30,778 ERROR 6980 [-/192.168.16.25/-/20ms POST /api/room/roomList] nodejs.MODULE_NOT_FOUNDError: Cannot find module 'locutus/php/var/unserialize'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\service\room.js:21:27)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\controller\room.js:64:50)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+code: 'MODULE_NOT_FOUND'
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+name: 'MODULE_NOT_FOUNDError'
+pid: 6980
+hostname: xiaomo
+
+2017-06-21 14:07:00,151 ERROR 6980 [-/192.168.16.25/-/12ms POST /api/room/roomList] nodejs.MODULE_NOT_FOUNDError: Cannot find module 'locutus/php/var/unserialize'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\service\room.js:21:27)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\controller\room.js:64:50)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+code: 'MODULE_NOT_FOUND'
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+name: 'MODULE_NOT_FOUNDError'
+pid: 6980
+hostname: xiaomo
+
+2017-06-21 14:18:59,440 ERROR 9896 [-/192.168.16.25/-/20ms POST /api/room/roomList] nodejs.MODULE_NOT_FOUNDError: Cannot find module 'locutus/php/var/unserialize'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\service\room.js:21:27)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\controller\room.js:64:50)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+code: 'MODULE_NOT_FOUND'
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+name: 'MODULE_NOT_FOUNDError'
+pid: 9896
+hostname: xiaomo
+
+2017-06-21 14:28:11,049 ERROR 1376 [-/192.168.16.19/-/31ms POST /api/room/roomList] nodejs.MODULE_NOT_FOUNDError: Cannot find module 'locutus/php/var/unserialize'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\service\room.js:21:27)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\controller\room.js:64:50)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+code: 'MODULE_NOT_FOUND'
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+name: 'MODULE_NOT_FOUNDError'
+pid: 1376
+hostname: xiaomo
+
+2017-06-21 14:36:13,158 ERROR 9404 [-/192.168.16.25/-/19ms POST /api/room/roomList] nodejs.MODULE_NOT_FOUNDError: Cannot find module 'locutus/php/var/unserialize'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\service\room.js:21:27)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\controller\room.js:64:50)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+code: 'MODULE_NOT_FOUND'
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+name: 'MODULE_NOT_FOUNDError'
+pid: 9404
+hostname: xiaomo
+
+2017-06-21 14:38:50,443 ERROR 7940 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 7940
+hostname: xiaomo
+
+2017-06-21 15:05:14,685 ERROR 8040 [-/127.0.0.1/-/33ms POST /api/user/chatRootList] nodejs.ER_PARSE_ERRORError: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1' at line 1
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT log_id,log_main_id,log_room_expire,room_title as log_title ,room_photo as log_photo ,room_hits as log_hits FROM data_user_bean_log left join data_room on (room_id=log_main_id) WHERE log_uid = 62 AND log_type='join_room' AND log_room_expire >='2017-06-21' ORDER BY log_id DESC LIMIT 0,-1
+code: 'ER_PARSE_ERROR'
+errno: 1064
+sqlState: '42000'
+index: 0
+name: 'ER_PARSE_ERRORError'
+pid: 8040
+hostname: xiaomo
+
+2017-06-21 15:05:17,492 ERROR 8040 [-/127.0.0.1/-/22ms POST /api/user/chatRootList] nodejs.ER_PARSE_ERRORError: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1' at line 1
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT log_id,log_main_id,log_room_expire,room_title as log_title ,room_photo as log_photo ,room_hits as log_hits FROM data_user_bean_log left join data_room on (room_id=log_main_id) WHERE log_uid = 62 AND log_type='join_room' AND log_room_expire >='2017-06-21' ORDER BY log_id DESC LIMIT 0,-1
+code: 'ER_PARSE_ERROR'
+errno: 1064
+sqlState: '42000'
+index: 0
+name: 'ER_PARSE_ERRORError'
+pid: 8040
+hostname: xiaomo
+
+2017-06-21 15:05:36,916 ERROR 8040 [-/127.0.0.1/-/13ms POST /api/user/chatRootList] nodejs.ER_PARSE_ERRORError: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-2,1' at line 1
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    sql: SELECT log_id,log_main_id,log_room_expire,room_title as log_title ,room_photo as log_photo ,room_hits as log_hits FROM data_user_bean_log left join data_room on (room_id=log_main_id) WHERE log_uid = 62 AND log_type='join_room' AND log_room_expire >='2017-06-21' ORDER BY log_id DESC LIMIT -2,1
+code: 'ER_PARSE_ERROR'
+errno: 1064
+sqlState: '42000'
+index: 0
+name: 'ER_PARSE_ERRORError'
+pid: 8040
+hostname: xiaomo
+
+2017-06-21 15:18:02,894 ERROR 10832 [-/192.168.16.25/-/26ms POST /api/room/roomList] nodejs.MODULE_NOT_FOUNDError: Cannot find module 'locutus/php/var/unserialize'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\service\room.js:21:27)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\controller\room.js:48:50)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+code: 'MODULE_NOT_FOUND'
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+name: 'MODULE_NOT_FOUNDError'
+pid: 10832
+hostname: xiaomo
+
+2017-06-21 15:18:47,896 ERROR 10832 [-/192.168.16.25/-/18ms POST /api/room/roomList] nodejs.MODULE_NOT_FOUNDError: Cannot find module 'locutus/php/var/unserialize'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\service\room.js:21:27)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\controller\room.js:48:50)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+code: 'MODULE_NOT_FOUND'
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+name: 'MODULE_NOT_FOUNDError'
+pid: 10832
+hostname: xiaomo
+
+2017-06-21 15:18:49,371 ERROR 10832 [-/192.168.16.25/-/10ms POST /api/room/roomList] nodejs.MODULE_NOT_FOUNDError: Cannot find module 'locutus/php/var/unserialize'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\service\room.js:21:27)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\controller\room.js:48:50)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+code: 'MODULE_NOT_FOUND'
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+name: 'MODULE_NOT_FOUNDError'
+pid: 10832
+hostname: xiaomo
+
+2017-06-21 15:18:52,826 ERROR 10832 [-/192.168.16.25/-/8ms POST /api/room/roomList] nodejs.MODULE_NOT_FOUNDError: Cannot find module 'locutus/php/var/unserialize'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\service\room.js:21:27)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\controller\room.js:48:50)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+code: 'MODULE_NOT_FOUND'
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+name: 'MODULE_NOT_FOUNDError'
+pid: 10832
+hostname: xiaomo
+
+2017-06-21 15:18:54,238 ERROR 10832 [-/192.168.16.25/-/8ms POST /api/room/roomList] nodejs.MODULE_NOT_FOUNDError: Cannot find module 'locutus/php/var/unserialize'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\service\room.js:21:27)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\controller\room.js:48:50)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+code: 'MODULE_NOT_FOUND'
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+name: 'MODULE_NOT_FOUNDError'
+pid: 10832
+hostname: xiaomo
+
+2017-06-21 15:19:48,228 ERROR 10404 [-/192.168.16.25/-/27ms POST /api/room/roomList] nodejs.MODULE_NOT_FOUNDError: Cannot find module 'locutus/php/var/unserialize'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\service\room.js:21:27)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\controller\room.js:48:50)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+code: 'MODULE_NOT_FOUND'
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+name: 'MODULE_NOT_FOUNDError'
+pid: 10404
+hostname: xiaomo
+
+2017-06-21 15:20:58,206 ERROR 9748 [-/192.168.16.25/-/29ms POST /api/room/roomList] nodejs.MODULE_NOT_FOUNDError: Cannot find module 'locutus/php/var/unserialize'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\service\room.js:21:27)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\controller\room.js:48:50)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+code: 'MODULE_NOT_FOUND'
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+name: 'MODULE_NOT_FOUNDError'
+pid: 9748
+hostname: xiaomo
+
+2017-06-21 15:21:01,271 ERROR 9748 [-/192.168.16.25/-/26ms POST /api/room/roomList] nodejs.MODULE_NOT_FOUNDError: Cannot find module 'locutus/php/var/unserialize'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\service\room.js:21:27)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\controller\room.js:48:50)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+code: 'MODULE_NOT_FOUND'
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+name: 'MODULE_NOT_FOUNDError'
+pid: 9748
+hostname: xiaomo
+
+2017-06-21 15:35:58,422 ERROR 7940 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 7940
+hostname: xiaomo
+
+2017-06-21 15:43:39,595 ERROR 7940 nodejs.unhandledExceptionError: read ECONNRESET
+    at exports._errnoException (util.js:1050:11)
+    at TCP.onread (net.js:582:26)
+code: 'ECONNRESET'
+errno: 'ECONNRESET'
+syscall: 'read'
+name: 'unhandledExceptionError'
+pid: 7940
+hostname: xiaomo
+
