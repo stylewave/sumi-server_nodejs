@@ -243,12 +243,35 @@ module.exports = app => {
       return boardallow.board_allow_subject > 0 ? boardallow.board_allow_subject : 0;
     }
     // 我的关注股吧列表
-    async myBoardlist(uid) {
+    async myBoardlist(start, size, uid) {
       const userrow = await app.mysql.get('data_user', { user_id: uid });
       const field = "board_id,board_title,board_description,board_stock_code,board_follow,board_hits,board_ishot";
       const board_id_list = userrow.user_follow_board.replace(/(^,*)|(,*$)/g, "");
-      const sql = `SELECT ${field} FROM data_forum_board where board_status='1' AND board_id in (${board_id_list})`;
-      const result = await app.mysql.query(sql);
+      console.log(board_id_list);
+      console.log('board_id_list');
+      let result;
+      if (board_id_list) {
+        const sql = `SELECT ${field} FROM data_forum_board where board_status='1' AND board_id in (${board_id_list})  ORDER BY board_id DESC LIMIT ${start},${size}`;
+        const result2 = await app.mysql.query(sql);
+        result = result2;
+      } else {
+        result = 0;
+      }
+      return result;
+    }
+    async myBoardTotal(uid) {
+      const userrow = await app.mysql.get('data_user', { user_id: uid });
+      const board_id_list = userrow.user_follow_board.replace(/(^,*)|(,*$)/g, "");
+      let result;
+      if (board_id_list) {
+        const sql = `SELECT COUNT(*) as total FROM data_forum_board WHERE board_status = 1  AND board_id in (${board_id_list})`;
+        const result2 = await app.mysql.query(sql);
+        result = result2[0].total;
+      } else {
+        result = 0;
+      }
+
+
       return result;
     }
 

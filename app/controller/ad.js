@@ -1,8 +1,44 @@
+const _ = require('lodash');
+const charUtil = require('./utils/charUtil.js');
 module.exports = app => {
   class AdController extends app.Controller {
     // 拉取广告列表
     async list() {
-      const { page } = this.ctx.request.body;
+      const { page, uid, token } = this.ctx.request.body;
+      const arr = [uid, page];
+      const strArr = [token];
+      if (charUtil.checkNumT(arr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数格式不正确',
+        };
+        return;
+      }
+
+      if (charUtil.checkIntType(arr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+
+
+      if (charUtil.checkStringType(strArr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoken)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户信息已过期,请重新登录',
+        };
+        return;
+      }
       const result = await this.ctx.service.ad.list(page);
 
       this.ctx.body = {

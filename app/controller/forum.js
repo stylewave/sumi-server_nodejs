@@ -14,29 +14,45 @@ module.exports = app => {
 
     // 股吧板块列表
     async get_stock_board_list() {
-      let { cpage, size } = this.ctx.request.body;
-      if (charUtil.checkNumT(cpage) === false) {
+      let { cpage, size, uid, token } = this.ctx.request.body;
+      const arr = [uid, cpage, size];
+      const strArr = [token];
+      if (charUtil.checkNumT(arr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '页码格式不正确',
-        };
-        return;
-      }
-      if (charUtil.checkNumT(size) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '页码数量格式不正确',
+          tips: '参数格式不正确',
         };
         return;
       }
 
+      if (charUtil.checkIntType(arr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+
+
+      if (charUtil.checkStringType(strArr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoken)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户信息已过期,请重新登录',
+        };
+        return;
+      }
 
       cpage = parseInt(cpage, 10);
       size = parseInt(size, 10);
-      // let { page, size } = this.ctx.request.body;
-      console.log('ctx.request.body>>>', this.ctx.request.body);
-      // const page = 1;// parseInt(page, 10);
-      // const size = 4;// parseInt(size, 10);
+
       const maxPage = await this.getMaxPage();
       if (cpage > maxPage) {
         this.ctx.body = {
@@ -55,11 +71,38 @@ module.exports = app => {
 
     // 股吧热门四条
     async get_stock_board_hot() {
-      let { size } = this.ctx.request.body;
-      if (charUtil.checkNumT(size) === false) {
+      let { size, uid, token } = this.ctx.request.body;
+      const arr = [uid, size];
+      const strArr = [token];
+      if (charUtil.checkNumT(arr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '页码数量格式不正确',
+          tips: '参数格式不正确',
+        };
+        return;
+      }
+
+      if (charUtil.checkIntType(arr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+
+
+      if (charUtil.checkStringType(strArr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoken)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户信息已过期,请重新登录',
         };
         return;
       }
@@ -75,23 +118,33 @@ module.exports = app => {
     // 模块详情
     async boardDetail() {
       const { id, uid, token } = this.ctx.request.body;
+      const arr = [id, uid];
+      const strArr = [token];
+      if (charUtil.checkNumT(arr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数格式不正确',
+        };
+        return;
+      }
 
-      if (charUtil.checkNumT(id) === false) {
+      if (charUtil.checkIntType(arr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: 'ID格式不正确',
+          tips: '参数类型不正确',
         };
         return;
       }
-      if (charUtil.checkNumT(uid) === false) {
+
+      if (charUtil.checkStringType(strArr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '用户ID格式不正确',
+          tips: '参数类型不正确',
         };
         return;
       }
-      const rs = await this.ctx.service.utils.common.checkToken(uid, token);
-      if (_.isEmpty(rs)) {
+      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoken)) {
         this.ctx.body = {
           status: 0,
           tips: '用户信息已过期,请重新登录',
@@ -115,19 +168,44 @@ module.exports = app => {
     // 股吧板块关注与取消
     async follow() {
       let { state, boardId, uid, token } = this.ctx.request.body;
-
-      if (charUtil.checkNumT(boardId) === false) {
+      const arr = [boardId, uid];
+      const strArr = [token];
+      if (charUtil.checkNum(state) === false) {
         this.ctx.body = {
           status: 0,
-          tips: 'ID格式不正确',
+          tips: '状态格式不正确',
+        };
+        return;
+      }
+      if (charUtil.checkNumT(arr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数格式不正确',
         };
         return;
       }
 
-      if (charUtil.checkNumT(uid) === false) {
+      if (charUtil.checkIntType(arr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '用户ID格式不正确',
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+
+
+      if (charUtil.checkStringType(strArr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoken)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户信息已过期,请重新登录',
         };
         return;
       }
@@ -233,31 +311,42 @@ module.exports = app => {
     }
     // 股吧主题列表
     async sublist() {
-      let { page, size, boardId, order } = this.ctx.request.body;
+      let { page, size, boardId, order, uid, token } = this.ctx.request.body;
+      const arr = [page, size, boardId, uid];
+      const strArr = [token];
+      if (charUtil.checkNumT(arr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数格式不正确',
+        };
+        return;
+      }
+
+      if (charUtil.checkIntType(arr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+
+
+      if (charUtil.checkStringType(strArr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoken)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户信息已过期,请重新登录',
+        };
+        return;
+      }
       order = parseInt(order, 10);
-      if (charUtil.checkNumT(page) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '页码格式不正确',
-        };
-        return;
-      }
-      if (charUtil.checkNumT(boardId) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '股吧ID格式不正确',
-        };
-        return;
-      }
-      if (charUtil.checkNumT(size) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '页码数量格式不正确',
-        };
-        return;
-      }
-
-
       page = parseInt(page, 10);
       size = parseInt(size, 10);
       const maxPage = await this.getMaxPage(boardId);
@@ -298,25 +387,38 @@ module.exports = app => {
     }
     // 主题热门列表
     async subHotlist() {
-      let { page, size, boardId } = this.ctx.request.body;
-      if (charUtil.checkNumT(size) === false) {
+      let { uid, token, page, size, boardId } = this.ctx.request.body;
+      const arr = [uid, page, size, boardId];
+      const strArr = [token];
+      if (charUtil.checkNumT(arr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '页码数量格式不正确',
+          tips: '参数格式不正确',
         };
         return;
       }
-      if (charUtil.checkNumT(page) === false) {
+
+      if (charUtil.checkIntType(arr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '页码格式不正确',
+          tips: '参数类型不正确',
         };
         return;
       }
-      if (charUtil.checkNumT(boardId) === false) {
+
+
+      if (charUtil.checkStringType(strArr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '股吧ID格式不正确',
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoken)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户信息已过期,请重新登录',
         };
         return;
       }
@@ -350,11 +452,38 @@ module.exports = app => {
 
     // 股吧主题详情
     async forumSubjectDetail() {
-      const { subId } = this.ctx.request.body;
-      if (charUtil.checkNumT(subId) === false) {
+      const { subId, uid, token } = this.ctx.request.body;
+      const arr = [subId, uid];
+      const strArr = [token];
+      if (charUtil.checkNumT(arr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '主题ID格式不正确',
+          tips: '参数格式不正确',
+        };
+        return;
+      }
+
+      if (charUtil.checkIntType(arr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+
+
+      if (charUtil.checkStringType(strArr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoken)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户信息已过期,请重新登录',
         };
         return;
       }
@@ -373,12 +502,39 @@ module.exports = app => {
     }
     // 股吧主题评论信息
     async commentdata() {
-      const { subId } = this.ctx.request.body;
+      const { subId, uid, token } = this.ctx.request.body;
 
-      if (charUtil.checkNumT(subId) === false) {
+      const arr = [subId, uid];
+      const strArr = [token];
+      if (charUtil.checkNumT(arr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '主题ID格式不正确',
+          tips: '参数格式不正确',
+        };
+        return;
+      }
+
+      if (charUtil.checkIntType(arr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+
+
+      if (charUtil.checkStringType(strArr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoken)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户信息已过期,请重新登录',
         };
         return;
       }
@@ -394,17 +550,37 @@ module.exports = app => {
       // let { subId, content } = this.ctx.request.body;
       const { subId, content, uid, token } = this.ctx.request.body;
 
-      if (charUtil.checkNumT(subId) === false) {
+      const arr = [subId, uid];
+      const strArr = [token];
+      if (charUtil.checkNumT(arr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '主题ID格式不正确',
+          tips: '参数格式不正确',
         };
         return;
       }
-      if (charUtil.checkNumT(uid) === false) {
+
+      if (charUtil.checkIntType(arr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '用户ID格式不正确',
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+
+
+      if (charUtil.checkStringType(strArr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoken)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户信息已过期,请重新登录',
         };
         return;
       }
@@ -415,14 +591,7 @@ module.exports = app => {
         };
         return;
       }
-      const rs = await this.ctx.service.utils.common.checkToken(uid, token);
-      if (_.isEmpty(rs)) {
-        this.ctx.body = {
-          status: 0,
-          tips: '用户信息已过期,请重新登录',
-        };
-        return;
-      }
+
       const result = await this.ctx.service.forum.commentadd(subId, content, uid);
       this.ctx.body = {
         status: 1,
@@ -432,19 +601,39 @@ module.exports = app => {
     }
     // 股吧主题的增加
     async addForumSubject() {
-      const { title, content, boardId, uid } = this.ctx.request.body;
+      const { title, content, boardId, uid, token } = this.ctx.request.body;
 
-      if (charUtil.checkNumT(boardId) === false) {
+      const arr = [uid, boardId];
+      const strArr = [token, content, title];
+      if (charUtil.checkNumT(arr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '股吧id格式不正确',
+          tips: '参数格式不正确',
         };
         return;
       }
-      if (charUtil.checkNumT(uid) === false) {
+
+      if (charUtil.checkIntType(arr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '用户ID格式不正确',
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+
+
+      if (charUtil.checkStringType(strArr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoken)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户信息已过期,请重新登录',
         };
         return;
       }
@@ -480,29 +669,66 @@ module.exports = app => {
         detail: result,
       };
     }
+    // 获取 我的关注股吧最大页码
+    async myBoardTotal(uid) {
+      const result = await this.ctx.service.forum.myBoardTotal(uid);
+      return result;
+    }
     // 我的关注股吧列表
     async myBoardlist() {
-      const { uid, token } = this.ctx.request.body;
-      if (charUtil.checkNumT(uid) === false) {
+      let { uid, token, page, size } = this.ctx.request.body;
+      const arr = [uid, page, size];
+      const strArr = [token];
+      if (charUtil.checkNumT(arr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '用户id格式不正确',
+          tips: '参数格式不正确',
         };
         return;
       }
-      const rs = await this.ctx.service.utils.common.checkToken(uid, token);
 
-      if (_.isEmpty(rs)) {
+      if (charUtil.checkIntType(arr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+
+
+      if (charUtil.checkStringType(strArr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoken)) {
         this.ctx.body = {
           status: 0,
           tips: '用户信息已过期,请重新登录',
         };
         return;
       }
+      page = parseInt(page, 10);
+      size = parseInt(size, 10);
+      const maxPage = await this.myBoardTotal(uid);
+      if (page > maxPage) {
+        this.ctx.body = {
+          status: 0,
+          tips: '没有更多数据了',
+        };
+        return;
+      }
+      // 总共页数
+      const total = Math.ceil(maxPage / size);
+      const start = (page - 1) * size;
 
-      const result = await this.ctx.service.forum.myBoardlist(uid);
+      const result = await this.ctx.service.forum.myBoardlist(start, size, uid);
       this.ctx.body = {
         status: 1,
+        totalsub: total,
         list: result,
       };
     }

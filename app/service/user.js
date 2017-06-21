@@ -35,12 +35,40 @@ module.exports = app => {
 
       const sql = `SELECT ${field} FROM data_user_bean_log left join data_room on (room_id=log_main_id) WHERE log_uid = ${userId} AND log_type='join_room' AND log_room_expire >='${time}' ORDER BY log_id DESC LIMIT ${start},${size}`;
       const result = await app.mysql.query(sql);
+      for (const v in result) {
+        console.log(v);
+        result[v].log_photo = app.config.host + result[v].log_photo;
+      }
       // console.log(result);
       return {
         result,
         prev,
         next,
       };
+    }
+    // 用户消息总的记录数
+    async userMsg(uid, type = '') {
+      let sql;
+      if (type) {
+        sql = `SELECT COUNT(*) as total FROM data_msg WHERE msg_uid='${uid}' AND msg_type='${type}'`;
+      } else {
+        sql = `SELECT COUNT(*) as total FROM data_msg WHERE msg_uid='${uid}'`;
+      }
+      const result = await app.mysql.query(sql);
+      return result[0].total;
+    }
+    // 用户消息列表
+    async userMsgList(start, size, uid, type = '') {
+      const field = 'msg_id,msg_type,msg_action,msg_isread,msg_main_id,msg_title,DATE_FORMAT(msg_create_time,"%Y-%m-%d %H:%i:%s") as msg_create_time';
+      let sql;
+      if (type) {
+        sql = `SELECT ${field} FROM data_msg WHERE msg_uid='${uid}' AND msg_type='${type}' ORDER BY msg_id DESC LIMIT ${start},${size}`;
+      } else {
+        sql = `SELECT ${field} FROM data_msg WHERE msg_uid='${uid}' ORDER BY msg_id DESC LIMIT ${start},${size}`;
+      }
+      console.log(sql);
+      const result = await app.mysql.query(sql);
+      return result.length > 0 ? result : null;
     }
 
   }
