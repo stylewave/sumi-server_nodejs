@@ -3,6 +3,7 @@ module.exports = app => {
   // app.get('/', 'home.index');
   app.get('/debug/:mobile', 'debug.get');
   app.get('/api/alipay', 'alipay.pay');
+  app.get('/api/chat', 'chat.chat');
 
   app.post('/api/ad/create', 'ad.create');
   /** http post请求**/
@@ -15,7 +16,6 @@ module.exports = app => {
   app.post('/api/news/list', 'news.list');
   app.post('/api/news/detail', 'news.newsDetail');
   app.get('/api/login/crypt', 'login.crypt');
-
 
   app.post('/api/user/setUserPhoto', 'user.setUserPhoto');
   // 股吧模板详情
@@ -64,7 +64,11 @@ module.exports = app => {
   app.post('/api/task/finishTask', 'task.finishTask');
 
   /** socket请求**/
-  app.io.route('join', app.io.controllers.chat);
+  // app.io.route('res', app.io.controllers.res);
+  app.io.route('join', app.io.controllers.join);
+  app.io.route('send', app.io.controllers.send);
+  app.io.route('gift', app.io.controllers.gift);
+  // app.io.route('disconnect', app.io.controllers.leave);
 
   // app.get('/home','home.index');
 };

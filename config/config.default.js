@@ -10,5 +10,12 @@ module.exports = {
       '.html': 'xtpl',
     },
   },
+  io: {
+    namespace: {
+      '/': {
+        connectionMiddleware: ['auth'],
+      },
+    },
+  },
   proxyworker: { port: 10086 },
 };

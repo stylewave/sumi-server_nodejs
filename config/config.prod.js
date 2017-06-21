@@ -1,4 +1,5 @@
 module.exports = {
+  rootUrl: 'http://sumi.cf69.com',
   custom: 'prod hello',
   crypKeys: '12345678',
   mysql: {

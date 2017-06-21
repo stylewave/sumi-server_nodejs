@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+  <script>
+    var socket = io.connect('http://localhost:7001');
+    //console.log(socket);
+    socket.on('connect', () => {
+      console.log('client is on connect..');
+      let data = {
+        roomid: Math.ceil(Math.random() * 10),
+        uid: 1,
+        name: 'alan',
+        nickname: 'alanyao'
+      };
+      socket.emit('join', data);
+    });
+
+    socket.on('selfInfo', data => {
+      console.log('return your info:', data);
+    });
+
+    socket.on('res', data => {
+      console.log('Server:', data);
+    });
+
+    socket.on('chat1', data => {
+      console.log('new chat(new reply) to part1', data);
+    });
+
+    socket.on('chat2', data => {
+      console.log('new chat(new reply) to part2:', data);
+    });
+
+    socket.on('self', data => {
+      console.log('only for u chat', data);
+    });
+
+
+
+    socket.on('join', data => {
+      console.log('some one join', data);
+    });
+
+    socket.on('leave', data => {
+      console.log('some one leave', data);
+    });
+
+    socket.on('online', data => {
+      console.log('get the online list', data);
+    });
+
+    socket.on('history', data => {
+      console.log('get the history list', data);
+    });
+
+    socket.on('gift', data => {
+      console.log('some one send gift', data);
+    });
+
+    socket.on('broadcast', data => {
+      console.log('send to all ', data);
+    });
+
+    socket.on('error', data => {
+      console.log('got error:', data);
+    });
+    /*
+    socket.on('send', data => {
+      console.log('on send', data);
+    });
+    */
+
+    socket.on('disconnect', () => {
+      console.log('on disconnect');
+    });
+
+    $(function () {
+      $("#go").click(function () {
+        var val = $("#content").val();
+        console.log('send ', val);
+        socket.emit('send', val);
+
+      });
+
+      $("#gift").click(function () {
+        console.log('send a gift ');
+        socket.emit('gift', 'i like you');
+
+      });
+
+    })
+  </script>
+</head>
+
+<body>
+
+  <input id="content" name="content" type="input" />
+
+  <button id="go" />发送信息</button>
+
+  <button id="gift" />送礼物</button>
+</body>
+
+</html>
