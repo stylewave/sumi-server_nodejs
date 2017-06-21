@@ -2,6 +2,7 @@ module.exports = {
   rootUrl: 'http://127.0.0.1:7001',
   custom: 'local hello',
   crypKeys: '12345678',
+  host: 'http://192.168.16.254:2050',
   mysql: {
     client: {
       // host

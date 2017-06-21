@@ -18,6 +18,7 @@ module.exports = app => {
   app.get('/api/login/crypt', 'login.crypt');
 
   app.post('/api/user/setUserPhoto', 'user.setUserPhoto');
+  app.post('/api/user/userMsgList', 'user.userMsgList');
   // 股吧模板详情
   app.post('/api/forum/boardDetail', 'forum.boardDetail');
   // 股吧模板列表
@@ -46,22 +47,34 @@ module.exports = app => {
 
   // 观点列表
   app.post('/api/viewpoint/expertCommentList', 'viewpoint.expertCommentList');
-  // 没购买观点详情
+  // 观点详情
   app.post('/api/viewpoint/commentDetail', 'viewpoint.commentDetail');
   // 多空舆情列表
   app.post('/api/viewpoint/marketList', 'viewpoint.marketList');
-  // 购买观点详情
+  // 购买观点
   app.post('/api/viewpoint/buyExpertComment', 'viewpoint.buyExpertComment');
-
+  // 用户资金记录
   app.post('/api/myaccount/userMoneylog', 'myaccount.userMoneylog');
   app.post('/api/myaccount/userBeanLog', 'myaccount.userBeanLog');
   app.post('/api/myaccount/beanReturnList', 'myaccount.beanReturnList');
   app.post('/api/myaccount/beanReturnDetail', 'myaccount.beanReturnDetail');
+  app.post('/api/myaccount/beanReturn', 'myaccount.beanReturn');
 
   app.post('/api/user/chatRootList', 'user.chatRootList');
 
   app.post('/api/task/taskList', 'task.taskList');
   app.post('/api/task/finishTask', 'task.finishTask');
+
+  app.post('/api/job/skillList', 'job.skillList');
+  app.post('/api/job/joblList', 'job.joblList');
+  app.post('/api/job/jobDetail', 'job.jobDetail');
+  app.post('/api/job/setJob', 'job.setJob');
+
+  app.post('/api/room/roomList', 'room.roomList');
+  app.post('/api/room/buyRoomList', 'room.buyRoomList');
+  app.post('/api/myaccount/test', 'myaccount.test');
+
+  app.post('/api/user/test', 'user.test');
 
   /** socket请求**/
   // app.io.route('res', app.io.controllers.res);
