@@ -17,7 +17,7 @@ module.exports = () => {
       chat_job_id: userInfo.user_job_id,
       chat_job_level: userInfo.user_job_level,
       chat_job_name: userInfo.user_job_name,
-      //chat_content: img_to_realpath($message),          //注意图片路径要转化
+      // chat_content: img_to_realpath($message),          //注意图片路径要转化
       chat_content: message,
       chat_show: 0,
       chat_create_time: this.app.mysql.literals.now,

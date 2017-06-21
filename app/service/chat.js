@@ -64,8 +64,8 @@ module.exports = app => {
           `select ${field} from data_chat where chat_room='${roomid}' and chat_level<'${adminlevel2}' and (chat_show='1' or chat_uid='{$uid}') order by chat_id desc `
         );
       }
-      if (history || history2) {
-      }
+      // if (history || history2) {
+      // }
       const result = {};
       result.list = history;
       result.list2 = history2;

@@ -1648,3 +1648,11 @@
 2017-06-21 12:17:25,599 INFO 9980 [egg-development-proxyworker] debugger attached
 2017-06-21 12:17:25,599 INFO 9980 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
 2017-06-21 12:17:25,810 WARN 9980 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 12:18:25,420 WARN 9980 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\send.js change
+2017-06-21 12:18:26,182 INFO 9980 [egg-development-proxyworker] debugger attached
+2017-06-21 12:18:26,182 INFO 9980 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 12:18:26,387 WARN 9980 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 12:18:48,462 WARN 9980 [agent:development] reload worker because E:\wamp\sumi-server\app\service\chat.js change
+2017-06-21 12:18:49,267 INFO 9980 [egg-development-proxyworker] debugger attached
+2017-06-21 12:18:49,268 INFO 9980 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 12:18:49,475 WARN 9980 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
