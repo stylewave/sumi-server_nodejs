@@ -174,7 +174,7 @@ module.exports = app => {
 
       let i;
       let issign;
-      let date_array = [];
+      const date_array = [];
       for (i = 1; i <= 30; i++) {
         if (this.isCon(sign_array, i) === 1) {
           issign = 1;
@@ -200,7 +200,7 @@ module.exports = app => {
     isCon(arr, val) {
       let i = arr.length;
       while (i--) {
-        if (arr[i] == val) {
+        if (arr[i] === val) {
           return 1;
         }
       }
