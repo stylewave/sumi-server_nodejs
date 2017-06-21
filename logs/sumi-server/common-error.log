@@ -624,3 +624,215 @@ name: 'unhandledExceptionError'
 pid: 7940
 hostname: xiaomo
 
+2017-06-21 17:07:42,525 ERROR 5200 [-/192.168.16.25/-/40ms POST /api/viewpoint/commentDetail] nodejs.ER_PARSE_ERRORError: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM data_expert_comment  ORDER BY comment_id DESC LIMIT 1' at line 1
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    at TCP.onread (net.js:561:20)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSClient.createPromise [as query] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at ViewpointService.buydata (E:\nodejs\sumi-server\app\service\viewpoint.js:66:40)
+    at ViewpointController.commentDetail (E:\nodejs\sumi-server\app\controller\viewpoint.js:81:56)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+    sql: SELECT comment_id,comment_title,comment_intro, FROM data_expert_comment  ORDER BY comment_id DESC LIMIT 1
+code: 'ER_PARSE_ERROR'
+errno: 1064
+sqlState: '42000'
+index: 0
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+name: 'ER_PARSE_ERRORError'
+pid: 5200
+hostname: xiaomo
+
+2017-06-21 17:08:51,430 ERROR 5200 [-/192.168.16.25/-/7ms POST /api/viewpoint/commentDetail] nodejs.ER_PARSE_ERRORError: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM data_expert_comment  ORDER BY comment_id DESC LIMIT 1' at line 1
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    at TCP.onread (net.js:561:20)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSClient.createPromise [as query] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at ViewpointService.buydata (E:\nodejs\sumi-server\app\service\viewpoint.js:66:40)
+    at ViewpointController.commentDetail (E:\nodejs\sumi-server\app\controller\viewpoint.js:81:56)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+    sql: SELECT comment_id,comment_title,comment_intro, FROM data_expert_comment  ORDER BY comment_id DESC LIMIT 1
+code: 'ER_PARSE_ERROR'
+errno: 1064
+sqlState: '42000'
+index: 0
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+name: 'ER_PARSE_ERRORError'
+pid: 5200
+hostname: xiaomo
+
+2017-06-21 17:10:39,055 ERROR 5200 [-/192.168.16.25/-/7ms POST /api/viewpoint/commentDetail] nodejs.ER_PARSE_ERRORError: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM data_expert_comment  ORDER BY comment_id DESC LIMIT 1' at line 1
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    at TCP.onread (net.js:561:20)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSClient.createPromise [as query] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at ViewpointService.buydata (E:\nodejs\sumi-server\app\service\viewpoint.js:66:40)
+    at ViewpointController.commentDetail (E:\nodejs\sumi-server\app\controller\viewpoint.js:81:56)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+    sql: SELECT comment_id,comment_title,comment_intro, FROM data_expert_comment  ORDER BY comment_id DESC LIMIT 1
+code: 'ER_PARSE_ERROR'
+errno: 1064
+sqlState: '42000'
+index: 0
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+name: 'ER_PARSE_ERRORError'
+pid: 5200
+hostname: xiaomo
+
+2017-06-21 17:11:20,942 ERROR 7192 [-/192.168.16.25/-/21ms POST /api/viewpoint/commentDetail] nodejs.ER_PARSE_ERRORError: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM data_expert_comment  ORDER BY comment_id DESC LIMIT 1' at line 1
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    at TCP.onread (net.js:561:20)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSClient.createPromise [as query] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at ViewpointService.buydata (E:\nodejs\sumi-server\app\service\viewpoint.js:69:40)
+    at ViewpointController.commentDetail (E:\nodejs\sumi-server\app\controller\viewpoint.js:81:56)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+    sql: SELECT comment_id,comment_title,comment_intro, FROM data_expert_comment  ORDER BY comment_id DESC LIMIT 1
+code: 'ER_PARSE_ERROR'
+errno: 1064
+sqlState: '42000'
+index: 0
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+name: 'ER_PARSE_ERRORError'
+pid: 7192
+hostname: xiaomo
+
+2017-06-21 17:19:17,752 ERROR 9576 [-/127.0.0.1/-/8ms POST /api/viewpoint/commentDetail] nodejs.ER_PARSE_ERRORError: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM data_expert_comment  ORDER BY comment_id DESC LIMIT 1' at line 1
+    at Query.Sequence._packetToError (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\nodejs\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\nodejs\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    at TCP.onread (net.js:561:20)
+    --------------------
+    at Pool.query (E:\nodejs\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\nodejs\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\nodejs\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\nodejs\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\nodejs\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\nodejs\sumi-server\node_modules\co\index.js:65:19)
+    at E:\nodejs\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\nodejs\sumi-server\node_modules\co\index.js:50:10)
+    at RDSClient.createPromise [as query] (E:\nodejs\sumi-server\node_modules\co\index.js:30:15)
+    at ViewpointService.buydata (E:\nodejs\sumi-server\app\service\viewpoint.js:83:40)
+    at ViewpointController.commentDetail (E:\nodejs\sumi-server\app\controller\viewpoint.js:81:56)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+    sql: SELECT comment_id,comment_title,comment_intro, FROM data_expert_comment  ORDER BY comment_id DESC LIMIT 1
+code: 'ER_PARSE_ERROR'
+errno: 1064
+sqlState: '42000'
+index: 0
+name: 'ER_PARSE_ERRORError'
+pid: 9576
+hostname: xiaomo
+
+2017-06-21 17:20:54,511 ERROR 7240 [-/192.168.16.25/-/15ms POST /api/room/roomList] nodejs.MODULE_NOT_FOUNDError: Cannot find module 'locutus/php/var/unserialize'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\service\room.js:21:27)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\controller\room.js:48:50)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+code: 'MODULE_NOT_FOUND'
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+name: 'MODULE_NOT_FOUNDError'
+pid: 7240
+hostname: xiaomo
+
+2017-06-21 17:21:04,622 ERROR 7240 [-/192.168.16.25/-/12ms POST /api/room/roomList] nodejs.MODULE_NOT_FOUNDError: Cannot find module 'locutus/php/var/unserialize'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\service\room.js:21:27)
+    at RoomService.roomList (E:\nodejs\sumi-server\app\controller\room.js:48:50)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+code: 'MODULE_NOT_FOUND'
+headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' }
+name: 'MODULE_NOT_FOUNDError'
+pid: 7240
+hostname: xiaomo
+

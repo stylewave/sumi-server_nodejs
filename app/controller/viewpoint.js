@@ -54,7 +54,12 @@ module.exports = app => {
     // 观点详情
     async commentDetail() {
       const { commentId, uid, token } = this.ctx.request.body;
-      const numArr = [commentId, uid];
+      let numArr;
+      if (commentId) {
+        numArr = [commentId, uid];
+      } else {
+        numArr = [uid];
+      }
       const strArr = [token];
       if (charUtil.checkType(numArr, strArr) === false) {
         this.ctx.body = {

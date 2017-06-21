@@ -1,5 +1,6 @@
 const _ = require('lodash');
 const charUtil = require('./utils/charUtil.js');
+const regExp = require('./utils/regExpUtil.js');
 module.exports = app => {
   // 我的账户模块
   class MyaccountController extends app.Controller {
@@ -172,6 +173,30 @@ module.exports = app => {
     //  豆币回收
     async beanReturn() {
       let { token, uid, beans, account_type, alipay_account, wxpay_account, unionpay_account, unionpay_name, unionpay_bank, mobile } = this.ctx.request.body;
+      let numArr;
+      if (account_type) {
+        numArr = [uid, beans, account_type];
+      } else {
+        numArr = [uid, beans];
+      }
+      const strArr = [token];
+      if (charUtil.checkType(numArr, strArr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数有错',
+        };
+        return;
+      }
+
+      if (mobile) {
+        if (regExp.checkMobile(mobile) === false) {
+          this.ctx.body = {
+            status: 0,
+            tips: '手机号码格式不正确',
+          };
+          return;
+        }
+      }
 
       const checktoke = await this.ctx.service.utils.common.checkToken(uid, token);
       if (_.isEmpty(checktoke)) {
