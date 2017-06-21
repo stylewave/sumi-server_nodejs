@@ -158,9 +158,6 @@ module.exports = app => {
     async test() {
       const { uid } = this.ctx.request.body;
       const moment = require("moment");
-
-
-
       const time = moment().format("YYYY-MM-DD HH:mm:ss");
       const week1 = moment().format('d');
       const key = moment().format('YYYYMM');

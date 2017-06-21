@@ -32,9 +32,6 @@ module.exports = app => {
         };
         return;
       }
-
-
-
       page = parseInt(page, 10);
       size = parseInt(size, 10);
       const maxPage = await this.getMaxPage();

@@ -1207,3 +1207,5 @@
 2017-06-21 15:52:36,459 INFO 7940 [egg-development-proxyworker] debugger attached
 2017-06-21 15:52:36,459 INFO 7940 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
 2017-06-21 15:52:36,732 WARN 7940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 15:54:15,271 WARN 7940 [agent:development] reload worker because E:\nodejs\sumi-server\config\plugin.js change
+2017-06-21 15:54:15,864 WARN 7940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer

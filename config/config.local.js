@@ -1,4 +1,5 @@
 module.exports = {
+  rootUrl: 'http://127.0.0.1:7001',
   custom: 'local hello',
   crypKeys: '12345678',
   host: 'http://192.168.16.254:2050',
@@ -14,6 +15,15 @@ module.exports = {
       password: '111111',
       // 数据库名
       database: 'cq',
+    },
+  },
+  redis: {
+    client: {
+      host: '192.168.16.254',
+      port: '8000',
+      family: '',
+      password: '',
+      db: '1',
     },
   },
 };
