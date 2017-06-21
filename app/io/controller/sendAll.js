@@ -1,5 +1,5 @@
 module.exports = () => {
-  return function* send() {
+  return function* sendAll() {
     const message = this.args[0];
     const fd = this.socket.id; // 用户进程id
 
@@ -7,7 +7,6 @@ module.exports = () => {
     const moment = require('moment');
     const time = moment().format('YYYY-MM-DD HH:mm:ss');
 
-    console.log('some one send :', message);
     const data = {
       chat_fd: fd,
       chat_room: userInfo.roomid,
@@ -21,17 +20,17 @@ module.exports = () => {
       chat_job_name: userInfo.user_job_name,
       // chat_content: img_to_realpath($message),          //注意图片路径要转化
       chat_content: message,
-      chat_show: 0,
+      chat_show: 1,
       chat_create_time: time,
     };
 
     const id = yield this.service.chat.addChat(data);
     if (id) {
-      data.chat_id = id;
-      this.socket.emit('self', data); // 返回给当前用户
+      console.log('sendAll');
+      this.app.io.sockets.in(userInfo.roomid).emit('chat1', data); // 直播区
+      this.app.io.sockets.in(userInfo.roomid).emit('chat2', data); // 互动区
     } else {
       this.socket.emit('warning', `网络异常,请稍后再试`); // 入库失败!!
     }
-    console.log('insert', id);
   };
 };

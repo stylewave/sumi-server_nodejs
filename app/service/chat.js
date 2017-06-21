@@ -74,12 +74,39 @@ module.exports = app => {
 
     // 写入数据
     async addChat(data) {
-      let uid;
+      let id;
       const result = await this.app.mysql.insert('data_chat', data);
       if (result.affectedRows === 1) {
-        uid = result.insertId;
+        id = result.insertId;
       }
-      return uid;
+      return id;
+    }
+
+    // 获取一条信息
+    async getChat(id) {
+      const result = await this.app.mysql.get('data_chat', { chat_id: id });
+      return result;
+    }
+
+    // 回复数据
+    async replyChat(data, replyid) {
+      let id;
+      const result = await this.app.mysql.insert('data_chat', data);
+      if (result.affectedRows === 1) {
+        id = result.insertId;
+
+        const sql = `UPDATE data_chat SET chat_show = '1' WHERE chat_id ='${replyid}'`;
+        await this.app.mysql.query(sql);
+      }
+      return id;
+    }
+
+    // 记录通过
+    async passChat(id) {
+      const sql = `UPDATE data_chat SET chat_show = '1' WHERE chat_id ='${id}'`;
+      const result = await this.app.mysql.query(sql);
+      console.log('update res', result);
+      return result;
     }
   }
   return ChatService;

@@ -2253,3 +2253,508 @@ name: 'ER_TRUNCATED_WRONG_VALUE_FOR_FIELDError'
 pid: 8224
 hostname: O1SCA91JEKG1MM4
 
+2017-06-21 15:18:07,849 ERROR 9616 nodejs.ER_NO_DEFAULT_FOR_FIELDError: [egg-socket.io] packet middleware execute error: [egg-socket.io] controller execute error: ER_NO_DEFAULT_FOR_FIELD: Field 'chat_reply_fd' doesn't have a default value
+    at Query.Sequence._packetToError (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\wamp\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:176:18)
+    at Socket.Readable.push (_stream_readable.js:134:10)
+    at TCP.onread (net.js:554:20)
+    --------------------
+    at Pool.query (E:\wamp\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\wamp\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\wamp\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\wamp\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\wamp\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\wamp\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at E:\wamp\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\wamp\sumi-server\node_modules\co\index.js:50:10)
+    at RDSClient.createPromise [as query] (E:\wamp\sumi-server\node_modules\co\index.js:30:15)
+    at RDSClient.proto.insert (E:\wamp\sumi-server\node_modules\ali-rds\lib\operator.js:141:21)
+    at proto.insert.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at E:\wamp\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\wamp\sumi-server\node_modules\co\index.js:50:10)
+    sql: INSERT INTO `data_chat`(`chat_fd`, `chat_room`, `chat_name`, `chat_level`, `chat_nickname`, `chat_uid`, `chat_logo`, `chat_job_id`, `chat_job_level`, `chat_job_name`, `chat_content`, `chat_show`, `chat_create_time`) VALUES('dIMuMmzPDMeGsuUVAAAC', '23', '13928491004', '7', '阿斯达是对的', '1', 'http://wx.qlogo.cn/mmopen/lpHDr05YrIS0HPDEbQXPwpL8S0O4hwSPsfQPiajCxYjicmKgJzjPhSXt57BbIVwEsqkhCsmIEv3GibCqs9o6iatOGVf2cRt80Tww/0', '2', '11', '韭菜', 'aaaa', 0, '2017-06-21 15:18:07')
+code: 'ER_NO_DEFAULT_FOR_FIELD'
+errno: 1364
+sqlState: 'HY000'
+index: 0
+name: 'ER_NO_DEFAULT_FOR_FIELDError'
+pid: 9616
+hostname: O1SCA91JEKG1MM4
+
+2017-06-21 15:18:58,447 ERROR 9324 nodejs.ER_NO_DEFAULT_FOR_FIELDError: [egg-socket.io] packet middleware execute error: [egg-socket.io] controller execute error: ER_NO_DEFAULT_FOR_FIELD: Field 'chat_reply_fd' doesn't have a default value
+    at Query.Sequence._packetToError (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\wamp\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:176:18)
+    at Socket.Readable.push (_stream_readable.js:134:10)
+    at TCP.onread (net.js:554:20)
+    --------------------
+    at Pool.query (E:\wamp\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\wamp\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\wamp\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\wamp\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\wamp\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\wamp\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at E:\wamp\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\wamp\sumi-server\node_modules\co\index.js:50:10)
+    at RDSClient.createPromise [as query] (E:\wamp\sumi-server\node_modules\co\index.js:30:15)
+    at RDSClient.proto.insert (E:\wamp\sumi-server\node_modules\ali-rds\lib\operator.js:141:21)
+    at proto.insert.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at E:\wamp\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\wamp\sumi-server\node_modules\co\index.js:50:10)
+    sql: INSERT INTO `data_chat`(`chat_fd`, `chat_room`, `chat_name`, `chat_level`, `chat_nickname`, `chat_uid`, `chat_logo`, `chat_job_id`, `chat_job_level`, `chat_job_name`, `chat_content`, `chat_show`, `chat_create_time`) VALUES('utEqnquQ65-2Mb9QAAAC', '23', '13928491004', '7', '阿斯达是对的', '1', 'http://wx.qlogo.cn/mmopen/lpHDr05YrIS0HPDEbQXPwpL8S0O4hwSPsfQPiajCxYjicmKgJzjPhSXt57BbIVwEsqkhCsmIEv3GibCqs9o6iatOGVf2cRt80Tww/0', '2', '11', '韭菜', 'asdfasdf', 0, '2017-06-21 15:18:58')
+code: 'ER_NO_DEFAULT_FOR_FIELD'
+errno: 1364
+sqlState: 'HY000'
+index: 0
+name: 'ER_NO_DEFAULT_FOR_FIELDError'
+pid: 9324
+hostname: O1SCA91JEKG1MM4
+
+2017-06-21 15:24:33,389 ERROR 9324 nodejs.ER_NO_DEFAULT_FOR_FIELDError: [egg-socket.io] packet middleware execute error: [egg-socket.io] controller execute error: ER_NO_DEFAULT_FOR_FIELD: Field 'chat_reply_fd' doesn't have a default value
+    at Query.Sequence._packetToError (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\wamp\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:176:18)
+    at Socket.Readable.push (_stream_readable.js:134:10)
+    at TCP.onread (net.js:554:20)
+    --------------------
+    at Pool.query (E:\wamp\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\wamp\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\wamp\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\wamp\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\wamp\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\wamp\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at E:\wamp\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\wamp\sumi-server\node_modules\co\index.js:50:10)
+    at RDSClient.createPromise [as query] (E:\wamp\sumi-server\node_modules\co\index.js:30:15)
+    at RDSClient.proto.insert (E:\wamp\sumi-server\node_modules\ali-rds\lib\operator.js:141:21)
+    at proto.insert.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at E:\wamp\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\wamp\sumi-server\node_modules\co\index.js:50:10)
+    sql: INSERT INTO `data_chat`(`chat_fd`, `chat_room`, `chat_name`, `chat_level`, `chat_nickname`, `chat_uid`, `chat_logo`, `chat_job_id`, `chat_job_level`, `chat_job_name`, `chat_content`, `chat_show`, `chat_create_time`) VALUES('utEqnquQ65-2Mb9QAAAC', '23', '13928491004', '7', '阿斯达是对的', '1', 'http://wx.qlogo.cn/mmopen/lpHDr05YrIS0HPDEbQXPwpL8S0O4hwSPsfQPiajCxYjicmKgJzjPhSXt57BbIVwEsqkhCsmIEv3GibCqs9o6iatOGVf2cRt80Tww/0', '2', '11', '韭菜', '1111', 0, '2017-06-21 15:24:33')
+code: 'ER_NO_DEFAULT_FOR_FIELD'
+errno: 1364
+sqlState: 'HY000'
+index: 0
+name: 'ER_NO_DEFAULT_FOR_FIELDError'
+pid: 9324
+hostname: O1SCA91JEKG1MM4
+
+2017-06-21 15:25:02,886 ERROR 9324 nodejs.ER_NO_DEFAULT_FOR_FIELDError: [egg-socket.io] packet middleware execute error: [egg-socket.io] controller execute error: ER_NO_DEFAULT_FOR_FIELD: Field 'chat_reply_fd' doesn't have a default value
+    at Query.Sequence._packetToError (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\wamp\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:176:18)
+    at Socket.Readable.push (_stream_readable.js:134:10)
+    at TCP.onread (net.js:554:20)
+    --------------------
+    at Pool.query (E:\wamp\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\wamp\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\wamp\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\wamp\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\wamp\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\wamp\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at E:\wamp\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\wamp\sumi-server\node_modules\co\index.js:50:10)
+    at RDSClient.createPromise [as query] (E:\wamp\sumi-server\node_modules\co\index.js:30:15)
+    at RDSClient.proto.insert (E:\wamp\sumi-server\node_modules\ali-rds\lib\operator.js:141:21)
+    at proto.insert.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at E:\wamp\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\wamp\sumi-server\node_modules\co\index.js:50:10)
+    sql: INSERT INTO `data_chat`(`chat_fd`, `chat_room`, `chat_name`, `chat_level`, `chat_nickname`, `chat_uid`, `chat_logo`, `chat_job_id`, `chat_job_level`, `chat_job_name`, `chat_content`, `chat_show`, `chat_create_time`) VALUES('utEqnquQ65-2Mb9QAAAC', '23', '13928491004', '7', '阿斯达是对的', '1', 'http://wx.qlogo.cn/mmopen/lpHDr05YrIS0HPDEbQXPwpL8S0O4hwSPsfQPiajCxYjicmKgJzjPhSXt57BbIVwEsqkhCsmIEv3GibCqs9o6iatOGVf2cRt80Tww/0', '2', '11', '韭菜', '111141241', 0, '2017-06-21 15:25:02')
+code: 'ER_NO_DEFAULT_FOR_FIELD'
+errno: 1364
+sqlState: 'HY000'
+index: 0
+name: 'ER_NO_DEFAULT_FOR_FIELDError'
+pid: 9324
+hostname: O1SCA91JEKG1MM4
+
+2017-06-21 15:26:09,014 ERROR 8816 nodejs.ER_NO_DEFAULT_FOR_FIELDError: [egg-socket.io] packet middleware execute error: [egg-socket.io] controller execute error: ER_NO_DEFAULT_FOR_FIELD: Field 'chat_reply_fd' doesn't have a default value
+    at Query.Sequence._packetToError (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\wamp\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:176:18)
+    at Socket.Readable.push (_stream_readable.js:134:10)
+    at TCP.onread (net.js:554:20)
+    --------------------
+    at Pool.query (E:\wamp\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\wamp\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\wamp\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\wamp\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\wamp\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\wamp\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at E:\wamp\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\wamp\sumi-server\node_modules\co\index.js:50:10)
+    at RDSClient.createPromise [as query] (E:\wamp\sumi-server\node_modules\co\index.js:30:15)
+    at RDSClient.proto.insert (E:\wamp\sumi-server\node_modules\ali-rds\lib\operator.js:141:21)
+    at proto.insert.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at E:\wamp\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\wamp\sumi-server\node_modules\co\index.js:50:10)
+    sql: INSERT INTO `data_chat`(`chat_fd`, `chat_room`, `chat_name`, `chat_level`, `chat_nickname`, `chat_uid`, `chat_logo`, `chat_job_id`, `chat_job_level`, `chat_job_name`, `chat_content`, `chat_show`, `chat_create_time`) VALUES('O7Ck5hRM1sSvzvhxAAAC', '23', '13928491004', '7', '阿斯达是对的', '1', 'http://wx.qlogo.cn/mmopen/lpHDr05YrIS0HPDEbQXPwpL8S0O4hwSPsfQPiajCxYjicmKgJzjPhSXt57BbIVwEsqkhCsmIEv3GibCqs9o6iatOGVf2cRt80Tww/0', '2', '11', '韭菜', '32423', 0, '2017-06-21 15:26:08')
+code: 'ER_NO_DEFAULT_FOR_FIELD'
+errno: 1364
+sqlState: 'HY000'
+index: 0
+name: 'ER_NO_DEFAULT_FOR_FIELDError'
+pid: 8816
+hostname: O1SCA91JEKG1MM4
+
+2017-06-21 15:27:09,172 ERROR 8816 nodejs.ER_NO_DEFAULT_FOR_FIELDError: [egg-socket.io] packet middleware execute error: [egg-socket.io] controller execute error: ER_NO_DEFAULT_FOR_FIELD: Field 'chat_reply_fd' doesn't have a default value
+    at Query.Sequence._packetToError (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\wamp\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:176:18)
+    at Socket.Readable.push (_stream_readable.js:134:10)
+    at TCP.onread (net.js:554:20)
+    --------------------
+    at Pool.query (E:\wamp\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\wamp\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\wamp\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\wamp\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\wamp\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\wamp\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at E:\wamp\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\wamp\sumi-server\node_modules\co\index.js:50:10)
+    at RDSClient.createPromise [as query] (E:\wamp\sumi-server\node_modules\co\index.js:30:15)
+    at RDSClient.proto.insert (E:\wamp\sumi-server\node_modules\ali-rds\lib\operator.js:141:21)
+    at proto.insert.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at E:\wamp\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\wamp\sumi-server\node_modules\co\index.js:50:10)
+    sql: INSERT INTO `data_chat`(`chat_fd`, `chat_room`, `chat_name`, `chat_level`, `chat_nickname`, `chat_uid`, `chat_logo`, `chat_job_id`, `chat_job_level`, `chat_job_name`, `chat_content`, `chat_show`, `chat_create_time`) VALUES('bCjZQILlNqua7arsAAAD', '23', '13928491004', '7', '阿斯达是对的', '1', 'http://wx.qlogo.cn/mmopen/lpHDr05YrIS0HPDEbQXPwpL8S0O4hwSPsfQPiajCxYjicmKgJzjPhSXt57BbIVwEsqkhCsmIEv3GibCqs9o6iatOGVf2cRt80Tww/0', '2', '11', '韭菜', '12312', 0, '2017-06-21 15:27:09')
+code: 'ER_NO_DEFAULT_FOR_FIELD'
+errno: 1364
+sqlState: 'HY000'
+index: 0
+name: 'ER_NO_DEFAULT_FOR_FIELDError'
+pid: 8816
+hostname: O1SCA91JEKG1MM4
+
+2017-06-21 15:28:46,452 ERROR 8820 nodejs.ER_NO_DEFAULT_FOR_FIELDError: [egg-socket.io] packet middleware execute error: [egg-socket.io] controller execute error: ER_NO_DEFAULT_FOR_FIELD: Field 'chat_reply_fd' doesn't have a default value
+    at Query.Sequence._packetToError (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\wamp\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:176:18)
+    at Socket.Readable.push (_stream_readable.js:134:10)
+    at TCP.onread (net.js:554:20)
+    --------------------
+    at Pool.query (E:\wamp\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\wamp\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\wamp\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\wamp\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\wamp\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\wamp\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at E:\wamp\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\wamp\sumi-server\node_modules\co\index.js:50:10)
+    at RDSClient.createPromise [as query] (E:\wamp\sumi-server\node_modules\co\index.js:30:15)
+    at RDSClient.proto.insert (E:\wamp\sumi-server\node_modules\ali-rds\lib\operator.js:141:21)
+    at proto.insert.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at E:\wamp\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\wamp\sumi-server\node_modules\co\index.js:50:10)
+    sql: INSERT INTO `data_chat`(`chat_fd`, `chat_room`, `chat_name`, `chat_level`, `chat_nickname`, `chat_uid`, `chat_logo`, `chat_job_id`, `chat_job_level`, `chat_job_name`, `chat_content`, `chat_show`, `chat_create_time`) VALUES('PIobCT45ngj2RwBNAAAC', '23', '13928491004', '7', '阿斯达是对的', '1', 'http://wx.qlogo.cn/mmopen/lpHDr05YrIS0HPDEbQXPwpL8S0O4hwSPsfQPiajCxYjicmKgJzjPhSXt57BbIVwEsqkhCsmIEv3GibCqs9o6iatOGVf2cRt80Tww/0', '2', '11', '韭菜', 'aaaa', 0, '2017-06-21 15:28:46')
+code: 'ER_NO_DEFAULT_FOR_FIELD'
+errno: 1364
+sqlState: 'HY000'
+index: 0
+name: 'ER_NO_DEFAULT_FOR_FIELDError'
+pid: 8820
+hostname: O1SCA91JEKG1MM4
+
+2017-06-21 15:29:47,725 ERROR 8820 nodejs.ER_NO_DEFAULT_FOR_FIELDError: [egg-socket.io] packet middleware execute error: [egg-socket.io] controller execute error: ER_NO_DEFAULT_FOR_FIELD: Field 'chat_reply_fd' doesn't have a default value
+    at Query.Sequence._packetToError (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\wamp\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:176:18)
+    at Socket.Readable.push (_stream_readable.js:134:10)
+    at TCP.onread (net.js:554:20)
+    --------------------
+    at Pool.query (E:\wamp\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\wamp\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\wamp\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\wamp\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\wamp\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\wamp\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at E:\wamp\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\wamp\sumi-server\node_modules\co\index.js:50:10)
+    at RDSClient.createPromise [as query] (E:\wamp\sumi-server\node_modules\co\index.js:30:15)
+    at RDSClient.proto.insert (E:\wamp\sumi-server\node_modules\ali-rds\lib\operator.js:141:21)
+    at proto.insert.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at E:\wamp\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\wamp\sumi-server\node_modules\co\index.js:50:10)
+    sql: INSERT INTO `data_chat`(`chat_fd`, `chat_room`, `chat_name`, `chat_level`, `chat_nickname`, `chat_uid`, `chat_logo`, `chat_job_id`, `chat_job_level`, `chat_job_name`, `chat_content`, `chat_show`, `chat_create_time`) VALUES('fgf9K3SUX9MJkDE-AAAD', '23', '13928491004', '7', '阿斯达是对的', '1', 'http://wx.qlogo.cn/mmopen/lpHDr05YrIS0HPDEbQXPwpL8S0O4hwSPsfQPiajCxYjicmKgJzjPhSXt57BbIVwEsqkhCsmIEv3GibCqs9o6iatOGVf2cRt80Tww/0', '2', '11', '韭菜', 'aaaaasdf', 0, '2017-06-21 15:29:47')
+code: 'ER_NO_DEFAULT_FOR_FIELD'
+errno: 1364
+sqlState: 'HY000'
+index: 0
+name: 'ER_NO_DEFAULT_FOR_FIELDError'
+pid: 8820
+hostname: O1SCA91JEKG1MM4
+
+2017-06-21 15:30:22,696 ERROR 7108 nodejs.ReferenceError: [egg-socket.io] packet middleware execute error: [egg-socket.io] controller execute error: id is not defined
+    at Object.send (E:\wamp\sumi-server\app\io\controller\send.js:30:24)
+    at send.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+
+pid: 7108
+hostname: O1SCA91JEKG1MM4
+
+2017-06-21 15:32:39,774 ERROR 9640 nodejs.ER_NO_DEFAULT_FOR_FIELDError: [egg-socket.io] packet middleware execute error: [egg-socket.io] controller execute error: ER_NO_DEFAULT_FOR_FIELD: Field 'chat_reply_fd' doesn't have a default value
+    at Query.Sequence._packetToError (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\wamp\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:176:18)
+    at Socket.Readable.push (_stream_readable.js:134:10)
+    at TCP.onread (net.js:554:20)
+    --------------------
+    at Pool.query (E:\wamp\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\wamp\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\wamp\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\wamp\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\wamp\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\wamp\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at E:\wamp\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\wamp\sumi-server\node_modules\co\index.js:50:10)
+    at RDSClient.createPromise [as query] (E:\wamp\sumi-server\node_modules\co\index.js:30:15)
+    at RDSClient.proto.insert (E:\wamp\sumi-server\node_modules\ali-rds\lib\operator.js:141:21)
+    at proto.insert.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at E:\wamp\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\wamp\sumi-server\node_modules\co\index.js:50:10)
+    sql: INSERT INTO `data_chat`(`chat_fd`, `chat_room`, `chat_name`, `chat_level`, `chat_nickname`, `chat_uid`, `chat_logo`, `chat_job_id`, `chat_job_level`, `chat_job_name`, `chat_content`, `chat_show`, `chat_create_time`) VALUES('jXsPC2uREfl-ll1sAAAC', '23', '13928491004', '7', '阿斯达是对的', '1', 'http://wx.qlogo.cn/mmopen/lpHDr05YrIS0HPDEbQXPwpL8S0O4hwSPsfQPiajCxYjicmKgJzjPhSXt57BbIVwEsqkhCsmIEv3GibCqs9o6iatOGVf2cRt80Tww/0', '2', '11', '韭菜', 'asdf', 0, '2017-06-21 15:32:39')
+code: 'ER_NO_DEFAULT_FOR_FIELD'
+errno: 1364
+sqlState: 'HY000'
+index: 0
+name: 'ER_NO_DEFAULT_FOR_FIELDError'
+pid: 9640
+hostname: O1SCA91JEKG1MM4
+
+2017-06-21 15:37:58,583 ERROR 5628 nodejs.Error: [egg-socket.io] packet middleware execute error: [egg-socket.io] controller execute error: Can't not auto detect update condition, please set options.where, or make sure obj.id exists
+    at RDSClient.proto.update (E:\wamp\sumi-server\node_modules\ali-rds\lib\operator.js:152:13)
+    at proto.update.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at E:\wamp\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\wamp\sumi-server\node_modules\co\index.js:50:10)
+    at RDSClient.createPromise [as update] (E:\wamp\sumi-server\node_modules\co\index.js:30:15)
+    at ChatService.replyChat (E:\wamp\sumi-server\app\service\chat.js:101:30)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 5628
+hostname: O1SCA91JEKG1MM4
+
+2017-06-21 15:39:19,500 ERROR 8068 nodejs.ER_BAD_FIELD_ERRORError: [egg-socket.io] packet middleware execute error: [egg-socket.io] controller execute error: ER_BAD_FIELD_ERROR: Unknown column 'id' in 'where clause'
+    at Query.Sequence._packetToError (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\wamp\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:176:18)
+    at Socket.Readable.push (_stream_readable.js:134:10)
+    at TCP.onread (net.js:554:20)
+    --------------------
+    at Pool.query (E:\wamp\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\wamp\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\wamp\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\wamp\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\wamp\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\wamp\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at E:\wamp\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\wamp\sumi-server\node_modules\co\index.js:50:10)
+    at RDSClient.createPromise [as query] (E:\wamp\sumi-server\node_modules\co\index.js:30:15)
+    at RDSClient.proto.update (E:\wamp\sumi-server\node_modules\ali-rds\lib\operator.js:174:21)
+    at proto.update.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at E:\wamp\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\wamp\sumi-server\node_modules\co\index.js:50:10)
+    sql: UPDATE `data_chat` SET `chat_show` = 1 WHERE `id` = '912'
+code: 'ER_BAD_FIELD_ERROR'
+errno: 1054
+sqlState: '42S22'
+index: 0
+name: 'ER_BAD_FIELD_ERRORError'
+pid: 8068
+hostname: O1SCA91JEKG1MM4
+
+2017-06-21 15:40:16,205 ERROR 9936 nodejs.ER_BAD_FIELD_ERRORError: [egg-socket.io] packet middleware execute error: [egg-socket.io] controller execute error: ER_BAD_FIELD_ERROR: Unknown column 'id' in 'where clause'
+    at Query.Sequence._packetToError (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Parser.js:75:12)
+    at Protocol.write (E:\wamp\sumi-server\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\wamp\sumi-server\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:176:18)
+    at Socket.Readable.push (_stream_readable.js:134:10)
+    at TCP.onread (net.js:554:20)
+    --------------------
+    at Pool.query (E:\wamp\sumi-server\node_modules\mysql\lib\Pool.js:199:23)
+    at E:\wamp\sumi-server\node_modules\pify\index.js:29:7
+    at Pool.<anonymous> (E:\wamp\sumi-server\node_modules\pify\index.js:12:10)
+    at Pool.ret [as query] (E:\wamp\sumi-server\node_modules\pify\index.js:56:34)
+    at RDSClient.proto._query (E:\wamp\sumi-server\node_modules\ali-rds\lib\client.js:34:20)
+    at RDSClient.proto.query (E:\wamp\sumi-server\node_modules\ali-rds\lib\operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at E:\wamp\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\wamp\sumi-server\node_modules\co\index.js:50:10)
+    at RDSClient.createPromise [as query] (E:\wamp\sumi-server\node_modules\co\index.js:30:15)
+    at RDSClient.proto.update (E:\wamp\sumi-server\node_modules\ali-rds\lib\operator.js:174:21)
+    at proto.update.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at E:\wamp\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\wamp\sumi-server\node_modules\co\index.js:50:10)
+    sql: UPDATE `data_chat` SET `chat_show` = 1 WHERE `id` = '914'
+code: 'ER_BAD_FIELD_ERROR'
+errno: 1054
+sqlState: '42S22'
+index: 0
+name: 'ER_BAD_FIELD_ERRORError'
+pid: 9936
+hostname: O1SCA91JEKG1MM4
+
+2017-06-21 15:41:56,890 ERROR 8136 nodejs.Error: [egg-socket.io] packet middleware execute error: [egg-socket.io] controller execute error: Can't not auto detect update condition, please set options.where, or make sure obj.id exists
+    at RDSClient.proto.update (E:\wamp\sumi-server\node_modules\ali-rds\lib\operator.js:152:13)
+    at proto.update.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at E:\wamp\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\wamp\sumi-server\node_modules\co\index.js:50:10)
+    at RDSClient.createPromise [as update] (E:\wamp\sumi-server\node_modules\co\index.js:30:15)
+    at ChatService.replyChat (E:\wamp\sumi-server\app\service\chat.js:101:46)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 8136
+hostname: O1SCA91JEKG1MM4
+
+2017-06-21 15:43:50,326 ERROR 7444 nodejs.Error: [egg-socket.io] packet middleware execute error: [egg-socket.io] controller execute error: Can't not auto detect update condition, please set options.where, or make sure obj.id exists
+    at RDSClient.proto.update (E:\wamp\sumi-server\node_modules\ali-rds\lib\operator.js:152:13)
+    at proto.update.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at E:\wamp\sumi-server\node_modules\co\index.js:54:5
+    at RDSClient.co (E:\wamp\sumi-server\node_modules\co\index.js:50:10)
+    at RDSClient.createPromise [as update] (E:\wamp\sumi-server\node_modules\co\index.js:30:15)
+    at ChatService.replyChat (E:\wamp\sumi-server\app\service\chat.js:102:46)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 7444
+hostname: O1SCA91JEKG1MM4
+
+2017-06-21 16:28:25,760 ERROR 9280 nodejs.Error: [egg-socket.io] packet middleware execute error: [egg-socket.io] controller execute error: Uncaught, unspecified "error" event. (网络异常,请稍后再试)
+    at Socket.emit (events.js:166:17)
+    at Socket.emit (E:\wamp\sumi-server\node_modules\socket.io\lib\socket.js:141:10)
+    at Object.join (E:\wamp\sumi-server\app\io\controller\join.js:39:19)
+    at join.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+context: '网络异常,请稍后再试'
+pid: 9280
+hostname: O1SCA91JEKG1MM4
+
+2017-06-21 16:28:25,773 ERROR 9280 nodejs.Error: [egg-socket.io] packet middleware execute error: [egg-socket.io] controller execute error: Uncaught, unspecified "error" event. (网络异常,请稍后再试)
+    at Socket.emit (events.js:166:17)
+    at Socket.emit (E:\wamp\sumi-server\node_modules\socket.io\lib\socket.js:141:10)
+    at Object.join (E:\wamp\sumi-server\app\io\controller\join.js:39:19)
+    at join.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+context: '网络异常,请稍后再试'
+pid: 9280
+hostname: O1SCA91JEKG1MM4
+
+2017-06-21 16:28:26,005 ERROR 9280 nodejs.Error: [egg-socket.io] packet middleware execute error: [egg-socket.io] controller execute error: Uncaught, unspecified "error" event. (网络异常,请稍后再试)
+    at Socket.emit (events.js:166:17)
+    at Socket.emit (E:\wamp\sumi-server\node_modules\socket.io\lib\socket.js:141:10)
+    at Object.join (E:\wamp\sumi-server\app\io\controller\join.js:39:19)
+    at join.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+context: '网络异常,请稍后再试'
+pid: 9280
+hostname: O1SCA91JEKG1MM4
+
+2017-06-21 16:28:36,921 ERROR 9280 nodejs.Error: [egg-socket.io] packet middleware execute error: [egg-socket.io] controller execute error: Uncaught, unspecified "error" event. (网络异常,请稍后再试)
+    at Socket.emit (events.js:166:17)
+    at Socket.emit (E:\wamp\sumi-server\node_modules\socket.io\lib\socket.js:141:10)
+    at Object.join (E:\wamp\sumi-server\app\io\controller\join.js:39:19)
+    at join.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+context: '网络异常,请稍后再试'
+pid: 9280
+hostname: O1SCA91JEKG1MM4
+

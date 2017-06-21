@@ -7,8 +7,12 @@
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
   <script>
-    var socket = io.connect('http://localhost:7001');
-    //console.log(socket);
+    var socket = io.connect('http://192.168.16.16:7001');
+    socket.on('res', data => {
+      console.log('Server:', data);
+    });
+
+    // 本身自带事件 连接上时发送用户信息
     socket.on('connect', () => {
       console.log('client is on connect..');
       let data = {
@@ -20,53 +24,54 @@
       socket.emit('join', data);
     });
 
+    // 获取返回的用户信息 带fd
     socket.on('selfInfo', data => {
-      console.log('return your info:', data);
+      console.log('get your info:', data);
     });
 
-    socket.on('res', data => {
-      console.log('Server:', data);
-    });
-
+    // 直播区显示内容
     socket.on('chat1', data => {
-      console.log('new chat(new reply) to part1', data);
+      console.log('new chat(reply) to part1', data);
     });
 
+    // 互动区显示内容
     socket.on('chat2', data => {
-      console.log('new chat(new reply) to part2:', data);
+      console.log('new chat(reply) to part2:', data);
     });
 
+    // 发完信息, 服务器回复
     socket.on('self', data => {
-      console.log('only for u chat', data);
+      console.log('only for u chat to part1', data);
+      $("#replyid").val(data.chat_id);
     });
 
-
-
+    // 进入情况
     socket.on('join', data => {
       console.log('some one join', data);
     });
 
+    // 出去情况
     socket.on('leave', data => {
       console.log('some one leave', data);
     });
 
+    // 在线人列表
     socket.on('online', data => {
       console.log('get the online list', data);
     });
 
+    // 历史记录
     socket.on('history', data => {
       console.log('get the history list', data);
     });
 
+    // 发礼物 待定
     socket.on('gift', data => {
       console.log('some one send gift', data);
     });
 
-    socket.on('broadcast', data => {
-      console.log('send to all ', data);
-    });
-
-    socket.on('error', data => {
+    // 错误警告, error不可用!
+    socket.on('warning', data => {
       console.log('got error:', data);
     });
     /*
@@ -74,7 +79,7 @@
       console.log('on send', data);
     });
     */
-
+    // 本身自带事件
     socket.on('disconnect', () => {
       console.log('on disconnect');
     });
@@ -82,15 +87,40 @@
     $(function () {
       $("#go").click(function () {
         var val = $("#content").val();
-        console.log('send ', val);
-        socket.emit('send', val);
+        if (val) {
+          console.log('send ', val);
+          socket.emit('send', val);
+        }
 
       });
 
       $("#gift").click(function () {
         console.log('send a gift ');
         socket.emit('gift', 'i like you');
+      });
 
+      $("#reply").click(function () {
+        var val = $("#content").val();
+        var replyid = $("#replyid").val();
+        if (val && replyid) {
+          console.log('reply id ', replyid);
+          socket.emit('reply', val, replyid);
+        }
+      });
+
+      $("#pass").click(function () {
+        console.log('pass a chat ');
+        var replyid = $("#replyid").val();
+        if (replyid) {
+          socket.emit('pass', replyid);
+        }
+      });
+
+      $("#sendAll").click(function () {
+        var val = $("#content").val();
+        if (val) {
+          socket.emit('sendAll', val);
+        }
       });
 
     })
@@ -100,10 +130,18 @@
 <body>
 
   <input id="content" name="content" type="input" />
+  <input id="replyid" name="replyid" type="input" />
 
   <button id="go" />发送信息</button>
 
   <button id="gift" />送礼物</button>
+
+  <button id="reply" />回复</button>
+
+  <button id="pass" />通过</button>
+
+  <button id="sendAll" />发房间通告</button>
+
 </body>
 
 </html>

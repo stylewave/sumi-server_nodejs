@@ -77,11 +77,13 @@ module.exports = app => {
   app.post('/api/user/test', 'user.test');
 
   /** socket请求**/
-  // app.io.route('res', app.io.controllers.res);
   app.io.route('join', app.io.controllers.join);
   app.io.route('send', app.io.controllers.send);
   app.io.route('gift', app.io.controllers.gift);
-  // app.io.route('disconnect', app.io.controllers.leave);
+
+  app.io.route('reply', app.io.controllers.reply); // admin reply
+  app.io.route('pass', app.io.controllers.pass); // admin pass
+  app.io.route('sendAll', app.io.controllers.sendAll); // admin broadcast to this room
 
   // app.get('/home','home.index');
 };

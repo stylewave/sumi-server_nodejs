@@ -11,5 +11,6 @@ module.exports = () => {
     yield this.service.chat.removeUser(fd); // 删除在线用户
     if (userInfo) this.socket.leave(userInfo.roomid);
     console.log('some on out:', userInfo.user_nickname);
+    this.app.io.sockets.in(userInfo.roomid).emit('leave', userInfo.user_nickname);
   };
 };

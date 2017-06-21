@@ -1656,3 +1656,336 @@
 2017-06-21 12:18:49,267 INFO 9980 [egg-development-proxyworker] debugger attached
 2017-06-21 12:18:49,268 INFO 9980 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
 2017-06-21 12:18:49,475 WARN 9980 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 12:26:53,321 INFO 4292 [egg-development-proxyworker] debugger attached
+2017-06-21 12:26:53,323 INFO 4292 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 12:26:52,451 INFO 4292 [egg:logger] init all loggers with options: {"dir":"E:\\wamp\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","outputJSON":false,"buffer":true,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"type":"agent"}
+2017-06-21 12:26:52,598 INFO 4292 [egg-watcher:agent] watcher start success
+2017-06-21 14:18:46,287 WARN 4292 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\send.js change
+2017-06-21 14:18:47,098 INFO 4292 [egg-development-proxyworker] debugger attached
+2017-06-21 14:18:47,098 INFO 4292 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 14:18:47,317 WARN 4292 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 14:19:08,672 WARN 4292 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\send.js change
+2017-06-21 14:19:09,435 INFO 4292 [egg-development-proxyworker] debugger attached
+2017-06-21 14:19:09,436 INFO 4292 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 14:19:09,652 WARN 4292 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 14:25:14,613 WARN 4292 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\send.js change
+2017-06-21 14:25:15,421 INFO 4292 [egg-development-proxyworker] debugger attached
+2017-06-21 14:25:15,421 INFO 4292 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 14:25:15,629 WARN 4292 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 14:25:17,654 WARN 4292 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\send.js change
+2017-06-21 14:25:18,433 INFO 4292 [egg-development-proxyworker] debugger attached
+2017-06-21 14:25:18,434 INFO 4292 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 14:25:18,645 WARN 4292 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 14:26:26,579 WARN 4292 [agent:development] reload worker because E:\wamp\sumi-server\app\router.js change
+2017-06-21 14:26:27,336 INFO 4292 [egg-development-proxyworker] debugger attached
+2017-06-21 14:26:27,336 INFO 4292 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 14:26:27,545 WARN 4292 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 14:32:22,465 WARN 4292 [agent:development] reload worker because E:\wamp\sumi-server\app\router.js change
+2017-06-21 14:32:23,308 INFO 4292 [egg-development-proxyworker] debugger attached
+2017-06-21 14:32:23,316 INFO 4292 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 14:32:23,527 WARN 4292 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 14:34:12,980 WARN 4292 [agent:development] reload worker because E:\wamp\sumi-server\app\router.js change
+2017-06-21 14:34:13,760 INFO 4292 [egg-development-proxyworker] debugger attached
+2017-06-21 14:34:13,765 INFO 4292 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 14:35:09,840 WARN 4292 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\reply.js change
+2017-06-21 14:35:10,648 INFO 4292 [egg-development-proxyworker] debugger attached
+2017-06-21 14:35:10,648 INFO 4292 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 14:36:01,040 WARN 4292 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\reply.js change
+2017-06-21 14:36:01,806 INFO 4292 [egg-development-proxyworker] debugger attached
+2017-06-21 14:36:01,809 INFO 4292 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 14:40:02,901 WARN 4292 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\reply.js change
+2017-06-21 14:40:03,657 INFO 4292 [egg-development-proxyworker] debugger attached
+2017-06-21 14:40:03,657 INFO 4292 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 14:41:37,262 INFO 10076 [egg-development-proxyworker] debugger attached
+2017-06-21 14:41:37,263 INFO 10076 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 14:41:36,395 INFO 10076 [egg:logger] init all loggers with options: {"dir":"E:\\wamp\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","outputJSON":false,"buffer":true,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"type":"agent"}
+2017-06-21 14:41:36,539 INFO 10076 [egg-watcher:agent] watcher start success
+2017-06-21 14:43:30,697 WARN 10076 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\send.js change
+2017-06-21 14:43:31,461 INFO 10076 [egg-development-proxyworker] debugger attached
+2017-06-21 14:43:31,462 INFO 10076 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 14:43:32,049 WARN 10076 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\send.js change
+2017-06-21 14:43:31,673 WARN 10076 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 14:43:32,891 INFO 10076 [egg-development-proxyworker] debugger attached
+2017-06-21 14:43:32,891 INFO 10076 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 14:43:33,139 WARN 10076 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 14:46:04,098 WARN 10076 [agent:development] reload worker because E:\wamp\sumi-server\app\router.js change
+2017-06-21 14:46:04,912 INFO 10076 [egg-development-proxyworker] debugger attached
+2017-06-21 14:46:04,912 INFO 10076 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 14:46:05,152 WARN 10076 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 14:51:03,779 WARN 10076 [agent:development] reload worker because E:\wamp\sumi-server\app\service\chat.js change
+2017-06-21 14:51:04,584 INFO 10076 [egg-development-proxyworker] debugger attached
+2017-06-21 14:51:04,585 INFO 10076 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 14:51:04,812 WARN 10076 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 14:51:12,604 WARN 10076 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\reply.js change
+2017-06-21 14:51:13,453 WARN 10076 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 14:51:40,134 WARN 10076 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\reply.js change
+2017-06-21 14:55:24,374 WARN 10076 [agent:development] reload worker because E:\wamp\sumi-server\app\service\chat.js change
+2017-06-21 15:00:33,223 WARN 10076 [agent:development] reload worker because E:\wamp\sumi-server\app\service\chat.js change
+2017-06-21 15:00:59,398 WARN 10076 [agent:development] reload worker because E:\wamp\sumi-server\app\service\chat.js change
+2017-06-21 15:02:14,395 WARN 10076 [agent:development] reload worker because E:\wamp\sumi-server\app\service\chat.js change
+2017-06-21 15:04:02,976 WARN 10076 [agent:development] reload worker because E:\wamp\sumi-server\app\service\chat.js change
+2017-06-21 15:08:51,910 WARN 10076 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\reply.js change
+2017-06-21 15:09:14,748 WARN 10076 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\reply.js change
+2017-06-21 15:10:26,851 WARN 10076 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\reply.js change
+2017-06-21 15:12:06,162 WARN 10076 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\reply.js change
+2017-06-21 15:12:28,692 WARN 10076 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\reply.js change
+2017-06-21 15:12:29,479 INFO 10076 [egg-development-proxyworker] debugger attached
+2017-06-21 15:12:29,480 INFO 10076 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:12:33,216 WARN 10076 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\reply.js change
+2017-06-21 15:12:33,995 INFO 10076 [egg-development-proxyworker] debugger attached
+2017-06-21 15:12:33,996 INFO 10076 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:12:34,206 WARN 10076 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 15:12:41,393 WARN 10076 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\reply.js change
+2017-06-21 15:12:42,160 INFO 10076 [egg-development-proxyworker] debugger attached
+2017-06-21 15:12:42,160 INFO 10076 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:12:42,370 WARN 10076 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 15:13:00,032 WARN 10076 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\reply.js change
+2017-06-21 15:13:00,760 INFO 10076 [egg-development-proxyworker] debugger attached
+2017-06-21 15:13:00,761 INFO 10076 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:13:00,980 WARN 10076 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 15:13:30,285 WARN 10076 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\reply.js change
+2017-06-21 15:13:31,028 INFO 10076 [egg-development-proxyworker] debugger attached
+2017-06-21 15:13:31,029 INFO 10076 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:13:31,237 WARN 10076 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 15:14:54,083 WARN 10076 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\reply.js change
+2017-06-21 15:14:54,859 INFO 10076 [egg-development-proxyworker] debugger attached
+2017-06-21 15:14:54,860 INFO 10076 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:14:55,075 WARN 10076 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 15:16:23,143 WARN 10076 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\reply.js change
+2017-06-21 15:16:23,877 INFO 10076 [egg-development-proxyworker] debugger attached
+2017-06-21 15:16:23,877 INFO 10076 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:16:24,085 WARN 10076 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 15:17:58,438 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 15:17:58,439 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:17:57,534 INFO 5584 [egg:logger] init all loggers with options: {"dir":"E:\\wamp\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","outputJSON":false,"buffer":true,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"type":"agent"}
+2017-06-21 15:17:57,681 INFO 5584 [egg-watcher:agent] watcher start success
+2017-06-21 15:18:27,972 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\send.js change
+2017-06-21 15:18:28,740 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 15:18:28,740 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:18:28,967 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 15:18:33,647 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\send.js change
+2017-06-21 15:18:34,381 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 15:18:34,381 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:18:34,597 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 15:26:01,795 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\send.js change
+2017-06-21 15:26:02,609 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 15:26:02,609 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:26:02,825 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 15:28:24,657 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\join.js change
+2017-06-21 15:28:25,440 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 15:28:25,440 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:28:25,669 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 15:28:35,523 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\join.js change
+2017-06-21 15:28:36,312 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 15:28:36,313 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:28:36,520 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 15:30:15,736 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\send.js change
+2017-06-21 15:30:16,559 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 15:30:16,567 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:30:16,805 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 15:31:29,205 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\send.js change
+2017-06-21 15:31:29,962 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 15:31:29,963 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:31:30,173 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 15:31:36,600 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\send.js change
+2017-06-21 15:31:37,565 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 15:31:37,355 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 15:31:37,360 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:31:53,557 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\send.js change
+2017-06-21 15:31:54,328 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 15:31:54,328 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:31:54,543 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 15:32:25,366 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\send.js change
+2017-06-21 15:32:26,141 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 15:32:26,141 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:32:26,351 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 15:34:52,309 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\send.js change
+2017-06-21 15:34:53,128 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 15:34:53,128 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:34:53,341 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 15:37:43,004 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\send.js change
+2017-06-21 15:37:43,834 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 15:37:43,836 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:37:44,075 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 15:39:02,886 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\service\chat.js change
+2017-06-21 15:39:03,677 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 15:39:03,677 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:39:03,886 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 15:39:57,075 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\service\chat.js change
+2017-06-21 15:39:57,858 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 15:39:57,859 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:39:58,071 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 15:40:55,273 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\send.js change
+2017-06-21 15:40:56,053 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 15:40:56,054 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:40:56,273 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 15:41:19,928 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\service\chat.js change
+2017-06-21 15:41:20,661 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 15:41:20,662 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:41:20,870 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 15:43:35,677 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\service\chat.js change
+2017-06-21 15:43:36,459 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 15:43:36,460 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:43:36,687 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 15:49:43,276 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\service\chat.js change
+2017-06-21 15:49:43,996 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 15:49:43,996 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:49:44,209 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 15:52:24,563 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\reply.js change
+2017-06-21 15:52:25,316 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 15:52:25,316 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:52:25,532 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 15:53:06,255 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\reply.js change
+2017-06-21 15:53:07,050 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 15:53:07,054 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:53:07,284 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 15:54:27,934 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\router.js change
+2017-06-21 15:54:28,899 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 15:54:28,708 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 15:54:28,708 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:54:49,351 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\reply.1.js change
+2017-06-21 15:54:55,208 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\pass.js change
+2017-06-21 15:54:56,003 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 15:54:56,004 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:55:04,445 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\pass.js change
+2017-06-21 15:55:05,213 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 15:55:05,213 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:55:05,427 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 15:59:32,101 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\pass.js change
+2017-06-21 15:59:32,857 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 15:59:32,857 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:59:33,064 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 15:59:58,462 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\pass.js change
+2017-06-21 15:59:59,237 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 15:59:59,238 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 15:59:59,448 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 16:01:03,393 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\service\chat.js change
+2017-06-21 16:01:04,139 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:01:04,139 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:01:04,347 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 16:01:41,882 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\service\chat.js change
+2017-06-21 16:01:42,649 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:01:42,649 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:01:42,860 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 16:02:10,333 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\pass.js change
+2017-06-21 16:02:11,342 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 16:02:11,126 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:02:11,126 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:03:34,427 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\router.js change
+2017-06-21 16:03:35,171 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:03:35,171 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:03:35,392 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 16:06:09,067 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\router.js change
+2017-06-21 16:06:09,860 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:06:09,866 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:06:10,079 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 16:06:33,343 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\send.1.js change
+2017-06-21 16:06:45,606 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\broadcast.js change
+2017-06-21 16:06:46,397 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:06:46,397 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:06:54,952 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\broadcast.js change
+2017-06-21 16:06:55,707 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:06:55,708 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:06:55,924 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 16:07:59,197 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\broadcast.js change
+2017-06-21 16:07:59,971 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:07:59,971 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:08:00,187 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 16:10:08,894 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\broadcast.js change
+2017-06-21 16:10:09,652 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:10:09,653 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:10:09,863 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 16:10:43,762 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\broadcast.js change
+2017-06-21 16:10:44,537 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:10:44,537 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:10:44,759 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 16:14:59,504 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\service\chat.js change
+2017-06-21 16:15:00,282 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:15:00,282 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:15:00,494 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 16:15:30,759 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\sendall.js change
+2017-06-21 16:15:31,521 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:15:31,521 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:15:31,718 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 16:16:06,717 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\sendAll.js change
+2017-06-21 16:16:07,467 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:16:07,467 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:16:45,157 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\router.js change
+2017-06-21 16:16:45,940 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:16:45,940 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:17:13,749 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\sendAll.js change
+2017-06-21 16:17:14,512 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:17:14,513 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:17:14,721 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 16:17:16,854 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\sendAll.js change
+2017-06-21 16:17:17,643 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:17:17,644 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:17:17,855 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 16:17:51,168 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\router.js change
+2017-06-21 16:17:51,921 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:17:51,921 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:17:52,129 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 16:18:35,099 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\sendAll.js change
+2017-06-21 16:18:35,861 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:18:35,861 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:18:36,069 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 16:20:01,210 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\join.js change
+2017-06-21 16:20:02,052 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:20:02,053 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:20:02,280 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 16:20:13,880 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\join.js change
+2017-06-21 16:20:14,724 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:20:14,728 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:20:14,964 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 16:27:25,439 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\join.js change
+2017-06-21 16:27:26,179 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:27:26,179 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:27:26,390 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 16:28:23,492 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\join.js change
+2017-06-21 16:28:24,315 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:28:24,319 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:28:24,591 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 16:29:05,038 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\join.js change
+2017-06-21 16:29:05,830 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:29:05,830 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:29:06,043 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 16:29:24,026 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\join.js change
+2017-06-21 16:29:24,805 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:29:24,805 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:29:25,013 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 16:31:20,389 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\send.js change
+2017-06-21 16:31:21,194 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:31:21,198 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:31:21,416 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 16:31:37,865 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\reply.js change
+2017-06-21 16:31:38,658 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:31:38,658 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:31:38,878 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 16:31:49,539 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\pass.js change
+2017-06-21 16:31:50,313 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:31:50,313 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:31:50,530 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 16:31:54,267 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\join.js change
+2017-06-21 16:31:55,067 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:31:55,068 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:31:55,282 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 16:32:00,838 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\sendAll.js change
+2017-06-21 16:32:01,612 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:32:01,613 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:32:01,823 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 16:32:17,821 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\join.js change
+2017-06-21 16:32:18,612 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:32:18,613 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:32:18,822 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 16:38:20,641 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\middleware\auth.js change
+2017-06-21 16:38:21,399 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:38:21,400 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:38:21,612 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 16:39:29,652 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\middleware\auth.js change
+2017-06-21 16:39:30,437 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:39:30,437 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:39:30,648 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 16:39:44,520 WARN 5584 [agent:development] reload worker because E:\wamp\sumi-server\app\io\controller\join.js change
+2017-06-21 16:39:45,356 INFO 5584 [egg-development-proxyworker] debugger attached
+2017-06-21 16:39:45,357 INFO 5584 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
+2017-06-21 16:39:45,577 WARN 5584 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer

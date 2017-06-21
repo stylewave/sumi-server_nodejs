@@ -41,14 +41,14 @@ module.exports = () => {
         const history = yield this.service.chat.getHistory(uid, userInfo.user_level, roomid);
         // console.log('history', history);
         // 历史记录
-        this.app.io.sockets.in(roomid).emit('history', history);
+        this.socket.emit('history', history);
 
         // 通知本人
         // this.socket.emit('res', `欢迎您的到来!`);
       }
     } else {
       // error
-      this.socket.emit('error', `网络异常,请稍后再试`); // 无法写入数据
+      this.socket.emit('warning', `网络异常,请稍后再试`); // 无法写入数据
     }
   };
 };
