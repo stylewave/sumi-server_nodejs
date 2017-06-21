@@ -1209,3 +1209,6 @@
 2017-06-21 15:52:36,732 WARN 7940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
 2017-06-21 15:54:15,271 WARN 7940 [agent:development] reload worker because E:\nodejs\sumi-server\config\plugin.js change
 2017-06-21 15:54:15,864 WARN 7940 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2017-06-21 15:56:28,614 WARN 7940 [agent:development] reload worker because E:\nodejs\sumi-server\app\controller\alipay.js change
+2017-06-21 15:56:40,638 WARN 7940 [agent:development] reload worker because E:\nodejs\sumi-server\app\controller\news.js change
+2017-06-21 15:56:46,822 WARN 7940 [agent:development] reload worker because E:\nodejs\sumi-server\app\controller\user.js change
