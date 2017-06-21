@@ -7,55 +7,88 @@ module.exports = app => {
     // 用户资金记录
     async userMoneylog() {
       const { uid, token } = this.ctx.request.body;
-      if (charUtil.checkNumT(uid) === false) {
+      const arr = [uid];
+      const strArr = [token];
+      if (charUtil.checkNumT(arr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '用户ID格式不正确',
+          tips: '参数格式不正确',
         };
         return;
       }
-      const checktoke = await this.ctx.service.utils.common.checkToken(uid, token);
-      if (_.isEmpty(checktoke)) {
+
+      if (charUtil.checkIntType(arr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+
+
+      if (charUtil.checkStringType(strArr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoken)) {
         this.ctx.body = {
           status: 0,
           tips: '用户信息已过期,请重新登录',
         };
         return;
       }
-
       const result = await this.ctx.service.myaccount.userMoneylog(uid);
       this.ctx.body = {
         status: 1,
         list: result,
       };
     }
-    // async user_bean_log() {
+    // 获取豆币记录最大页码
+    async userBeanLogTotal(uid) {
+      const result = await this.ctx.service.myaccount.userBeanLogTotal(uid);
+      return result;
+    }
 
-    // }
-    // 豆币记录
+    // 豆币记录列表
     async userBeanLog() {
-      const { uid, page, size, token, test } = this.ctx.request.body;
-      // const rs = this.ctx.service.utils.common.chechtype(page);
-      if (charUtil.checkNumT(uid) === false) {
+      let { uid, page, size, token } = this.ctx.request.body;
+      const arr = [uid, page, size];
+      const strArr = [token];
+      if (charUtil.checkNumT(arr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '用户ID格式不正确',
+          tips: '参数格式不正确',
         };
         return;
       }
-      const checktoke = await this.ctx.service.utils.common.checkToken(uid, token);
-      if (_.isEmpty(checktoke)) {
+
+      if (charUtil.checkIntType(arr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+
+
+      if (charUtil.checkStringType(strArr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoken)) {
         this.ctx.body = {
           status: 0,
           tips: '用户信息已过期,请重新登录',
         };
         return;
-      }
-      for (const value in test) {
-        console.log(value);
-        console.log('test');
-        console.log(test[value]);
-
       }
 
       if (charUtil.checkNumT(size) === false) {
@@ -72,32 +105,69 @@ module.exports = app => {
         };
         return;
       }
+      page = parseInt(page, 10);
+      size = parseInt(size, 10);
+      const maxPage = await this.userBeanLogTotal(uid);
 
-      const result = await this.ctx.service.myaccount.userBeanLog(uid, page, size);
+      if (page > maxPage) {
+        this.ctx.body = {
+          status: 0,
+          tips: '没有更多数据了',
+        };
+        return;
+      }
+
+      // 总共页数
+      const total = Math.ceil(maxPage / size);
+      const start = (page - 1) * size;
+
+      const result = await this.ctx.service.myaccount.userBeanLog(uid, start, size);
       this.ctx.body = {
         status: 1,
+        totalsub: total,
         list: result,
+
       };
 
     }
     //  豆币回收列表
     async beanReturnList() {
       const { uid, token, status } = this.ctx.request.body;
-      if (charUtil.checkNumT(uid) === false) {
+      const arr = [uid];
+      const strArr = [token];
+      if (charUtil.checkNumT(arr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '用户ID格式不正确',
+          tips: '参数格式不正确',
         };
         return;
       }
-      const checktoke = await this.ctx.service.utils.common.checkToken(uid, token);
-      if (_.isEmpty(checktoke)) {
+
+      if (charUtil.checkIntType(arr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+
+
+      if (charUtil.checkStringType(strArr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoken)) {
         this.ctx.body = {
           status: 0,
           tips: '用户信息已过期,请重新登录',
         };
         return;
       }
+
       const result = await this.ctx.service.myaccount.beanReturnList(uid, status);
       this.ctx.body = {
         status: 1,
@@ -106,14 +176,42 @@ module.exports = app => {
     }
     //  豆币回收详情
     async beanReturnDetail() {
-      const { returnId } = this.ctx.request.body;
-      if (charUtil.checkNumT(returnId) === false) {
+      const { returnId, uid, token } = this.ctx.request.body;
+      const arr = [uid];
+      const strArr = [token];
+      if (charUtil.checkNumT(arr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '豆币id格式不正确',
+          tips: '参数格式不正确',
         };
         return;
       }
+
+      if (charUtil.checkIntType(arr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+
+
+      if (charUtil.checkStringType(strArr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoken)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户信息已过期,请重新登录',
+        };
+        return;
+      }
+
       const result = await this.ctx.service.myaccount.beanReturnDetail(returnId);
 
       this.ctx.body = {
@@ -125,16 +223,18 @@ module.exports = app => {
     //  豆币回收
     async beanReturn() {
       let { token, uid, beans, account_type, alipay_account, wxpay_account, unionpay_account, unionpay_name, unionpay_bank, mobile } = this.ctx.request.body;
-      // const checktoke = await this.ctx.service.utils.common.checkToken(uid, token);
-      // if (_.isEmpty(checktoke)) {
-      //   this.ctx.body = {
-      //     status: 0,
-      //     tips: '用户信息已过期,请重新登录',
-      //   };
-      //   return;
-      // }
+      token = this.ctx.request.header.token;
+      console.log(token);
+      const checktoke = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoke)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户信息已过期,请重新登录',
+        };
+        return;
+      }
       beans = parseInt(beans, 10);
-      if (beans < 100) {
+      if (!beans || beans < 100) {
         this.ctx.body = {
           status: 0,
           tips: '您输入的咨询豆数量必须大于100',

@@ -23,8 +23,6 @@ module.exports = app => {
       if (_.isEmpty(token)) {
         return false;
       }
-      console.log(uid);
-      console.log('eeee');
       console.log(app.config.crypKeys);
       const str = charUtil.decrypt(token, app.config.crypKeys);
       console.log(app.config.crypKeys);

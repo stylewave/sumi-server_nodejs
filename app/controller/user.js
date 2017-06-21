@@ -5,15 +5,25 @@ module.exports = app => {
     // 头像和昵称设置
     async setUserPhoto() {
       const { uid, photo, nickname, token } = this.ctx.request.body;
-      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
-
-      if (charUtil.checkNumT(uid) === false) {
+      const arr = [photo, uid];
+      if (charUtil.checkNumT(arr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '用户ID格式不正确',
+          tips: '参数格式不正确',
         };
         return;
       }
+
+      if (charUtil.checkIntType(arr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+
+      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
+
       if (_.isEmpty(checktoken)) {
         this.ctx.body = {
           status: 0,
@@ -21,15 +31,6 @@ module.exports = app => {
         };
         return;
       }
-
-      if (charUtil.checkNumT(photo) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '头像图片的格式不正确',
-        };
-        return;
-      }
-
 
       if (nickname.length < 2) {
         this.ctx.body = {
@@ -55,13 +56,23 @@ module.exports = app => {
     // 购买房间列表
     async chatRootList() {
       const { uid, page, size, token } = this.ctx.request.body;
-      if (charUtil.checkNumT(uid) === false) {
+      const arr = [page, size, uid];
+      if (charUtil.checkNumT(arr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '用户ID格式不正确',
+          tips: '参数格式不正确',
         };
         return;
       }
+
+      if (charUtil.checkIntType(arr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+
       const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
       if (_.isEmpty(checktoken)) {
         this.ctx.body = {
@@ -70,21 +81,6 @@ module.exports = app => {
         };
         return;
       }
-      if (charUtil.checkNumT(page) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '页数格式不正确',
-        };
-        return;
-      }
-      if (charUtil.checkNumT(size) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '页码数量格式不正确',
-        };
-        return;
-      }
-
       const result = await this.ctx.service.user.chatRootList(uid, page, size);
 
       this.ctx.body = {
@@ -96,7 +92,7 @@ module.exports = app => {
     }
 
 
-    // 获取任务列表最大页码
+    // 获取消息列表最大页码
     async userMsg(uid, type) {
       const result = await this.ctx.service.user.userMsg(uid, type);
       return result;
@@ -105,15 +101,26 @@ module.exports = app => {
     // 用户消息列表
     async userMsgList() {
       let { uid, token, type, page, size } = this.ctx.request.body;
-      if (charUtil.checkNumT(uid) === false) {
+      const arr = [page, size, uid];
+      if (charUtil.checkNumT(arr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '用户ID格式不正确',
+          tips: '参数格式不正确',
         };
         return;
       }
-      const checktoke = await this.ctx.service.utils.common.checkToken(uid, token);
-      if (_.isEmpty(checktoke)) {
+
+      if (charUtil.checkIntType(arr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+
+
+      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoken)) {
         this.ctx.body = {
           status: 0,
           tips: '用户信息已过期,请重新登录',
@@ -142,7 +149,60 @@ module.exports = app => {
         list: result,
       };
     }
+    async test() {
+      const { uid } = this.ctx.request.body;
+      const moment = require("moment");
 
+
+
+      const time = moment().format("YYYY-MM-DD HH:mm:ss");
+      const week1 = moment().format('d');
+      const key = moment().format('YYYYMM');
+      const sql = `select sign_id,DATE_FORMAT(sign_date,'%Y-%m-%d') as sign_date,DATE_FORMAT(sign_date,'%e') as news_date from data_sign_log where sign_uid='${uid}' and sign_key='${key}'`;
+      console.log(sql);
+      const list = await app.mysql.query(sql);
+      //  $sign_array = array();
+      const sign_array = [];
+      if (list) {
+        for (const value in list) {
+          sign_array.push(list[value].news_date);
+        }
+      }
+
+      let i;
+      let issign;
+      let date_array = [];
+      for (i = 1; i <= 30; i++) {
+        if (this.isCon(sign_array, i) === 1) {
+          issign = 1;
+        } else {
+          issign = 0;
+        }
+        //  $date_array[] = array('date'=>$i, 'issign'=>$issign);
+        date_array[i] = { date: i, issign1: issign };
+        // date_array.push(list[value].news_date);
+      }
+      // const item = [{ id: 1, title: '签到5天', beans: '10', count: '5' }, { id: 2, title: '签到10天', beans: '30', count: '10' }, { id: 3, title: '签到20天', beans: '60', count: '20' }, { id: 4, title: '满签', beans: '100', count: moment().format('LL') }];
+      // const today_issign = in_array($today,$sign_array) ? '1' : '0';
+      this.ctx.body = {
+        status: 1,
+        list1: list,
+        times: time,
+        week: week1,
+        month: moment().month(),
+        result1: sign_array,
+        da: date_array,
+      };
+    }
+    isCon(arr, val) {
+      let i = arr.length;
+      while (i--) {
+        if (arr[i] == val) {
+          return 1;
+        }
+      }
+      return 0;
+    }
 
   }
   return UserController;

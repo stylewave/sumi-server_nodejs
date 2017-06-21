@@ -123,7 +123,39 @@ module.exports = {
   // 检测参数是否为的正整数
   checkNumT(arr) {
     const re = /^[0-9]*[1-9][0-9]*$/;
+    for (const v in arr) {
+      // console.log(re.test(arr[v]));
+      if (re.test(arr[v]) === false) {
+        return false;
+      }
+    }
+    return true;
+
+  },
+  // 检测参数验证非负整数
+  checkNum(arr) {
+    const re = /^\d+$/;
     return re.test(arr);
+
+  },
+  // 检测参数是否为整数类型
+  checkIntType(arr) {
+    for (const v in arr) {
+      if (typeof arr[v] !== 'number') {
+        return false;
+      }
+    }
+    return true;
+
+  },
+  // 检测参数是否为字符串类型
+  checkStringType(arr) {
+    for (const v in arr) {
+      if (typeof arr[v] !== 'string') {
+        return false;
+      }
+    }
+    return true;
 
   },
 

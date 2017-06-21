@@ -11,12 +11,14 @@ describe('test/controller/news.test.js', () => {
     return app.ready();
   });
 
-  it('get /api/news/list', done => {
+  it.only('get /api/news/list', done => {
     request(app.callback())
       .post('/api/news/list')
       .send({
         page: 2,
         size: 10,
+        token: 'qhASfxQk68dkY7MmZ4dpEcZGtDxlJk6iFLYSok/U0v8=',
+        uid: 62,
       })
       .end((err, res) => {
         const info = JSON.parse(res.text);

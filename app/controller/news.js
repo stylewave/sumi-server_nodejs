@@ -5,27 +5,50 @@ module.exports = app => {
   class NewsController extends app.Controller {
     // 获取最大页码
     async getMaxPage() {
-      const MAX_PAGE = 5;
+      //  const MAX_PAGE = 5;
       const result = await this.ctx.service.news.getTotal();
       console.log(result);
-      return result > MAX_PAGE ? MAX_PAGE : result;
+      // return result > MAX_PAGE ? MAX_PAGE : result;
+      return result;
     }
 
     // 拉取新闻列表
     async list() {
-      let { page, size } = this.ctx.request.body;
+      let { page, size, uid, token } = this.ctx.request.body;
 
-      if (charUtil.checkNumT(page) === false) {
+      const arr = [page, size, uid];
+      const string = [token];
+
+      token = this.ctx.request.header.token;
+      if (charUtil.checkNumT(arr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '页码格式不正确',
+          tips: '参数格式不正确',
         };
         return;
       }
-      if (charUtil.checkNumT(size) === false) {
+
+      const checktoke = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoke)) {
         this.ctx.body = {
           status: 0,
-          tips: '页码数量格式不正确',
+          tips: '用户信息已过期,请重新登录',
+        };
+        return;
+      }
+
+      if (charUtil.checkIntType(arr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+
+      if (charUtil.checkStringType(string) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
         };
         return;
       }
@@ -43,22 +66,44 @@ module.exports = app => {
         return;
       }
       const start = (page - 1) * size;
+      // 总共页数
+      const total = Math.ceil(maxPage / size);
       const result = await this.ctx.service.news.list(start, size);
       this.ctx.body = {
         status: 1,
+        totalsub: total,
         list: result,
-        maxPage,
+
       };
     }
 
     // 拉取新闻详情
     async newsDetail() {
-      const { newsId } = this.ctx.request.body;
+      const { newsId, uid, token } = this.ctx.request.body;
+      if (newsId) {
+        const arr = [newsId];
 
-      if (charUtil.checkNumT(newsId) === false) {
+        if (charUtil.checkNumT(arr) === false) {
+          this.ctx.body = {
+            status: 0,
+            tips: '参数格式不正确',
+          };
+          return;
+        }
+        if (charUtil.checkIntType(arr) === false) {
+          this.ctx.body = {
+            status: 0,
+            tips: '参数类型不正确',
+          };
+          return;
+        }
+      }
+
+      const checktoke = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoke)) {
         this.ctx.body = {
           status: 0,
-          tips: '资讯ID格式不正确',
+          tips: '用户信息已过期,请重新登录',
         };
         return;
       }

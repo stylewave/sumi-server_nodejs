@@ -16,9 +16,15 @@ module.exports = app => {
     }
 
     // 拉取新闻详情
-    async newsDetail(newsId) {
+    async newsDetail(newsId = '') {
       const field = "news_id,news_title,news_content,news_hits,DATE_FORMAT(news_create_time,'%y-%d-%m %H:%i:%s') as news_create_time";
-      const sql = `SELECT ${field} FROM data_news WHERE news_show = '1' AND news_id='${newsId}'`;
+      let sql;
+      if (newsId) {
+        sql = `SELECT ${field} FROM data_news WHERE news_show = '1' AND news_id='${newsId}'`;
+      } else {
+        sql = `SELECT ${field} FROM data_news WHERE news_show = '1' ORDER BY news_id DESC`;
+      }
+
       const result = await app.mysql.query(sql);
       return result.length > 0 ? result[0] : null;
     }

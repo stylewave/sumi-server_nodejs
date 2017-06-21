@@ -74,6 +74,8 @@ module.exports = app => {
   app.post('/api/room/buyRoomList', 'room.buyRoomList');
   app.post('/api/myaccount/test', 'myaccount.test');
 
+  app.post('/api/user/test', 'user.test');
+
   /** socket请求**/
   app.io.route('join', app.io.controllers.chat);
 

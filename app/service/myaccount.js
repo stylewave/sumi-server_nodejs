@@ -3,38 +3,31 @@ module.exports = app => {
   class MyaccountController extends app.Service {
 
     // 用户资金记录
-    async userMoneylog(userId) {
+    async userMoneylog(uid) {
 
       const field = 'log_id,log_content,log_uid,log_type,log_count,log_main_table,log_main_id,log_create_time,log_recharge_beans';
-      const sql = 'SELECT ' + field + ' FROM data_user_money_log  WHERE log_uid = ' + userId + ' ORDER BY log_id DESC ';
+      const sql = `SELECT '${field}' FROM data_user_money_log  WHERE log_uid = '${uid}' ORDER BY log_id DESC`;
       console.log(sql);
       const result = await app.mysql.query(sql);
       return result;
 
     }
     // 豆币记录总的记录数
-    async getBeanTotal(userId) {
-      const sql = `SELECT COUNT(*) as total FROM data_user_bean_log WHERE log_uid='${userId}'`;
+    async userBeanLogTotal(uid) {
+      const sql = `SELECT COUNT(*) as total FROM data_user_bean_log WHERE log_uid='${uid}'`;
       const result = await app.mysql.query(sql);
       return result[0].total;
     }
 
     // 豆币记录列表
-    async userBeanLog(uid, page, size) {
-      const start = (page - 1) * size;
-      this.ctx.service.utils.page.paginate(page, size, await this.getBeanTotal(uid));
-      const prev = await this.ctx.service.utils.page.prev();
-      const next = await this.ctx.service.utils.page.next();
+    async userBeanLog(uid, start, size) {
+
       const field = 'log_id,log_content,log_uid,log_type,log_count,log_main_table,log_main_id,log_create_time,log_remark';
 
       const sql = `SELECT ${field} FROM data_user_bean_log  WHERE log_uid = '${uid}' ORDER BY log_id DESC LIMIT ${start},${size}`;
       // console.log(sql);
       const result = await app.mysql.query(sql);
-      return {
-        result,
-        prev,
-        next,
-      };
+      return result;
 
     }
     //  豆币回收列表

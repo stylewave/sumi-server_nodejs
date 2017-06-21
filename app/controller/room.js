@@ -11,11 +11,38 @@ module.exports = app => {
 
     //  房间列表列表
     async roomList() {
-      let { page, size, order } = this.ctx.request.body;
-      if (charUtil.checkNumT(page) === false) {
+      let { page, size, order, uid, token } = this.ctx.request.body;
+      const arr = [uid, page, size];
+      const strArr = [token];
+      if (charUtil.checkNumT(arr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '页码格式不正确',
+          tips: '参数格式不正确',
+        };
+        return;
+      }
+
+      if (charUtil.checkIntType(arr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+
+
+      if (charUtil.checkStringType(strArr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoken)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户信息已过期,请重新登录',
         };
         return;
       }
@@ -51,22 +78,41 @@ module.exports = app => {
     //  购买房间列表列表
     async buyRoomList() {
       let { uid, token, page, size } = this.ctx.request.body;
-      if (charUtil.checkNumT(uid) === false) {
+      const arr = [uid, page, size];
+      const strArr = [token];
+      if (charUtil.checkNumT(arr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '用户id格式不正确',
+          tips: '参数格式不正确',
         };
         return;
       }
-      const rs = await this.ctx.service.utils.common.checkToken(uid, token);
 
-      if (_.isEmpty(rs)) {
+      if (charUtil.checkIntType(arr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+
+
+      if (charUtil.checkStringType(strArr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoken)) {
         this.ctx.body = {
           status: 0,
           tips: '用户信息已过期,请重新登录',
         };
         return;
       }
+
       page = parseInt(page, 10);
       size = parseInt(size, 10);
       const maxPage = await this.getTotal(uid);

@@ -56,7 +56,7 @@ describe('test/controller/user.test.js', () => {
         done();
       });
   });
-  it.only('get api/user/setUserPhoto', done => {
+  it('get api/user/setUserPhoto', done => {
     request(app.callback())
       .post('/api/user/setUserPhoto')
       .send({

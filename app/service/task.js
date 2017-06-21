@@ -7,8 +7,8 @@ module.exports = app => {
     // }
 
     //  任务列表
-    async taskList(userId) {
-      const result = await app.mysql.get('data_task', { task_uid: userId });
+    async taskList(uid) {
+      const result = await app.mysql.get('data_task', { task_uid: uid });
       const rs = await this.ctx.service.utils.taskArray.task();
       const task_finish = [];
       const task_going = [];
@@ -22,7 +22,6 @@ module.exports = app => {
           rs[value].task_status = '2';
           rs[value].task_count = task_row.count;
           task_finish.push(rs[value]);
-          console.log(task_finish);
         } else if (task_row.status === '1') {
           rs[value].task_status = '1';
           rs[value].task_count = task_row.count;
@@ -36,6 +35,7 @@ module.exports = app => {
       }
 
       const list = task_none.concat(task_going);
+      // console.log(list);
       return list;
     }
 
@@ -49,7 +49,6 @@ module.exports = app => {
     // 领取完成任务
     async finishTask(uid, taskcontent, content, task_row) {
       const userrow = await app.mysql.get('data_user', { user_id: uid });
-      //  console.log('taskcontent');
       const e = await this.taskContent(uid, content);
       const tcontent = JSON.parse(e.content);
       const user_bonus_beans = userrow.user_bonus_beans + task_row.task_bonus_beans;

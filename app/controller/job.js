@@ -24,19 +24,37 @@ module.exports = app => {
     // 获取职业详情
     async jobDetail() {
       const { uid, token } = this.ctx.request.body;
-      console.log(token);
-      // const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
-      // if (_.isEmpty(checktoken)) {
-      //   this.ctx.body = {
-      //     status: 0,
-      //     tips: '用户信息已过期,请重新登录',
-      //   };
-      //   return;
-      // }
-      if (charUtil.checkNumT(uid) === false) {
+      const arr = [uid];
+      const strArr = [token];
+      if (charUtil.checkNumT(arr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '用户ID格式不正确',
+          tips: '参数格式不正确',
+        };
+        return;
+      }
+
+      if (charUtil.checkIntType(arr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+
+
+      if (charUtil.checkStringType(strArr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoken)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户信息已过期,请重新登录',
         };
         return;
       }
@@ -59,23 +77,39 @@ module.exports = app => {
     // 设置职业
     async setJob() {
       const { id, uid, token } = this.ctx.request.body;
-      console.log(token);
-      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
-      // if (_.isEmpty(checktoken)) {
-      //   this.ctx.body = {
-      //     status: 0,
-      //     tips: '用户信息已过期,请重新登录',
-      //   };
-      //   return;
-      // }
-      if (charUtil.checkNumT(uid) === false) {
+      const arr = [uid, id];
+      const strArr = [token];
+      if (charUtil.checkNumT(arr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '用户ID格式不正确',
+          tips: '参数格式不正确',
         };
         return;
       }
 
+      if (charUtil.checkIntType(arr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+
+      if (charUtil.checkStringType(strArr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoken)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户信息已过期,请重新登录',
+        };
+        return;
+      }
       const checkdetail = await this.ctx.service.job.checkDetail(uid);
       // console.log(checkdetail);
       if (checkdetail) {

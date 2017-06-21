@@ -12,19 +12,29 @@ module.exports = app => {
     // 观点列表
     async expertCommentList() {
 
-      let { page, size } = this.ctx.request.body;
-
-      if (charUtil.checkNumT(page) === false) {
+      let { page, size, uid, token } = this.ctx.request.body;
+      const arr = [page, size, uid];
+      if (charUtil.checkNumT(arr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '页码格式不正确',
+          tips: '参数格式不正确',
         };
         return;
       }
-      if (charUtil.checkNumT(size) === false) {
+
+      if (charUtil.checkIntType(arr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '页码数量格式不正确',
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+
+      const checktoke = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoke)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户信息已过期,请重新登录',
         };
         return;
       }
@@ -52,6 +62,24 @@ module.exports = app => {
     // 观点详情
     async commentDetail() {
       const { commentId, uid, token } = this.ctx.request.body;
+      const arr = [commentId, uid];
+      if (charUtil.checkNumT(arr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数格式不正确',
+        };
+        return;
+      }
+
+      if (charUtil.checkIntType(arr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+
+
       const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
       if (_.isEmpty(checktoken)) {
         this.ctx.body = {
@@ -60,22 +88,6 @@ module.exports = app => {
         };
         return;
       }
-      if (charUtil.checkNumT(commentId) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '观点ID格式不正确',
-        };
-        return;
-      }
-      if (charUtil.checkNumT(uid) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '用户ID格式不正确',
-        };
-        return;
-      }
-
-
       const buydata = await this.ctx.service.viewpoint.buydata(commentId, uid);
       if (_.isEmpty(buydata)) {
         console.log('还没购买该文章');
@@ -115,6 +127,23 @@ module.exports = app => {
     // 购买观点
     async buyExpertComment() {
       const { commentId, uid, token } = this.ctx.request.body;
+      const arr = [commentId, uid];
+      if (charUtil.checkNumT(arr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数格式不正确',
+        };
+        return;
+      }
+
+      if (charUtil.checkIntType(arr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+
       const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
       if (_.isEmpty(checktoken)) {
         this.ctx.body = {
@@ -186,7 +215,33 @@ module.exports = app => {
 
     // 多空舆情
     async marketList() {
-      let { page, size } = this.ctx.request.body;
+      let { page, size, uid, token } = this.ctx.request.body;
+      const arr = [page, size, uid];
+      if (charUtil.checkNumT(arr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数格式不正确',
+        };
+        return;
+      }
+
+      if (charUtil.checkIntType(arr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数类型不正确',
+        };
+        return;
+      }
+
+
+      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoken)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户信息已过期,请重新登录',
+        };
+        return;
+      }
 
       if (charUtil.checkNumT(page) === false) {
         this.ctx.body = {
