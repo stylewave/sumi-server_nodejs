@@ -6,16 +6,16 @@ module.exports = app => {
       const rs = await this.ctx.service.utils.jobArray.job().job;
       const job_row = rs[user_row.user_job_id - 1];
       console.log(job_row);
-      job_row.list[0].active = '0';
+      job_row.list[0].active = '1';
       job_row.list[1].active = '0';
-      job_row.list[2].active = '1';
+      job_row.list[2].active = '0';
       if (user_row.user_job_level >= job_row.list[2].level) {
         job_row.list[0].active = '1';
         job_row.list[1].active = '1';
         job_row.list[2].active = '1';
       } else if (user_row.user_job_level >= job_row.list[1].level) {
         job_row.list[1].active = '1';
-        job_row.list[2].active = '1';
+        job_row.list[0].active = '1';
       }
       user_row.list = job_row.list;
       user_row.job_levelup = '999999';
@@ -42,10 +42,10 @@ module.exports = app => {
       if (!job_row) {
         result = 2;
       } else {
-        const userSql = `UPDATE data_user SET user_job_id = '${job_row.job_id}',user_job_name='${job_row.list[2].title}',user_job_icon='${job_row.job_icon}'  WHERE user_id = '${uid}'`;
+        const userSql = `UPDATE data_user SET user_job_id = '${job_row.job_id}',user_job_name='${job_row.list[0].title}',user_job_icon='${job_row.job_icon}'  WHERE user_id = '${uid}'`;
         const re = await app.mysql.query(userSql);
         if (re) {
-          job_row.job_name = job_row.list[2].title;
+          job_row.job_name = job_row.list[0].title;
           result = job_row;
         } else {
           result = 0;
