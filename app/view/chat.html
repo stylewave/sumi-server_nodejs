@@ -90,21 +90,17 @@
 
       $("#go").click(function () {
         var val = $("#content").val();
-<<<<<<< HEAD
+
         if (val) {
           console.log('send ', val);
           socket.emit('send', token, val);
         }
-=======
-        console.log('send ', val);
-        socket.emit('send', val);
->>>>>>> 957f06d8882a78684f6c1f111052a4c7bf1d74e0
+
 
       });
 
       $("#gift").click(function () {
         console.log('send a gift ');
-<<<<<<< HEAD
         socket.emit('gift', token, 'i like you');
       });
 
@@ -130,10 +126,7 @@
         if (val) {
           socket.emit('sendAll', token, val);
         }
-=======
-        socket.emit('gift', 'i like you');
 
->>>>>>> 957f06d8882a78684f6c1f111052a4c7bf1d74e0
       });
 
     })
