@@ -19,6 +19,10 @@ module.exports = app => {
 
   app.post('/api/user/setUserPhoto', 'user.setUserPhoto');
   app.post('/api/user/userMsgList', 'user.userMsgList');
+
+  // 股票行情
+  app.post('/api/market', 'market.getMarketData');
+
   // 股吧模板详情
   app.post('/api/forum/boardDetail', 'forum.boardDetail');
   // 股吧模板列表
