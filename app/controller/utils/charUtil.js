@@ -138,13 +138,35 @@ module.exports = {
     return re.test(arr);
 
   },
-  // 检测参数是否为整数类型
-  checkIntType(arr) {
-    for (const v in arr) {
-      if (typeof arr[v] !== 'number') {
+  // 检测参数的类型
+  checkIntType(numArr) {
+    for (const v in numArr) {
+      if (typeof numArr[v] !== 'number') {
         return false;
       }
     }
+    return true;
+
+  },
+  // 检测参数的类型
+  checkType(numArr, strArr) {
+
+    if (numArr) {
+      const re = /^\d+$/;
+      for (const v in numArr) {
+        if (typeof numArr[v] !== 'number' || re.test(numArr[v]) === false) {
+          return false;
+        }
+      }
+    }
+    if (strArr) {
+      for (const s in strArr) {
+        if (typeof strArr[s] !== 'string') {
+          return false;
+        }
+      }
+    }
+
     return true;
 
   },

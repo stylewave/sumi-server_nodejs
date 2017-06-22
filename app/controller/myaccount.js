@@ -1,44 +1,22 @@
 const _ = require('lodash');
 const charUtil = require('./utils/charUtil.js');
+const regExp = require('./utils/regExpUtil.js');
 module.exports = app => {
   // 我的账户模块
   class MyaccountController extends app.Controller {
     // 用户资金记录
     async userMoneylog() {
       const { uid, token, page, size } = this.ctx.request.body;
-      const arr = [uid];
+      const numArr = [uid, page, size];
       const strArr = [token];
-      if (charUtil.checkNumT(arr) === false) {
+      if (charUtil.checkType(numArr, strArr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '参数格式不正确',
+          tips: '参数有错',
         };
         return;
       }
 
-      if (charUtil.checkIntType(arr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
-        };
-        return;
-      }
-
-      if (charUtil.checkStringType(strArr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
-        };
-        return;
-      }
-      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
-      if (_.isEmpty(checktoken)) {
-        this.ctx.body = {
-          status: 0,
-          tips: '用户信息已过期,请重新登录',
-        };
-        return;
-      }
 
       const checktoke = await this.ctx.service.utils.common.checkToken(uid, token);
       if (_.isEmpty(checktoke)) {
@@ -62,7 +40,7 @@ module.exports = app => {
       const result = await this.ctx.service.myaccount.userMoneylog(uid, start, size);
       this.ctx.body = {
         status: 1,
-        count: total,
+        totalsub: total,
         list: result,
       };
     }
@@ -73,33 +51,20 @@ module.exports = app => {
     }
 
     // 豆币记录列表
+
     async userBeanLog() {
       let { uid, page, size, token } = this.ctx.request.body;
-      const arr = [uid, page, size];
+      const numArr = [uid, page, size];
       const strArr = [token];
-      if (charUtil.checkNumT(arr) === false) {
+      if (charUtil.checkType(numArr, strArr) === false) {
+
         this.ctx.body = {
           status: 0,
-          tips: '参数格式不正确',
+          tips: '参数有错',
         };
         return;
       }
 
-      if (charUtil.checkIntType(arr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
-        };
-        return;
-      }
-
-      if (charUtil.checkStringType(strArr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
-        };
-        return;
-      }
       const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
       if (_.isEmpty(checktoken)) {
         this.ctx.body = {
@@ -145,20 +110,17 @@ module.exports = app => {
     //  豆币回收列表
     async beanReturnList() {
       const { uid, token, status } = this.ctx.request.body;
-      const arr = [uid];
-      const strArr = [token];
-      if (charUtil.checkNumT(arr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数格式不正确',
-        };
-        return;
+      let numArr;
+      if (status) {
+        numArr = [uid, status];
+      } else {
+        numArr = [uid];
       }
-
-      if (charUtil.checkIntType(arr) === false) {
+      const strArr = [token];
+      if (charUtil.checkType(numArr, strArr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '参数类型不正确',
+          tips: '参数有错',
         };
         return;
       }
@@ -188,28 +150,12 @@ module.exports = app => {
     //  豆币回收详情
     async beanReturnDetail() {
       const { returnId, uid, token } = this.ctx.request.body;
-      const arr = [uid];
+      const numArr = [uid, returnId];
       const strArr = [token];
-      if (charUtil.checkNumT(arr) === false) {
+      if (charUtil.checkType(numArr, strArr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '参数格式不正确',
-        };
-        return;
-      }
-
-      if (charUtil.checkIntType(arr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
-        };
-        return;
-      }
-
-      if (charUtil.checkStringType(strArr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
+          tips: '参数有错',
         };
         return;
       }
@@ -232,20 +178,32 @@ module.exports = app => {
     }
     //  豆币回收
     async beanReturn() {
-      let {
-        token,
-        uid,
-        beans,
-        account_type,
-        alipay_account,
-        wxpay_account,
-        unionpay_account,
-        unionpay_name,
-        unionpay_bank,
-        mobile,
-      } = this.ctx.request.body;
-      token = this.ctx.request.header.token;
-      console.log(token);
+      let { token, uid, beans, account_type, alipay_account, wxpay_account, unionpay_account, unionpay_name, unionpay_bank, mobile } = this.ctx.request.body;
+      let numArr;
+      if (account_type) {
+        numArr = [uid, beans, account_type];
+      } else {
+        numArr = [uid, beans];
+      }
+      const strArr = [token];
+      if (charUtil.checkType(numArr, strArr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数有错',
+        };
+        return;
+      }
+
+      if (mobile) {
+        if (regExp.checkMobile(mobile) === false) {
+          this.ctx.body = {
+            status: 0,
+            tips: '手机号码格式不正确',
+          };
+          return;
+        }
+      }
+
       const checktoke = await this.ctx.service.utils.common.checkToken(uid, token);
       if (_.isEmpty(checktoke)) {
         this.ctx.body = {
@@ -288,6 +246,7 @@ module.exports = app => {
         };
       }
     }
+
     async test() {
       const result = await this.app.mysql.insert('data_user', {
         user_name: '123456633',

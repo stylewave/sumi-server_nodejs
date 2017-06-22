@@ -30,13 +30,20 @@ module.exports = app => {
     }
 
     // 没购买观点详情
-    async commentDetail(commentId) {
+    async commentDetail(commentId = '') {
       const field = 'comment_id,comment_title,comment_intro,comment_hits,comment_beans,comment_expert_id,ep_name as comment_expert_name,ep_photo as comment_expert_photo,DATE_FORMAT(comment_create_time,"%m-%d %H:%i") as comment_create_time';
-      const sql = 'SELECT ' + field + " FROM data_expert_comment left join data_expert on (comment_expert_id=ep_id) WHERE comment_status = \'1\' AND comment_id = '" + commentId + "' ";
-      console.log(sql);
+      let sql;
+      if (commentId) {
+        sql = `SELECT ${field} FROM data_expert_comment left join data_expert on (comment_expert_id=ep_id) WHERE comment_status = 1 AND comment_id = ${commentId}`;
+      } else {
+        const sql2 = `SELECT comment_id,comment_title,comment_intro FROM data_expert_comment ORDER BY comment_id DESC LIMIT 1`;
+        const re = await app.mysql.query(sql2);
+        sql = `SELECT ${field} FROM data_expert_comment left join data_expert on (comment_expert_id=ep_id) WHERE comment_status = 1 AND comment_id = ${re[0].comment_id}`;
+      }
+
       const result = await app.mysql.query(sql);
       for (const v in result) {
-        console.log(v);
+        // console.log(v);
         result[v].comment_expert_photo = app.config.host + result[v].comment_expert_photo;
       }
       return result.length > 0 ? result[0] : null;
@@ -44,9 +51,16 @@ module.exports = app => {
 
 
     // 购买观点详情
-    async commentDetailBuy(commentId) {
+    async commentDetailBuy(commentId = '') {
       const field = 'comment_id,comment_title,comment_intro,comment_hits,comment_beans,comment_content,comment_expert_id,ep_name as comment_expert_name,ep_photo as comment_expert_photo,DATE_FORMAT(comment_create_time,"%m-%d %H:%i") as comment_create_time';
-      const sql = 'SELECT ' + field + " FROM data_expert_comment left join data_expert on (comment_expert_id=ep_id) WHERE comment_status = \'1\' AND comment_id = '" + commentId + "' ";
+      let sql;
+      if (commentId) {
+        sql = `SELECT ${field} FROM data_expert_comment left join data_expert on (comment_expert_id=ep_id) WHERE comment_status = 1 AND comment_id = '${commentId}'`;
+      } else {
+        const sql2 = `SELECT comment_id,comment_title,comment_intro FROM data_expert_comment ORDER BY comment_id DESC LIMIT 1`;
+        const re = await app.mysql.query(sql2);
+        sql = `SELECT ${field} FROM data_expert_comment left join data_expert on (comment_expert_id=ep_id) WHERE comment_status = 1 AND comment_id = '${re[0].comment_id}'`;
+      }
       const result = await app.mysql.query(sql);
       for (const v in result) {
         console.log(v);
@@ -56,14 +70,24 @@ module.exports = app => {
     }
 
     // 判断是否已购买了该观点
-    async buydata(commentId, userId) {
-      const data = await app.mysql.get('data_user_bean_log', { log_uid: userId, log_main_id: commentId, log_type: 'buy_expert_comment' });
+    async buydata(commentId = '', uid) {
+      let data;
+      if (commentId) {
+        data = await app.mysql.get('data_user_bean_log', { log_uid: uid, log_main_id: commentId, log_type: 'buy_expert_comment' });
+      } else {
+        const field = "comment_id,comment_title,comment_intro";
+        const sql = `SELECT ${field} FROM data_expert_comment  ORDER BY comment_id DESC LIMIT 1`;
+        const result = await app.mysql.query(sql);
+        console.log(result[0].comment_id);
+        data = await app.mysql.get('data_user_bean_log', { log_uid: uid, log_main_id: result[0].comment_id, log_type: 'buy_expert_comment' });
+
+      }
       return data;
     }
 
     // 判断是否用户的豆币是否可以购买
-    async beanNum(beannum, userId) {
-      const userrow = await app.mysql.get('data_user', { user_id: userId });
+    async beanNum(beannum, uid) {
+      const userrow = await app.mysql.get('data_user', { user_id: uid });
       const userbeans = userrow.user_beans + userrow.user_bonus_beans;
       if (beannum > userbeans) {
         return 0;
@@ -72,8 +96,8 @@ module.exports = app => {
     }
 
     // 购买观点
-    async buyExpertComment(commentId, userId) {
-      const userrow = await app.mysql.get('data_user', { user_id: userId });
+    async buyExpertComment(commentId, uid) {
+      const userrow = await app.mysql.get('data_user', { user_id: uid });
       const userbeans = userrow.user_beans + userrow.user_bonus_beans;
       const dedata = await this.commentDetail(commentId);
       const total = dedata.comment_beans;
@@ -82,16 +106,16 @@ module.exports = app => {
       let subSql;
       if (userrow.user_bonus_beans >= total) {
         const userbean = userrow.user_bonus_beans - total;
-        subSql = 'UPDATE data_user SET user_bonus_beans =' + userbean + ' WHERE user_id = ' + userId;
+        // subSql = 'UPDATE data_user SET user_bonus_beans =' + userbean + ' WHERE user_id = ' + userId;
+        subSql = `UPDATE data_user SET user_bonus_beans ='${userbean}' WHERE user_id = ${uid}`;
 
       } else {
         const userbean = userbeans - total;
-        subSql = 'UPDATE data_user SET user_beans =' + userbean + ',`user_bonus_beans` = 0  WHERE user_id = ' + userId;
+        //  subSql = 'UPDATE data_user SET user_beans =' + userbean + ',`user_bonus_beans` = 0  WHERE user_id = ' + uid;
+        subSql = `UPDATE data_user SET user_beans ='${userbean}',user_bonus_beans = 0  WHERE user_id =${uid}`;
 
       }
       console.log(subSql);
-
-
       // const result = await this.app.mysql.insert('data_user_bean_log', { log_uid: userrow.user_id, log_user: userrow.user_name, log_nickname: userrow.user_nickname, log_type: 'buy_expert_comment', log_main_table: 'data_expert_comment', log_main_id: commentId, log_content: '购买投顾文章[' + userrow.comment_title + ']', log_count: 0 - dedata.comment_beans, log_bean_before: userbeans, log_bean_end: end, log_create_time: this.app.mysql.literals.now });
 
       const conn = await app.mysql.beginTransaction(); // 初始化事务
@@ -121,7 +145,7 @@ module.exports = app => {
     // 多空舆情列表
     async marketList(start, size) {
       const sql = 'SELECT * FROM data_market  ORDER BY mk_id DESC LIMIT ' + start + ',' + size;
-      console.log(sql);
+      // console.log(sql);
       const result = await app.mysql.query(sql);
       return result;
 

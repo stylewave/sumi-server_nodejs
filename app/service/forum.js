@@ -23,16 +23,23 @@ module.exports = app => {
 
     // 获取股吧板块总的记录数
     async getTotal() {
-      const sql = "SELECT COUNT(*) as total FROM data_forum_board WHERE board_status = '1'";
+      const sql = `SELECT COUNT(*) as total FROM data_forum_board WHERE board_status =1`;
+      // const sql = "SELECT COUNT(*) as total FROM data_forum_board WHERE board_status = '1'";
       const result = await app.mysql.query(sql);
       return result[0].total;
     }
 
     // 股吧板块列表
-    async list(start, size) {
+    async list(start, size, order = '') {
       const field = 'board_id,board_title,board_description,board_stock_code,board_follow,board_hits,board_ishot';
-      const sql = 'SELECT ' + field + ' FROM data_forum_board WHERE board_status = \'1\'   ORDER BY board_id DESC LIMIT ' + start + ',' + size;
-
+      let sql;
+      if (order) {
+        sql = `SELECT ${field} FROM data_forum_board  WHERE board_status =1  ORDER BY board_hits DESC LIMIT ${start},${size}`;
+      } else {
+        sql = `SELECT ${field} FROM data_forum_board  WHERE board_status =1  ORDER BY board_id DESC LIMIT ${start},${size}`;
+      }
+      // const sql = 'SELECT ' + field + ' FROM data_forum_board WHERE board_status = \'1\'   ORDER BY board_id DESC LIMIT ' + start + ',' + size;
+      console.log(sql);
       const result = await app.mysql.query(sql);
       return result;
     }

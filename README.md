@@ -5,7 +5,8 @@
 # 安装白名单插件
 $ npm install egg-cors或者
 $ yarn add egg-cors
-
+# 安装支持PHP序列化插件
+$ npm install locutus
 ```
 
 ## 命令
