@@ -1,8 +1,0 @@
-2017-06-21 16:13:28,618 INFO 8436 [egg:logger] init all loggers with options: {"dir":"E:\\nodejs\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","outputJSON":false,"buffer":true,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"type":"agent"}
-2017-06-21 16:13:28,857 INFO 8436 [egg-watcher:agent] watcher start success
-2017-06-21 16:13:29,745 INFO 8436 [egg-development-proxyworker] debugger attached
-2017-06-21 16:13:29,747 INFO 8436 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
-2017-06-22 09:27:59,499 INFO 8904 [egg:logger] init all loggers with options: {"dir":"D:\\cq-server\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","outputJSON":false,"buffer":true,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"type":"agent"}
-2017-06-22 09:27:59,836 INFO 8904 [egg-watcher:agent] watcher start success
-2017-06-22 09:28:01,625 INFO 8904 [egg-development-proxyworker] debugger attached
-2017-06-22 09:28:01,626 INFO 8904 [egg-development-proxyworker] debugger debugPort is 5858 and proxyPort is 10086
