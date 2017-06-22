@@ -2,16 +2,20 @@ module.exports = () => {
   return function* join() {
     // !!! 清空当前redis数据库!! 当前测试用!
     // yield this.service.chat.removeDB();
-
-    const message = this.args[0]; // message
+    const token = this.args[0]; // token
     const fd = this.socket.id; // 用户进程id
-    // const roomid = message.roomid; // 房间id
-    const roomid = 23; // 房间id
-    const uid = message.uid; // 房间id
+    console.log('token', token);
+
+    const roomid = token.roomid; // roomid
+    const uid = token.uid; // 用户id
     // console.log('some one join:', roomid, fd);
+
+    // 检查token ,暂时跳过
+    // const checktoken = yield this.service.utils.common.checkToken(uid, token.token);
+
     const userInfo = yield this.service.chat.getUserInfo(uid);
 
-    userInfo.roomid = roomid;
+    userInfo.roomid = roomid; // 房间id
     userInfo.fd = fd;
     // console.log(userInfo.user_id);
 

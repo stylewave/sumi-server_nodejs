@@ -23,9 +23,8 @@ module.exports = app => {
       if (_.isEmpty(token)) {
         return false;
       }
-      console.log(app.config.crypKeys);
       const str = charUtil.decrypt(token, app.config.crypKeys);
-      console.log(app.config.crypKeys);
+      // console.log(app.config.crypKeys);
       let array = {}; // 定义一数组
       array = str.split('|'); // 字符分割
       const user_id = Number(array[0]);
@@ -36,9 +35,10 @@ module.exports = app => {
         console.log('uid fail', uid, user_id);
         return false;
       }
-      if (Date.now() - time > 86400 * 30) {
+      if (Date.now() - time > 86400 * 30000) {
+        // 毫秒
         // 有效30天
-        console.log('time fail', time);
+        console.log('time fail', Date.now(), time, Date.now() - time);
         return false;
       }
 
@@ -57,8 +57,7 @@ module.exports = app => {
       // }
     }
 
-    checkVersion() { }
-
+    checkVersion() {}
   }
 
   return CommonService;

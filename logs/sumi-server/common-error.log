@@ -2758,3 +2758,12 @@ context: '网络异常,请稍后再试'
 pid: 9280
 hostname: O1SCA91JEKG1MM4
 
+2017-06-22 09:54:01,548 ERROR 2892 nodejs.TypeError: [egg-socket.io] packet middleware execute error: [egg-socket.io] controller execute error: Cannot set property 'roomid' of null
+    at Object.join (E:\wamp\sumi-server\app\io\controller\join.js:14:21)
+    at join.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 2892
+hostname: O1SCA91JEKG1MM4
+
