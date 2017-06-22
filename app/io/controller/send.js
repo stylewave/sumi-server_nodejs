@@ -8,6 +8,8 @@ module.exports = () => {
     // const checktoken = yield this.service.utils.common.checkToken(token.uid, token.token);
 
     const userInfo = yield this.service.chat.getUser(fd); // 用户信息
+    const moment = require('moment');
+    const time = moment().format('YYYY-MM-DD HH:mm:ss');
 
     console.log('some one send :', message);
     const data = {
@@ -24,17 +26,16 @@ module.exports = () => {
       // chat_content: img_to_realpath($message),          //注意图片路径要转化
       chat_content: message,
       chat_show: 0,
-      chat_create_time: this.app.mysql.literals.now,
+      chat_create_time: time,
     };
 
     const id = yield this.service.chat.addChat(data);
     if (id) {
-      data.data_id = id;
-      this.socket.emit('self', data);
+      data.chat_id = id;
+      this.socket.emit('self', data); // 返回给当前用户
     } else {
-      this.socket.emit('error', `网络异常,请稍后再试`); // 入库失败!!
+      this.socket.emit('warning', `网络异常,请稍后再试`); // 入库失败!!
     }
     console.log('insert', id);
-    // console.log('connect socket io>>>', message);
   };
 };
