@@ -577,3 +577,19 @@
 2017-06-21 18:08:22,533 INFO 11116 [egg-watcher:app] watcher start success
 2017-06-21 18:08:22,540 INFO 11116 [egg-mysql] instance[0] status OK, rds currentTime: Wed Jun 21 2017 18:10:31 GMT+0800 (中国标准时间)
 2017-06-21 18:08:22,540 INFO 11116 [egg-redis] instance[0] status OK, redis currentTime: 1498039831
+2017-06-22 09:28:01,010 INFO 7988 [egg:logger] init all loggers with options: {"dir":"D:\\cq-server\\sumi-server\\logs\\sumi-server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","outputJSON":false,"buffer":true,"appLogName":"sumi-server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"type":"application"}
+2017-06-22 09:28:01,079 INFO 7988 [egg-schedule]: register schedule egg-schedule:D:\cq-server\sumi-server\node_modules\egg-logrotator\app\schedule\clean_log.js
+2017-06-22 09:28:01,079 INFO 7988 [egg-schedule]: register schedule egg-schedule:D:\cq-server\sumi-server\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2017-06-22 09:28:01,089 INFO 7988 [egg-mysql] connecting root@192.168.16.254:3306/cq
+2017-06-22 09:28:01,367 INFO 7988 [egg-redis] connecting redis://:@192.168.16.254:8000/1
+2017-06-22 09:28:02,000 INFO 7988 [egg-static] starting static serve /public/ -> D:\cq-server\sumi-server\app\public
+2017-06-22 09:28:02,003 INFO 7988 [egg-security] use methodnoallow middleware
+2017-06-22 09:28:02,004 INFO 7988 [egg-security] use noopen middleware
+2017-06-22 09:28:02,004 INFO 7988 [egg-security] use nosniff middleware
+2017-06-22 09:28:02,005 INFO 7988 [egg-security] use xssProtection middleware
+2017-06-22 09:28:02,005 INFO 7988 [egg-security] use xframe middleware
+2017-06-22 09:28:02,005 INFO 7988 [egg-security] compose 5 middlewares into one security middleware
+2017-06-22 09:28:02,150 INFO 7988 [egg-redis] connect success on redis://:@192.168.16.254:8000/1
+2017-06-22 09:28:02,152 INFO 7988 [egg-watcher:app] watcher start success
+2017-06-22 09:28:02,159 INFO 7988 [egg-redis] instance[0] status OK, redis currentTime: 1498094950
+2017-06-22 09:28:05,154 INFO 7988 [egg-mysql] instance[0] status OK, rds currentTime: Thu Jun 22 2017 09:29:13 GMT+0800 (中国标准时间)

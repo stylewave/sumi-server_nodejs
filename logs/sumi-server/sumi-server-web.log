@@ -527,3 +527,4 @@ hostname: xiaomo
 2017-06-21 17:26:22,399 INFO 9512 [egg-development-proxyworker] client worker ready to connect proxyworker.
 2017-06-21 17:26:31,681 INFO 5888 [egg-development-proxyworker] client worker ready to connect proxyworker.
 2017-06-21 18:08:22,393 INFO 11116 [egg-development-proxyworker] client worker ready to connect proxyworker.
+2017-06-22 09:28:01,622 INFO 7988 [egg-development-proxyworker] client worker ready to connect proxyworker.
