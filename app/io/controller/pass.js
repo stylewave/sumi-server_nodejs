@@ -1,6 +1,7 @@
 module.exports = () => {
   return function* pass() {
-    const id = this.args[0]; // pass chat_id
+    const token = this.args[0]; // pass token
+    const id = this.args[1]; // pass chat_id
     // const fd = this.socket.id; // 用户进程id
     // const userInfo = yield this.service.chat.getUser(fd); // 用户信息
 

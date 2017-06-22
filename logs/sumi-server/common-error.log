@@ -836,3 +836,58 @@ name: 'MODULE_NOT_FOUNDError'
 pid: 7240
 hostname: xiaomo
 
+<<<<<<< HEAD
+pid: 7444
+hostname: O1SCA91JEKG1MM4
+
+2017-06-21 16:28:25,760 ERROR 9280 nodejs.Error: [egg-socket.io] packet middleware execute error: [egg-socket.io] controller execute error: Uncaught, unspecified "error" event. (网络异常,请稍后再试)
+    at Socket.emit (events.js:166:17)
+    at Socket.emit (E:\wamp\sumi-server\node_modules\socket.io\lib\socket.js:141:10)
+    at Object.join (E:\wamp\sumi-server\app\io\controller\join.js:39:19)
+    at join.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+context: '网络异常,请稍后再试'
+pid: 9280
+hostname: O1SCA91JEKG1MM4
+
+2017-06-21 16:28:25,773 ERROR 9280 nodejs.Error: [egg-socket.io] packet middleware execute error: [egg-socket.io] controller execute error: Uncaught, unspecified "error" event. (网络异常,请稍后再试)
+    at Socket.emit (events.js:166:17)
+    at Socket.emit (E:\wamp\sumi-server\node_modules\socket.io\lib\socket.js:141:10)
+    at Object.join (E:\wamp\sumi-server\app\io\controller\join.js:39:19)
+    at join.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+context: '网络异常,请稍后再试'
+pid: 9280
+hostname: O1SCA91JEKG1MM4
+
+2017-06-21 16:28:26,005 ERROR 9280 nodejs.Error: [egg-socket.io] packet middleware execute error: [egg-socket.io] controller execute error: Uncaught, unspecified "error" event. (网络异常,请稍后再试)
+    at Socket.emit (events.js:166:17)
+    at Socket.emit (E:\wamp\sumi-server\node_modules\socket.io\lib\socket.js:141:10)
+    at Object.join (E:\wamp\sumi-server\app\io\controller\join.js:39:19)
+    at join.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+context: '网络异常,请稍后再试'
+pid: 9280
+hostname: O1SCA91JEKG1MM4
+
+2017-06-21 16:28:36,921 ERROR 9280 nodejs.Error: [egg-socket.io] packet middleware execute error: [egg-socket.io] controller execute error: Uncaught, unspecified "error" event. (网络异常,请稍后再试)
+    at Socket.emit (events.js:166:17)
+    at Socket.emit (E:\wamp\sumi-server\node_modules\socket.io\lib\socket.js:141:10)
+    at Object.join (E:\wamp\sumi-server\app\io\controller\join.js:39:19)
+    at join.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+context: '网络异常,请稍后再试'
+pid: 9280
+hostname: O1SCA91JEKG1MM4
+
+2017-06-22 09:54:01,548 ERROR 2892 nodejs.TypeError: [egg-socket.io] packet middleware execute error: [egg-socket.io] controller execute error: Cannot set property 'roomid' of null
+    at Object.join (E:\wamp\sumi-server\app\io\controller\join.js:14:21)
+    at join.next (<anonymous>)
+    at onFulfilled (E:\wamp\sumi-server\node_modules\co\index.js:65:19)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+
+pid: 2892
+hostname: O1SCA91JEKG1MM4
+
+=======
+>>>>>>> 957f06d8882a78684f6c1f111052a4c7bf1d74e0

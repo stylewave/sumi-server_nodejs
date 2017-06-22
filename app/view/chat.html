@@ -7,17 +7,23 @@
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
   <script>
-    var socket = io.connect('http://localhost:7001');
-    //console.log(socket);
+    var socket = io.connect('http://192.168.16.16:7001');
+    socket.on('res', data => {
+      console.log('Server:', data);
+    });
+    var token = {
+      roomid: 23,
+      uid: 62,
+      name: 'alan',
+      nickname: 'alanyao',
+      token: 'qhASfxQk68dkY7MmZ4dpEYa/en7ghxgaoNCJtAo1Jow=',
+    };
+    // 本身自带事件 连接上时发送用户信息
+
     socket.on('connect', () => {
       console.log('client is on connect..');
-      let data = {
-        roomid: Math.ceil(Math.random() * 10),
-        uid: 1,
-        name: 'alan',
-        nickname: 'alanyao'
-      };
-      socket.emit('join', data);
+      // const roomid=Math.ceil(Math.random() * 10);
+      socket.emit('join', token);
     });
 
     socket.on('selfInfo', data => {
@@ -59,7 +65,7 @@
     });
 
     socket.on('gift', data => {
-      console.log('some one send gift', data);
+      console.log('some one send gift', 1);
     });
 
     socket.on('broadcast', data => {
@@ -80,16 +86,46 @@
     });
 
     $(function () {
+
+
       $("#go").click(function () {
         var val = $("#content").val();
-        console.log('send ', val);
-        socket.emit('send', val);
+
+        if (val) {
+          console.log('send ', val);
+          socket.emit('send', token, val);
+        }
+
 
       });
 
       $("#gift").click(function () {
         console.log('send a gift ');
-        socket.emit('gift', 'i like you');
+        socket.emit('gift', token, 'i like you');
+      });
+
+      $("#reply").click(function () {
+        var val = $("#content").val();
+        var replyid = $("#replyid").val();
+        if (val && replyid) {
+          console.log('reply id ', replyid);
+          socket.emit('reply', token, val, replyid);
+        }
+      });
+
+      $("#pass").click(function () {
+        console.log('pass a chat ');
+        var replyid = $("#replyid").val();
+        if (replyid) {
+          socket.emit('pass', token, replyid);
+        }
+      });
+
+      $("#sendAll").click(function () {
+        var val = $("#content").val();
+        if (val) {
+          socket.emit('sendAll', token, val);
+        }
 
       });
 

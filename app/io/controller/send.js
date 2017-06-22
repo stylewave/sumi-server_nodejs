@@ -1,6 +1,7 @@
 module.exports = () => {
   return function* send() {
-    const message = this.args[0];
+    const token = this.args[0];
+    const message = this.args[1];
     const fd = this.socket.id; // 用户进程id
 
     const userInfo = yield this.service.chat.getUser(fd); // 用户信息

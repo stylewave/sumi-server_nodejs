@@ -2,6 +2,8 @@ const regExp = require('./utils/regExpUtil.js');
 module.exports = app => {
   class DebugController extends app.Controller {
     async get() {
+      // console.log(app.io.sockets);
+      // this.app.io.sockets.in('23').emit('res', 'test');
       const { mobile } = this.ctx.params;
       if (regExp.checkMobile(mobile) === false) {
         this.ctx.body = {

@@ -1,7 +1,8 @@
 module.exports = () => {
   return function* reply() {
-    const message = this.args[0]; // content
-    const replyid = this.args[1]; // replyid
+    const token = this.args[0]; // token
+    const message = this.args[1]; // content
+    const replyid = this.args[2]; // replyid
     const fd = this.socket.id; // 用户进程id
     const userInfo = yield this.service.chat.getUser(fd); // 用户信息
 
