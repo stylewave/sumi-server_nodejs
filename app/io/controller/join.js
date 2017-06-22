@@ -2,20 +2,16 @@ module.exports = () => {
   return function* join() {
     // !!! 清空当前redis数据库!! 当前测试用!
     // yield this.service.chat.removeDB();
-    const token = this.args[0]; // token
+
+    const message = this.args[0]; // message
     const fd = this.socket.id; // 用户进程id
-    console.log('token', token);
-
-    const roomid = token.roomid; // roomid
-    const uid = token.uid; // 用户id
+    // const roomid = message.roomid; // 房间id
+    const roomid = 23; // 房间id
+    const uid = message.uid; // 房间id
     // console.log('some one join:', roomid, fd);
-
-    // 检查token ,暂时跳过
-    // const checktoken = yield this.service.utils.common.checkToken(uid, token.token);
-
     const userInfo = yield this.service.chat.getUserInfo(uid);
 
-    userInfo.roomid = roomid; // 房间id
+    userInfo.roomid = roomid;
     userInfo.fd = fd;
     // console.log(userInfo.user_id);
 
@@ -45,14 +41,14 @@ module.exports = () => {
         const history = yield this.service.chat.getHistory(uid, userInfo.user_level, roomid);
         // console.log('history', history);
         // 历史记录
-        this.app.io.sockets.in(roomid).emit('history', history);
+        this.socket.emit('history', history);
 
         // 通知本人
         // this.socket.emit('res', `欢迎您的到来!`);
       }
     } else {
       // error
-      this.socket.emit('error', `网络异常,请稍后再试`); // 无法写入数据
+      this.socket.emit('warning', `网络异常,请稍后再试`); // 无法写入数据
     }
   };
 };

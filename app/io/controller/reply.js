@@ -6,6 +6,9 @@ module.exports = () => {
     const fd = this.socket.id; // 用户进程id
     const userInfo = yield this.service.chat.getUser(fd); // 用户信息
 
+    // 检查token ,暂时跳过
+    // const checktoken = yield this.service.utils.common.checkToken(token.uid, token.token);
+
     const row = yield this.service.chat.getChat(replyid);
 
     const moment = require('moment');

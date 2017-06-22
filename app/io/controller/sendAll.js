@@ -4,6 +4,9 @@ module.exports = () => {
     const message = this.args[1];
     const fd = this.socket.id; // 用户进程id
 
+    // 检查token ,暂时跳过
+    // const checktoken = yield this.service.utils.common.checkToken(token.uid, token.token);
+
     const userInfo = yield this.service.chat.getUser(fd); // 用户信息
     const moment = require('moment');
     const time = moment().format('YYYY-MM-DD HH:mm:ss');
