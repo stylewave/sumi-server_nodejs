@@ -30,3 +30,4 @@ yarn-error.log*
 /logs/sumi-server/egg-web.log
 /logs/sumi-server/sumi-server-web.log
 /logs/sumi-server/*.log
+logs
