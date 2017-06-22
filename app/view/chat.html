@@ -7,7 +7,6 @@
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
   <script>
-<<<<<<< HEAD
     var socket = io.connect('http://192.168.16.16:7001');
     socket.on('res', data => {
       console.log('Server:', data);
@@ -20,10 +19,7 @@
       token: 'qhASfxQk68dkY7MmZ4dpEYa/en7ghxgaoNCJtAo1Jow=',
     };
     // 本身自带事件 连接上时发送用户信息
-=======
-    var socket = io.connect('http://localhost:7001');
-    //console.log(socket);
->>>>>>> 957f06d8882a78684f6c1f111052a4c7bf1d74e0
+
     socket.on('connect', () => {
       console.log('client is on connect..');
       // const roomid=Math.ceil(Math.random() * 10);
