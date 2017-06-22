@@ -20,34 +20,33 @@ module.exports = app => {
       return result.affectedRows;
 
     }
-
-    async chatRootList(userId, page, size) {
-      const start = (page - 1) * size;
+    // 用户购买房间总数
+    async chatRootTotal(uid) {
       const moment = require("moment");
       const time = moment().format("YYYY-MM-DD");
-      const sqlcount = `SELECT COUNT(*) as total FROM data_user_bean_log WHERE log_uid='${userId}' AND log_room_expire >='${time}'`;
-      const total = await app.mysql.query(sqlcount);
-      const roomtotal = total[0].total;
-      this.ctx.service.utils.page.paginate(page, size, roomtotal);
-      const prev = await this.ctx.service.utils.page.prev();
-      const next = await this.ctx.service.utils.page.next();
+      const sql = `SELECT COUNT(*) as total FROM data_user_bean_log WHERE log_uid='${uid}' AND log_room_expire >='${time}'`;
+      const result = await app.mysql.query(sql);
+      return result[0].total;
+
+    }
+    // 购买房间列表
+    async chatRootList(uid, start, size) {
+
+      const moment = require("moment");
+      const time = moment().format("YYYY-MM-DD");
       const field = 'log_id,log_main_id,log_room_expire,room_title as log_title ,room_photo as log_photo ,room_hits as log_hits';
 
-      const sql = `SELECT ${field} FROM data_user_bean_log left join data_room on (room_id=log_main_id) WHERE log_uid = ${userId} AND log_type='join_room' AND log_room_expire >='${time}' ORDER BY log_id DESC LIMIT ${start},${size}`;
+      const sql = `SELECT ${field} FROM data_user_bean_log left join data_room on (room_id=log_main_id) WHERE log_uid = ${uid} AND log_type='join_room' AND log_room_expire >='${time}' ORDER BY log_id DESC LIMIT ${start},${size}`;
       const result = await app.mysql.query(sql);
       for (const v in result) {
         console.log(v);
         result[v].log_photo = app.config.host + result[v].log_photo;
       }
       // console.log(result);
-      return {
-        result,
-        prev,
-        next,
-      };
+      return result;
     }
     // 用户消息总的记录数
-    async userMsg(uid, type = '') {
+    async userMsgTotal(uid, type = '') {
       let sql;
       if (type) {
         sql = `SELECT COUNT(*) as total FROM data_msg WHERE msg_uid='${uid}' AND msg_type='${type}'`;
@@ -62,7 +61,7 @@ module.exports = app => {
       const field = 'msg_id,msg_type,msg_action,msg_isread,msg_main_id,msg_title,DATE_FORMAT(msg_create_time,"%Y-%m-%d %H:%i:%s") as msg_create_time';
       let sql;
       if (type) {
-        sql = `SELECT ${field} FROM data_msg WHERE msg_uid='${uid}' AND msg_type='${type}' ORDER BY msg_id DESC LIMIT ${start},${size}`;
+        sql = `SELECT ${field} FROM data_msg WHERE msg_uid='${uid}' AND msg_type=${type} ORDER BY msg_id DESC LIMIT ${start},${size}`;
       } else {
         sql = `SELECT ${field} FROM data_msg WHERE msg_uid='${uid}' ORDER BY msg_id DESC LIMIT ${start},${size}`;
       }

@@ -8,6 +8,9 @@ module.exports = app => {
     }
 
     // 用户资金记录
+    // async userMoneylog(uid) {
+    //   const field = 'log_id,log_content,log_uid,log_type,log_count,log_main_table,log_main_id,log_create_time,log_recharge_beans';
+    //   const sql = `SELECT ${field} FROM data_user_money_log  WHERE log_uid = '${uid}' ORDER BY log_id DESC`;
     async userMoneylog(userId, start, size) {
       const field =
         'log_id,log_content,log_uid,log_type,log_count,log_main_table,log_main_id,log_create_time,log_recharge_beans';

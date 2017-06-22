@@ -7,37 +7,25 @@ module.exports = app => {
   class ForumController extends app.Controller {
     // 获取板块最大页码
     async getMaxPage() {
-      const MAX_PAGE = 5;
       const result = await this.ctx.service.forum.getTotal();
-      return result > MAX_PAGE ? MAX_PAGE : result;
+      return result;
     }
 
-    // 股吧板块列表
+    // 股吧板块列表order:1人气，0全部
     async get_stock_board_list() {
-      let { cpage, size, uid, token } = this.ctx.request.body;
-      const arr = [uid, cpage, size];
+      let { page, size, uid, token, order } = this.ctx.request.body;
+      let numArr;
+      if (order) {
+        numArr = [uid, page, size, order];
+      } else {
+        numArr = [uid, page, size];
+      }
+
       const strArr = [token];
-      if (charUtil.checkNumT(arr) === false) {
+      if (charUtil.checkType(numArr, strArr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '参数格式不正确',
-        };
-        return;
-      }
-
-      if (charUtil.checkIntType(arr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
-        };
-        return;
-      }
-
-
-      if (charUtil.checkStringType(strArr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
+          tips: '参数有错',
         };
         return;
       }
@@ -50,21 +38,24 @@ module.exports = app => {
         return;
       }
 
-      cpage = parseInt(cpage, 10);
+      page = parseInt(page, 10);
       size = parseInt(size, 10);
 
       const maxPage = await this.getMaxPage();
-      if (cpage > maxPage) {
+      // 总共页数
+      const total = Math.ceil(maxPage / size);
+      if (page > maxPage) {
         this.ctx.body = {
           status: 0,
           tips: '没有更多数据了',
         };
         return;
       }
-      const start = (cpage - 1) * size;
-      const result = await this.ctx.service.forum.list(start, size);
+      const start = (page - 1) * size;
+      const result = await this.ctx.service.forum.list(start, size, order);
       this.ctx.body = {
         status: 1,
+        totalsub: total,
         list: result,
       };
     }
@@ -72,29 +63,12 @@ module.exports = app => {
     // 股吧热门四条
     async get_stock_board_hot() {
       let { size, uid, token } = this.ctx.request.body;
-      const arr = [uid, size];
+      const numArr = [uid, size];
       const strArr = [token];
-      if (charUtil.checkNumT(arr) === false) {
+      if (charUtil.checkType(numArr, strArr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '参数格式不正确',
-        };
-        return;
-      }
-
-      if (charUtil.checkIntType(arr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
-        };
-        return;
-      }
-
-
-      if (charUtil.checkStringType(strArr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
+          tips: '参数有错',
         };
         return;
       }
@@ -118,28 +92,12 @@ module.exports = app => {
     // 模块详情
     async boardDetail() {
       const { id, uid, token } = this.ctx.request.body;
-      const arr = [id, uid];
+      const numArr = [uid, id];
       const strArr = [token];
-      if (charUtil.checkNumT(arr) === false) {
+      if (charUtil.checkType(numArr, strArr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '参数格式不正确',
-        };
-        return;
-      }
-
-      if (charUtil.checkIntType(arr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
-        };
-        return;
-      }
-
-      if (charUtil.checkStringType(strArr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
+          tips: '参数有错',
         };
         return;
       }
@@ -168,31 +126,20 @@ module.exports = app => {
     // 股吧板块关注与取消
     async follow() {
       let { state, boardId, uid, token } = this.ctx.request.body;
-      const arr = [boardId, uid];
+      let numArr;
+      if (state) {
+        numArr = [uid, boardId, state];
+      } else {
+        numArr = [uid, boardId];
+      }
       const strArr = [token];
-      if (charUtil.checkNum(state) === false) {
+      if (charUtil.checkType(numArr, strArr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '状态格式不正确',
+          tips: '参数有错',
         };
         return;
       }
-      if (charUtil.checkNumT(arr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数格式不正确',
-        };
-        return;
-      }
-
-      if (charUtil.checkIntType(arr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
-        };
-        return;
-      }
-
 
       if (charUtil.checkStringType(strArr) === false) {
         this.ctx.body = {
@@ -312,29 +259,18 @@ module.exports = app => {
     // 股吧主题列表
     async sublist() {
       let { page, size, boardId, order, uid, token } = this.ctx.request.body;
-      const arr = [page, size, boardId, uid];
+
+      let numArr;
+      if (order) {
+        numArr = [page, size, boardId, uid, order];
+      } else {
+        numArr = [page, size, boardId, uid];
+      }
       const strArr = [token];
-      if (charUtil.checkNumT(arr) === false) {
+      if (charUtil.checkType(numArr, strArr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '参数格式不正确',
-        };
-        return;
-      }
-
-      if (charUtil.checkIntType(arr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
-        };
-        return;
-      }
-
-
-      if (charUtil.checkStringType(strArr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
+          tips: '参数有错',
         };
         return;
       }
@@ -388,32 +324,17 @@ module.exports = app => {
     // 主题热门列表
     async subHotlist() {
       let { uid, token, page, size, boardId } = this.ctx.request.body;
-      const arr = [uid, page, size, boardId];
+
+      const numArr = [page, size, boardId, uid];
       const strArr = [token];
-      if (charUtil.checkNumT(arr) === false) {
+      if (charUtil.checkType(numArr, strArr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '参数格式不正确',
+          tips: '参数有错',
         };
         return;
       }
 
-      if (charUtil.checkIntType(arr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
-        };
-        return;
-      }
-
-
-      if (charUtil.checkStringType(strArr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
-        };
-        return;
-      }
       const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
       if (_.isEmpty(checktoken)) {
         this.ctx.body = {
@@ -453,32 +374,17 @@ module.exports = app => {
     // 股吧主题详情
     async forumSubjectDetail() {
       const { subId, uid, token } = this.ctx.request.body;
-      const arr = [subId, uid];
+
+      const numArr = [subId, uid];
       const strArr = [token];
-      if (charUtil.checkNumT(arr) === false) {
+      if (charUtil.checkType(numArr, strArr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '参数格式不正确',
+          tips: '参数有错',
         };
         return;
       }
 
-      if (charUtil.checkIntType(arr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
-        };
-        return;
-      }
-
-
-      if (charUtil.checkStringType(strArr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
-        };
-        return;
-      }
       const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
       if (_.isEmpty(checktoken)) {
         this.ctx.body = {
@@ -503,33 +409,17 @@ module.exports = app => {
     // 股吧主题评论信息
     async commentdata() {
       const { subId, uid, token } = this.ctx.request.body;
-
-      const arr = [subId, uid];
+      const numArr = [subId, uid];
       const strArr = [token];
-      if (charUtil.checkNumT(arr) === false) {
+      if (charUtil.checkType(numArr, strArr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '参数格式不正确',
-        };
-        return;
-      }
-
-      if (charUtil.checkIntType(arr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
+          tips: '参数有错',
         };
         return;
       }
 
 
-      if (charUtil.checkStringType(strArr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
-        };
-        return;
-      }
       const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
       if (_.isEmpty(checktoken)) {
         this.ctx.body = {
@@ -547,32 +437,13 @@ module.exports = app => {
     }
     // 股吧主题评论增加
     async addComment() {
-      // let { subId, content } = this.ctx.request.body;
       const { subId, content, uid, token } = this.ctx.request.body;
-
-      const arr = [subId, uid];
+      const numArr = [subId, uid];
       const strArr = [token];
-      if (charUtil.checkNumT(arr) === false) {
+      if (charUtil.checkType(numArr, strArr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '参数格式不正确',
-        };
-        return;
-      }
-
-      if (charUtil.checkIntType(arr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
-        };
-        return;
-      }
-
-
-      if (charUtil.checkStringType(strArr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
+          tips: '参数有错',
         };
         return;
       }
@@ -602,30 +473,12 @@ module.exports = app => {
     // 股吧主题的增加
     async addForumSubject() {
       const { title, content, boardId, uid, token } = this.ctx.request.body;
-
-      const arr = [uid, boardId];
+      const numArr = [uid, boardId];
       const strArr = [token, content, title];
-      if (charUtil.checkNumT(arr) === false) {
+      if (charUtil.checkType(numArr, strArr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '参数格式不正确',
-        };
-        return;
-      }
-
-      if (charUtil.checkIntType(arr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
-        };
-        return;
-      }
-
-
-      if (charUtil.checkStringType(strArr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
+          tips: '参数有错',
         };
         return;
       }
@@ -677,32 +530,16 @@ module.exports = app => {
     // 我的关注股吧列表
     async myBoardlist() {
       let { uid, token, page, size } = this.ctx.request.body;
-      const arr = [uid, page, size];
+      const numArr = [uid, page, size];
       const strArr = [token];
-      if (charUtil.checkNumT(arr) === false) {
+      if (charUtil.checkType(numArr, strArr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '参数格式不正确',
+          tips: '参数有错',
         };
         return;
       }
 
-      if (charUtil.checkIntType(arr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
-        };
-        return;
-      }
-
-
-      if (charUtil.checkStringType(strArr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
-        };
-        return;
-      }
       const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
       if (_.isEmpty(checktoken)) {
         this.ctx.body = {

@@ -13,24 +13,15 @@ module.exports = app => {
     async taskList() {
       const { uid, token } = this.ctx.request.body;
 
-      const arr = [uid];
-      if (charUtil.checkNumT(arr) === false) {
+      const numArr = [uid];
+      const strArr = [token];
+      if (charUtil.checkType(numArr, strArr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '参数格式不正确',
+          tips: '参数有错',
         };
         return;
       }
-
-      if (charUtil.checkIntType(arr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
-        };
-        return;
-      }
-
-
       const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
       if (_.isEmpty(checktoken)) {
         this.ctx.body = {
@@ -65,32 +56,16 @@ module.exports = app => {
     // 领取完成任务
     async finishTask() {
       const { key, uid, token } = this.ctx.request.body;
-      const arr = [uid];
+      const numArr = [uid];
       const strArr = [key, token];
-      if (charUtil.checkNumT(arr) === false) {
+      if (charUtil.checkType(numArr, strArr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '参数格式不正确',
+          tips: '参数有错',
         };
         return;
       }
 
-      if (charUtil.checkIntType(arr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
-        };
-        return;
-      }
-
-
-      if (charUtil.checkStringType(strArr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
-        };
-        return;
-      }
       const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
       if (_.isEmpty(checktoken)) {
         this.ctx.body = {

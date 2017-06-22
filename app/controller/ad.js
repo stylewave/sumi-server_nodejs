@@ -2,32 +2,15 @@ const _ = require('lodash');
 const charUtil = require('./utils/charUtil.js');
 module.exports = app => {
   class AdController extends app.Controller {
-    // 拉取广告列表
+    // 拉取广告列表page=index,activity,index_top
     async list() {
       const { page, uid, token } = this.ctx.request.body;
-      const arr = [uid, page];
-      const strArr = [token];
-      if (charUtil.checkNumT(arr) === false) {
+      const numArr = [uid];
+      const strArr = [token, page];
+      if (charUtil.checkType(numArr, strArr) === false) {
         this.ctx.body = {
           status: 0,
-          tips: '参数格式不正确',
-        };
-        return;
-      }
-
-      if (charUtil.checkIntType(arr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
-        };
-        return;
-      }
-
-
-      if (charUtil.checkStringType(strArr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
+          tips: '参数有错',
         };
         return;
       }
