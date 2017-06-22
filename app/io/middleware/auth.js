@@ -1,5 +1,5 @@
 module.exports = () => {
-  return function*(next) {
+  return function* (next) {
     const fd = this.socket.id; // 用户进程id
 
     // 用户连接上
