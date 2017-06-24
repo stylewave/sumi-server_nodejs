@@ -373,9 +373,14 @@ module.exports = app => {
 
     // 股吧主题详情
     async forumSubjectDetail() {
-      const { subId, uid, token } = this.ctx.request.body;
-
-      const numArr = [subId, uid];
+      const { boardId, subId, uid, token } = this.ctx.request.body;
+      let numArr;
+      if (subId) {
+        numArr = [subId, uid, boardId];
+      } else {
+        numArr = [uid, boardId];
+      }
+      // const numArr = [subId, uid, boardId];
       const strArr = [token];
       if (charUtil.checkType(numArr, strArr) === false) {
         this.ctx.body = {
@@ -393,7 +398,7 @@ module.exports = app => {
         };
         return;
       }
-      const result = await this.ctx.service.forum.forumSubjectDetail(subId);
+      const result = await this.ctx.service.forum.forumSubjectDetail(boardId, subId);
       if (_.isEmpty(result)) {
         this.ctx.body = {
           status: 0,
@@ -408,8 +413,14 @@ module.exports = app => {
     }
     // 股吧主题评论信息
     async commentdata() {
-      const { subId, uid, token } = this.ctx.request.body;
-      const numArr = [subId, uid];
+      const { boardId, subId, uid, token } = this.ctx.request.body;
+      // const numArr = [subId, uid];
+      let numArr;
+      if (subId) {
+        numArr = [subId, uid, boardId];
+      } else {
+        numArr = [uid, boardId];
+      }
       const strArr = [token];
       if (charUtil.checkType(numArr, strArr) === false) {
         this.ctx.body = {
@@ -429,7 +440,7 @@ module.exports = app => {
         return;
       }
 
-      const result = await this.ctx.service.forum.commentdata(subId);
+      const result = await this.ctx.service.forum.commentdata(boardId, subId);
       this.ctx.body = {
         status: 1,
         list: result,

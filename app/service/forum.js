@@ -138,15 +138,17 @@ module.exports = app => {
     }
 
     // 股吧主题评论
-    async commentdata(subId) {
+    async commentdata(boardId, subId = '') {
       const field =
         'reply_id,reply_board_id,reply_user,reply_user_icon,reply_nickname,reply_content,reply_status,DATE_FORMAT(reply_create_time,"%m-%d %H:%i") AS reply_create_time ';
-      const sql =
-        'SELECT ' +
-        field +
-        " FROM data_forum_reply WHERE reply_status = '1' AND  reply_suject_id= " +
-        subId +
-        ' ORDER BY reply_id DESC ';
+      let sql;
+      if (subId) {
+        sql = `SELECT ${field} FROM data_forum_reply WHERE reply_status = '1' AND  reply_suject_id=${subId} AND  reply_board_id=${boardId} ORDER BY reply_id DESC `;
+      } else {
+        sql = `SELECT ${field} FROM data_forum_reply WHERE reply_status = '1' AND  reply_board_id=${boardId} ORDER BY reply_id DESC `;
+      }
+
+      // const sql = 'SELECT ' +field +" FROM data_forum_reply WHERE reply_status = '1' AND  reply_suject_id= " + subId +' ORDER BY reply_id DESC ';
       const result = await app.mysql.query(sql);
       return result;
     }
@@ -192,14 +194,21 @@ module.exports = app => {
       return result;
     }
     // 股吧主题详情
-    async forumSubjectDetail(subId) {
+    async forumSubjectDetail(boardId, subId = '') {
       const field =
         'sub_id,sub_board_id,sub_title,sub_content,sub_uid,sub_user,sub_nickname,sub_user_icon,sub_hits,sub_hot_type,sub_reply_count,DATE_FORMAT(sub_create_time,"%m-%d %H:%i") AS sub_create_time ';
-      const sql = 'SELECT ' + field + 'FROM data_forum_subject where sub_status="1" and sub_id=' + subId;
+      let sql;
+      if (subId) {
+        //  sql = 'SELECT ' + field + 'FROM data_forum_subject where sub_status="1" and sub_id=' + subId;
+        sql = `SELECT ${field} FROM data_forum_subject where sub_status="1" and sub_id=${subId} AND sub_board_id=${boardId}`;
+      } else {
+        sql = `SELECT ${field} FROM data_forum_subject where sub_status="1" and sub_board_id=${boardId} ORDER BY sub_id DESC`;
+      }
+
       const result = await app.mysql.query(sql);
       const randhit = parseInt(Math.random() * 5 + 1, 10);
       console.log(randhit);
-      const subSql = 'UPDATE data_forum_subject SET sub_hits = sub_hits+' + randhit + '  WHERE sub_id = ' + subId;
+      const subSql = 'UPDATE data_forum_subject SET sub_hits = sub_hits+' + randhit + '  WHERE sub_id = ' + result[0].sub_id;
       app.mysql.query(subSql);
       return result.length > 0 ? result[0] : null;
     }
