@@ -196,7 +196,7 @@ module.exports = app => {
     // 股吧主题详情
     async forumSubjectDetail(boardId, subId = '') {
       const field =
-        'sub_id,sub_board_id,sub_title,sub_content,sub_uid,sub_user,sub_nickname,sub_user_icon,sub_hits,sub_hot_type,sub_reply_count,DATE_FORMAT(sub_create_time,"%m-%d %H:%i") AS sub_create_time ';
+        'sub_id,sub_board_id,sub_title,sub_content,sub_uid,sub_user,sub_nickname,sub_user_icon,sub_hits,sub_hot_type,sub_reply_count,DATE_FORMAT(sub_create_time,"%m/%d %H:%i") AS sub_create_time ';
       let sql;
       if (subId) {
         //  sql = 'SELECT ' + field + 'FROM data_forum_subject where sub_status="1" and sub_id=' + subId;
