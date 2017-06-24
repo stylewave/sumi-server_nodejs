@@ -7,6 +7,9 @@ $ npm install egg-cors或者
 $ yarn add egg-cors
 # 安装支持PHP序列化插件
 $ npm install locutus
+# 安装request
+$ npm install request
+$ npm install iconv-lite
 ```
 
 ## 命令
