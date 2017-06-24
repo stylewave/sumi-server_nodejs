@@ -1,9 +1,9 @@
 module.exports = app => {
   class ForumService extends app.Service {
     // 股吧板块详情
-    async boardDetail(id, uid) {
+    async boardDetail(boardId, uid) {
       const field = '*';
-      const sql = 'SELECT ' + field + " FROM data_forum_board WHERE board_id = '" + id + "' ";
+      const sql = 'SELECT ' + field + " FROM data_forum_board WHERE board_id = '" + boardId + "' ";
       const result = await app.mysql.query(sql);
       const user = await this.userBoard(uid);
 
@@ -204,6 +204,7 @@ module.exports = app => {
       } else {
         sql = `SELECT ${field} FROM data_forum_subject where sub_status="1" and sub_board_id=${boardId} ORDER BY sub_id DESC`;
       }
+      console.log(sql);
 
       const result = await app.mysql.query(sql);
       const randhit = parseInt(Math.random() * 5 + 1, 10);

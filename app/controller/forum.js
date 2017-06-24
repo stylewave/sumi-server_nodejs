@@ -89,10 +89,10 @@ module.exports = app => {
       };
     }
 
-    // 模块详情
+    // 股吧详情
     async boardDetail() {
-      const { id, uid, token } = this.ctx.request.body;
-      const numArr = [uid, id];
+      const { boardId, uid, token } = this.ctx.request.body;
+      const numArr = [uid, boardId];
       const strArr = [token];
       if (charUtil.checkType(numArr, strArr) === false) {
         this.ctx.body = {
@@ -109,7 +109,7 @@ module.exports = app => {
         };
         return;
       }
-      const result = await this.ctx.service.forum.boardDetail(id, uid);
+      const result = await this.ctx.service.forum.boardDetail(boardId, uid);
       if (_.isEmpty(result)) {
         this.ctx.body = {
           status: 0,
@@ -117,8 +117,10 @@ module.exports = app => {
         };
         return;
       }
+      const total = await this.ctx.service.forum.getSubTotal(boardId);
       this.ctx.body = {
         status: 1,
+        totalCount: total,
         detail: result,
       };
     }
