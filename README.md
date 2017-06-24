@@ -9,6 +9,7 @@ $ yarn add egg-cors
 $ npm install locutus
 # 安装request
 $ npm install request
+$ npm install iconv-lite
 ```
 
 ## 命令
