@@ -143,8 +143,8 @@ module.exports = app => {
     }
 
     // 多空舆情列表
-    async marketList(start, size) {
-      const sql = 'SELECT * FROM data_market  ORDER BY mk_id DESC LIMIT ' + start + ',' + size;
+    async marketList() {
+      const sql = 'SELECT * FROM data_market  ORDER BY mk_id DESC';
       // console.log(sql);
       const result = await app.mysql.query(sql);
       return result;

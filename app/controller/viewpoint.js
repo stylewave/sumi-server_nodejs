@@ -198,8 +198,8 @@ module.exports = app => {
 
     // 多空舆情
     async marketList() {
-      let { page, size, uid, token } = this.ctx.request.body;
-      const numArr = [page, size, uid];
+      let { uid, token } = this.ctx.request.body;
+      const numArr = [uid];
       const strArr = [token];
       if (charUtil.checkType(numArr, strArr) === false) {
         this.ctx.body = {
@@ -217,18 +217,20 @@ module.exports = app => {
         return;
       }
 
-      page = parseInt(page, 10);
-      size = parseInt(size, 10);
-      const maxPage = await this.getMarketMaxPage();
-      if (page > maxPage) {
-        this.ctx.body = {
-          status: 0,
-          tips: '没有更多数据了',
-        };
-        return;
-      }
-      const start = (page - 1) * size;
-      const result = await this.ctx.service.viewpoint.marketList(start, size);
+      // page = parseInt(page, 10);
+      // size = parseInt(size, 10);
+      // const maxPage = await this.getMarketMaxPage();
+      // if (page > maxPage) {
+      //   this.ctx.body = {
+      //     status: 0,
+      //     tips: '没有更多数据了',
+      //   };
+      //   return;
+      // }
+      // const start = (page - 1) * size;
+      // // 总共页数
+      // const total = Math.ceil(maxPage / size);
+      const result = await this.ctx.service.viewpoint.marketList();
       this.ctx.body = {
         status: 1,
         list: result,
