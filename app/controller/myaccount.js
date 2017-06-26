@@ -17,7 +17,6 @@ module.exports = app => {
         return;
       }
 
-
       const checktoke = await this.ctx.service.utils.common.checkToken(uid, token);
       if (_.isEmpty(checktoke)) {
         this.ctx.body = {
@@ -40,7 +39,7 @@ module.exports = app => {
       const result = await this.ctx.service.myaccount.userMoneylog(uid, start, size);
       this.ctx.body = {
         status: 1,
-        totalsub: total,
+        count: maxPage,
         list: result,
       };
     }
@@ -57,7 +56,6 @@ module.exports = app => {
       const numArr = [uid, page, size];
       const strArr = [token];
       if (charUtil.checkType(numArr, strArr) === false) {
-
         this.ctx.body = {
           status: 0,
           tips: '参数有错',
@@ -103,19 +101,14 @@ module.exports = app => {
       const result = await this.ctx.service.myaccount.userBeanLog(uid, start, size);
       this.ctx.body = {
         status: 1,
-        count: total,
+        count: maxPage,
         list: result,
       };
     }
     //  豆币回收列表
     async beanReturnList() {
-      const { uid, token, status } = this.ctx.request.body;
-      let numArr;
-      if (status) {
-        numArr = [uid, status];
-      } else {
-        numArr = [uid];
-      }
+      let { uid, token, page, size } = this.ctx.request.body;
+      const numArr = [uid, page, size];
       const strArr = [token];
       if (charUtil.checkType(numArr, strArr) === false) {
         this.ctx.body = {
@@ -140,11 +133,24 @@ module.exports = app => {
         };
         return;
       }
-
-      const result = await this.ctx.service.myaccount.beanReturnList(uid, status);
+      page = parseInt(page, 10);
+      size = parseInt(size, 10);
+      const total = await this.ctx.service.myaccount.beanReturnTotal(uid);
+      // 总共页数
+      const maxPage = Math.ceil(total / size);
+      if (page > maxPage) {
+        this.ctx.body = {
+          status: 0,
+          tips: '没有更多数据了',
+        };
+        return;
+      }
+      const start = (page - 1) * size;
+      const result = await this.ctx.service.myaccount.beanReturnList(uid, start, size);
       this.ctx.body = {
         status: 1,
         list: result,
+        count: maxPage,
       };
     }
     //  豆币回收详情
@@ -178,7 +184,18 @@ module.exports = app => {
     }
     //  豆币回收
     async beanReturn() {
-      let { token, uid, beans, account_type, alipay_account, wxpay_account, unionpay_account, unionpay_name, unionpay_bank, mobile } = this.ctx.request.body;
+      let {
+        token,
+        uid,
+        beans,
+        account_type,
+        alipay_account,
+        wxpay_account,
+        unionpay_account,
+        unionpay_name,
+        unionpay_bank,
+        mobile,
+      } = this.ctx.request.body;
       let numArr;
       if (account_type) {
         numArr = [uid, beans, account_type];
