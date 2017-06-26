@@ -10,13 +10,13 @@ module.exports = app => {
     // 用户资金记录
     async userMoneylog(userId, start, size) {
       const field =
-        'log_id,log_content,log_uid,log_type,log_count,log_main_table,log_main_id,log_create_time,log_recharge_beans,log_recharge_sn';
+        'order_id,order_beans,order_sn,order_all_total,DATE_FORMAT(order_create_time,"%Y-%m-%d %H:%i") as order_create_time,order_pay_from';
       const sql =
         'SELECT ' +
         field +
-        ' FROM data_user_money_log  WHERE log_uid = ' +
+        ' FROM data_order WHERE order_uid = ' +
         userId +
-        ' AND log_recharge_beans > 0 ORDER BY log_id DESC LIMIT ' +
+        ' AND order_status = 3 ORDER BY order_id DESC LIMIT ' +
         start +
         ',' +
         size;
@@ -49,7 +49,7 @@ module.exports = app => {
     //  豆币回收列表
     async beanReturnList(uid, start, size) {
       const field =
-        'return_id,return_uid,return_beans,return_money,return_account_type,DATE_FORMAT(return_create_time,"%m-%d %H:%i") as return_create_time,return_finish_time,return_status';
+        'return_id,return_money,return_beans,return_money,return_account_type,DATE_FORMAT(return_create_time,"%m-%d %H:%i") as return_create_time,return_status';
       const sql = `SELECT ${field} FROM data_user_bean_return  WHERE return_uid = ${uid}  ORDER BY return_id DESC LIMIT ${start}, ${size}`;
       const result = await app.mysql.query(sql);
       return result;
