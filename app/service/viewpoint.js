@@ -154,13 +154,22 @@ module.exports = app => {
     async marketVideo(start, size) {
       const field = 'video_id,video_title,video_url,video_photo,video_hits';
       const sql = `SELECT ${field} FROM data_video WHERE video_status=1 ORDER BY video_id DESC LIMIT ${start},${size}`;
+      console.log(sql);
       const result = await app.mysql.query(sql);
       for (const v in result) {
         result[v].video_photo = app.config.host + result[v].video_photo;
       }
 
-      console.log(result);
+      // console.log(result);
       return result;
+    }
+    async marketVideoDetail(videoId) {
+      const field = 'video_id,video_title,video_url,video_content,video_hits,DATE_FORMAT(video_create_time,"%Y-%d-%m %H:%i") AS video_create_time';
+      const sql = `SELECT ${field} FROM data_video WHERE video_status=1 and video_id = ${videoId}`;
+
+      const result = await app.mysql.query(sql);
+      return result.length > 0 ? result[0] : null;
+
     }
 
 

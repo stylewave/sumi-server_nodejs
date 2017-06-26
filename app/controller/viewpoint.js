@@ -264,6 +264,41 @@ module.exports = app => {
       };
     }
 
+    async marketVideoDetail() {
+      const { uid, token, videoId } = this.ctx.request.body;
+      const numArr = [uid, videoId];
+      const strArr = [token];
+      if (charUtil.checkType(numArr, strArr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数有错',
+        };
+        return;
+      }
+      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoken)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户信息已过期,请重新登录',
+        };
+        return;
+      }
+      const video = await this.ctx.service.viewpoint.marketVideoDetail(videoId);
+      if (_.isEmpty(video)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '该id不存在',
+        };
+        return;
+      }
+      this.ctx.body = {
+        status: 1,
+        list: video,
+      };
+
+    }
+
+
   }
   return ViewpointController;
 };
