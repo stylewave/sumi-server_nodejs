@@ -135,20 +135,32 @@ module.exports = app => {
 
     }
 
-    // 获取多空舆情总的记录数
-    async getMarketMaxPage() {
-      const sql = 'SELECT COUNT(*) as total FROM data_market ';
+
+    // 大数据列表
+    async marketList() {
+      const sql = 'SELECT mk_point1,mk_point2,mk_point3,mk_point4 FROM data_market  ORDER BY mk_id DESC';
+      // console.log(sql);
+      const result = await app.mysql.query(sql);
+      return result[0];
+
+    }
+    // 获取多空策略的记录数
+    async getVideoPage() {
+      const sql = 'SELECT COUNT(*) as total FROM data_video WHERE video_status=1';
       const result = await app.mysql.query(sql);
       return result[0].total;
     }
-
-    // 多空舆情列表
-    async marketList() {
-      const sql = 'SELECT * FROM data_market  ORDER BY mk_id DESC';
-      // console.log(sql);
+    // 多空策略
+    async marketVideo(start, size) {
+      const field = 'video_id,video_title,video_url,video_photo,video_hits';
+      const sql = `SELECT ${field} FROM data_video WHERE video_status=1 ORDER BY video_id DESC LIMIT ${start},${size}`;
       const result = await app.mysql.query(sql);
-      return result;
+      for (const v in result) {
+        result[v].video_photo = app.config.host + result[v].video_photo;
+      }
 
+      console.log(result);
+      return result;
     }
 
 

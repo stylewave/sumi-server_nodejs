@@ -186,19 +186,11 @@ module.exports = app => {
       console.log(buydata);
     }
 
-    // 大数据
-    async bigdata() {
-      this.ctx.body = '大数据';
-    }
-    // 获取多空舆情最大页码
-    async getMarketMaxPage() {
-      const result = await this.ctx.service.viewpoint.getMarketMaxPage();
-      return result;
-    }
 
-    // 多空舆情
+
+    // 大数据
     async marketList() {
-      let { uid, token } = this.ctx.request.body;
+      const { uid, token } = this.ctx.request.body;
       const numArr = [uid];
       const strArr = [token];
       if (charUtil.checkType(numArr, strArr) === false) {
@@ -216,23 +208,58 @@ module.exports = app => {
         };
         return;
       }
-
-      // page = parseInt(page, 10);
-      // size = parseInt(size, 10);
-      // const maxPage = await this.getMarketMaxPage();
-      // if (page > maxPage) {
-      //   this.ctx.body = {
-      //     status: 0,
-      //     tips: '没有更多数据了',
-      //   };
-      //   return;
-      // }
-      // const start = (page - 1) * size;
-      // // 总共页数
-      // const total = Math.ceil(maxPage / size);
       const result = await this.ctx.service.viewpoint.marketList();
       this.ctx.body = {
         status: 1,
+        detail: result,
+      };
+    }
+
+
+    // 获取多空舆情最大页码
+    async getVideoPage() {
+      const result = await this.ctx.service.viewpoint.getVideoPage();
+      return result;
+    }
+
+    // 多空舆情
+    async marketVideo() {
+      let { uid, token, page, size } = this.ctx.request.body;
+      const numArr = [uid, page, size];
+      const strArr = [token];
+      if (charUtil.checkType(numArr, strArr) === false) {
+        this.ctx.body = {
+          status: 0,
+          tips: '参数有错',
+        };
+        return;
+      }
+      const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
+      if (_.isEmpty(checktoken)) {
+        this.ctx.body = {
+          status: 0,
+          tips: '用户信息已过期,请重新登录',
+        };
+        return;
+      }
+
+      page = parseInt(page, 10);
+      size = parseInt(size, 10);
+      const maxPage = await this.getVideoPage();
+      if (page > maxPage) {
+        this.ctx.body = {
+          status: 0,
+          tips: '没有更多数据了',
+        };
+        return;
+      }
+      const start = (page - 1) * size;
+      // 总共页数
+      const total = Math.ceil(maxPage / size);
+      const result = await this.ctx.service.viewpoint.marketVideo(start, size);
+      this.ctx.body = {
+        status: 1,
+        totalsub: total,
         list: result,
       };
     }

@@ -53,8 +53,10 @@ module.exports = app => {
   app.post('/api/viewpoint/expertCommentList', 'viewpoint.expertCommentList');
   // 观点详情
   app.post('/api/viewpoint/commentDetail', 'viewpoint.commentDetail');
-  // 多空舆情列表
+  // 大数据
   app.post('/api/viewpoint/marketList', 'viewpoint.marketList');
+  // 多空舆情列表
+  app.post('/api/viewpoint/marketVideo', 'viewpoint.marketVideo');
   // 购买观点
   app.post('/api/viewpoint/buyExpertComment', 'viewpoint.buyExpertComment');
   // 用户资金记录
