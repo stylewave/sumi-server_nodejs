@@ -8,12 +8,9 @@ module.exports = app => {
     async userMoneylog() {
       const { uid, token, page, size, type } = this.ctx.request.body;
       const numArr = [uid, page, size];
-      let strArr;
-      if (type) {
-        strArr = [token, type];
-      } else {
-        strArr = [token];
-      }
+
+      const strArr = [token, type];
+
 
       if (charUtil.checkType(numArr, strArr) === false) {
         this.ctx.body = {
@@ -258,6 +255,7 @@ module.exports = app => {
         this.ctx.body = {
           status: 1,
           tips: '回收提交成功',
+          data: result,
           // time: formatted,
         };
       } else {
