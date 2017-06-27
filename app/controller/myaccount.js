@@ -216,7 +216,7 @@ module.exports = app => {
         if (charUtil.check_string(unionpay_account, 'bank') === false || charUtil.check_string(unionpay_name, 'chinese') === false) {
           this.ctx.body = {
             status: 0,
-            tips: '填写的信息有误',
+            tips: '填写的银行卡的信息有误',
           };
           return;
         }

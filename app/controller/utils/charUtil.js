@@ -168,7 +168,7 @@ module.exports = {
       return re.test(value);
     }
     if (type === 'bank') {
-      re = /^\d{16}|\d{19}$/;
+      re = /^d{16}|\d{19}$/g;
       return re.test(value);
     }
     if (type === 'chinese') {
