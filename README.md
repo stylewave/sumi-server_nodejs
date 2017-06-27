@@ -23,6 +23,11 @@ $ yarn dev
 # 运行单元测试
 $ yarn test
 ```
+## git使用技巧
+### 防止在windows下拉取代码后换行符变成了\r\n
+```bash
+$ git config --global core.autocrlf false
+```
 
 ## 调试
 ```bash
