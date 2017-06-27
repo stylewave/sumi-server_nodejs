@@ -50,10 +50,13 @@ module.exports = app => {
             let id = this.cutString(tempList[0], "str_", "=");          // id
             let name = this.cutString(tempList[0], "=\"", "");        // name
             let priceCur = parseFloat(tempList[3], 10).toFixed(2);    // 当前价
-            let priceChange = parseFloat(tempList[3], 10).toFixed(2) - parseFloat(tempList[2], 10).toFixed(2);    // 差价
-            let priceChangeRatio = (parseFloat(tempList[3], 10) - parseFloat(tempList[2], 10)) / parseFloat(tempList[2], 10) * 100;// 涨跌幅
+            if (priceCur <= 1) {
+              priceCur = parseFloat(tempList[2], 10).toFixed(2);
+            }
+            let priceChange = priceCur - parseFloat(tempList[2], 10);    // 差价
+            let priceChangeRatio = (priceCur - parseFloat(tempList[2], 10)) / parseFloat(tempList[2], 10) * 100;// 涨跌幅
             let volume = parseFloat(tempList[9], 10) / 1000000000;         // 成交额
-            let flag = (parseFloat(tempList[3], 10) - parseFloat(tempList[2], 10) > 0) ? 1 : 0;
+            let flag = (priceCur - parseFloat(tempList[2], 10) >= 0) ? 1 : 0;
 
             priceChange = priceChange.toFixed(2);
             priceChangeRatio = priceChangeRatio.toFixed(2);
