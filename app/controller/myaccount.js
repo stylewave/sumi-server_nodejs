@@ -4,11 +4,17 @@ const regExp = require('./utils/regExpUtil.js');
 module.exports = app => {
   // 我的账户模块
   class MyaccountController extends app.Controller {
-    // 用户资金记录
+    // 用户资金记录,type:buy_bean购买参数
     async userMoneylog() {
-      const { uid, token, page, size } = this.ctx.request.body;
+      const { uid, token, page, size, type } = this.ctx.request.body;
       const numArr = [uid, page, size];
-      const strArr = [token];
+      let strArr;
+      if (type) {
+        strArr = [token, type];
+      } else {
+        strArr = [token];
+      }
+
       if (charUtil.checkType(numArr, strArr) === false) {
         this.ctx.body = {
           status: 0,
@@ -25,7 +31,7 @@ module.exports = app => {
         };
         return;
       }
-      const total = await this.ctx.service.myaccount.getMoneylogTotal(uid);
+      const total = await this.ctx.service.myaccount.getMoneylogTotal(uid, type);
       // 总共页数
       const maxPage = Math.ceil(total / size);
       if (page > maxPage) {
@@ -36,7 +42,7 @@ module.exports = app => {
         return;
       }
       const start = (page - 1) * size;
-      const result = await this.ctx.service.myaccount.userMoneylog(uid, start, size);
+      const result = await this.ctx.service.myaccount.userMoneylog(uid, start, size, type);
       this.ctx.body = {
         status: 1,
         count: maxPage,
@@ -44,13 +50,12 @@ module.exports = app => {
       };
     }
     // 获取豆币记录最大页码
-    async userBeanLogTotal(uid) {
-      const result = await this.ctx.service.myaccount.userBeanLogTotal(uid);
+    async userBeanLogTotal(uid, type) {
+      const result = await this.ctx.service.myaccount.userBeanLogTotal(uid, type);
       return result;
     }
 
     // 豆币记录列表
-
     async userBeanLog() {
       let { uid, page, size, token } = this.ctx.request.body;
       const numArr = [uid, page, size];
@@ -150,7 +155,7 @@ module.exports = app => {
       this.ctx.body = {
         status: 1,
         list: result,
-        count: maxPage,
+        totalsub: maxPage,
       };
     }
     //  豆币回收详情
@@ -264,20 +269,6 @@ module.exports = app => {
       }
     }
 
-    async test() {
-      const result = await this.app.mysql.insert('data_user', {
-        user_name: '123456633',
-        user_pwd: '1413',
-        user_salt: '1222',
-        user_reg_time: this.app.mysql.literals.now,
-      });
-      console.log(result.insertId);
-      this.ctx.body = {
-        status: 1,
-        list: result.insertId,
-        // time: formatted,
-      };
-    }
   }
   return MyaccountController;
 };
