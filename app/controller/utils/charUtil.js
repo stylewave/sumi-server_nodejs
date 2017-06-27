@@ -139,16 +139,6 @@ module.exports = {
 
   },
   // 检测参数的类型
-  checkIntType(numArr) {
-    for (const v in numArr) {
-      if (typeof numArr[v] !== 'number') {
-        return false;
-      }
-    }
-    return true;
-
-  },
-  // 检测参数的类型
   checkType(numArr, strArr) {
 
     if (numArr) {
@@ -170,15 +160,25 @@ module.exports = {
     return true;
 
   },
-  // 检测参数是否为字符串类型
-  checkStringType(arr) {
-    for (const v in arr) {
-      if (typeof arr[v] !== 'string') {
-        return false;
-      }
-    }
-    return true;
 
+  check_string(value, type) {
+    let re;
+    if (type === 'mail') {
+      re = /^(?:[a-z\d]+[_\-\+\.]?)*[a-z\d]+@(?:([a-z\d]+\-?)*[a-z\d]+\.)+([a-z]{2,})+$/i;
+      return re.test(value);
+    }
+    if (type === 'bank') {
+      re = /^\d{16}|\d{19}$/;
+      return re.test(value);
+    }
+    if (type === 'chinese') {
+      re = /^[\u4e00-\u9fa5\w\-\(\)]{2,20}$/;
+
+      return re.test(value);
+    }
   },
+
+
+
 
 };

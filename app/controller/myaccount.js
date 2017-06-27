@@ -119,14 +119,6 @@ module.exports = app => {
         };
         return;
       }
-
-      if (charUtil.checkStringType(strArr) === false) {
-        this.ctx.body = {
-          status: 0,
-          tips: '参数类型不正确',
-        };
-        return;
-      }
       const checktoken = await this.ctx.service.utils.common.checkToken(uid, token);
       if (_.isEmpty(checktoken)) {
         this.ctx.body = {
@@ -198,12 +190,9 @@ module.exports = app => {
         unionpay_bank,
         mobile,
       } = this.ctx.request.body;
-      let numArr;
-      if (account_type) {
-        numArr = [uid, beans, account_type];
-      } else {
-        numArr = [uid, beans];
-      }
+
+      const numArr = [uid, beans, account_type];
+
       const strArr = [token];
       if (charUtil.checkType(numArr, strArr) === false) {
         this.ctx.body = {
@@ -211,6 +200,27 @@ module.exports = app => {
           tips: '参数有错',
         };
         return;
+      }
+      if (account_type === 0) {
+        if (charUtil.check_string(alipay_account, 'mail') === false && regExp.checkMobile(alipay_account) === false) {
+          this.ctx.body = {
+            status: 0,
+            tips: '支付宝账号的信息有误',
+          };
+          return;
+        }
+      }
+      if (account_type === 2) {
+        console.log(charUtil.check_string(unionpay_account, 'bank'));
+        console.log(charUtil.check_string(unionpay_name, 'chinese'));
+        if (charUtil.check_string(unionpay_account, 'bank') === false || charUtil.check_string(unionpay_name, 'chinese') === false) {
+          this.ctx.body = {
+            status: 0,
+            tips: '填写的信息有误',
+          };
+          return;
+        }
+
       }
 
       if (mobile) {
@@ -232,7 +242,7 @@ module.exports = app => {
         return;
       }
       beans = parseInt(beans, 10);
-      if (!beans || beans < 100) {
+      if (beans < 100) {
         this.ctx.body = {
           status: 0,
           tips: '您输入的咨询豆数量必须大于100',

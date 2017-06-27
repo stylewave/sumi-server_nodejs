@@ -61,6 +61,11 @@ module.exports = app => {
 
         // 上回登录时间
         info.user_last_login = result[0].user_last_login;
+        // 获取职业经验
+        const exp_array = await this.ctx.service.utils.expArray.exp();
+        info.jop_exp = info.user_job_exp - exp_array[info.user_job_level - 1];
+        info.jop_next_exp = exp_array[info.user_job_level] - exp_array[info.user_job_level - 1];
+        console.log(info);
         return info;
         // const rs = this.config.crypKeys;
         // console.log('key>>>>>>>>', rs);
