@@ -15,8 +15,7 @@ module.exports = app => {
 
     // 用户资金记录
     async userMoneylog(uid, start, size, type = '') {
-      const field =
-        'log_id,log_content,log_uid,log_type,log_count,log_main_table,log_main_id,log_recharge_beans,log_recharge_sn,DATE_FORMAT(log_create_time,"%Y年%m月%d日 %H:%i") as log_create_time';
+      const field = 'log_id,log_content,log_uid,log_type,log_count,log_main_table,log_main_id,log_recharge_beans,log_recharge_sn,DATE_FORMAT(log_create_time,"%Y年%m月%d日 %H:%i") as log_create_time';
       let sql;
       if (type) {
         sql = `SELECT ${field} FROM data_user_money_log  WHERE log_uid = ${uid} AND log_recharge_beans > 0 AND log_type='${type}' ORDER BY log_id DESC LIMIT ${start},${size}`;
@@ -51,8 +50,7 @@ module.exports = app => {
     }
     //  豆币回收列表
     async beanReturnList(uid, start, size) {
-      const field =
-        'return_id,return_uid,return_beans,return_money,return_account_type,DATE_FORMAT(return_create_time,"%Y年%m月%d日 %H:%i") as return_create_time,return_finish_time,return_status';
+      const field = 'return_id,return_uid,return_beans,return_money,return_account_type,DATE_FORMAT(return_create_time,"%Y年%m月%d日 %H:%i") as return_create_time,return_finish_time,return_status';
       const sql = `SELECT ${field} FROM data_user_bean_return  WHERE return_uid = ${uid}  ORDER BY return_id DESC LIMIT ${start}, ${size}`;
       const result = await app.mysql.query(sql);
       return result;
