@@ -168,8 +168,11 @@ module.exports = {
       return re.test(value);
     }
     if (type === 'bank') {
-      re = /^d{16}|\d{19}$/g;
-      return re.test(value);
+      // re = /^\d{16}|\d{19}$/g;
+      re = /^\d{16}$/;
+      const re2 = /^\d{19}$/;
+      if (re.test(value) === false && re2.test(value) === false) return false;
+      return true;
     }
     if (type === 'chinese') {
       re = /^[\u4e00-\u9fa5\w\-\(\)]{2,20}$/;
