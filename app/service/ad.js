@@ -2,7 +2,7 @@ module.exports = app => {
   class AdService extends app.Service {
     // 获取广告列表
     async list(page) {
-      const field = 'ad_id,ad_title,ad_page,ad_url,ad_photo,ad_create_time';
+      const field = 'ad_id,ad_title,ad_page,ad_url,ad_photo,ad_create_time,ad_content';
       const sql = `SELECT ${field} FROM data_ad WHERE ad_status = '1' AND ad_page='${page}' ORDER BY ad_id`;
       const result = await app.mysql.query(sql);
       for (const v in result) {
@@ -11,6 +11,24 @@ module.exports = app => {
       }
       return result;
     }
+    // 活动总数
+    async getActivityTotal() {
+      const sql = `SELECT COUNT(*) as total FROM data_ad WHERE ad_status = 1 AND ad_page='activity'`;
+      const result = await app.mysql.query(sql);
+      return result[0].total;
+    }
+    // 活动列表
+    async activityList(start, size) {
+      const field = 'ad_id,ad_title,ad_page,ad_url,ad_photo,ad_create_time,ad_content';
+      const sql = `SELECT ${field} FROM data_ad  WHERE ad_status = 1 AND ad_page='activity' ORDER BY ad_id DESC LIMIT ${start},${size}`;
+      // console.log(sql);
+      const result = await app.mysql.query(sql);
+      for (const v in result) {
+        result[v].ad_photo = app.config.host + result[v].ad_photo;
+      }
+      return result;
+    }
+
 
   }
   return AdService;

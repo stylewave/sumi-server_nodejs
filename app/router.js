@@ -5,7 +5,6 @@ module.exports = app => {
   app.get('/api/alipay', 'alipay.pay');
   app.get('/api/chat', 'chat.chat');
 
-  app.post('/api/ad/create', 'ad.create');
   /** http post请求**/
   app.post('/api/sendCode', 'veCode.sendCode');
   app.post('/api/login/register', 'login.register');
@@ -13,6 +12,7 @@ module.exports = app => {
   app.post('/api/login/login', 'login.login');
   app.post('/api/login/relogin', 'login.relogin');
   app.post('/api/ad/list', 'ad.list');
+  app.post('/api/ad/activityList', 'ad.activityList');
   app.post('/api/news/list', 'news.list');
   app.post('/api/news/detail', 'news.newsDetail');
   app.get('/api/login/crypt', 'login.crypt');
@@ -80,6 +80,8 @@ module.exports = app => {
 
   app.post('/api/room/roomList', 'room.roomList');
   app.post('/api/room/buyRoomList', 'room.buyRoomList');
+
+  app.post('/api/sign/signCalendar', 'sign.signCalendar');
 
   app.post('/api/user/test', 'user.test');
 
