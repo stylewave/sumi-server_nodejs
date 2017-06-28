@@ -34,7 +34,8 @@ module.exports = app => {
       page = parseInt(page, 10);
       size = parseInt(size, 10);
       order = parseInt(order, 10);
-      const maxPage = await this.getListTotal();
+      const total = await this.getListTotal();
+      const maxPage = Math.ceil(total / size);
       if (page > maxPage) {
         this.ctx.body = {
           status: 0,
@@ -43,12 +44,11 @@ module.exports = app => {
         return;
       }
       // 总共页数
-      const total = Math.ceil(maxPage / size);
       const start = (page - 1) * size;
       const result = await this.ctx.service.room.roomList(start, size, order);
       this.ctx.body = {
         status: 1,
-        totalsub: total,
+        count: maxPage,
         list: result,
       };
     }
@@ -101,7 +101,6 @@ module.exports = app => {
         list: result,
       };
     }
-
   }
   return RoomService;
 };

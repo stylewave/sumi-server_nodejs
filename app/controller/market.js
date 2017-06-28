@@ -52,7 +52,7 @@ module.exports = app => {
             let priceCur = parseFloat(tempList[3], 10).toFixed(2);    // 当前价
             let priceChange = parseFloat(tempList[3], 10).toFixed(2) - parseFloat(tempList[2], 10).toFixed(2);    // 差价
             let priceChangeRatio = (parseFloat(tempList[3], 10) - parseFloat(tempList[2], 10)) / parseFloat(tempList[2], 10) * 100;// 涨跌幅
-            let volume = parseFloat(tempList[9], 10) / 1000000000;         // 成交额
+            let volume = parseFloat(tempList[9], 10) / 100000000;         // 成交额
             let flag = (parseFloat(tempList[3], 10) - parseFloat(tempList[2], 10) > 0) ? 1 : 0;
 
             priceChange = priceChange.toFixed(2);
