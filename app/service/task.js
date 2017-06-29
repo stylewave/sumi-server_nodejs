@@ -67,8 +67,7 @@ module.exports = app => {
         case '1':
           tcontent.status = '2';
           contentdata = JSON.stringify(tcontent);
-          // contentdata = tcontent;
-          // console.log(contentdata);
+
           taskSql = `UPDATE data_task SET ${content}='${contentdata}' WHERE task_uid = ${uid}`;
           userSql = `UPDATE data_user SET user_bonus_beans='${user_bonus_beans}',user_job_exp=${user_job_exp} WHERE user_id = ${uid}`;
 
@@ -93,15 +92,10 @@ module.exports = app => {
             await conn.commit(); // 提交事务
             // 返回级别及2经验
             re = await this.ctx.service.job.checkUpgrade(uid, userrow.user_job_level, user_job_exp);
-            console.log(re);
-            // re = [{ comet: 2222 }];
-            //  const task_going = [];
+            // console.log(re);
 
             output = { user_job_level: re.user_job_level, jop_exp: re.jop_exp, jop_next_exp: re.jop_next_exp, status: 1, bonus_beans: task_row.task_bonus_beans, exp: task_row.task_exp };
             console.log(output);
-
-            // console.log(re);
-
             result = output;
             // result = output;
           } catch (err) {
@@ -123,6 +117,52 @@ module.exports = app => {
       // console.log(test);
       return result;
     }
+
+    async check_task(key2, uid) {
+      const rs = await this.ctx.service.utils.taskArray.task();
+      const key_array = [key2];
+      let field_list = '';
+      const task_array = [];
+      for (const v in key_array) {
+        const fi = key_array[v];
+        const field = rs[fi].task_db_field;  //
+        field_list += field_list ? ',' + field : field;
+        task_array[v] = rs[fi];
+      }
+      // console.log(task_array);
+      const sql = `select task_id,${field_list} from data_task where task_uid='${uid}'`;
+      const user_task_row = await app.mysql.query(sql);
+      console.log(user_task_row[0]);
+      for (const vv in task_array) {
+        const key = task_array[vv].task_db_field;
+        const content_json = user_task_row[0][key];						// 用户任务json
+        if (content_json) {
+          const content = JSON.parse(content_json);
+          if (content.status === '0') {
+            content.count = parseInt(content.count, 10) + 1;
+          }
+          if (content.count >= task_array[vv].task_need) {				// 大于等于需求则更新状态
+            content.status = "1";
+          }
+          const contentdata = JSON.stringify(content);
+          const taskSql = `UPDATE data_task SET ${key}='${contentdata}' WHERE task_uid = ${uid}`;
+          const rs = await app.mysql.query(taskSql);
+          let output;
+          if (rs) {
+            output = { status: 1, tips: '任务状态已更新' };
+            return output;
+          }
+          output = { status: 0, tips: '没有更新内容' };
+          return output;
+        }
+        // else {
+        //   continue;
+        // }
+
+      }
+
+    }
+
 
 
   }

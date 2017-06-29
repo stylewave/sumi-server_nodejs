@@ -1,84 +1,15 @@
 module.exports = app => {
   class SignController extends app.Service {
-    // 查询用户信息
-    async findByUid(mobile) {
-      const sql = `SELECT user_salt FROM data_user WHERE user_name='${mobile}'`;
-      const result = await app.mysql.query(sql);
-      return result.length > 0 ? result[0].user_salt : null;
-    }
 
-    // 查询用户信息
-    async findByToken(uid, token) {
-      const userInfo = await app.mysql.get('data_user', { user_id: uid, user_token: token });
-      return userInfo;
-    }
-    // 头像和昵称设置
-    async setUserPhoto(userId, photo, nickname) {
-      const userphoto = '/public/images/icon/' + photo + '.png';
-      const userSql = `UPDATE data_user SET user_photo ='${userphoto}',user_nickname='${nickname}'  WHERE user_id = '${userId}'`;
-      const result = await this.app.mysql.query(userSql);
-      return result.affectedRows;
-
-    }
-    // 用户购买房间总数
-    async chatRootTotal(uid) {
-      const moment = require("moment");
-      const time = moment().format("YYYY-MM-DD");
-      const sql = `SELECT COUNT(*) as total FROM data_user_bean_log WHERE log_uid='${uid}' AND log_room_expire >='${time}'`;
-      const result = await app.mysql.query(sql);
-      return result[0].total;
-
-    }
-    // 购买房间列表
-    async chatRootList(uid, start, size) {
-
-      const moment = require("moment");
-      const time = moment().format("YYYY-MM-DD");
-      const field = 'log_id,log_main_id,log_room_expire,room_title as log_title ,room_photo as log_photo ,room_hits as log_hits';
-
-      const sql = `SELECT ${field} FROM data_user_bean_log left join data_room on (room_id=log_main_id) WHERE log_uid = ${uid} AND log_type='join_room' AND log_room_expire >='${time}' ORDER BY log_id DESC LIMIT ${start},${size}`;
-      const result = await app.mysql.query(sql);
-      for (const v in result) {
-        console.log(v);
-        result[v].log_photo = app.config.host + result[v].log_photo;
-      }
-      // console.log(result);
-      return result;
-    }
-    // 用户消息总的记录数
-    async userMsgTotal(uid, type = '') {
-      let sql;
-      if (type) {
-        sql = `SELECT COUNT(*) as total FROM data_msg WHERE msg_uid='${uid}' AND msg_type='${type}'`;
-      } else {
-        sql = `SELECT COUNT(*) as total FROM data_msg WHERE msg_uid='${uid}'`;
-      }
-      const result = await app.mysql.query(sql);
-      return result[0].total;
-    }
-    // 用户消息列表
-    async userMsgList(start, size, uid, type = '') {
-      const field = 'msg_id,msg_type,msg_action,msg_isread,msg_main_id,msg_title,DATE_FORMAT(msg_create_time,"%Y-%m-%d %H:%i:%s") as msg_create_time';
-      let sql;
-      if (type) {
-        sql = `SELECT ${field} FROM data_msg WHERE msg_uid='${uid}' AND msg_type=${type} ORDER BY msg_id DESC LIMIT ${start},${size}`;
-      } else {
-        sql = `SELECT ${field} FROM data_msg WHERE msg_uid='${uid}' ORDER BY msg_id DESC LIMIT ${start},${size}`;
-      }
-      console.log(sql);
-      const result = await app.mysql.query(sql);
-      return result.length > 0 ? result : null;
-    }
     // 签到日历
     async signCalendar(uid) {
       const moment = require("moment");
-      const times = moment().format("YYYY-MM-DD HH:mm:ss");
+      const times = moment().format("YYYY年MM月DD日");
       // const week1 = moment().format('d');
       const week1 = moment(moment().startOf('month').format("YYYY-MM-DD HH:mm:ss")).format('d'); // 一个月开始的一天是周几
-      console.log(week1);
-      console.log(moment().month(), moment().get('date'));
+      // console.log(moment().month(), moment().get('date'));
+      const today = moment().get('date');
       const monthDay = moment(moment().endOf("month")).format('DD'); // 一个月多少天
-      console.log(monthDay);
       const key = moment().format('YYYYMM');
       const sql = `select sign_id,DATE_FORMAT(sign_date,'%Y-%m-%d') as sign_date,DATE_FORMAT(sign_date,'%e') as news_date from data_sign_log where sign_uid='${uid}' and sign_key='${key}'`;
       console.log(sql);
@@ -91,28 +22,35 @@ module.exports = app => {
       }
 
       let i;
-      let issign;
+      let issign1;
       const date_array = [];
-      for (i = 0; i <= monthDay; i++) {
+      for (i = 0; i <= monthDay - 1; i++) {
         if (this.isCon(sign_array, i + 1) === 1) {
-          issign = 1;
+          issign1 = 1;
         } else {
-          issign = 0;
+          issign1 = 0;
         }
-        date_array[i] = { date: i + 1, issign1: issign };
+        date_array[i] = { date: i + 1, issign: issign1 };
         // date_array.push(list[value].news_date);
       }
+      const items = [{ id: 1, title: '签到5天', beans: '10', count: '5' }, { id: 2, title: '签到10天', beans: '30', count: '10' }, { id: 3, title: '签到20天', beans: '60', count: '20' }, { id: 4, title: '满签', beans: '100', count: monthDay }];
+
+      const today_issign = this.isCon(sign_array, today) ? '1' : '0';
+      console.log(today_issign);
+
       return {
         status: 1,
-        //  list1: list,
         time: times,
         week: week1,
         month: monthDay,
         list: date_array,
+        item: items,
+        count: sign_array.length,
+        todayIssign: today_issign,
       };
     }
 
-
+    // 判断函数
     isCon(arr, val) {
       let i = arr.length;
       while (i--) {
@@ -123,7 +61,134 @@ module.exports = app => {
       }
       return 0;
     }
+    // 签到
+    async userSign(uid) {
+      const moment = require("moment");
+      //  const create_time = moment().format("YYYY-MM-DD HH:mm:ss");
+      const days = moment(moment().endOf("month")).format('DD'); // 一个月多少天
+      const date = moment().format("YYYY-MM-DD");
+      const key = moment().format('YYYYMM');
 
+      // const week1 = moment().format('d');
+      // const week1 = moment(moment().startOf('month').format("YYYY-MM-DD HH:mm:ss")).format('d'); // 一个月开始的一天是周几
+      // console.log(moment().month(), moment().get('date'));
+      // const today = moment().get('date');
+
+
+      const sql = `select sign_id from data_sign_log where sign_uid=${uid} and sign_date='${date}'`;
+      console.log(sql);
+      const list = await app.mysql.query(sql);
+      if (list.length > 0) {
+        return 2;
+      }
+      const log = [];
+      const user_row = await app.mysql.get('data_user', { user_id: uid });
+      const SIGN_DEFAULT_BEAN = 5;
+      log[0] = { title: '签到获得', beans: SIGN_DEFAULT_BEAN };
+      let user_beans;
+      user_beans = parseInt(user_row.user_bonus_beans, 10) + parseInt(SIGN_DEFAULT_BEAN, 10);
+      const skill_list = await this.ctx.service.utils.jobArray.job().skill;
+
+      let value = 0;
+      let more_beans = 0;
+      let more_text = '';
+
+      if (!user_row.user_job_skill) {
+        user_row.user_job_skill = 'test';
+      }
+      if (user_row.user_job_skill.indexOf('sign_more_bean1') !== -1) {
+        value = skill_list.sign_more_bean1.value;
+        more_beans = value;
+        more_text = value;
+        if (log.length > 0) {
+          log[log.length] = { title: '职业额外获得', beans: value };
+        }
+
+      }
+
+      if (user_row.user_job_skill.indexOf('sign_more_bean2') !== -1) {
+        value = skill_list.sign_more_bean2.value;
+        more_beans = parseInt(value, 10) + parseInt(more_beans, 10);
+        more_text += more_text ? ' + ' + value : value;
+        if (log.length > 0) {
+          log[log.length] = { title: '职业额外获得', beans: value };
+        }
+
+      }
+
+      const items = [{ id: 1, title: '签到5天', beans: '10', count: '5' }, { id: 2, title: '签到10天', beans: '30', count: '10' }, { id: 3, title: '签到20天', beans: '60', count: '20' }, { id: 4, title: '满签', beans: '100', count: days }];
+      const sqlcount = `select count(*) as total  from data_sign_log where sign_uid='${uid}' and sign_key='${key}'`;
+      const recount = await app.mysql.query(sqlcount);
+      const sign_count = recount[0].total + 1;
+
+      for (const v in items) {
+        const count = parseInt(items[v].count, 10);
+        if (count === sign_count) {
+          value = v.beans;
+          more_beans = parseInt(value, 10) + parseInt(more_beans, 10);
+          more_text += more_text ? ' + ' + value : value;
+          if (log.length > 0) {
+            log[log.length] = { title: v.title + '额外获得', beans: value };
+          }
+
+          break;
+        } else {
+          continue;
+        }
+      }
+
+
+      let log_remarks = '';
+      if (more_text) {
+        user_beans = parseInt(user_row.user_bonus_beans, 10) + parseInt(SIGN_DEFAULT_BEAN, 10) + parseInt(more_beans, 10);
+        log_remarks = "额外获取(" + more_text + ")赠豆";
+      }
+      console.log(log_remarks);
+      console.log(user_beans);
+
+      const userSql = `UPDATE data_user SET user_bonus_beans ='${user_beans}' WHERE user_id ='${uid}'`;
+      const conn = await app.mysql.beginTransaction(); // 初始化事务
+      try {
+        await conn.query(userSql);
+        //  await conn.query(subSql);
+        const r1 = await conn.insert('data_sign_log', {
+          sign_uid: uid,
+          sign_date: date,
+          sign_key: key,
+          sign_create_time: this.app.mysql.literals.now,
+        });
+
+        await conn.insert('data_user_bean_log', {
+          log_uid: user_row.user_id,
+          log_user: user_row.user_name,
+          log_nickname: user_row.user_nickname,
+          log_type: 'sign',
+          log_main_table: 'data_sign_log',
+          log_main_id: r1.insertId,
+          log_content: '签到获得' + SIGN_DEFAULT_BEAN + '赠豆 ' + log_remarks,
+          log_count: SIGN_DEFAULT_BEAN + more_beans,
+          log_bean_before: user_row.user_beans + user_row.user_bonus_beans,
+          log_bean_end: user_row.user_beans + user_row.user_bonus_beans + SIGN_DEFAULT_BEAN + more_beans,
+          log_create_time: this.app.mysql.literals.now,
+          log_remark: log_remarks,
+        });
+
+
+        await conn.commit(); // 提交事务
+        const key2 = 'sign';
+        const rss = await this.ctx.service.task.check_task(key2, uid);
+        return { status: 1, rs: rss, list: log };
+
+      } catch (err) {
+        const output = { status: 0, tips: '签到失败,请稍后再试!' };
+
+        await conn.rollback(); // 一定记得捕获异常后回滚事务！！
+        //  throw err;
+        return output;
+
+      }
+
+    }
 
 
 

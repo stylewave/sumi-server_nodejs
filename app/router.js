@@ -82,6 +82,7 @@ module.exports = app => {
   app.post('/api/room/buyRoomList', 'room.buyRoomList');
 
   app.post('/api/sign/signCalendar', 'sign.signCalendar');
+  app.post('/api/sign/userSign', 'sign.userSign');
 
   app.post('/api/user/test', 'user.test');
 

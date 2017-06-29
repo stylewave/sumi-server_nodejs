@@ -156,6 +156,7 @@ module.exports = app => {
     }
 
     async test() {
+
       const { uid } = this.ctx.request.body;
       const moment = require("moment");
       const time = moment().format("YYYY-MM-DD HH:mm:ss");
@@ -164,6 +165,29 @@ module.exports = app => {
       const sql = `select sign_id,DATE_FORMAT(sign_date,'%Y-%m-%d') as sign_date,DATE_FORMAT(sign_date,'%e') as news_date from data_sign_log where sign_uid='${uid}' and sign_key='${key}'`;
       console.log(sql);
       const list = await app.mysql.query(sql);
+
+
+
+      // const rs = await this.ctx.service.utils.taskArray.task();
+      // let up = [];
+      // const insert = {};
+      // for (const ve in rs) {
+      //   insert.task_uid = 66;
+      //   insert.task_las_update = moment().format("YYYY-MM-DD HH:mm:ss");
+      //   insert.task_date = moment().format("YYYY-MM-DD");
+      //   console.log(rs[ve].task_db_field);
+      //   up = { key: rs[ve].task_key, status: '0', count: '0' };
+
+      //   insert[rs[ve].task_db_field] = JSON.stringify(up);
+      //   //  insert[rs[ve].key] = up;
+      //   //	$insert[$v['task_db_field']] = json_encode($update_row);
+      // }
+      // const re = await this.app.mysql.insert('data_task', insert);
+      // console.log(re);
+
+
+      // console.log(insert);
+
       //  $sign_array = array();
       const sign_array = [];
       if (list) {
