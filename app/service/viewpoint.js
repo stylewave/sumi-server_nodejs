@@ -13,18 +13,20 @@ module.exports = app => {
     async expertCommentList(start, size) {
 
       const field = 'comment_id,comment_expert_id,comment_title,comment_hits,comment_beans,comment_intro,ep_name as  comment_expert_name,ep_photo as comment_expert_photo,DATE_FORMAT(comment_create_time,"%m/%d %H:%i") as comment_create_time';
-      const sql = 'SELECT ' + field + ' FROM data_expert_comment left join data_expert on (comment_expert_id=ep_id) WHERE comment_status = \'1\' ORDER BY comment_id DESC LIMIT ' + start + ',' + size;
-      console.log(sql);
-      const result = await app.mysql.query(sql);
+      let where = [];
+      where = [['comment_status', '1']];
+      const limit = start + ',' + size;
+      const result = await this.ctx.service.utils.db.getAll(field, 'data_expert_comment left join data_expert on (comment_expert_id=ep_id)', where, 'comment_id', limit);
+
+      // const sql = 'SELECT ' + field + ' FROM data_expert_comment left join data_expert on (comment_expert_id=ep_id) WHERE comment_status = \'1\' ORDER BY comment_id DESC LIMIT ' + app.mysql.escape(start) + ',' + app.mysql.escape(size);
+      // console.log(sql);
+      // const result = await app.mysql.query(sql);
       for (const v in result) {
-        console.log(v);
+        // console.log(v);
         result[v].comment_expert_photo = app.config.host + result[v].comment_expert_photo;
       }
       // result[0].comment_expert_photo = app.config.host + result[0].comment_expert_photo;
-      // result.push(result.comment_expert_photo);
 
-      console.log(result);
-      // this.ctx.body = app.config.custom;
       return result;
 
     }
@@ -33,15 +35,21 @@ module.exports = app => {
     async commentDetail(commentId = '') {
       const field = 'comment_id,comment_title,comment_intro,comment_hits,comment_beans,comment_expert_id,ep_name as comment_expert_name,ep_photo as comment_expert_photo,DATE_FORMAT(comment_create_time,"%m-%d %H:%i") as comment_create_time';
       let sql;
+      let result;
       if (commentId) {
-        sql = `SELECT ${field} FROM data_expert_comment left join data_expert on (comment_expert_id=ep_id) WHERE comment_status = 1 AND comment_id = ${commentId}`;
+        let where = [];
+        where = [['comment_status', '1'], ['comment_id', commentId]];
+        result = await this.ctx.service.utils.db.getAll(field, 'data_expert_comment left join data_expert on (comment_expert_id=ep_id)', where);
+
+        // sql = `SELECT ${field} FROM data_expert_comment left join data_expert on (comment_expert_id=ep_id) WHERE comment_status = 1 AND comment_id = ${app.mysql.escape(commentId)}`;
       } else {
         const sql2 = `SELECT comment_id,comment_title,comment_intro FROM data_expert_comment ORDER BY comment_id DESC LIMIT 1`;
         const re = await app.mysql.query(sql2);
         sql = `SELECT ${field} FROM data_expert_comment left join data_expert on (comment_expert_id=ep_id) WHERE comment_status = 1 AND comment_id = ${re[0].comment_id}`;
+        result = await app.mysql.query(sql);
       }
 
-      const result = await app.mysql.query(sql);
+
       for (const v in result) {
         // console.log(v);
         result[v].comment_expert_photo = app.config.host + result[v].comment_expert_photo;
@@ -54,14 +62,19 @@ module.exports = app => {
     async commentDetailBuy(commentId = '') {
       const field = 'comment_id,comment_title,comment_intro,comment_hits,comment_beans,comment_content,comment_expert_id,ep_name as comment_expert_name,ep_photo as comment_expert_photo,DATE_FORMAT(comment_create_time,"%m-%d %H:%i") as comment_create_time';
       let sql;
+      let result;
       if (commentId) {
-        sql = `SELECT ${field} FROM data_expert_comment left join data_expert on (comment_expert_id=ep_id) WHERE comment_status = 1 AND comment_id = '${commentId}'`;
+        let where = [];
+        where = [['comment_status', '1'], ['comment_id', commentId]];
+        result = await this.ctx.service.utils.db.getAll(field, 'data_expert_comment left join data_expert on (comment_expert_id=ep_id)', where);
+        //  sql = `SELECT ${field} FROM data_expert_comment left join data_expert on (comment_expert_id=ep_id) WHERE comment_status = 1 AND comment_id = '${app.mysql.escape(commentId)}'`;
       } else {
         const sql2 = `SELECT comment_id,comment_title,comment_intro FROM data_expert_comment ORDER BY comment_id DESC LIMIT 1`;
         const re = await app.mysql.query(sql2);
         sql = `SELECT ${field} FROM data_expert_comment left join data_expert on (comment_expert_id=ep_id) WHERE comment_status = 1 AND comment_id = '${re[0].comment_id}'`;
+        result = await app.mysql.query(sql);
       }
-      const result = await app.mysql.query(sql);
+
       for (const v in result) {
         console.log(v);
         result[v].comment_expert_photo = app.config.host + result[v].comment_expert_photo;
@@ -73,13 +86,13 @@ module.exports = app => {
     async buydata(commentId = '', uid) {
       let data;
       if (commentId) {
-        data = await app.mysql.get('data_user_bean_log', { log_uid: uid, log_main_id: commentId, log_type: 'buy_expert_comment' });
+        data = await app.mysql.get('data_user_bean_log', { log_uid: app.mysql.escape(uid), log_main_id: app.mysql.escape(commentId), log_type: 'buy_expert_comment' });
       } else {
         const field = "comment_id,comment_title,comment_intro";
         const sql = `SELECT ${field} FROM data_expert_comment  ORDER BY comment_id DESC LIMIT 1`;
         const result = await app.mysql.query(sql);
-        console.log(result[0].comment_id);
-        data = await app.mysql.get('data_user_bean_log', { log_uid: uid, log_main_id: result[0].comment_id, log_type: 'buy_expert_comment' });
+        // console.log(result[0].comment_id);
+        data = await app.mysql.get('data_user_bean_log', { log_uid: app.mysql.escape(uid), log_main_id: result[0].comment_id, log_type: 'buy_expert_comment' });
 
       }
       return data;
@@ -87,7 +100,7 @@ module.exports = app => {
 
     // 判断是否用户的豆币是否可以购买
     async beanNum(beannum, uid) {
-      const userrow = await app.mysql.get('data_user', { user_id: uid });
+      const userrow = await app.mysql.get('data_user', { user_id: app.mysql.escape(uid) });
       const userbeans = userrow.user_beans + userrow.user_bonus_beans;
       if (beannum > userbeans) {
         return 0;
@@ -97,7 +110,7 @@ module.exports = app => {
 
     // 购买观点
     async buyExpertComment(commentId, uid) {
-      const userrow = await app.mysql.get('data_user', { user_id: uid });
+      const userrow = await app.mysql.get('data_user', { user_id: app.mysql.escape(uid) });
       const userbeans = userrow.user_beans + userrow.user_bonus_beans;
       const dedata = await this.commentDetail(commentId);
       const total = dedata.comment_beans;
@@ -106,16 +119,14 @@ module.exports = app => {
       let subSql;
       if (userrow.user_bonus_beans >= total) {
         const userbean = userrow.user_bonus_beans - total;
-        // subSql = 'UPDATE data_user SET user_bonus_beans =' + userbean + ' WHERE user_id = ' + userId;
-        subSql = `UPDATE data_user SET user_bonus_beans ='${userbean}' WHERE user_id = ${uid}`;
+        subSql = `UPDATE data_user SET user_bonus_beans ='${userbean}' WHERE user_id = ${app.mysql.escape(uid)}`;
 
       } else {
         const userbean = userbeans - total;
-        //  subSql = 'UPDATE data_user SET user_beans =' + userbean + ',`user_bonus_beans` = 0  WHERE user_id = ' + uid;
-        subSql = `UPDATE data_user SET user_beans ='${userbean}',user_bonus_beans = 0  WHERE user_id =${uid}`;
+        subSql = `UPDATE data_user SET user_beans ='${userbean}',user_bonus_beans = 0  WHERE user_id =${app.mysql.escape(uid)}`;
 
       }
-      console.log(subSql);
+      // console.log(subSql);
       // const result = await this.app.mysql.insert('data_user_bean_log', { log_uid: userrow.user_id, log_user: userrow.user_name, log_nickname: userrow.user_nickname, log_type: 'buy_expert_comment', log_main_table: 'data_expert_comment', log_main_id: commentId, log_content: '购买投顾文章[' + userrow.comment_title + ']', log_count: 0 - dedata.comment_beans, log_bean_before: userbeans, log_bean_end: end, log_create_time: this.app.mysql.literals.now });
 
       const conn = await app.mysql.beginTransaction(); // 初始化事务
@@ -152,20 +163,24 @@ module.exports = app => {
     }
     // 多空策略
     async marketVideo(start, size) {
+
       const field = 'video_id,video_title,video_url,video_photo,video_hits';
-      const sql = `SELECT ${field} FROM data_video WHERE video_status=1 ORDER BY video_id DESC LIMIT ${start},${size}`;
-      console.log(sql);
-      const result = await app.mysql.query(sql);
+      let where = [];
+      where = [['video_status', '1']];
+      const limit = start + ',' + size;
+      const result = await this.ctx.service.utils.db.getAll(field, 'data_video', where, 'video_id', limit);
+      // const sql = `SELECT ${field} FROM data_video WHERE video_status=1 ORDER BY video_id DESC LIMIT ${app.mysql.escape(start)},${app.mysql.escape(size)}`;
+      // console.log(sql);
+      // const result = await app.mysql.query(sql);
       for (const v in result) {
         result[v].video_photo = app.config.host + result[v].video_photo;
       }
 
-      // console.log(result);
       return result;
     }
     async marketVideoDetail(videoId) {
       const field = 'video_id,video_title,video_url,video_content,video_hits,DATE_FORMAT(video_create_time,"%Y-%d-%m %H:%i") AS video_create_time';
-      const sql = `SELECT ${field} FROM data_video WHERE video_status=1 and video_id = ${videoId}`;
+      const sql = `SELECT ${field} FROM data_video WHERE video_status=1 and video_id = ${app.mysql.escape(videoId)}`;
 
       const result = await app.mysql.query(sql);
       return result.length > 0 ? result[0] : null;

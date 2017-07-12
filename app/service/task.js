@@ -8,7 +8,7 @@ module.exports = app => {
 
     //  任务列表
     async taskList(uid) {
-      const result = await app.mysql.get('data_task', { task_uid: uid });
+      const result = await app.mysql.get('data_task', { task_uid: app.mysql.escape(uid) });
       const rs = await this.ctx.service.utils.taskArray.task();
       const task_finish = [];
       const task_going = [];
@@ -42,13 +42,13 @@ module.exports = app => {
     // 判断任务是否存在
     async taskContent(uid, content) {
       const field = 'task_id,' + content + ' as content';
-      const sql = `SELECT ${field} FROM data_task WHERE task_uid = ${uid}`;
+      const sql = `SELECT ${field} FROM data_task WHERE task_uid = ${app.mysql.escape(uid)}`;
       const result = await app.mysql.query(sql);
       return result.length > 0 ? result[0] : 0;
     }
     // 领取完成任务
     async finishTask(uid, taskcontent, content, task_row) {
-      const userrow = await app.mysql.get('data_user', { user_id: uid });
+      const userrow = await app.mysql.get('data_user', { user_id: app.mysql.escape(uid) });
       const e = await this.taskContent(uid, content);
       const tcontent = JSON.parse(e.content);
       const user_bonus_beans = userrow.user_bonus_beans + task_row.task_bonus_beans;
@@ -68,8 +68,8 @@ module.exports = app => {
           tcontent.status = '2';
           contentdata = JSON.stringify(tcontent);
 
-          taskSql = `UPDATE data_task SET ${content}='${contentdata}' WHERE task_uid = ${uid}`;
-          userSql = `UPDATE data_user SET user_bonus_beans='${user_bonus_beans}',user_job_exp=${user_job_exp} WHERE user_id = ${uid}`;
+          taskSql = `UPDATE data_task SET ${content}=${app.mysql.escape(contentdata)} WHERE task_uid = ${app.mysql.escape(uid)}`;
+          userSql = `UPDATE data_user SET user_bonus_beans='${user_bonus_beans}',user_job_exp=${user_job_exp} WHERE user_id = ${app.mysql.escape(uid)}`;
 
           app.mysql.query(taskSql);
           conn = await app.mysql.beginTransaction(); // 初始化事务
@@ -130,7 +130,7 @@ module.exports = app => {
         task_array[v] = rs[fi];
       }
       // console.log(task_array);
-      const sql = `select task_id,${field_list} from data_task where task_uid='${uid}'`;
+      const sql = `select task_id,${field_list} from data_task where task_uid='${app.mysql.escape(uid)}'`;
       const user_task_row = await app.mysql.query(sql);
       console.log(user_task_row[0]);
       for (const vv in task_array) {
@@ -145,7 +145,7 @@ module.exports = app => {
             content.status = "1";
           }
           const contentdata = JSON.stringify(content);
-          const taskSql = `UPDATE data_task SET ${key}='${contentdata}' WHERE task_uid = ${uid}`;
+          const taskSql = `UPDATE data_task SET ${key}='${contentdata}' WHERE task_uid = ${app.mysql.escape(uid)}`;
           const rs = await app.mysql.query(taskSql);
           let output;
           if (rs) {

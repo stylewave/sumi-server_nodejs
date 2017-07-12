@@ -10,7 +10,8 @@ module.exports = app => {
     // 拉取新闻列表
     async list(start, size) {
       const field = "news_id,news_title,news_intro,news_create_time,news_hits,DATE_FORMAT(news_create_time,'%H:%i') as time";
-      const sql = `SELECT ${field} FROM data_news WHERE news_show = '1' ORDER BY news_id DESC LIMIT ${start} , ${size}`;
+      const sql = `SELECT ${field} FROM data_news WHERE news_show = '1' ORDER BY news_id DESC LIMIT ${
+        app.mysql.escape(start)} , ${app.mysql.escape(size)}`;
       const result = await app.mysql.query(sql);
       return result;
     }
@@ -20,7 +21,7 @@ module.exports = app => {
       const field = "news_id,news_title,news_content,news_hits,DATE_FORMAT(news_create_time,'%y-%d-%m %H:%i:%s') as news_create_time";
       let sql;
       if (newsId) {
-        sql = `SELECT ${field} FROM data_news WHERE news_show = '1' AND news_id='${newsId}'`;
+        sql = `SELECT ${field} FROM data_news WHERE news_show = '1' AND news_id='${app.mysql.escape(newsId)}'`;
       } else {
         sql = `SELECT ${field} FROM data_news WHERE news_show = '1' ORDER BY news_id DESC`;
       }

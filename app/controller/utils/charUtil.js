@@ -179,6 +179,11 @@ module.exports = {
 
       return re.test(value);
     }
+    if (type === 'checkSpecial') {
+      re = /^[\w\u4e00-\u9fa5]+$/gi;
+      return re.test(value);
+    }
+
   },
 
 

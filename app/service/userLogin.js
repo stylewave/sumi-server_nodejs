@@ -29,7 +29,7 @@ module.exports = app => {
     async checkuser(mobile) {
       const field =
         'user_id,user_name,user_nickname,user_phone,user_photo,user_headimg,user_status,user_level,user_vip_to,user_wx_openid,user_token,user_beans,user_bonus_beans,user_job_id,user_job_name,user_job_level,user_job_exp,user_assessment_score,user_debug';
-      const sql = `SELECT  ${field} FROM data_user WHERE user_name = '${mobile}' LIMIT 1`;
+      const sql = `SELECT  ${field} FROM data_user WHERE user_name = ${app.mysql.escape(mobile)} LIMIT 1`;
       const result = await app.mysql.query(sql);
       return result.length ? result[0] : 0;
     }
@@ -44,7 +44,7 @@ module.exports = app => {
     // 用户登录
     async login(mobile, pwd) {
       const field = 'user_id,user_status,user_name,user_last_login';
-      const sql = `SELECT ${field}  FROM data_user WHERE user_pwd = MD5(CONCAT(MD5(${pwd}),user_salt)) AND user_name = '${mobile}' LIMIT 1`;
+      const sql = `SELECT ${field}  FROM data_user WHERE user_pwd = MD5(CONCAT(MD5(${pwd}),user_salt)) AND user_name = ${app.mysql.escape(mobile)} LIMIT 1`;
       const result = await app.mysql.query(sql);
       if (result.length > 0) {
         console.log('userinfo111>>>>>>>>', result);

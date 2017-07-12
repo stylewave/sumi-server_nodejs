@@ -4,9 +4,9 @@ module.exports = app => {
     async getMoneylogTotal(uid, type = '') {
       let sql;
       if (type) {
-        sql = `SELECT COUNT(*) as total FROM data_user_money_log WHERE log_uid = ${uid} AND log_type='${type}'`;
+        sql = `SELECT COUNT(*) as total FROM data_user_money_log WHERE log_uid = ${app.mysql.escape(uid)} AND log_type=${app.mysql.escape(type)}`;
       } else {
-        sql = `SELECT COUNT(*) as total FROM data_user_money_log WHERE log_uid = ${uid}`;
+        sql = `SELECT COUNT(*) as total FROM data_user_money_log WHERE log_uid = ${app.mysql.escape(uid)}`;
       }
       console.log(sql);
       const result = await app.mysql.query(sql);
@@ -18,16 +18,16 @@ module.exports = app => {
       const field = 'log_id,log_content,log_uid,log_type,log_count,log_main_table,log_main_id,log_recharge_beans,log_recharge_sn,DATE_FORMAT(log_create_time,"%Y年%m月%d日 %H:%i") as log_create_time';
       let sql;
       if (type) {
-        sql = `SELECT ${field} FROM data_user_money_log  WHERE log_uid = ${uid} AND log_recharge_beans > 0 AND log_type='${type}' ORDER BY log_id DESC LIMIT ${start},${size}`;
+        sql = `SELECT ${field} FROM data_user_money_log  WHERE log_uid = ${app.mysql.escape(uid)} AND log_recharge_beans > 0 AND log_type=${app.mysql.escape(type)} ORDER BY log_id DESC LIMIT ${app.mysql.escape(start)},${app.mysql.escape(size)}`;
       } else {
-        sql = `SELECT ${field} FROM data_user_money_log  WHERE log_uid = ${uid} AND log_recharge_beans > 0 ORDER BY log_id DESC LIMIT ${start},${size}`;
+        sql = `SELECT ${field} FROM data_user_money_log  WHERE log_uid = ${app.mysql.escape(uid)} AND log_recharge_beans > 0 ORDER BY log_id DESC LIMIT ${app.mysql.escape(start)},${app.mysql.escape(size)}`;
       }
       const result = await app.mysql.query(sql);
       return result;
     }
     // 豆币记录总的记录数
     async userBeanLogTotal(uid) {
-      const sql = `SELECT COUNT(*) as total FROM data_user_bean_log WHERE log_uid='${uid}'`;
+      const sql = `SELECT COUNT(*) as total FROM data_user_bean_log WHERE log_uid='${app.mysql.escape(uid)}'`;
       const result = await app.mysql.query(sql);
       return result[0].total;
     }
@@ -37,27 +37,27 @@ module.exports = app => {
       const field =
         'log_id,log_content,log_uid,log_type,log_count,log_main_table,log_main_id,log_remark,DATE_FORMAT(log_create_time,"%m-%d %H:%i") as log_create_time';
 
-      const sql = `SELECT ${field} FROM data_user_bean_log  WHERE log_uid = '${uid}' ORDER BY log_id DESC LIMIT ${start}, ${size}`;
+      const sql = `SELECT ${field} FROM data_user_bean_log  WHERE log_uid = '${app.mysql.escape(uid)}' ORDER BY log_id DESC LIMIT ${app.mysql.escape(start)}, ${app.mysql.escape(size)}`;
       // console.log(sql);
       const result = await app.mysql.query(sql);
       return result;
     }
     // 回收记录总的记录数
     async beanReturnTotal(uid) {
-      const sql = `SELECT COUNT(*) as total FROM data_user_bean_return WHERE return_uid='${uid}'`;
+      const sql = `SELECT COUNT(*) as total FROM data_user_bean_return WHERE return_uid='${app.mysql.escape(uid)}'`;
       const result = await app.mysql.query(sql);
       return result[0].total;
     }
     //  豆币回收列表
     async beanReturnList(uid, start, size) {
       const field = 'return_id,return_uid,return_beans,return_money,return_account_type,DATE_FORMAT(return_create_time,"%Y年%m月%d日 %H:%i") as return_create_time,return_finish_time,return_status';
-      const sql = `SELECT ${field} FROM data_user_bean_return  WHERE return_uid = ${uid}  ORDER BY return_id DESC LIMIT ${start}, ${size}`;
+      const sql = `SELECT ${field} FROM data_user_bean_return  WHERE return_uid = ${app.mysql.escape(uid)}  ORDER BY return_id DESC LIMIT ${app.mysql.escape(start)}, ${app.mysql.escape(size)}`;
       const result = await app.mysql.query(sql);
       return result;
     }
     //  豆币回收详情
     async beanReturnDetail(returnId) {
-      const data = await app.mysql.get('data_user_bean_return', { return_id: returnId });
+      const data = await app.mysql.get('data_user_bean_return', { return_id: app.mysql.escape(returnId) });
       return data;
     }
 
@@ -73,7 +73,7 @@ module.exports = app => {
       unionpay_bank = '',
       mobile = ''
     ) {
-      const userrow = await app.mysql.get('data_user', { user_id: uid });
+      const userrow = await app.mysql.get('data_user', { user_id: app.mysql.escape(uid) });
       const money = beans * 0.8;
       let user_beans;
       const u_money = userrow.user_money + money;

@@ -11,7 +11,7 @@ module.exports = app => {
       const today = moment().get('date');
       const monthDay = moment(moment().endOf("month")).format('DD'); // 一个月多少天
       const key = moment().format('YYYYMM');
-      const sql = `select sign_id,DATE_FORMAT(sign_date,'%Y-%m-%d') as sign_date,DATE_FORMAT(sign_date,'%e') as news_date from data_sign_log where sign_uid='${uid}' and sign_key='${key}'`;
+      const sql = `select sign_id,DATE_FORMAT(sign_date,'%Y-%m-%d') as sign_date,DATE_FORMAT(sign_date,'%e') as news_date from data_sign_log where sign_uid='${app.mysql.escape(uid)}' and sign_key='${key}'`;
       console.log(sql);
       const list = await app.mysql.query(sql);
       const sign_array = [];
@@ -75,7 +75,7 @@ module.exports = app => {
       // const today = moment().get('date');
 
 
-      const sql = `select sign_id from data_sign_log where sign_uid=${uid} and sign_date='${date}'`;
+      const sql = `select sign_id from data_sign_log where sign_uid=${app.mysql.escape(uid)} and sign_date='${date}'`;
       console.log(sql);
       const list = await app.mysql.query(sql);
       if (list.length > 0) {

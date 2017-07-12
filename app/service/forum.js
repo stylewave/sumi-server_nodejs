@@ -176,20 +176,15 @@ module.exports = app => {
     }
     // 获取热门主题总的记录数
     async getSubHotTotal(boardId) {
-      const sql = `SELECT COUNT(*) as total FROM data_forum_subject WHERE sub_status = 1  AND sub_board_id='${boardId}'`;
+      const sql = `SELECT COUNT(*) as total FROM data_forum_subject WHERE sub_status = 1  AND sub_board_id='${app.mysql.escape(boardId)}'`;
       const result = await app.mysql.query(sql);
       return result[0].total;
     }
     // 主题热门列表
     async subHotlist(start, size, boardId) {
-      // let hot;
-      // if (type === 1) {
-      //   hot = "and sub_hot_type='1'";
-      // } else {
-      //   hot = '';
-      // }
+
       const field = '*';
-      const sql = `SELECT ${field} FROM data_forum_subject WHERE sub_status = 1  AND sub_board_id='${boardId}' ORDER BY sub_hits DESC LIMIT ${start},${size}`;
+      const sql = `SELECT ${field} FROM data_forum_subject WHERE sub_status = 1  AND sub_board_id='${app.mysql.escape(boardId)}' ORDER BY sub_hits DESC LIMIT ${app.mysql.escape(start)},${app.mysql.escape(size)}`;
       const result = await app.mysql.query(sql);
       return result;
     }
@@ -200,9 +195,9 @@ module.exports = app => {
       let sql;
       if (subId) {
         //  sql = 'SELECT ' + field + 'FROM data_forum_subject where sub_status="1" and sub_id=' + subId;
-        sql = `SELECT ${field} FROM data_forum_subject where sub_status="1" and sub_id=${subId} AND sub_board_id=${boardId}`;
+        sql = `SELECT ${field} FROM data_forum_subject where sub_status="1" and sub_id=${app.mysql.escape(subId)} AND sub_board_id=${app.mysql.escape(boardId)}`;
       } else {
-        sql = `SELECT ${field} FROM data_forum_subject where sub_status="1" and sub_board_id=${boardId} ORDER BY sub_id DESC`;
+        sql = `SELECT ${field} FROM data_forum_subject where sub_status="1" and sub_board_id=${app.mysql.escape(boardId)} ORDER BY sub_id DESC`;
       }
       console.log(sql);
 
@@ -215,8 +210,8 @@ module.exports = app => {
     }
     // 股吧主题评论增加
     async commentadd(subId, content, uid) {
-      const board = await app.mysql.get('data_forum_subject', { sub_id: subId });
-      const user = await app.mysql.get('data_user', { user_id: uid });
+      const board = await app.mysql.get('data_forum_subject', { sub_id: app.mysql.escape(subId) });
+      const user = await app.mysql.get('data_user', { user_id: app.mysql.escape(uid) });
       const reply_board_id1 = board.sub_board_id;
       const subSql = 'UPDATE data_forum_subject SET sub_reply_count =sub_reply_count+1 WHERE sub_id = ' + subId;
       const conn = await app.mysql.beginTransaction(); // 初始化事务
@@ -240,12 +235,12 @@ module.exports = app => {
       }
     }
     // 股吧主题增加
-    async addForumSubject(title, content, boardId, userId) {
-      const user = await app.mysql.get('data_user', { user_id: userId });
+    async addForumSubject(title, content, boardId, uid) {
+      const user = await app.mysql.get('data_user', { user_id: app.mysql.escape(uid) });
       const result = await this.app.mysql.insert('data_forum_subject', {
-        sub_board_id: boardId,
-        sub_title: title,
-        sub_content: content,
+        sub_board_id: app.mysql.escape(boardId),
+        sub_title: app.mysql.escape(title),
+        sub_content: app.mysql.escape(content),
         sub_uid: user.user_id,
         sub_user: user.user_name,
         sub_nickname: user.user_nickname,
@@ -256,19 +251,17 @@ module.exports = app => {
     }
     // 判断该股吧板块是否可以增加主题
     async boardAllowSub(boardId) {
-      const boardallow = await app.mysql.get('data_forum_board', { board_id: boardId });
+      const boardallow = await app.mysql.get('data_forum_board', { board_id: app.mysql.escape(boardId) });
       return boardallow.board_allow_subject > 0 ? boardallow.board_allow_subject : 0;
     }
     // 我的关注股吧列表
     async myBoardlist(start, size, uid) {
-      const userrow = await app.mysql.get('data_user', { user_id: uid });
+      const userrow = await app.mysql.get('data_user', { user_id: app.mysql.escape(uid) });
       const field = "board_id,board_title,board_description,board_stock_code,board_follow,board_hits,board_ishot";
       const board_id_list = userrow.user_follow_board.replace(/(^,*)|(,*$)/g, "");
-      console.log(board_id_list);
-      console.log('board_id_list');
       let result;
       if (board_id_list) {
-        const sql = `SELECT ${field} FROM data_forum_board where board_status='1' AND board_id in (${board_id_list})  ORDER BY board_id DESC LIMIT ${start},${size}`;
+        const sql = `SELECT ${field} FROM data_forum_board where board_status='1' AND board_id in (${board_id_list})  ORDER BY board_id DESC LIMIT ${app.mysql.escape(start)},${app.mysql.escape(size)}`;
         const result2 = await app.mysql.query(sql);
         result = result2;
       } else {
@@ -277,7 +270,7 @@ module.exports = app => {
       return result;
     }
     async myBoardTotal(uid) {
-      const userrow = await app.mysql.get('data_user', { user_id: uid });
+      const userrow = await app.mysql.get('data_user', { user_id: app.mysql.escape(uid) });
       const board_id_list = userrow.user_follow_board.replace(/(^,*)|(,*$)/g, "");
       let result;
       if (board_id_list) {

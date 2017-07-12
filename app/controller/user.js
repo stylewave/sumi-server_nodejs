@@ -25,10 +25,10 @@ module.exports = app => {
         return;
       }
 
-      if (nickname.length < 2) {
+      if (nickname.length < 2 || charUtil.check_string(nickname, 'checkSpecial')) {
         this.ctx.body = {
           status: 0,
-          tips: '昵称不能少于两位',
+          tips: '昵称输入有误',
         };
         return;
       }
@@ -156,15 +156,37 @@ module.exports = app => {
     }
 
     async test() {
-
+      const field = 'ad_id,ad_title,ad_page,ad_url,ad_photo,ad_create_time,ad_content';
+      let where = [];
+      let userdata = [];
+      // where = [['ad_status', '1; or ad_status=0 ', '='], ['ad_page', 'index']];
+      where = [['ad_id', '23']];
+      userdata = [['ad_title', '123455,ad_page=1232323']];
+      // where[0] = ['ad_status', 1, '='];
+      // where[1] = ['ad_page', 'index'];
+      // const start = 0;
+      // const size = 10;
+      // const limit = start + ',' + size;
+      // const data = await this.ctx.service.utils.db.getAllRow(field, 'data_ad', where, '', limit);
+      const data = await this.ctx.service.utils.db.update('data_ad', userdata, where);
+      console.log(data);
+      console.log('data');
       const { uid } = this.ctx.request.body;
+      console.log(app.mysql.escape(uid));
       const moment = require("moment");
       const time = moment().format("YYYY-MM-DD HH:mm:ss");
       const week1 = moment().format('d');
       const key = moment().format('YYYYMM');
-      const sql = `select sign_id,DATE_FORMAT(sign_date,'%Y-%m-%d') as sign_date,DATE_FORMAT(sign_date,'%e') as news_date from data_sign_log where sign_uid='${uid}' and sign_key='${key}'`;
-      console.log(sql);
+      //   const sql = `select sign_id,DATE_FORMAT(sign_date,'%Y-%m-%d') as sign_date,DATE_FORMAT(sign_date,'%e') as news_date from data_sign_log where sign_uid='${uid}' and sign_key='${key}'`;
+      const sql = `select sign_id,DATE_FORMAT(sign_date,'%Y-%m-%d') as sign_date,DATE_FORMAT(sign_date,'%e') as news_date from data_sign_log where sign_uid=${app.mysql.escape(uid)} and sign_key='${key}'`;
+      // console.log(sql);
       const list = await app.mysql.query(sql);
+
+
+      const sql2 = `select user_id from data_user where user_id=${app.mysql.escape(uid)}`;
+      // const sql2 = `select user_id from data_user where user_id=${uid}`;
+      // console.log(sql2);
+      const list2 = await app.mysql.query(sql2);
 
 
 
@@ -213,12 +235,12 @@ module.exports = app => {
       // const today_issign = in_array($today,$sign_array) ? '1' : '0';
       this.ctx.body = {
         status: 1,
-        list1: list,
+        list1: list2,
         times: time,
         week: week1,
         month: moment().month(),
         result1: sign_array,
-        da: date_array,
+        // da: date_array,
       };
     }
     isCon(arr, val) {

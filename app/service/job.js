@@ -30,7 +30,7 @@ module.exports = app => {
     // 查询是否选择职业
     async checkDetail(uid) {
       const field = 'user_id,user_name,user_nickname,user_job_id,user_job_exp,user_job_name,user_job_level,user_job_icon';
-      const sql = `SELECT ${field} FROM data_user WHERE user_id = ${uid}`;
+      const sql = `SELECT ${field} FROM data_user WHERE user_id = ${app.mysql.escape(uid)}`;
       const result = await app.mysql.query(sql);
       return result[0].user_job_id > 0 ? result[0] : null;
     }
@@ -42,7 +42,7 @@ module.exports = app => {
       if (!job_row) {
         result = 2;
       } else {
-        const userSql = `UPDATE data_user SET user_job_id = '${job_row.job_id}',user_job_name='${job_row.list[0].title}',user_job_icon='${job_row.job_icon}'  WHERE user_id = '${uid}'`;
+        const userSql = `UPDATE data_user SET user_job_id = '${job_row.job_id}',user_job_name='${job_row.list[0].title}',user_job_icon='${job_row.job_icon}'  WHERE user_id = '${app.mysql.escape(uid)}'`;
         const re = await app.mysql.query(userSql);
         if (re) {
           job_row.job_name = job_row.list[0].title;
@@ -88,7 +88,7 @@ module.exports = app => {
     }
 
     async setJobLevel(uid, level) {
-      const user_row = await app.mysql.get('data_user', { user_id: uid });
+      const user_row = await app.mysql.get('data_user', { user_id: app.mysql.escape(uid) });
       const job_list = await this.ctx.service.utils.jobArray.job().job;
       let job_row;
 
