@@ -168,7 +168,7 @@ module.exports = app => {
       return result;
     }
 
-    //  共同执行sql语句
+    //  共用的执行sql语句
     async common(sql) {
       const result = await this.app.mysql.query(sql);
       return result;

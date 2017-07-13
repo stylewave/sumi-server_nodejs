@@ -3,7 +3,8 @@ module.exports = app => {
     // 获取总的记录数
     async getTotal() {
       const sql = `SELECT COUNT(*) as total FROM data_news WHERE news_show = '1'`;
-      const result = await app.mysql.query(sql);
+      const result = await this.ctx.service.utils.db.common(sql);
+      //  const result = await app.mysql.query(sql);
       return result[0].total;
     }
 

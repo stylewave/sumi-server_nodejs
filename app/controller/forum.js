@@ -476,7 +476,7 @@ module.exports = app => {
         return;
       }
 
-      const result = await this.ctx.service.forum.commentadd(subId, content, uid);
+      const result = await this.ctx.service.forum.commentadd(subId, this.ctx.helper.escape(content), uid);
       this.ctx.body = {
         status: 1,
         tips: '评论提交成功！',
@@ -528,7 +528,7 @@ module.exports = app => {
         };
         return;
       }
-      const result = await this.ctx.service.forum.addForumSubject(title, content, boardId, uid);
+      const result = await this.ctx.service.forum.addForumSubject(this.ctx.helper.escape(title), this.ctx.helper.escape(content), boardId, uid);
       this.ctx.body = {
         status: 1,
         tips: '增加主题成功',
