@@ -9,7 +9,7 @@ module.exports = app => {
 
     // 查询用户信息
     async findByToken(uid, token) {
-      const userInfo = await app.mysql.get('data_user', { user_id: app.mysql.escape(uid), user_token: token });
+      const userInfo = await app.mysql.get('data_user', { user_id: uid, user_token: token });
       return userInfo;
     }
     // 头像和昵称设置

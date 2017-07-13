@@ -15,17 +15,12 @@ module.exports = app => {
       const field = 'comment_id,comment_expert_id,comment_title,comment_hits,comment_beans,comment_intro,ep_name as  comment_expert_name,ep_photo as comment_expert_photo,DATE_FORMAT(comment_create_time,"%m/%d %H:%i") as comment_create_time';
       let where = [];
       where = [['comment_status', '1']];
-      const limit = start + ',' + size;
+      const limit = app.mysql.escape(start) + ',' + app.mysql.escape(size);
       const result = await this.ctx.service.utils.db.getAll(field, 'data_expert_comment left join data_expert on (comment_expert_id=ep_id)', where, 'comment_id', limit);
-
-      // const sql = 'SELECT ' + field + ' FROM data_expert_comment left join data_expert on (comment_expert_id=ep_id) WHERE comment_status = \'1\' ORDER BY comment_id DESC LIMIT ' + app.mysql.escape(start) + ',' + app.mysql.escape(size);
-      // console.log(sql);
-      // const result = await app.mysql.query(sql);
       for (const v in result) {
-        // console.log(v);
         result[v].comment_expert_photo = app.config.host + result[v].comment_expert_photo;
       }
-      // result[0].comment_expert_photo = app.config.host + result[0].comment_expert_photo;
+
 
       return result;
 
@@ -86,13 +81,13 @@ module.exports = app => {
     async buydata(commentId = '', uid) {
       let data;
       if (commentId) {
-        data = await app.mysql.get('data_user_bean_log', { log_uid: app.mysql.escape(uid), log_main_id: app.mysql.escape(commentId), log_type: 'buy_expert_comment' });
+        data = await app.mysql.get('data_user_bean_log', { log_uid: uid, log_main_id: commentId, log_type: 'buy_expert_comment' });
       } else {
         const field = "comment_id,comment_title,comment_intro";
         const sql = `SELECT ${field} FROM data_expert_comment  ORDER BY comment_id DESC LIMIT 1`;
         const result = await app.mysql.query(sql);
         // console.log(result[0].comment_id);
-        data = await app.mysql.get('data_user_bean_log', { log_uid: app.mysql.escape(uid), log_main_id: result[0].comment_id, log_type: 'buy_expert_comment' });
+        data = await app.mysql.get('data_user_bean_log', { log_uid: uid, log_main_id: result[0].comment_id, log_type: 'buy_expert_comment' });
 
       }
       return data;
@@ -126,9 +121,6 @@ module.exports = app => {
         subSql = `UPDATE data_user SET user_beans ='${userbean}',user_bonus_beans = 0  WHERE user_id =${app.mysql.escape(uid)}`;
 
       }
-      // console.log(subSql);
-      // const result = await this.app.mysql.insert('data_user_bean_log', { log_uid: userrow.user_id, log_user: userrow.user_name, log_nickname: userrow.user_nickname, log_type: 'buy_expert_comment', log_main_table: 'data_expert_comment', log_main_id: commentId, log_content: '购买投顾文章[' + userrow.comment_title + ']', log_count: 0 - dedata.comment_beans, log_bean_before: userbeans, log_bean_end: end, log_create_time: this.app.mysql.literals.now });
-
       const conn = await app.mysql.beginTransaction(); // 初始化事务
       try {
 

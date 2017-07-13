@@ -25,7 +25,7 @@ module.exports = app => {
       const field = 'ad_id,ad_title,ad_page,ad_url,ad_photo,ad_create_time,ad_content';
       let where = [];
       where = [['ad_status', '1'], ['ad_page', 'activity']];
-      const limit = start + ',' + size;
+      const limit = app.mysql.escape(start) + ',' + app.mysql.escape(size);
       const result = await this.ctx.service.utils.db.getAll(field, 'data_ad', where, 'ad_id', limit);
       // const sql = `SELECT ${field} FROM data_ad  WHERE ad_status = 1 AND ad_page='activity' ORDER BY ad_id DESC LIMIT ${
       //   app.mysql.escape(start)},${

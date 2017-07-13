@@ -8,7 +8,7 @@ module.exports = app => {
 
     //  任务列表
     async taskList(uid) {
-      const result = await app.mysql.get('data_task', { task_uid: app.mysql.escape(uid) });
+      const result = await app.mysql.get('data_task', { task_uid: uid });
       const rs = await this.ctx.service.utils.taskArray.task();
       const task_finish = [];
       const task_going = [];
@@ -48,7 +48,7 @@ module.exports = app => {
     }
     // 领取完成任务
     async finishTask(uid, taskcontent, content, task_row) {
-      const userrow = await app.mysql.get('data_user', { user_id: app.mysql.escape(uid) });
+      const userrow = await app.mysql.get('data_user', { user_id: uid });
       const e = await this.taskContent(uid, content);
       const tcontent = JSON.parse(e.content);
       const user_bonus_beans = userrow.user_bonus_beans + task_row.task_bonus_beans;
@@ -132,7 +132,7 @@ module.exports = app => {
       // console.log(task_array);
       const sql = `select task_id,${field_list} from data_task where task_uid='${app.mysql.escape(uid)}'`;
       const user_task_row = await app.mysql.query(sql);
-      console.log(user_task_row[0]);
+      // console.log(user_task_row[0]);
       for (const vv in task_array) {
         const key = task_array[vv].task_db_field;
         const content_json = user_task_row[0][key];						// 用户任务json

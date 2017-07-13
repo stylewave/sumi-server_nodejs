@@ -88,7 +88,7 @@ module.exports = app => {
     }
 
     async setJobLevel(uid, level) {
-      const user_row = await app.mysql.get('data_user', { user_id: app.mysql.escape(uid) });
+      const user_row = await app.mysql.get('data_user', { user_id: uid });
       const job_list = await this.ctx.service.utils.jobArray.job().job;
       let job_row;
 

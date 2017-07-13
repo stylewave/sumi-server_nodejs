@@ -76,7 +76,7 @@ module.exports = app => {
 
 
       const sql = `select sign_id from data_sign_log where sign_uid=${app.mysql.escape(uid)} and sign_date='${date}'`;
-      console.log(sql);
+      // console.log(sql);
       const list = await app.mysql.query(sql);
       if (list.length > 0) {
         return 2;
@@ -117,7 +117,7 @@ module.exports = app => {
       }
 
       const items = [{ id: 1, title: '签到5天', beans: '10', count: '5' }, { id: 2, title: '签到10天', beans: '30', count: '10' }, { id: 3, title: '签到20天', beans: '60', count: '20' }, { id: 4, title: '满签', beans: '100', count: days }];
-      const sqlcount = `select count(*) as total  from data_sign_log where sign_uid='${uid}' and sign_key='${key}'`;
+      const sqlcount = `select count(*) as total  from data_sign_log where sign_uid='${app.mysql.escape(uid)}' and sign_key='${key}'`;
       const recount = await app.mysql.query(sqlcount);
       const sign_count = recount[0].total + 1;
 
@@ -143,10 +143,9 @@ module.exports = app => {
         user_beans = parseInt(user_row.user_bonus_beans, 10) + parseInt(SIGN_DEFAULT_BEAN, 10) + parseInt(more_beans, 10);
         log_remarks = "额外获取(" + more_text + ")赠豆";
       }
-      console.log(log_remarks);
-      console.log(user_beans);
 
-      const userSql = `UPDATE data_user SET user_bonus_beans ='${user_beans}' WHERE user_id ='${uid}'`;
+
+      const userSql = `UPDATE data_user SET user_bonus_beans ='${user_beans}' WHERE user_id ='${app.mysql.escape(uid)}'`;
       const conn = await app.mysql.beginTransaction(); // 初始化事务
       try {
         await conn.query(userSql);

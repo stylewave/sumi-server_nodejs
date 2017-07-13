@@ -57,7 +57,7 @@ module.exports = app => {
     }
     //  豆币回收详情
     async beanReturnDetail(returnId) {
-      const data = await app.mysql.get('data_user_bean_return', { return_id: app.mysql.escape(returnId) });
+      const data = await app.mysql.get('data_user_bean_return', { return_id: returnId });
       return data;
     }
 
@@ -73,7 +73,7 @@ module.exports = app => {
       unionpay_bank = '',
       mobile = ''
     ) {
-      const userrow = await app.mysql.get('data_user', { user_id: app.mysql.escape(uid) });
+      const userrow = await app.mysql.get('data_user', { user_id: uid });
       const money = beans * 0.8;
       let user_beans;
       const u_money = userrow.user_money + money;
