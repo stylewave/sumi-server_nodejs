@@ -10,10 +10,15 @@ module.exports = app => {
 
     // 拉取新闻列表
     async list(start, size) {
-      const field = "news_id,news_title,news_intro,news_create_time,news_hits,DATE_FORMAT(news_create_time,'%H:%i') as time";
-      const sql = `SELECT ${field} FROM data_news WHERE news_show = '1' ORDER BY news_id DESC LIMIT ${
-        app.mysql.escape(start)} , ${app.mysql.escape(size)}`;
-      const result = await app.mysql.query(sql);
+      const where = { news_show: '1' };
+      const data_columns = ['news_id', 'news_title', 'news_intro', 'news_create_time', 'news_hits', 'news_create_time'];
+      const result = await this.ctx.service.utils.db.select('data_news', where, data_columns, ['news_id', 'desc'], size, start);
+      const moment = require("moment");
+      if (result.length > 0) {
+        for (const v in result) {
+          result[v].time = moment(result[v].msg_create_time).format("HH:mm");
+        }
+      }
       return result;
     }
 

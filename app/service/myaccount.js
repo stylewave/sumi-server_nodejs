@@ -34,12 +34,15 @@ module.exports = app => {
 
     // 豆币记录列表
     async userBeanLog(uid, start, size) {
-      const field =
-        'log_id,log_content,log_uid,log_type,log_count,log_main_table,log_main_id,log_remark,DATE_FORMAT(log_create_time,"%m-%d %H:%i") as log_create_time';
-
-      const sql = `SELECT ${field} FROM data_user_bean_log  WHERE log_uid = '${app.mysql.escape(uid)}' ORDER BY log_id DESC LIMIT ${app.mysql.escape(start)}, ${app.mysql.escape(size)}`;
-      // console.log(sql);
-      const result = await app.mysql.query(sql);
+      const where = { log_uid: uid };
+      const data_columns = ['log_id', 'log_content', 'log_uid', 'log_type', 'log_count', 'log_main_table', 'log_main_id', 'log_remark', 'log_create_time'];
+      const result = await this.ctx.service.utils.db.select('data_user_bean_log', where, data_columns, ['log_id', 'desc'], size, start);
+      const moment = require("moment");
+      if (result.length > 0) {
+        for (const v in result) {
+          result[v].log_create_time = moment(result[v].log_create_time).format("MM-DD HH:mm");
+        }
+      }
       return result;
     }
     // 回收记录总的记录数
@@ -50,9 +53,16 @@ module.exports = app => {
     }
     //  豆币回收列表
     async beanReturnList(uid, start, size) {
-      const field = 'return_id,return_uid,return_beans,return_money,return_account_type,DATE_FORMAT(return_create_time,"%Y年%m月%d日 %H:%i") as return_create_time,return_finish_time,return_status';
-      const sql = `SELECT ${field} FROM data_user_bean_return  WHERE return_uid = ${app.mysql.escape(uid)}  ORDER BY return_id DESC LIMIT ${app.mysql.escape(start)}, ${app.mysql.escape(size)}`;
-      const result = await app.mysql.query(sql);
+
+      const where = { return_uid: uid };
+      const data_columns = ['return_id', 'return_uid', 'return_beans', 'return_money', 'return_account_type', 'return_create_time', 'return_finish_time', 'return_status'];
+      const result = await this.ctx.service.utils.db.select('data_user_bean_return', where, data_columns, ['return_id', 'desc'], size, start);
+      const moment = require("moment");
+      if (result.length > 0) {
+        for (const v in result) {
+          result[v].return_create_time = moment(result[v].return_create_time).format("MM/DD HH:mm");
+        }
+      }
       return result;
     }
     //  豆币回收详情
@@ -78,7 +88,7 @@ module.exports = app => {
       let user_beans;
       const u_money = userrow.user_money + money;
       const end = userrow.user_beans - beans;
-      const userSql = `UPDATE data_user SET user_beans= '${end}', user_money = '${u_money}' WHERE user_id = ${uid}`;
+      const userSql = `UPDATE data_user SET user_beans= '${end}', user_money = '${u_money}' WHERE user_id = ${app.mysql.escape(uid)}`;
       const conn = await app.mysql.beginTransaction(); // 初始化事务
       try {
         await conn.query(userSql);

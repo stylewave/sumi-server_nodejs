@@ -1,3 +1,4 @@
+const moment = require("moment");
 module.exports = app => {
   class UserService extends app.Service {
     // 查询用户信息
@@ -23,7 +24,7 @@ module.exports = app => {
     }
     // 用户购买房间总数
     async chatRootTotal(uid) {
-      const moment = require("moment");
+      // const moment = require("moment");
       const time = moment().format("YYYY-MM-DD");
       const sql = `SELECT COUNT(*) as total FROM data_user_bean_log WHERE log_uid=${app.mysql.escape(uid)} AND log_room_expire >='${time}'`;
       const result = await app.mysql.query(sql);
@@ -59,14 +60,21 @@ module.exports = app => {
     }
     // 用户消息列表
     async userMsgList(start, size, uid, type = '') {
-      const field = 'msg_id,msg_type,msg_action,msg_isread,msg_main_id,msg_title,DATE_FORMAT(msg_create_time,"%Y-%m-%d %H:%i:%s") as msg_create_time';
-      let sql;
+      let result;
       if (type) {
-        sql = `SELECT ${field} FROM data_msg WHERE msg_uid=${app.mysql.escape(uid)} AND msg_type=${app.mysql.escape(type)} ORDER BY msg_id DESC LIMIT ${app.mysql.escape(start)},${app.mysql.escape(size)}`;
+        const where = { msg_uid: uid, msg_type: type };
+        const data_columns = ['msg_id', 'msg_type', 'msg_action', 'msg_isread', 'msg_main_id', 'msg_title', 'msg_create_time'];
+        result = await this.ctx.service.utils.db.select('data_msg', where, data_columns, ['msg_id', 'desc'], size, start);
       } else {
-        sql = `SELECT ${field} FROM data_msg WHERE msg_uid='${app.mysql.escape(uid)}' ORDER BY msg_id DESC LIMIT ${app.mysql.escape(start)},${app.mysql.escape(size)}`;
+        const where = { msg_uid: uid };
+        const data_columns = ['msg_id', 'msg_type', 'msg_action', 'msg_isread', 'msg_main_id', 'msg_title', 'msg_create_time'];
+        result = await this.ctx.service.utils.db.select('data_msg', where, data_columns, 'msg_id', size, start);
       }
-      const result = await app.mysql.query(sql);
+      if (result.length > 0) {
+        for (const v in result) {
+          result[v].msg_create_time = moment(result[v].msg_create_time).format("YYYY-MM-DD HH:mm:ss");
+        }
+      }
       return result.length > 0 ? result : null;
     }
 

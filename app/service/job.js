@@ -125,14 +125,14 @@ module.exports = app => {
 
       if (skill.indexOf('nomal_box_count1') !== -1) {
         const skill_list = await this.ctx.service.utils.jobArray.job().skill;
-        taskSql = `UPDATE data_task SET task_nomal_box_max='${skill_list.nomal_box_count1.value}',task_las_update=${this.app.mysql.literals.now} WHERE task_uid = ${uid}`;
+        taskSql = `UPDATE data_task SET task_nomal_box_max='${skill_list.nomal_box_count1.value}',task_las_update=${this.app.mysql.literals.now} WHERE task_uid = ${app.mysql.escape(uid)}`;
         app.mysql.query(taskSql);
       }
 
       if (job_name) {
-        userSql = `UPDATE data_user SET user_job_skill='${skill}',user_job_level='${level}',user_job_level_stage='${job_stage}',user_job_name='${job_name}' WHERE user_id = ${uid}`;
+        userSql = `UPDATE data_user SET user_job_skill='${skill}',user_job_level='${level}',user_job_level_stage='${job_stage}',user_job_name='${job_name}' WHERE user_id = ${app.mysql.escape(uid)}`;
       } else {
-        userSql = `UPDATE data_user SET user_job_skill='${skill}',user_job_level='${level}',user_job_level_stage='${job_stage}' WHERE user_id = ${uid}`;
+        userSql = `UPDATE data_user SET user_job_skill='${skill}',user_job_level='${level}',user_job_level_stage='${job_stage}' WHERE user_id = ${app.mysql.escape(uid)}`;
       }
       const user = app.mysql.query(userSql);
       if (user) {

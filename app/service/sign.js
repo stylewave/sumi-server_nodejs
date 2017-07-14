@@ -69,12 +69,6 @@ module.exports = app => {
       const date = moment().format("YYYY-MM-DD");
       const key = moment().format('YYYYMM');
 
-      // const week1 = moment().format('d');
-      // const week1 = moment(moment().startOf('month').format("YYYY-MM-DD HH:mm:ss")).format('d'); // 一个月开始的一天是周几
-      // console.log(moment().month(), moment().get('date'));
-      // const today = moment().get('date');
-
-
       const sql = `select sign_id from data_sign_log where sign_uid=${app.mysql.escape(uid)} and sign_date='${date}'`;
       // console.log(sql);
       const list = await app.mysql.query(sql);

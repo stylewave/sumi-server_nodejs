@@ -95,7 +95,7 @@ module.exports = app => {
 
     // 判断是否用户的豆币是否可以购买
     async beanNum(beannum, uid) {
-      const userrow = await app.mysql.get('data_user', { user_id: app.mysql.escape(uid) });
+      const userrow = await app.mysql.get('data_user', { user_id: uid });
       const userbeans = userrow.user_beans + userrow.user_bonus_beans;
       if (beannum > userbeans) {
         return 0;
@@ -105,7 +105,7 @@ module.exports = app => {
 
     // 购买观点
     async buyExpertComment(commentId, uid) {
-      const userrow = await app.mysql.get('data_user', { user_id: app.mysql.escape(uid) });
+      const userrow = await app.mysql.get('data_user', { user_id: uid });
       const userbeans = userrow.user_beans + userrow.user_bonus_beans;
       const dedata = await this.commentDetail(commentId);
       const total = dedata.comment_beans;
@@ -142,7 +142,6 @@ module.exports = app => {
     // 大数据列表
     async marketList() {
       const sql = 'SELECT mk_point1,mk_point2,mk_point3,mk_point4 FROM data_market  ORDER BY mk_id DESC';
-      // console.log(sql);
       const result = await app.mysql.query(sql);
       return result[0];
 
@@ -156,14 +155,10 @@ module.exports = app => {
     // 多空策略
     async marketVideo(start, size) {
 
-      const field = 'video_id,video_title,video_url,video_photo,video_hits';
-      let where = [];
-      where = [['video_status', '1']];
-      const limit = start + ',' + size;
-      const result = await this.ctx.service.utils.db.getAll(field, 'data_video', where, 'video_id', limit);
-      // const sql = `SELECT ${field} FROM data_video WHERE video_status=1 ORDER BY video_id DESC LIMIT ${app.mysql.escape(start)},${app.mysql.escape(size)}`;
-      // console.log(sql);
-      // const result = await app.mysql.query(sql);
+      // const field = 'video_id,video_title,video_url,video_photo,video_hits';
+      const where = { video_status: '1' };
+      const data_columns = ['video_id', 'video_title', 'video_url', 'video_photo', 'video_hits'];
+      const result = await this.ctx.service.utils.db.select('data_video', where, data_columns, 'video_id', size, start);
       for (const v in result) {
         result[v].video_photo = app.config.host + result[v].video_photo;
       }

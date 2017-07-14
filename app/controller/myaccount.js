@@ -9,7 +9,7 @@ module.exports = app => {
       const { uid, token, page, size, type } = this.ctx.request.body;
       const numArr = [uid, page, size];
 
-      const strArr = [token, type];
+      const strArr = [token];
 
 
       if (charUtil.checkType(numArr, strArr) === false) {

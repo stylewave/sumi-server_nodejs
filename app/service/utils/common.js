@@ -57,7 +57,7 @@ module.exports = app => {
       // }
     }
 
-    checkVersion() {}
+    checkVersion() { }
   }
 
   return CommonService;
