@@ -158,6 +158,9 @@ module.exports = app => {
     // 专门测试的
     async test() {
 
+
+      //  console.log(this.ctx.helper.escape(str));
+
       // const results = await this.app.mysql.select('data_ad', { // 搜索 post 表
       //   where: { ad_url: 'Lottery', ad_page: ['like', '%1%', 'weww'] }, // WHERE 条件
       //   columns: ['ad_page', 'ad_url', 'ad_id', 'ad_title', "DATE_FORMAT(ad_create_time,'%Y-%m-%d')"], // 要查询的表字段
@@ -174,7 +177,9 @@ module.exports = app => {
       where = [['ad_id', '23']];
       const aa = ['ad_id', 'ad_title', 'ad_create_time'];
       //  userdata = [['ad_title', '123455,ad_page=1232323']];
-      userdata = { ad_page: '123', ad_url: 'Lottery' };
+      userdata = {
+        ad_page: 123, ad_url: 'Lottery',
+      };
       const or = ['ad_id', 'desc'];
 
       // where[0] = ['ad_status', 1, '='];
@@ -183,9 +188,9 @@ module.exports = app => {
       // const size = 10;
       // const limit = start + ',' + size;
       // const data = await this.ctx.service.utils.db.getAllRow(field, 'data_ad', where, '', limit);
-      const sql22 = `SELECT COUNT(*) as total FROM data_user_bean_log`;
-      const data = await this.ctx.service.utils.db.common(sql22);
-      console.log(data[0].total);
+      // const sql22 = `SELECT COUNT(*) as total FROM data_user_bean_log`;
+      const data = await this.ctx.service.utils.db.select('data_ad', userdata, aa, or);
+      console.log(data);
       console.log('data');
       const { uid } = this.ctx.request.body;
       console.log(app.mysql.escape(uid));
